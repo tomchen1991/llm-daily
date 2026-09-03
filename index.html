@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>大模型早报</title>
+<meta name="description" content="每日大模型行业早报 · LLM知识老师" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0b0d12;
+    --paper: #f4f1ea;
+    --muted: #8b93a7;
+    --dim: #5a6272;
+    --gold: #e8b86d;
+    --gold-dim: #b88c48;
+    --card: #141821;
+    --hair: #242a37;
+    --pill: #1c212c;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--paper); }
+  body {
+    min-height: 100vh;
+    font-family: "Noto Sans SC", system-ui, sans-serif;
+    background:
+      radial-gradient(900px 420px at 50% -10%, rgba(232,184,109,.14), transparent 60%),
+      var(--bg);
+  }
+  .wrap {
+    width: min(720px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 40px 0 72px;
+  }
+  .rule { height: 2px; background: var(--gold); border: 0; margin: 0 8px 28px; opacity: .9; }
+  .kicker {
+    text-align: center;
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: .18em;
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    margin: 0;
+    text-align: center;
+    font-family: "Noto Serif SC", serif;
+    font-weight: 700;
+    font-size: clamp(40px, 8vw, 56px);
+    letter-spacing: .04em;
+  }
+  .date {
+    text-align: center;
+    color: var(--muted);
+    margin: 14px 0 22px;
+    font-size: 16px;
+  }
+  .lede {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 36px;
+    padding: 10px 18px;
+    border: 1px solid var(--gold-dim);
+    border-radius: 999px;
+    color: var(--paper);
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .stack { display: grid; gap: 16px; }
+  .card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--hair);
+    border-radius: 22px;
+    padding: 22px 22px 20px 26px;
+    overflow: hidden;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 22px; bottom: 22px;
+    width: 4px;
+    border-radius: 4px;
+    background: var(--accent, var(--gold));
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .num {
+    font-family: "Noto Serif SC", serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent, var(--gold));
+    line-height: 1;
+  }
+  .lab {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--accent, var(--gold));
+    background: var(--pill);
+    color: var(--accent, var(--gold));
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .04em;
+  }
+  .head {
+    margin: 0 0 10px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: .01em;
+  }
+  .body {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .why {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--hair);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .why b {
+    color: var(--gold);
+    font-weight: 700;
+    margin-right: 8px;
+  }
+  .why a { color: var(--paper); text-decoration: underline; text-underline-offset: 3px; }
+  .links {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .links a {
+    color: var(--muted);
+    font-size: 12px;
+    text-decoration: none;
+    border: 1px solid var(--hair);
+    border-radius: 999px;
+    padding: 4px 10px;
+  }
+  .links a:hover { color: var(--paper); border-color: var(--muted); }
+  footer {
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 1px solid var(--hair);
+    text-align: center;
+    color: var(--dim);
+    font-size: 13px;
+  }
+  .toolbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .toolbar button, .toolbar a.btn {
+    appearance: none;
+    border: 1px solid var(--hair);
+    background: var(--card);
+    color: var(--muted);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .toolbar button.active, .toolbar button:hover, .toolbar a.btn:hover {
+    color: var(--paper);
+    border-color: var(--gold-dim);
+  }
+  .empty {
+    text-align: center;
+    color: var(--muted);
+    padding: 48px 16px;
+  }
+  @media (max-width: 520px) {
+    .wrap { width: calc(100% - 28px); padding-top: 28px; }
+    .head { font-size: 19px; }
+    .body { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <hr class="rule" />
+    <div class="kicker">LLM 行业日报</div>
+    <h1>大模型早报</h1>
+    <div class="date" id="date">加载中…</div>
+    <div class="lede" id="lede"></div>
+    <div class="toolbar" id="toolbar" hidden>
+      <button type="button" id="btn-latest" class="active">最新一期</button>
+      <a class="btn" id="btn-json" href="./data/latest.json" target="_blank" rel="noopener">JSON</a>
+    </div>
+    <section class="stack" id="stories" aria-live="polite"></section>
+    <div class="empty" id="empty" hidden>今天还没有内容。</div>
+    <footer>LLM知识老师 · 每日 08:30（上海时间）更新</footer>
+  </main>
+  <script>
+    const DEFAULT_ACCENTS = ["#8ab4f8", "#66d9ef", "#ff9f43", "#7ee081", "#e8b86d", "#c4a7ff"];
+
+    function esc(s) {
+      return String(s ?? "").replace(/[&<>"']/g, c => ({
+        "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+      })[c]);
+    }
+
+    function render(data) {
+      document.getElementById("date").textContent = `${data.date}  ·  ${data.weekday}`;
+      document.getElementById("lede").textContent = data.lede || "";
+      document.title = `大模型早报 · ${data.date}`;
+      const root = document.getElementById("stories");
+      const empty = document.getElementById("empty");
+      root.innerHTML = "";
+      const stories = data.stories || [];
+      empty.hidden = stories.length > 0;
+      stories.forEach((s, i) => {
+        const accent = s.accent
+          ? (Array.isArray(s.accent)
+              ? `rgb(${s.accent.join(",")})`
+              : s.accent)
+          : DEFAULT_ACCENTS[i % DEFAULT_ACCENTS.length];
+        const card = document.createElement("article");
+        card.className = "card";
+        card.style.setProperty("--accent", accent);
+        const links = (s.links || []).map(l =>
+          `<a href="${esc(l.href)}" target="_blank" rel="noopener">${esc(l.label || "来源")}</a>`
+        ).join("");
+        card.innerHTML = `
+          <div class="row">
+            <div class="num">${String(i + 1).padStart(2, "0")}</div>
+            <span class="lab">${esc(s.lab)}</span>
+          </div>
+          <h2 class="head">${esc(s.head)}</h2>
+          <p class="body">${esc(s.body)}</p>
+          <div class="why"><b>所以</b>${esc(s.why)}</div>
+          ${links ? `<div class="links">${links}</div>` : ""}
+        `;
+        root.appendChild(card);
+      });
+      document.getElementById("toolbar").hidden = false;
+    }
+
+    async function load() {
+      try {
+        const res = await fetch("./data/latest.json", { cache: "no-store" });
+        if (!res.ok) throw new Error(String(res.status));
+        render(await res.json());
+      } catch (e) {
+        document.getElementById("date").textContent = "无法加载最新一期";
+        document.getElementById("lede").textContent = "请稍后刷新，或检查 data/latest.json";
+        document.getElementById("empty").hidden = false;
+      }
+    }
+    load();
+  </script>
+</body>
+</html>
