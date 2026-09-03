@@ -1,0 +1,48 @@
+{
+  "date": "2026.09.03",
+  "weekday": "周四",
+  "lede": "昨夜主线：便宜工作马在编程和 Agent 上对打",
+  "stories": [
+    {
+      "lab": "GOOGLE",
+      "accent": [138, 180, 248],
+      "head": "Gemini 3.8 Flash",
+      "body": "六周第三次 Flash。长程写代码和 Agent 抬升，入门价 $0.75 / $3.75，撑到年底。Cyber 版只给 Fairwind 防守方。",
+      "why": "Flash 在变成日常干活的默认模型。",
+      "links": [
+        {"label": "Google 官方", "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"}
+      ]
+    },
+    {
+      "lab": "META",
+      "accent": [102, 217, 239],
+      "head": "Muse Spark 1.3",
+      "body": "Muse Code 与 API 当天可调用，价随 1.2。官方称同任务少约 20% 工具调用、25% token。开放权重仍是 soon。",
+      "why": "Meta 用够强够便宜的 Agent 骨干挤进第一梯队叙事。",
+      "links": [
+        {"label": "SiliconANGLE", "href": "https://siliconangle.com/2026/09/02/meta-says-it-has-caught-up-with-anthropic-and-openai-after-releasing-muse-spark-1-3-its-most-powerful-llm-so-far/"},
+        {"label": "IT之家", "href": "https://www.ithome.com/0/997/728.htm"}
+      ]
+    },
+    {
+      "lab": "阿里千问",
+      "accent": [255, 159, 67],
+      "head": "Qwen3.8-Max 0902",
+      "body": "底座未换，Coding + Cowork 后训练。官方称 CodeArena 前端榜 1691 暂居第一，API 仍 $2 / $6。",
+      "why": "国内旗舰用快迭代后训练打同一赛道。",
+      "links": [
+        {"label": "IT之家", "href": "https://www.ithome.com/0/997/270.htm"}
+      ]
+    },
+    {
+      "lab": "OPENAI",
+      "accent": [126, 224, 129],
+      "head": "Astra 不透明推理",
+      "body": "尚未发布。消息称下一代会用 recurrent depth，思维不必全程走可读逐步链。安全圈担心更难看清在想什么。",
+      "why": "性能往潜空间走，和「能监控思维链」开始打架。",
+      "links": [
+        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/"}
+      ]
+    }
+  ]
+}
