@@ -1,60 +1,58 @@
 {
-  "date": "2026.09.06",
-  "weekday": "周日",
-  "lede": "昨夜主线：Claude 把费马大定理做成机器可验证的证明；Meta 最高推理档 Max 解禁",
+  "date": "2026.09.07",
+  "weekday": "周一",
+  "lede": "昨夜主线：Astra 的 99.9% 分被拆成「模型 vs 脚手架」；DeepSeek 据报要堆 16 万颗昇腾做推理",
   "stories": [
     {
-      "lab": "ANTHROPIC",
-      "accent": [196, 167, 255],
-      "head": "Claude 11 天形式化费马大定理",
-      "body": "Anthropic 官方称：Claude 多代理在约 11 天里，用 Lean 证明助手写出首个端到端、可由计算机自动检查的费马大定理证明。约 1300 万行 Lean，中间证明约 2.95 万条定理；关键脚手架是开源协作平台 Prove2Me。帝国理工 Kevin Buzzard 评价：证明只依赖数学公理，且自动形式化产物已稳到可继续往上建。",
-      "why": "这不是「AI 新发现了定理」，而是把人类 1995 年的证明翻成机器可验的代码——数学审稿与 AI 出证明的信任问题，终于有了可量产的验证路径。",
+      "lab": "OPENAI",
+      "accent": [255, 159, 67],
+      "head": "Astra 99.9%：同一模型，两套脚手架差 37 分",
+      "body": "ARC Prize 官方表：标准脚手架（各厂同一最小接口）Astra max 约 62.7%、花费约 2.61 万美元；OpenAI Provider Adapter（保留不透明推理状态、压缩长对话）high 档约 99.9%、约 1.88 万美元。TNW（9 月 6 日）指出：广为传播的「相对 GPT-5.6 Sol 的 7.8% 飙到 99.9%」不是同条件对比；同条件应是 62.7% 对 7.8%。ARC Prize 明确：不据此宣称 AGI。另有报道称发布页多处分数事后改过。",
+      "why": "买到的是模型权重；刷出 99.9% 的是「模型 + 专用脚手架」。看榜先看测法。",
       "links": [
-        {"label": "Anthropic 官方", "href": "https://www.anthropic.com/research/formalizing-fermats-last-theorem"},
-        {"label": "New Scientist", "href": "https://www.newscientist.com/article/2587839-fermats-last-theorem-formalised-by-ai-agents-in-just-11-days/"}
-      ]
-    },
-    {
-      "lab": "META",
-      "accent": [102, 217, 239],
-      "head": "Muse Spark 1.3 Max 对开发者开放",
-      "body": "Muse Spark 1.3 9 月 2 日先上了较低推理档；最高档 Max 多卡了约两天安全测试。多家报道称 Max 现已可在 Muse Code（终端编程助手）和 Meta Model API 调用。官方称相对 1.2，整体约少 20% 工具调用、少 25% token（公司自测）。权重仍闭源，开源时间表未公布；Max 单独的公开定价与延迟数字也还没给出。",
-      "why": "上周堆旗舰的那一周里，Meta 把「最好用的那一档」从合作伙伴预览放进了普通开发入口。",
-      "links": [
-        {"label": "Superpower Daily", "href": "https://superpowerdaily.com/posts/meta-adds-max-reasoning-to-muse-spark-1-3-after-a-two-day-safety-gate"}
+        {"label": "ARC Prize", "href": "https://arcprize.org/blog/astra"},
+        {"label": "TNW", "href": "https://thenextweb.com/news/openai-astra-arc-agi-3-harness-62-7-vs-99-9-benchmark-revisions"}
       ]
     },
     {
       "lab": "OPENAI",
-      "accent": [255, 159, 67],
-      "head": "Astra 放量：Plus 能用，但入口分叉",
-      "body": "乱发布过后，付费侧放量加速。多方报道与帮助中心口径：Plus 可在 ChatGPT Work / Codex 用 GPT-6 Astra；普通聊天里叫「GPT-6 Pro」的入口仍主要给 Pro / Business / Enterprise。产品负责人称扩容好于预期。Plus 用量偏紧：官方粗估每 5 小时约 5–45 条 Astra 本地消息（视任务与推理强度），并补发 9 月 3–4 日的 banked reset（积存的用量重置）。",
-      "why": "「能用上」不等于「在聊天框随便选」——同一模型，不同产品面、不同套餐。",
+      "accent": [232, 184, 109],
+      "head": "Brockman：首个超 10 万卡训练；电脑使用跨过门槛",
+      "body": "Stratechery（9 月 4 日）访谈 OpenAI 总裁 Greg Brockman（发布前录制）。他称 Astra 是公司首个在超过 10 万块 GPU 上完成训练的模型；大量算力也花在安全与对齐。他强调「电脑使用」（直接操作屏幕/键鼠）已跨过他心中的应用门槛——不必再给每个软件单独写 API 连接器。他个人认为「我们已经进入 AGI 时代」，同时强调安全、对齐与能力要一起推。中文侧 9 月 6 日密集转述。",
+      "why": "这是旗舰发布后的战略口径：算力规模、产品形态（通用操作电脑），以及 AGI 措辞怎么被公司自己定义。",
       "links": [
-        {"label": "Lookonchain", "href": "https://www.lookonchain.com/feeds/71588"},
-        {"label": "计划对照", "href": "https://christopheralarcon.com/blog/gpt-6-astra-chatgpt-plans"}
+        {"label": "Stratechery", "href": "https://stratechery.com/2026/an-interview-with-openai-president-greg-brockman-about-astra-and-alignment/"},
+        {"label": "华尔街见闻转述", "href": "https://news.marsbit.co/20260906095012818592.html"}
       ]
     },
     {
-      "lab": "评测",
-      "accent": [138, 180, 248],
-      "head": "独立榜：Fable 略高分，Astra 更省",
-      "body": "Artificial Analysis Intelligence Index v4.2：Claude Fable 5.1 约 57 分、GPT-6 Astra 约 55 分（Fable 仍第一）。但同一套任务上，Astra 单任务成本约 $2.57、约 4.0 分钟；Fable 约 $6.12、约 9.5 分钟——单价同档（约 $10/$50 每百万 token），Astra 更省 token、更快出结果。LLM Stats 等另一套复合分则常把 Astra 排前。",
-      "why": "榜一不等于账单低；选型要看你是要「中立推理分」还是「单位成本能跑完多少工作」。",
+      "lab": "DEEPSEEK",
+      "accent": [126, 224, 129],
+      "head": "彭博：内蒙古拟部署至少 16 万颗昇腾 950DT",
+      "body": "彭博（9 月 4 日，知情人士）称 DeepSeek 计划在内蒙古（乌兰察布）数据中心部署至少 16 万颗华为昇腾 950DT，主要用于跑模型推理，暂不用于训练；该站规划约 1 GW 级算力，16 万卡只是其中一部分。交付取决于华为产能，部分能力目标约 2027 年底至 2028 年初。DeepSeek / 华为均未见到对等官方确认；中文媒体 9 月 5–6 日仍在跟进。另有转述称 V4-Pro API 吞吐受限，昇腾 950 超节点量产后 Pro 价格可能下调（仍属报道口径）。",
+      "why": "不是新模型，是推理产能与国产芯片路线：训练仍偏依赖英伟达生态时，推理侧先堆自家供应链。",
       "links": [
-        {"label": "对比长文", "href": "https://www.intelligentliving.co/gpt-6-vs-claude-fable-5-1"},
-        {"label": "周报摘录", "href": "https://patmcguinness.substack.com/p/ai-week-in-review-260905"}
+        {"label": "Bloomberg", "href": "https://www.bloomberg.com/news/articles/2026-09-04/deepseek-plans-big-huawei-ai-chip-order-to-power-new-data-center"},
+        {"label": "经济日报", "href": "https://money.udn.com/money/story/5603/9737570"}
+      ]
+    },
+    {
+      "lab": "OPENAI",
+      "accent": [138, 180, 248],
+      "head": "Altman 为 Astra 放量延迟道歉",
+      "body": "多家 9 月 6 日报道：付费用户抱怨 Astra 迟迟进不来。Sam Altman 在 X 上致歉，称扩量未按预期推进，希望周末能放开，但未给死线。Codex 工程负责人称：符合条件的付费用户，每缺一天 Astra 会补一次 banked usage reset（积存的用量重置）。谨慎放量仍与网络安全「Critical」能力门槛有关。",
+      "why": "发布日≠可用日；安全分级会直接拖慢普通付费入口。",
+      "links": [
+        {"label": "Moneycontrol", "href": "https://www.moneycontrol.com/technology/sam-altman-apologises-for-gpt-6-astra-rollout-delays-for-paying-users-here-s-why-and-what-went-wrong-article-14023556.html"}
       ]
     },
     {
       "lab": "行业",
-      "accent": [126, 224, 129],
+      "accent": [196, 167, 255],
       "head": "今天没有新的旗舰模型发布",
-      "body": "过去约 24 小时没有再看到 OpenAI / Google / Anthropic / DeepSeek / 阿里等官宣全新基础模型。主线是研究突破（费马形式化）、上一波发布的放量与拆分入口，以及第三方榜单把 Fable / Astra / Muse 摆到一起比。下一处国内节点：多家分析仍盯着 9 月 22–24 日阿里云栖大会是否出新版模型。",
-      "why": "冷清日也要分清：没发新品 ≠ 没动静；验证与放量往往比发布日更决定你能不能用上。",
-      "links": [
-        {"label": "华尔街见闻 / 美银梳理", "href": "https://wallstreetcn.com/articles/3780788"}
-      ]
+      "body": "过去约 24 小时未见 OpenAI / Google / Anthropic / Meta / DeepSeek / 阿里等官宣全新基础模型。主线是评测方法论拆解、高管访谈与算力订单传闻。上周的 Fable 5.1、Muse Spark 1.3、Gemini 3.8 Flash、Astra 仍在放量与对表阶段。",
+      "why": "冷清日也要说清楚：没发新品 ≠ 没动静；数字怎么测、卡从哪来，往往比再刷一条参数更影响你能不能用、用多少钱。",
+      "links": []
     }
   ]
 }
