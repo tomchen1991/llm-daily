@@ -1,58 +1,61 @@
 {
-  "date": "2026.09.07",
-  "weekday": "周一",
-  "lede": "昨夜主线：Astra 的 99.9% 分被拆成「模型 vs 脚手架」；DeepSeek 据报要堆 16 万颗昇腾做推理",
+  "date": "2026.09.08",
+  "weekday": "周二",
+  "lede": "今天没什么新的旗舰模型发布。主线是评测榜换尺子：Astra 与 Fable 并列第一；Plus 用户要去 Work/Codex 才找得到 Astra。",
   "stories": [
+    {
+      "lab": "评测",
+      "accent": [138, 180, 248],
+      "head": "AA 指数 v4.3：Astra 与 Fable 5.1 并列 53 分",
+      "body": "第三方评测机构 Artificial Analysis（9 月 7 日）发布 Intelligence Index v4.3。Claude Fable 5.1（max + fallback）与 GPT-6 Astra（max）同得 53 分并列第一；其后是 Claude Opus 5（51）、Fable 5（50）、Muse Spark 1.3（48）、GPT-5.6 Sol（47）。改动是换题：Terminal-Bench 升到 4.0（66 道终端任务），并用与 Zapier 合作的 AutomationBench-AA（657 条业务工作流）替换旧题；私有题权重升到 45%。同为 53 分时，官方称 Astra 单题均摊约 3.26 美元，Fable 约 7.63 美元。",
+      "why": "名次变了，多半是尺子变了，不是模型又刷一版。选型看同口径对比和单任务成本。",
+      "links": [
+        {"label": "Artificial Analysis", "href": "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-3"},
+        {"label": "OfficeChai 综述", "href": "https://officechai.com/ai/artificial-analysis-updates-intelligence-index-twice-in-2-days-fable-5-1-gpt-6-astra-now-tied-for-first-place/"}
+      ]
+    },
     {
       "lab": "OPENAI",
       "accent": [255, 159, 67],
-      "head": "Astra 99.9%：同一模型，两套脚手架差 37 分",
-      "body": "ARC Prize 官方表：标准脚手架（各厂同一最小接口）Astra max 约 62.7%、花费约 2.61 万美元；OpenAI Provider Adapter（保留不透明推理状态、压缩长对话）high 档约 99.9%、约 1.88 万美元。TNW（9 月 6 日）指出：广为传播的「相对 GPT-5.6 Sol 的 7.8% 飙到 99.9%」不是同条件对比；同条件应是 62.7% 对 7.8%。ARC Prize 明确：不据此宣称 AGI。另有报道称发布页多处分数事后改过。",
-      "why": "买到的是模型权重；刷出 99.9% 的是「模型 + 专用脚手架」。看榜先看测法。",
+      "head": "Plus 有 Astra，但只在 Work / Codex，不在普通聊天",
+      "body": "Notebookcheck（9 月 7 日）对照 OpenAI 帮助页：ChatGPT Plus（约 20 美元/月）在 Work（长任务代理）和 Codex（写代码）里能用 GPT-6 Astra；普通聊天窗口顶配仍是 GPT-5.6 Sol。聊天窗口里的「GPT-6 Pro」写明面向 Pro 100/200 美元档、Business、Enterprise。桌面端左上角切到 Work；Codex CLI 需 0.153.0 或更高。付费用户每缺一天 Astra 仍补一次 banked usage reset（积存用量重置）。",
+      "why": "「订阅已含」不等于「聊天框里能选」。找错入口会以为自己没放量。",
       "links": [
-        {"label": "ARC Prize", "href": "https://arcprize.org/blog/astra"},
-        {"label": "TNW", "href": "https://thenextweb.com/news/openai-astra-arc-agi-3-harness-62-7-vs-99-9-benchmark-revisions"}
+        {"label": "Notebookcheck", "href": "https://www.notebookcheck.net/GPT-6-Astra-is-on-ChatGPT-Plus-but-only-in-Work-and-Codex.1391574.0.html"},
+        {"label": "OpenAI 发布页", "href": "https://openai.com/index/gpt-6-astra/"}
       ]
     },
     {
-      "lab": "OPENAI",
-      "accent": [232, 184, 109],
-      "head": "Brockman：首个超 10 万卡训练；电脑使用跨过门槛",
-      "body": "Stratechery（9 月 4 日）访谈 OpenAI 总裁 Greg Brockman（发布前录制）。他称 Astra 是公司首个在超过 10 万块 GPU 上完成训练的模型；大量算力也花在安全与对齐。他强调「电脑使用」（直接操作屏幕/键鼠）已跨过他心中的应用门槛——不必再给每个软件单独写 API 连接器。他个人认为「我们已经进入 AGI 时代」，同时强调安全、对齐与能力要一起推。中文侧 9 月 6 日密集转述。",
-      "why": "这是旗舰发布后的战略口径：算力规模、产品形态（通用操作电脑），以及 AGI 措辞怎么被公司自己定义。",
-      "links": [
-        {"label": "Stratechery", "href": "https://stratechery.com/2026/an-interview-with-openai-president-greg-brockman-about-astra-and-alignment/"},
-        {"label": "华尔街见闻转述", "href": "https://news.marsbit.co/20260906095012818592.html"}
-      ]
-    },
-    {
-      "lab": "DEEPSEEK",
+      "lab": "基准",
       "accent": [126, 224, 129],
-      "head": "彭博：内蒙古拟部署至少 16 万颗昇腾 950DT",
-      "body": "彭博（9 月 4 日，知情人士）称 DeepSeek 计划在内蒙古（乌兰察布）数据中心部署至少 16 万颗华为昇腾 950DT，主要用于跑模型推理，暂不用于训练；该站规划约 1 GW 级算力，16 万卡只是其中一部分。交付取决于华为产能，部分能力目标约 2027 年底至 2028 年初。DeepSeek / 华为均未见到对等官方确认；中文媒体 9 月 5–6 日仍在跟进。另有转述称 V4-Pro API 吞吐受限，昇腾 950 超节点量产后 Pro 价格可能下调（仍属报道口径）。",
-      "why": "不是新模型，是推理产能与国产芯片路线：训练仍偏依赖英伟达生态时，推理侧先堆自家供应链。",
+      "head": "OSWorld 2.0：最好的电脑操作模型也只过 72.6%",
+      "body": "Miraflow（9 月 8 日）梳理港大 XLANG 的 OSWorld 2.0：108 道约一小时的真实电脑操作题。公开榜（约 9 月 5 日）：GPT-6 Astra 72.6%、Claude Opus 5 70.6%、Muse Spark 1.3 66.9%。Opus 5 严格通关约 31.4%，部分得分约 68.3%——多数步骤做对了，仍常卡在终点。常见翻车：长任务错误会滚雪球、记不住前面改过什么状态、高分往往靠更多工具调用堆出来。",
+      "why": "发布会 demo 过关 ≠ 无人值守能用。长任务仍要人盯或做断点校验。",
       "links": [
-        {"label": "Bloomberg", "href": "https://www.bloomberg.com/news/articles/2026-09-04/deepseek-plans-big-huawei-ai-chip-order-to-power-new-data-center"},
-        {"label": "经济日报", "href": "https://money.udn.com/money/story/5603/9737570"}
+        {"label": "Miraflow 解读", "href": "https://miraflow.ai/blog/osworld-2-explained-computer-use-agent-benchmark-2026"}
       ]
     },
     {
-      "lab": "OPENAI",
-      "accent": [138, 180, 248],
-      "head": "Altman 为 Astra 放量延迟道歉",
-      "body": "多家 9 月 6 日报道：付费用户抱怨 Astra 迟迟进不来。Sam Altman 在 X 上致歉，称扩量未按预期推进，希望周末能放开，但未给死线。Codex 工程负责人称：符合条件的付费用户，每缺一天 Astra 会补一次 banked usage reset（积存的用量重置）。谨慎放量仍与网络安全「Critical」能力门槛有关。",
-      "why": "发布日≠可用日；安全分级会直接拖慢普通付费入口。",
-      "links": [
-        {"label": "Moneycontrol", "href": "https://www.moneycontrol.com/technology/sam-altman-apologises-for-gpt-6-astra-rollout-delays-for-paying-users-here-s-why-and-what-went-wrong-article-14023556.html"}
-      ]
-    },
-    {
-      "lab": "行业",
+      "lab": "OPENBMB",
       "accent": [196, 167, 255],
-      "head": "今天没有新的旗舰模型发布",
-      "body": "过去约 24 小时未见 OpenAI / Google / Anthropic / Meta / DeepSeek / 阿里等官宣全新基础模型。主线是评测方法论拆解、高管访谈与算力订单传闻。上周的 Fable 5.1、Muse Spark 1.3、Gemini 3.8 Flash、Astra 仍在放量与对表阶段。",
-      "why": "冷清日也要说清楚：没发新品 ≠ 没动静；数字怎么测、卡从哪来，往往比再刷一条参数更影响你能不能用、用多少钱。",
-      "links": []
+      "head": "MiniCPM5-2B 开源：约 25 亿参数的端侧小模型",
+      "body": "OpenBMB（面壁智能，与清华 NLP 等相关）9 月 7 日在 Hugging Face 放出 MiniCPM5-2B：稠密约 2.5B 参数，面向手机/本机部署；原生上下文约 13.1 万 token，并提供 GGUF、MLX、GPTQ 等量化包。第三方报道称它在 Artificial Analysis Index v4.2 的「4B 以下开源」分组里得分 15、暂居该档前列；独立复现仍有限，当次要动态看。",
+      "why": "不是跟旗舰抢头条，是「能塞进本机」的小模型又多了一颗可下载的候选。",
+      "links": [
+        {"label": "Hugging Face", "href": "https://huggingface.co/openbmb/MiniCPM5-2B"},
+        {"label": "CryptoBriefing", "href": "https://cryptobriefing.com/minicpm5-2b-artificial-analysis-index/"}
+      ]
+    },
+    {
+      "lab": "ANTHROPIC",
+      "accent": [232, 184, 109],
+      "head": "提醒：Claude Code 周限额 9 月 14 日起换档",
+      "body": "Anthropic 此前宣布：现行 Claude Code「临时 +50%」周限额到 9 月 13 日结束；9 月 14 日起改为相对更早基准「永久 +25%」。对今天正在用的额度来说，约等于少 17%；对五月前旧基准则仍是上涨。覆盖 Pro / Max / Team / 按席位的 Enterprise；5 小时会话限额不变。超限可买用量。",
+      "why": "一周后重度编程订阅会感觉「额度变紧」。提前看用量，别等到 14 号才算账。",
+      "links": [
+        {"label": "MacObserver", "href": "https://www.macobserver.com/news/anthropic-raises-claude-code-weekly-limits-by-25-for-paid-plans/"},
+        {"label": "Implicator", "href": "https://www.implicator.ai/anthropic-claude-code-weekly-limits-september-14/"}
+      ]
     }
   ]
 }
