@@ -1,60 +1,48 @@
 {
-  "date": "2026.09.08",
-  "weekday": "周二",
-  "lede": "今天没什么新的旗舰模型发布。主线是评测榜换尺子：Astra 与 Fable 并列第一；Plus 用户要去 Work/Codex 才找得到 Astra。",
+  "date": "2026.09.09",
+  "weekday": "周三",
+  "lede": "昨夜主线：Meta 把能替你办事的 Muse 推给美国用户；DeepSeek 同步放了只活两天的 V4.1 Flash 内测。",
   "stories": [
     {
-      "lab": "评测",
+      "lab": "META",
       "accent": [138, 180, 248],
-      "head": "AA 指数 v4.3：Astra 与 Fable 5.1 并列 53 分",
-      "body": "第三方评测机构 Artificial Analysis（9 月 7 日）发布 Intelligence Index v4.3。Claude Fable 5.1（max + fallback）与 GPT-6 Astra（max）同得 53 分并列第一；其后是 Claude Opus 5（51）、Fable 5（50）、Muse Spark 1.3（48）、GPT-5.6 Sol（47）。改动是换题：Terminal-Bench 升到 4.0（66 道终端任务），并用与 Zapier 合作的 AutomationBench-AA（657 条业务工作流）替换旧题；私有题权重升到 45%。同为 53 分时，官方称 Astra 单题均摊约 3.26 美元，Fable 约 7.63 美元。",
-      "why": "名次变了，多半是尺子变了，不是模型又刷一版。选型看同口径对比和单任务成本。",
+      "head": "美国上线 Muse：能连邮箱、日历、付款的个人代理",
+      "body": "Meta（9 月 8 日）在美国推出消费级 AI 代理 Muse（内部曾叫 Hatch），入口是 muse.ai、手机应用和 WhatsApp。官方称它跑在独立安全虚拟机上，可接邮箱、日历、支付、健康、智能家居等；基础免费，超量后 Power 约 20 美元/月、Maximum 约 100 美元/月，开户要绑卡。底层模型是 Muse Spark。路透社写到内部测试仍有卡死、绕过护栏暴露 iCloud 照片等问题。",
+      "why": "聊天再往前一步：能替你点按钮、付钱。信任和权限比「会不会答对」更关键。",
       "links": [
-        {"label": "Artificial Analysis", "href": "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-3"},
-        {"label": "OfficeChai 综述", "href": "https://officechai.com/ai/artificial-analysis-updates-intelligence-index-twice-in-2-days-fable-5-1-gpt-6-astra-now-tied-for-first-place/"}
+        {"label": "Reuters", "href": "https://www.reuters.com/business/meta-launches-ai-agent-that-can-access-other-apps-send-emails-make-payments-2026-09-08/"},
+        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/"}
       ]
     },
     {
-      "lab": "OPENAI",
+      "lab": "DEEPSEEK",
+      "accent": [102, 217, 239],
+      "head": "V4.1 Flash 中间版内测，模型名写着 9 月 10 日过期",
+      "body": "DeepSeek（9 月 8 日）在官方群宣布开始 V4.1 Flash 中间版本内测。开发者保持原 base_url，模型名设为 deepseek-v4.1-flash-expires-on-0910 即可调用，每账号并发上限 20。官方称新结构、原生多模态、更快；计费与 deepseek-v4-flash 相同（空闲时段每百万 tokens：缓存命中输入 0.05 元、未命中 1.5 元、输出 4.5 元）。有开发者反馈 SVG 生成比 V4 Flash Vision-Exp 快约 6 倍，但账单体感更烫——多半是吐得更快、单位时间 token 消耗更高。",
+      "why": "正式博客还没出，两天窗口更像效果验证，不宜当生产主力。",
+      "links": [
+        {"label": "第一财经／新浪", "href": "https://finance.sina.com.cn/roll/2026-09-08/doc-inircmeq9212156.shtml"}
+      ]
+    },
+    {
+      "lab": "Z.AI",
       "accent": [255, 159, 67],
-      "head": "Plus 有 Astra，但只在 Work / Codex，不在普通聊天",
-      "body": "Notebookcheck（9 月 7 日）对照 OpenAI 帮助页：ChatGPT Plus（约 20 美元/月）在 Work（长任务代理）和 Codex（写代码）里能用 GPT-6 Astra；普通聊天窗口顶配仍是 GPT-5.6 Sol。聊天窗口里的「GPT-6 Pro」写明面向 Pro 100/200 美元档、Business、Enterprise。桌面端左上角切到 Work；Codex CLI 需 0.153.0 或更高。付费用户每缺一天 Astra 仍补一次 banked usage reset（积存用量重置）。",
-      "why": "「订阅已含」不等于「聊天框里能选」。找错入口会以为自己没放量。",
+      "head": "GLM-5.3-Flash 五折今晚结束，价格翻倍",
+      "body": "Z.ai 定价页写明：GLM-5.3-Flash 上线五折促销到 2026 年 9 月 9 日 24:00（UTC+8）。促销价每百万 tokens 输入 0.075 美元、输出 0.25 美元；过后回到标价 0.15 / 0.50 美元。缓存输入同样从 0.015 回到 0.03 美元。",
+      "why": "今天还在跑大批量推理的，账单会从明天起翻一倍。",
       "links": [
-        {"label": "Notebookcheck", "href": "https://www.notebookcheck.net/GPT-6-Astra-is-on-ChatGPT-Plus-but-only-in-Work-and-Codex.1391574.0.html"},
-        {"label": "OpenAI 发布页", "href": "https://openai.com/index/gpt-6-astra/"}
+        {"label": "Z.ai 定价", "href": "https://docs.z.ai/guides/overview/pricing"}
       ]
     },
     {
-      "lab": "基准",
+      "lab": "DEEPSEEK",
       "accent": [126, 224, 129],
-      "head": "OSWorld 2.0：最好的电脑操作模型也只过 72.6%",
-      "body": "Miraflow（9 月 8 日）梳理港大 XLANG 的 OSWorld 2.0：108 道约一小时的真实电脑操作题。公开榜（约 9 月 5 日）：GPT-6 Astra 72.6%、Claude Opus 5 70.6%、Muse Spark 1.3 66.9%。Opus 5 严格通关约 31.4%，部分得分约 68.3%——多数步骤做对了，仍常卡在终点。常见翻车：长任务错误会滚雪球、记不住前面改过什么状态、高分往往靠更多工具调用堆出来。",
-      "why": "发布会 demo 过关 ≠ 无人值守能用。长任务仍要人盯或做断点校验。",
+      "head": "Harness 团队招约 150 人，全是工程岗",
+      "body": "9 月 7 日晚，DeepSeek Harness 负责人崔添翼公开招约 150 个资深工程师名额，岗位集中在服务端与 Agent 弹性计算（含弹性计算平台），地点以北京为主、部分杭州。多家中文媒体 9 月 8 日报导：没有研究岗，重点是把模型跑成能规模化用的 Agent 基建。",
+      "why": "招人方向比招多少人更说明事：他们在补「能让模型持续干活」的工程层。",
       "links": [
-        {"label": "Miraflow 解读", "href": "https://miraflow.ai/blog/osworld-2-explained-computer-use-agent-benchmark-2026"}
-      ]
-    },
-    {
-      "lab": "OPENBMB",
-      "accent": [196, 167, 255],
-      "head": "MiniCPM5-2B 开源：约 25 亿参数的端侧小模型",
-      "body": "OpenBMB（面壁智能，与清华 NLP 等相关）9 月 7 日在 Hugging Face 放出 MiniCPM5-2B：稠密约 2.5B 参数，面向手机/本机部署；原生上下文约 13.1 万 token，并提供 GGUF、MLX、GPTQ 等量化包。第三方报道称它在 Artificial Analysis Index v4.2 的「4B 以下开源」分组里得分 15、暂居该档前列；独立复现仍有限，当次要动态看。",
-      "why": "不是跟旗舰抢头条，是「能塞进本机」的小模型又多了一颗可下载的候选。",
-      "links": [
-        {"label": "Hugging Face", "href": "https://huggingface.co/openbmb/MiniCPM5-2B"},
-        {"label": "CryptoBriefing", "href": "https://cryptobriefing.com/minicpm5-2b-artificial-analysis-index/"}
-      ]
-    },
-    {
-      "lab": "ANTHROPIC",
-      "accent": [232, 184, 109],
-      "head": "提醒：Claude Code 周限额 9 月 14 日起换档",
-      "body": "Anthropic 此前宣布：现行 Claude Code「临时 +50%」周限额到 9 月 13 日结束；9 月 14 日起改为相对更早基准「永久 +25%」。对今天正在用的额度来说，约等于少 17%；对五月前旧基准则仍是上涨。覆盖 Pro / Max / Team / 按席位的 Enterprise；5 小时会话限额不变。超限可买用量。",
-      "why": "一周后重度编程订阅会感觉「额度变紧」。提前看用量，别等到 14 号才算账。",
-      "links": [
-        {"label": "MacObserver", "href": "https://www.macobserver.com/news/anthropic-raises-claude-code-weekly-limits-by-25-for-paid-plans/"},
-        {"label": "Implicator", "href": "https://www.implicator.ai/anthropic-claude-code-weekly-limits-september-14/"}
+        {"label": "证券时报", "href": "https://www.stcn.com/article/detail/4176438.html"},
+        {"label": "第一财经／中华网", "href": "https://news.china.com/socialgd/10000169/20260908/49727149_all.html"}
       ]
     }
   ]
