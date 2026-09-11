@@ -1,60 +1,40 @@
 {
-  "date": "2026.09.10",
-  "weekday": "周四",
-  "lede": "今天主线：DeepSeek V4.1 Flash 进入正式上线窗口，中午起 Flash 降价，Pro 请求临时切到 Flash。",
+  "date": "2026.09.11",
+  "weekday": "周五",
+  "lede": "昨夜主线：OpenAI 推 GPT-6 Astra，DeepSeek V4.1 Flash 正式上线并开源权重；语音层 GPT-Live-1 也进了 API。",
   "stories": [
+    {
+      "lab": "OPENAI",
+      "accent": [138, 180, 248],
+      "head": "GPT-6 Astra 向 ChatGPT 订阅用户与 API 推送",
+      "body": "OpenAI 宣布推出 GPT-6 Astra：先给少量机构，随后数天内推到 ChatGPT Plus / Pro / Business / Enterprise，以及 OpenAI API、Azure、Bedrock。官方称它偏重电脑操作、写代码、科学与网络安全；API 名称为 gpt-6-astra。官方数字：OSWorld 2.0 约 72.6%（上一代 GPT-5.6 Sol 约 65.7%），单任务约 40 分钟对约 75 分钟；Terminal-Bench 4.0 约 57.9%。它是 OpenAI 首个被标成「关键级」网络安全能力的模型，正式版会限制高危攻击类用法。",
+      "why": "订阅用户和 API 开发者终于能直接点到这代旗舰，而不只是云厂商通道上的预告。",
+      "links": [
+        {"label": "OpenAI 公告", "href": "https://openai.com/index/gpt-6-astra/"},
+        {"label": "InfoQ", "href": "https://www.infoq.com/news/2026/09/openai-gpt6-astra/"}
+      ]
+    },
     {
       "lab": "DEEPSEEK",
       "accent": [102, 217, 239],
-      "head": "V4.1 Flash 今天前后正式上线；中午起降价，Pro 流量先走 Flash",
-      "body": "DeepSeek（9 月 9 日官方通知）称：V4.1 Flash 计划北京时间 9 月 10 日前后正式发布。官方称经内外部测试，它在性能、费用、速度、总耗时上全面超过自家 V4 Pro。上线后到 V4.1 Pro 出来前，发往 V4 Pro 的请求会全部路由到 V4.1 Flash，并按 Flash 单价计费。Flash 系列新价从今天 12:00（北京时间）生效——空闲时段每百万 tokens：缓存命中输入 0.02 元（原 0.05）、未命中 1 元（原 1.5）、输出 4 元（原 4.5）；高峰价为空闲价的 2 倍。",
-      "why": "今天中午前还在用 Pro 的人，下午账单和模型行为都可能变；先留一份对照结果再上线。",
+      "head": "V4.1 Flash 正式上线：API 降价，权重 MIT 开源",
+      "body": "DeepSeek（9 月 10 日）正式发布 V4.1 Flash。官方称：总参数约 5520 亿的混合专家模型，读入时激活约 80 亿、写出时约 160 亿，原生看图，上下文最长约 100 万 tokens。API 用 deepseek-flash；旧 Flash 名会转到新模型。新价已从北京时间 9 月 10 日 12:00 生效——空闲时段每百万 tokens：缓存命中输入 0.02 元、未命中 1 元、输出 4 元；高峰价为空闲价的 2 倍。北京时间 9 月 14 日 12:00 后，deepseek-v4-pro 请求会先全部转到 Flash 并按 Flash 价计费。权重已在 Hugging Face 以 MIT 许可证放出。",
+      "why": "便宜、能自托管、又能看图：做长上下文 Agent 的人今天可以同时试 API 和本地权重。",
       "links": [
-        {"label": "Hacker News（官方通知摘录）", "href": "https://news.ycombinator.com/item?id=49624603"},
-        {"label": "新浪科技", "href": "https://finance.sina.com.cn/tech/roll/2026-09-09/doc-inirexha3896758.shtml"},
-        {"label": "Digital Applied", "href": "https://www.digitalapplied.com/blog/deepseek-v4-1-flash-pro-routing-prices-early-tests"}
-      ]
-    },
-    {
-      "lab": "ANTHROPIC",
-      "accent": [255, 159, 67],
-      "head": "Claude Marketplace 再加 Cursor、Factory、Vercel 等五家",
-      "body": "多家媒体（9 月 9 日）报道：Anthropic 把 CrowdStrike、Cursor、Factory、Gamma、Vercel 放进 Claude Marketplace。企业可用已有 Anthropic 消费承诺的一部分，直接买这些合作方产品，由 Anthropic 统一开票。CrowdStrike 官方新闻稿（9 月 2 日）已确认 Falcon 上架；9 月 9 日的报道把开发工具与部署平台一并扩了进去。",
-      "why": "大厂在抢「企业 AI 采购入口」：一次合同里把模型和周边工具捆在一起。",
-      "links": [
-        {"label": "RuntimeWire", "href": "https://runtimewire.com/article/anthropic-claude-marketplace-spacex-cursor-vercel-crowdstrike"},
-        {"label": "CrowdStrike 新闻稿", "href": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-brings-falcon-platform-to-anthropic-claude-marketplace/"}
-      ]
-    },
-    {
-      "lab": "AWS / OPENAI",
-      "accent": [138, 180, 248],
-      "head": "GPT-6 Astra 在 Amazon Bedrock 正式可用",
-      "body": "AWS（9 月 8 日）宣布 OpenAI 的 GPT-6 Astra 在 Amazon Bedrock 正式可用（GA）。官方称支持最长约 100 万输入 tokens，可走 Bedrock API，也可把 ChatGPT Work / Codex 配到 Bedrock 上跑。同期 OpenAI 还为 ChatGPT Work 加了扩展浏览器能力的企业插件。",
-      "why": "已经锁在 AWS 合规与账单体系里的团队，终于能在自家云上点到这款旗舰模型。",
-      "links": [
-        {"label": "AWS What's New", "href": "https://aws.amazon.com/about-aws/whats-new/2026/09/openai-gpt-6-astra-on-amazon-bedrock/"}
+        {"label": "DeepSeek 公告", "href": "https://www.deepseek.com/news/deepseek-v4-1-flash/"},
+        {"label": "API 更新日志", "href": "https://api-docs.deepseek.com/updates"},
+        {"label": "Hugging Face 权重", "href": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"}
       ]
     },
     {
       "lab": "OPENAI",
       "accent": [196, 167, 255],
-      "head": "ChatGPT Images 2.5 上线；API 拆成 Flare 与 Sunburst",
-      "body": "OpenAI（9 月 8 日）发布 ChatGPT Images 2.5，向各档 ChatGPT / Work / Codex 用户推送。API 侧同时推出 gpt-image-2.5-flare（偏快、日常量产）和 gpt-image-2.5-sunburst（偏精修、多轮编辑）。官方称 Flare 比上一代 GPT-Image-2 延迟最多低约 50%；两者 token 单价与 gpt-image-2 相同（图像输出约 30 美元/百万 tokens）。",
-      "why": "做图流水线可以按「要快」还是「要改得准」选模型，不用再硬扛单一档。",
+      "head": "GPT-Live-1 语音模型进入开发者 API",
+      "body": "OpenAI（9 月 10 日）把 GPT-Live-1 放到 API：能同时听和说（全双工），打断后还能接上话，并把更重的推理交给后端文本模型（例如 GPT-6 Astra）。语音层官方标价每分钟 0.05 美元，按秒计费；后端模型和工具另算。接口走 Live Sessions（v1/live/sessions），不是普通 Chat Completions。",
+      "why": "想做电话客服或语音助手的团队，终于能把 ChatGPT 那套「边听边说」接到自己的产品里。",
       "links": [
-        {"label": "OpenAI 公告", "href": "https://openai.com/index/introducing-chatgpt-images-2-5/"}
-      ]
-    },
-    {
-      "lab": "ANT",
-      "accent": [126, 224, 129],
-      "head": "蚂蚁开源金融向模型 Ling-3.0-flash-Fin",
-      "body": "据 Ant Group 表述（9 月 9 日）：开源 Ling-3.0-flash-Fin，面向投研、估值建模与报告生成。官方称这是混合专家（MoE）模型，总参数约 1240 亿，每个 token 约激活 51 亿参数；并开源金融搜索代理基准 FinFIRST（中金投行团队参与构建）。权重可在 Hugging Face、ModelScope 获取。",
-      "why": "开源里少见「专做金融研究流程」的整包模型加基准，方便对照自家投研助手。",
-      "links": [
-        {"label": "Gate 快讯", "href": "https://www.gate.com/zh/news/detail/ant-group-open-sources-ling-30-flash-fin-with-124b-parameters-for-financial-24130426"},
-        {"label": "HF（同系列 VL）", "href": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL"}
+        {"label": "OpenAI 公告", "href": "https://openai.com/index/introducing-gpt-live-1-in-the-api/"},
+        {"label": "开发者社区", "href": "https://community.openai.com/t/introducing-gpt-live-1-in-the-api/1396471/1"}
       ]
     }
   ]
