@@ -1,40 +1,61 @@
 {
-  "date": "2026.09.11",
-  "weekday": "周五",
-  "lede": "昨夜主线：OpenAI 推 GPT-6 Astra，DeepSeek V4.1 Flash 正式上线并开源权重；语音层 GPT-Live-1 也进了 API。",
+  "date": "2026.09.12",
+  "weekday": "周六",
+  "lede": "今天没有新的旗舰模型发布。主线是 GPT-6 Astra 把算力顶满：OpenAI 暂停新开每月 200 美元的 Pro；xAI 的 Grok 4.7 再拖几天。",
   "stories": [
     {
       "lab": "OPENAI",
       "accent": [138, 180, 248],
-      "head": "GPT-6 Astra 向 ChatGPT 订阅用户与 API 推送",
-      "body": "OpenAI 宣布推出 GPT-6 Astra：先给少量机构，随后数天内推到 ChatGPT Plus / Pro / Business / Enterprise，以及 OpenAI API、Azure、Bedrock。官方称它偏重电脑操作、写代码、科学与网络安全；API 名称为 gpt-6-astra。官方数字：OSWorld 2.0 约 72.6%（上一代 GPT-5.6 Sol 约 65.7%），单任务约 40 分钟对约 75 分钟；Terminal-Bench 4.0 约 57.9%。它是 OpenAI 首个被标成「关键级」网络安全能力的模型，正式版会限制高危攻击类用法。",
-      "why": "订阅用户和 API 开发者终于能直接点到这代旗舰，而不只是云厂商通道上的预告。",
+      "head": "Astra 需求过热，暂停新开每月 200 美元 Pro",
+      "body": "OpenAI 帮助中心写明：自 2026 年 9 月 10 日起，暂时停掉 ChatGPT Pro 每月 200 美元档（Pro 20X）的新订阅和升级；已有用户不受影响，每月 100 美元档仍可新开。产品负责人 Thibault Sottiaux 在 X 上说：这档对系统压力最大，想用最小动作保住现有用户对 Astra 的体验。开发者社区里，Codex 选 gpt-6-astra 仍常报「at capacity」。",
+      "why": "旗舰模型推开了，但算力跟不上——想新买最高档额度的人暂时买不到。",
       "links": [
-        {"label": "OpenAI 公告", "href": "https://openai.com/index/gpt-6-astra/"},
-        {"label": "InfoQ", "href": "https://www.infoq.com/news/2026/09/openai-gpt6-astra/"}
+        {"label": "OpenAI 帮助中心", "href": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"},
+        {"label": "产品负责人说明", "href": "https://x.com/thsottiaux/status/2098113585683808624"},
+        {"label": "Fortune", "href": "https://fortune.com/2026/09/11/openai-astra-chatgpt-pro-pause/"}
+      ]
+    },
+    {
+      "lab": "XAI",
+      "accent": [232, 184, 109],
+      "head": "Grok 4.7 再拖几天：Musk 称强化学习还在调",
+      "body": "马斯克 9 月 11 日在 X 回复说：Grok 4.7「还需要再炖几天」。他称可能在强化学习里把「回答太长」罚得过重，模型遇到本该能做的难题会过早放弃，自检也不够严。此前他把上线窗口多次往后推；这次仍无官方模型卡或发布时间表。",
+      "why": "想等下一代 Grok 的人，至少还要再等几天，别按「今天到」排期。",
+      "links": [
+        {"label": "马斯克原帖", "href": "https://x.com/elonmusk/status/2098462085973741960"}
+      ]
+    },
+    {
+      "lab": "HUMANS&",
+      "accent": [196, 167, 255],
+      "head": "Persimmon：专门「演真人」的用户模型预览",
+      "body": "创业公司 humans&（9 月 10 日）放出 Persimmon 研究预览：用来模拟多人、多轮聊天里真人怎么说话，而不是当助手答题。官方称从英伟达约 5500 亿参数的 Nemotron 3 Ultra 起步，用公开对话训练，再用强化学习稳住长对话一致性。有限开放 playground 与 API；官方数字：多人图灵测试里平均约 19.8% 次骗过评审（对比 Astra 约 0.22%）。",
+      "why": "测客服、测产品文案、做「假用户」实验时，终于有更像真人的专用模型可试。",
+      "links": [
+        {"label": "官方博客", "href": "https://persimmon.humansand.ai/blog/"}
+      ]
+    },
+    {
+      "lab": "NASA/IBM",
+      "accent": [126, 224, 129],
+      "head": "月球基础模型开源：找冰、数陨石坑",
+      "body": "NASA 与 IBM（9 月 10 日）发布 NASA-IBM Lunar Foundation Model，权重放在 Hugging Face。官方称主要用月球勘测轨道器约 17 年数据训练，约 200 万块影像切片；可微调后做冰层潜力图、陨石坑识别、不规则月海斑块分割等。配套数据集与 TerraTorch 工具一并公开。",
+      "why": "行星科学和 Artemis 相关团队能直接拿现成模型扫月面数据，不用从零训。",
+      "links": [
+        {"label": "NASA 公告", "href": "https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/"},
+        {"label": "Hugging Face", "href": "https://huggingface.co/nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model"},
+        {"label": "IBM Research", "href": "https://research.ibm.com/blog/nasa-ibm-lunar-foundation-model"}
       ]
     },
     {
       "lab": "DEEPSEEK",
       "accent": [102, 217, 239],
-      "head": "V4.1 Flash 正式上线：API 降价，权重 MIT 开源",
-      "body": "DeepSeek（9 月 10 日）正式发布 V4.1 Flash。官方称：总参数约 5520 亿的混合专家模型，读入时激活约 80 亿、写出时约 160 亿，原生看图，上下文最长约 100 万 tokens。API 用 deepseek-flash；旧 Flash 名会转到新模型。新价已从北京时间 9 月 10 日 12:00 生效——空闲时段每百万 tokens：缓存命中输入 0.02 元、未命中 1 元、输出 4 元；高峰价为空闲价的 2 倍。北京时间 9 月 14 日 12:00 后，deepseek-v4-pro 请求会先全部转到 Flash 并按 Flash 价计费。权重已在 Hugging Face 以 MIT 许可证放出。",
-      "why": "便宜、能自托管、又能看图：做长上下文 Agent 的人今天可以同时试 API 和本地权重。",
+      "head": "倒计时：9 月 14 日起 V4 Pro 请求改走 Flash",
+      "body": "昨天刚报过的 DeepSeek V4.1 Flash 仍在发酵。官方安排：北京时间 9 月 14 日 12:00 之后，到未来 V4.1 Pro 上线前，打到 deepseek-v4-pro 的请求会全部转到 V4.1 Flash，并按 Flash 单价计费。API 应用 deepseek-flash；权重已在 Hugging Face 以 MIT 开源。",
+      "why": "还在写死 deepseek-v4-pro 的代码，这两天就要改模型名或接受被重定向。",
       "links": [
         {"label": "DeepSeek 公告", "href": "https://www.deepseek.com/news/deepseek-v4-1-flash/"},
-        {"label": "API 更新日志", "href": "https://api-docs.deepseek.com/updates"},
-        {"label": "Hugging Face 权重", "href": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"}
-      ]
-    },
-    {
-      "lab": "OPENAI",
-      "accent": [196, 167, 255],
-      "head": "GPT-Live-1 语音模型进入开发者 API",
-      "body": "OpenAI（9 月 10 日）把 GPT-Live-1 放到 API：能同时听和说（全双工），打断后还能接上话，并把更重的推理交给后端文本模型（例如 GPT-6 Astra）。语音层官方标价每分钟 0.05 美元，按秒计费；后端模型和工具另算。接口走 Live Sessions（v1/live/sessions），不是普通 Chat Completions。",
-      "why": "想做电话客服或语音助手的团队，终于能把 ChatGPT 那套「边听边说」接到自己的产品里。",
-      "links": [
-        {"label": "OpenAI 公告", "href": "https://openai.com/index/introducing-gpt-live-1-in-the-api/"},
-        {"label": "开发者社区", "href": "https://community.openai.com/t/introducing-gpt-live-1-in-the-api/1396471/1"}
+        {"label": "API 更新日志", "href": "https://api-docs.deepseek.com/updates"}
       ]
     }
   ]
