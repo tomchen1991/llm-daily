@@ -1,61 +1,61 @@
 {
-  "date": "2026.09.12",
-  "weekday": "周六",
-  "lede": "今天没有新的旗舰模型发布。主线是 GPT-6 Astra 把算力顶满：OpenAI 暂停新开每月 200 美元的 Pro；xAI 的 Grok 4.7 再拖几天。",
+  "date": "2026.09.13",
+  "weekday": "周日",
+  "lede": "今天没有新的旗舰模型发布。过去一天主线是产品与评测：Sites 加协作、Surge 打分上周三款模型、谷歌挖 AI 编程团队；DeepSeek Pro 改道还剩一天。",
   "stories": [
     {
       "lab": "OPENAI",
       "accent": [138, 180, 248],
-      "head": "Astra 需求过热，暂停新开每月 200 美元 Pro",
-      "body": "OpenAI 帮助中心写明：自 2026 年 9 月 10 日起，暂时停掉 ChatGPT Pro 每月 200 美元档（Pro 20X）的新订阅和升级；已有用户不受影响，每月 100 美元档仍可新开。产品负责人 Thibault Sottiaux 在 X 上说：这档对系统压力最大，想用最小动作保住现有用户对 Astra 的体验。开发者社区里，Codex 选 gpt-6-astra 仍常报「at capacity」。",
-      "why": "旗舰模型推开了，但算力跟不上——想新买最高档额度的人暂时买不到。",
+      "head": "ChatGPT Sites：能一起改，还能绑自己的域名",
+      "body": "9 月 12 日前后，OpenAI 给 ChatGPT Sites（用对话直接搭网站/小应用）加了 Build Together：邀请同事一起编辑、保存、发布。还可设私有仅指定人看、用自然语言查站点连着的数据库，并把已有域名绑上去。官方称从提示词到部署大约快了一半。Enterprise 工作区暂不支持自定义域名。",
+      "why": "从「一个人玩原型」往「小团队真能一起改、还能用自己的域名上线」迈了一步。",
       "links": [
-        {"label": "OpenAI 帮助中心", "href": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"},
-        {"label": "产品负责人说明", "href": "https://x.com/thsottiaux/status/2098113585683808624"},
-        {"label": "Fortune", "href": "https://fortune.com/2026/09/11/openai-astra-chatgpt-pro-pause/"}
+        {"label": "IT之家", "href": "https://www.ithome.com/1/001/485.htm"},
+        {"label": "OpenAI 帮助中心", "href": "https://help.openai.com/en/articles/20001339"}
       ]
     },
     {
-      "lab": "XAI",
-      "accent": [232, 184, 109],
-      "head": "Grok 4.7 再拖几天：Musk 称强化学习还在调",
-      "body": "马斯克 9 月 11 日在 X 回复说：Grok 4.7「还需要再炖几天」。他称可能在强化学习里把「回答太长」罚得过重，模型遇到本该能做的难题会过早放弃，自检也不够严。此前他把上线窗口多次往后推；这次仍无官方模型卡或发布时间表。",
-      "why": "想等下一代 Grok 的人，至少还要再等几天，别按「今天到」排期。",
-      "links": [
-        {"label": "马斯克原帖", "href": "https://x.com/elonmusk/status/2098462085973741960"}
-      ]
-    },
-    {
-      "lab": "HUMANS&",
+      "lab": "SURGE",
       "accent": [196, 167, 255],
-      "head": "Persimmon：专门「演真人」的用户模型预览",
-      "body": "创业公司 humans&（9 月 10 日）放出 Persimmon 研究预览：用来模拟多人、多轮聊天里真人怎么说话，而不是当助手答题。官方称从英伟达约 5500 亿参数的 Nemotron 3 Ultra 起步，用公开对话训练，再用强化学习稳住长对话一致性。有限开放 playground 与 API；官方数字：多人图灵测试里平均约 19.8% 次骗过评审（对比 Astra 约 0.22%）。",
-      "why": "测客服、测产品文案、做「假用户」实验时，终于有更像真人的专用模型可试。",
+      "head": "独立评测：Fable 5.1 总分最高，Astra 还没测完",
+      "body": "评测机构 Surge AI（9 月 12 日）公布上周三款新模型在 Tuesday Work Index（综合职场任务）上的结果：Claude Fable 5.1 总分 68.7 居首；Meta Muse Spark 1.3 在复杂指令跟随上领先，相对上一代总分涨 7.3；Gemini 3.8 Flash（High）总分 61.1，硬数学（Riemann-bench）一代涨约 12 个百分点且性价比突出。GPT-6 Astra 的完整结果计划下周再发。",
+      "why": "官方宣传之外，终于有一份把三家放同一套职场任务里比的公开分数。",
       "links": [
-        {"label": "官方博客", "href": "https://persimmon.humansand.ai/blog/"}
+        {"label": "Surge AI", "href": "https://surgehq.ai/blog/fable-5-1-tuesday-work-index"}
       ]
     },
     {
-      "lab": "NASA/IBM",
+      "lab": "GOOGLE",
       "accent": [126, 224, 129],
-      "head": "月球基础模型开源：找冰、数陨石坑",
-      "body": "NASA 与 IBM（9 月 10 日）发布 NASA-IBM Lunar Foundation Model，权重放在 Hugging Face。官方称主要用月球勘测轨道器约 17 年数据训练，约 200 万块影像切片；可微调后做冰层潜力图、陨石坑识别、不规则月海斑块分割等。配套数据集与 TerraTorch 工具一并公开。",
-      "why": "行星科学和 Artemis 相关团队能直接拿现成模型扫月面数据，不用从零训。",
+      "head": "挖走 Mechanize 团队：补 AI 写代码短板",
+      "body": "《商业内幕》9 月 11 日报道：谷歌已完成对旧金山 AI 编程创企 Mechanize 的人才交易。联合创始人 Tamay Besiroglu 等十余人转入 DeepMind，多做 midtraining（中期训练，介于预训练和最终对齐之间）。此前传过约 15 亿美元量级的技术和人才方案，最终金额未公开；公司仍由新 CEO 继续运转。报道称重点是提升模型做软件工程的能力。",
+      "why": "不买公司、先挖人——谷歌想更快补上写代码、做 Agent 这块短板。",
       "links": [
-        {"label": "NASA 公告", "href": "https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/"},
-        {"label": "Hugging Face", "href": "https://huggingface.co/nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model"},
-        {"label": "IBM Research", "href": "https://research.ibm.com/blog/nasa-ibm-lunar-foundation-model"}
+        {"label": "Business Insider", "href": "https://www.businessinsider.com/google-completes-deal-for-ai-agents-startup-mechanize-2026-9"},
+        {"label": "IT之家", "href": "https://www.ithome.com/1/001/653.htm"}
       ]
     },
     {
       "lab": "DEEPSEEK",
       "accent": [102, 217, 239],
-      "head": "倒计时：9 月 14 日起 V4 Pro 请求改走 Flash",
-      "body": "昨天刚报过的 DeepSeek V4.1 Flash 仍在发酵。官方安排：北京时间 9 月 14 日 12:00 之后，到未来 V4.1 Pro 上线前，打到 deepseek-v4-pro 的请求会全部转到 V4.1 Flash，并按 Flash 单价计费。API 应用 deepseek-flash；权重已在 Hugging Face 以 MIT 开源。",
-      "why": "还在写死 deepseek-v4-pro 的代码，这两天就要改模型名或接受被重定向。",
+      "head": "明天中午：deepseek-v4-pro 请求改走 Flash",
+      "body": "DeepSeek 官方安排不变：北京时间 9 月 14 日 12:00（UTC 04:00）起，打到 deepseek-v4-pro 的请求会转到 V4.1 Flash，并按 Flash 单价计费，直到未来的 V4.1 Pro 上线。当前正式模型名是 deepseek-flash；权重已在 Hugging Face 以 MIT 开源。",
+      "why": "还在写死 Pro 模型名的代码，今天最好测一遍 Flash，别等明天中午才发现行为变了。",
       "links": [
-        {"label": "DeepSeek 公告", "href": "https://www.deepseek.com/news/deepseek-v4-1-flash/"},
-        {"label": "API 更新日志", "href": "https://api-docs.deepseek.com/updates"}
+        {"label": "DeepSeek 公告", "href": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/"},
+        {"label": "Hugging Face", "href": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"}
+      ]
+    },
+    {
+      "lab": "OPENAI",
+      "accent": [255, 159, 67],
+      "head": "补报：Agents API 公测，把 Codex 那套托管出来",
+      "body": "OpenAI 官方 9 月 10 日宣布 Agents API 进入公开测试：把支撑 Codex 的 harness（负责长会话、工具调度、子 Agent 协作的那套运行框架）做成托管 API。开发者指定任务、模型、工具和运行环境即可；可选用 OpenAI 托管沙盒，或接自己的/合作方沙盒。官方称 API 本身不另收费，按模型和工具用量计费。中文圈 9 月 12 日仍在密集解读。",
+      "why": "想做能长时间干活的 Agent，不必从零自建调度层；模型升级时 harness 也由官方跟着维护。",
+      "links": [
+        {"label": "OpenAI 官方", "href": "https://openai.com/index/introducing-the-agents-api/"},
+        {"label": "开发者文档", "href": "https://developers.openai.com/api/docs/guides/agents-api/overview"},
+        {"label": "36氪", "href": "https://eu.36kr.com/zh/p/3979785466730377"}
       ]
     }
   ]
