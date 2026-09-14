@@ -1,61 +1,51 @@
 {
-  "date": "2026.09.13",
-  "weekday": "周日",
-  "lede": "今天没有新的旗舰模型发布。过去一天主线是产品与评测：Sites 加协作、Surge 打分上周三款模型、谷歌挖 AI 编程团队；DeepSeek Pro 改道还剩一天。",
+  "date": "2026.09.14",
+  "weekday": "周一",
+  "lede": "今天没有新的旗舰模型发布。主线是安全和接口：阿莫迪喊放慢前沿、奥特曼和马斯克跟着表态；DeepSeek 原定今天改道的 Pro 继续留着；OpenAI 最快专用模型 Spark 本周退役。",
   "stories": [
-    {
-      "lab": "OPENAI",
-      "accent": [138, 180, 248],
-      "head": "ChatGPT Sites：能一起改，还能绑自己的域名",
-      "body": "9 月 12 日前后，OpenAI 给 ChatGPT Sites（用对话直接搭网站/小应用）加了 Build Together：邀请同事一起编辑、保存、发布。还可设私有仅指定人看、用自然语言查站点连着的数据库，并把已有域名绑上去。官方称从提示词到部署大约快了一半。Enterprise 工作区暂不支持自定义域名。",
-      "why": "从「一个人玩原型」往「小团队真能一起改、还能用自己的域名上线」迈了一步。",
-      "links": [
-        {"label": "IT之家", "href": "https://www.ithome.com/1/001/485.htm"},
-        {"label": "OpenAI 帮助中心", "href": "https://help.openai.com/en/articles/20001339"}
-      ]
-    },
-    {
-      "lab": "SURGE",
-      "accent": [196, 167, 255],
-      "head": "独立评测：Fable 5.1 总分最高，Astra 还没测完",
-      "body": "评测机构 Surge AI（9 月 12 日）公布上周三款新模型在 Tuesday Work Index（综合职场任务）上的结果：Claude Fable 5.1 总分 68.7 居首；Meta Muse Spark 1.3 在复杂指令跟随上领先，相对上一代总分涨 7.3；Gemini 3.8 Flash（High）总分 61.1，硬数学（Riemann-bench）一代涨约 12 个百分点且性价比突出。GPT-6 Astra 的完整结果计划下周再发。",
-      "why": "官方宣传之外，终于有一份把三家放同一套职场任务里比的公开分数。",
-      "links": [
-        {"label": "Surge AI", "href": "https://surgehq.ai/blog/fable-5-1-tuesday-work-index"}
-      ]
-    },
-    {
-      "lab": "GOOGLE",
-      "accent": [126, 224, 129],
-      "head": "挖走 Mechanize 团队：补 AI 写代码短板",
-      "body": "《商业内幕》9 月 11 日报道：谷歌已完成对旧金山 AI 编程创企 Mechanize 的人才交易。联合创始人 Tamay Besiroglu 等十余人转入 DeepMind，多做 midtraining（中期训练，介于预训练和最终对齐之间）。此前传过约 15 亿美元量级的技术和人才方案，最终金额未公开；公司仍由新 CEO 继续运转。报道称重点是提升模型做软件工程的能力。",
-      "why": "不买公司、先挖人——谷歌想更快补上写代码、做 Agent 这块短板。",
-      "links": [
-        {"label": "Business Insider", "href": "https://www.businessinsider.com/google-completes-deal-for-ai-agents-startup-mechanize-2026-9"},
-        {"label": "IT之家", "href": "https://www.ithome.com/1/001/653.htm"}
-      ]
-    },
     {
       "lab": "DEEPSEEK",
       "accent": [102, 217, 239],
-      "head": "明天中午：deepseek-v4-pro 请求改走 Flash",
-      "body": "DeepSeek 官方安排不变：北京时间 9 月 14 日 12:00（UTC 04:00）起，打到 deepseek-v4-pro 的请求会转到 V4.1 Flash，并按 Flash 单价计费，直到未来的 V4.1 Pro 上线。当前正式模型名是 deepseek-flash；权重已在 Hugging Face 以 MIT 开源。",
-      "why": "还在写死 Pro 模型名的代码，今天最好测一遍 Flash，别等明天中午才发现行为变了。",
+      "head": "今天中午：V4 Pro 不改道，照旧计费",
+      "body": "官方定价页已写明：应大家需求，9 月 14 日之后继续提供 DeepSeek V4 Pro 的 API，计费不变；有变动会再通知。此前英文发布稿曾说今天 12:00（北京时间）起 deepseek-v4-pro 会转到 V4.1 Flash 并按 Flash 价计费——以定价页为准，这条改道不做了。正式调用 Flash 仍用 deepseek-flash。",
+      "why": "还在用 Pro 的生产流量，今天不用紧急切 Flash；但官方保留随时再改的余地。",
       "links": [
-        {"label": "DeepSeek 公告", "href": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/"},
-        {"label": "Hugging Face", "href": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"}
+        {"label": "DeepSeek 定价页", "href": "https://api-docs.deepseek.com/quick_start/pricing"},
+        {"label": "IT之家", "href": "https://www.ithome.com/1/001/443.htm"},
+        {"label": "发布稿（未改）", "href": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/"}
+      ]
+    },
+    {
+      "lab": "ANTHROPIC",
+      "accent": [196, 167, 255],
+      "head": "阿莫迪：前沿要「放慢步子」",
+      "body": "Anthropic CEO 达里奥·阿莫迪发文 We Must Pace the Frontier：称今夏起模型帮着训下一代模型（递归自我改进）加速太快，加上 OpenAI 智能体误攻 Hugging Face 一类事件，呼吁放慢能力攀升节奏。公司先单方面承诺引入常驻的第三方评估人员（给工位、工卡、接近员工级权限）。马斯克转发称「达里奥说得对」；奥特曼表示同意，并说 OpenAI 也会采用类似独立监控思路。",
+      "why": "头部实验室公开谈「慢一点」，后面监管和发布节奏都可能跟着变。",
+      "links": [
+        {"label": "阿莫迪原文", "href": "https://darioamodei.com/post/we-must-pace-the-frontier"},
+        {"label": "IT之家", "href": "https://www.ithome.com/1/001/709.htm"},
+        {"label": "The Guardian", "href": "https://www.theguardian.com/technology/2026/sep/13/openai-sam-altman-elon-musk-back-anthropic-calls-brakes-ai-development"}
+      ]
+    },
+    {
+      "lab": "INDUSTRY",
+      "accent": [138, 180, 248],
+      "head": "三家在谈行业标准组织",
+      "body": "据 The Information（9 月 13 日转述）：Anthropic、OpenAI、谷歌自 7 月起开过工作组会，讨论成立行业主导的 AI 标准机构，重点是发布前的技术测试与审计。阿莫迪在推；奥特曼支持「政府没动起来时，实验室先自己建」；三人对机构该长什么样仍有分歧（偏政府牌照、行业自律或国际核证）。",
+      "why": "谁写规则、谁审模型，会直接影响 Meta、xAI 等后来者怎么上线。",
+      "links": [
+        {"label": "AI Weekly 摘要", "href": "https://aiweekly.co/alerts/anthropic-openai-google-meet-since-july-on-ai-standards-body"}
       ]
     },
     {
       "lab": "OPENAI",
       "accent": [255, 159, 67],
-      "head": "补报：Agents API 公测，把 Codex 那套托管出来",
-      "body": "OpenAI 官方 9 月 10 日宣布 Agents API 进入公开测试：把支撑 Codex 的 harness（负责长会话、工具调度、子 Agent 协作的那套运行框架）做成托管 API。开发者指定任务、模型、工具和运行环境即可；可选用 OpenAI 托管沙盒，或接自己的/合作方沙盒。官方称 API 本身不另收费，按模型和工具用量计费。中文圈 9 月 12 日仍在密集解读。",
-      "why": "想做能长时间干活的 Agent，不必从零自建调度层；模型升级时 harness 也由官方跟着维护。",
+      "head": "史上最快专用模型 Spark 本周退役",
+      "body": "Codex 负责人 Tibo 9 月 11 日宣布：GPT-5.3-Codex-Spark「下周」退役（约指本周）。它 2 月上线，跑在 Cerebras 晶圆上，峰值约每秒 1200 token，但能力明显弱于完整版；Cerebras 8 月给旗舰 GPT-5.6 Sol 开了 Ultrafast（约每秒 750 token、能力不打折）后，专用「快模型」价值大减。中文圈 9 月 13 日仍在密集解读。",
+      "why": "「快」正在从单独一个阉割模型，变成旗舰模型上的付费速度档。",
       "links": [
-        {"label": "OpenAI 官方", "href": "https://openai.com/index/introducing-the-agents-api/"},
-        {"label": "开发者文档", "href": "https://developers.openai.com/api/docs/guides/agents-api/overview"},
-        {"label": "36氪", "href": "https://eu.36kr.com/zh/p/3979785466730377"}
+        {"label": "36氪/新智元", "href": "https://eu.36kr.com/zh/p/3981223980923651"},
+        {"label": "Tibo 原帖", "href": "https://x.com/thsottiaux/status/2098300998968357218"}
       ]
     }
   ]
