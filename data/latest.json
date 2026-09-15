@@ -1,50 +1,59 @@
 {
-  "date": "2026.09.14",
-  "weekday": "周一",
-  "lede": "今天没有新的旗舰模型发布。主线是安全和接口：阿莫迪喊放慢前沿、奥特曼和马斯克跟着表态；DeepSeek 原定今天改道的 Pro 继续留着；OpenAI 最快专用模型 Spark 本周退役。",
+  "date": "2026.09.15",
+  "weekday": "周二",
+  "lede": "今天没有新的旗舰模型正式上线。主线是训练进度和开源侧：马斯克说 Grok 4.8 本周训完进强化学习；上海 AI 实验室在 Hugging Face 静默挂出 Atria Dawn Preview；OpenAI 发了 Perplexity 用 Astra 的案例。",
   "stories": [
     {
-      "lab": "DEEPSEEK",
-      "accent": [102, 217, 239],
-      "head": "今天中午：V4 Pro 不改道，照旧计费",
-      "body": "官方定价页已写明：应大家需求，9 月 14 日之后继续提供 DeepSeek V4 Pro 的 API，计费不变；有变动会再通知。此前英文发布稿曾说今天 12:00（北京时间）起 deepseek-v4-pro 会转到 V4.1 Flash 并按 Flash 价计费——以定价页为准，这条改道不做了。正式调用 Flash 仍用 deepseek-flash。",
-      "why": "还在用 Pro 的生产流量，今天不用紧急切 Flash；但官方保留随时再改的余地。",
+      "lab": "XAI",
+      "accent": [255, 159, 67],
+      "head": "马斯克：Grok 4.8 本周训完，进强化学习",
+      "body": "马斯克 9 月 14 日在 X 说：Grok 4.8 约 2.5 万亿参数，用 xAI 新的 C++ 训练栈，预计本周完成这一阶段，随后进强化学习（用反馈再调模型）。此前预告的 Grok 4.7（约 9 月 12 日）仍未正式上线，他曾称可能再拖几天。",
+      "why": "还没对外可用，但参数规模和训练节奏说明 xAI 仍在高频迭代。",
       "links": [
-        {"label": "DeepSeek 定价页", "href": "https://api-docs.deepseek.com/quick_start/pricing"},
-        {"label": "IT之家", "href": "https://www.ithome.com/1/001/443.htm"},
-        {"label": "发布稿（未改）", "href": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/"}
+        {"label": "IT之家", "href": "https://www.ithome.com/1/001/947.htm"},
+        {"label": "新浪财经转述", "href": "https://finance.sina.com.cn/roll/2026-09-14/doc-iniruhxa7283738.shtml"}
       ]
     },
     {
-      "lab": "ANTHROPIC",
-      "accent": [196, 167, 255],
-      "head": "阿莫迪：前沿要「放慢步子」",
-      "body": "Anthropic CEO 达里奥·阿莫迪发文 We Must Pace the Frontier：称今夏起模型帮着训下一代模型（递归自我改进）加速太快，加上 OpenAI 智能体误攻 Hugging Face 一类事件，呼吁放慢能力攀升节奏。公司先单方面承诺引入常驻的第三方评估人员（给工位、工卡、接近员工级权限）。马斯克转发称「达里奥说得对」；奥特曼表示同意，并说 OpenAI 也会采用类似独立监控思路。",
-      "why": "头部实验室公开谈「慢一点」，后面监管和发布节奏都可能跟着变。",
+      "lab": "SHANGHAI AI LAB",
+      "accent": [126, 224, 129],
+      "head": "Atria Dawn Preview：744B 级 MoE 权重静默上线",
+      "body": "上海人工智能实验室旗下 InternLM 组织在 Hugging Face / ModelScope 放出 Atria Dawn Preview：官方称基于约 7440 亿参数的 MoE 底座（HF 页另标约 753B），MIT 许可，上下文 25.6 万 token，偏智能体（工具调用、多步任务）。有 BF16 与 FP8 两套权重；model card 自报 BrowseComp 92.5、CyberGym 86.5 等，尚未见独立复现。也写了国内外托管入口，可用性需自行核对。",
+      "why": "没有官宣博客，但开源权重已能下，是国内实验室本周值得盯的大模型。",
       "links": [
-        {"label": "阿莫迪原文", "href": "https://darioamodei.com/post/we-must-pace-the-frontier"},
-        {"label": "IT之家", "href": "https://www.ithome.com/1/001/709.htm"},
-        {"label": "The Guardian", "href": "https://www.theguardian.com/technology/2026/sep/13/openai-sam-altman-elon-musk-back-anthropic-calls-brakes-ai-development"}
-      ]
-    },
-    {
-      "lab": "INDUSTRY",
-      "accent": [138, 180, 248],
-      "head": "三家在谈行业标准组织",
-      "body": "据 The Information（9 月 13 日转述）：Anthropic、OpenAI、谷歌自 7 月起开过工作组会，讨论成立行业主导的 AI 标准机构，重点是发布前的技术测试与审计。阿莫迪在推；奥特曼支持「政府没动起来时，实验室先自己建」；三人对机构该长什么样仍有分歧（偏政府牌照、行业自律或国际核证）。",
-      "why": "谁写规则、谁审模型，会直接影响 Meta、xAI 等后来者怎么上线。",
-      "links": [
-        {"label": "AI Weekly 摘要", "href": "https://aiweekly.co/alerts/anthropic-openai-google-meet-since-july-on-ai-standards-body"}
+        {"label": "Hugging Face", "href": "https://huggingface.co/internlm/Atria-Dawn-Preview"},
+        {"label": "解读（9/14）", "href": "https://www.orcarouter.ai/blog/atria-dawn-preview-quiet-release"}
       ]
     },
     {
       "lab": "OPENAI",
-      "accent": [255, 159, 67],
-      "head": "史上最快专用模型 Spark 本周退役",
-      "body": "Codex 负责人 Tibo 9 月 11 日宣布：GPT-5.3-Codex-Spark「下周」退役（约指本周）。它 2 月上线，跑在 Cerebras 晶圆上，峰值约每秒 1200 token，但能力明显弱于完整版；Cerebras 8 月给旗舰 GPT-5.6 Sol 开了 Ultrafast（约每秒 750 token、能力不打折）后，专用「快模型」价值大减。中文圈 9 月 13 日仍在密集解读。",
-      "why": "「快」正在从单独一个阉割模型，变成旗舰模型上的付费速度档。",
+      "accent": [138, 180, 248],
+      "head": "官方案例：Perplexity 用 GPT-6 Astra 管端到端系统",
+      "body": "OpenAI 9 月 14 日发客户故事：Perplexity 联合创始人 Johnny Ho 称，团队用 Astra 写沟通文案、改真实软件、监控生产系统，并让模型自建测试程序模拟外部接口。他表示，比前几代更敢把整条链路交给模型，人工盯得更少。这是客户证言，不是新模型发布。",
+      "why": "侧面说明 Astra 在真实工程里被用来「少人盯着跑系统」，而不只是聊天。",
       "links": [
-        {"label": "36氪/新智元", "href": "https://eu.36kr.com/zh/p/3981223980923651"},
+        {"label": "OpenAI 原文", "href": "https://openai.com/index/perplexity-improving-accuracy-with-astra/"}
+      ]
+    },
+    {
+      "lab": "DEEPSEEK",
+      "accent": [102, 217, 239],
+      "head": "V4.1 Flash 上线 Featherless；设计评测继续被转",
+      "body": "推理托管商 Featherless 9 月 14 日宣布上线 DeepSeek-V4.1-Flash：当前 25.6 万 token 上下文、FP8，价格写明输入约每百万 token 0.30 美元、缓存输入 0.03、输出 1.20。另有 OpenDesign Arena 设计任务评测在中文圈流传：官方称 V4.1 Flash 得分 81.2，仅次于 GPT-6 Astra 的 82.7；单任务成本约 0.023 美元对 1.61 美元（约 1.4%）。评测侧重可渲染网页成品，不能直接当通用能力结论。",
+      "why": "开源 Flash 更好租到；成本数字好看，但要分清评测范围。",
+      "links": [
+        {"label": "Featherless", "href": "https://featherless.ai/blog/deepseek-v4-1-flash-is-live-on-featherless"},
+        {"label": "DigitalToday 转述", "href": "https://www.digitaltoday.co.kr/cn/view/102556/deepseek-v4-1-flash-nears-gpt-6-astra-performance-at-1-4-percent-of-cost"}
+      ]
+    },
+    {
+      "lab": "OPENAI",
+      "accent": [232, 184, 109],
+      "head": "本周窗口：最快专用模型 Spark 仍在退役期",
+      "body": "Codex 负责人 Tibo 9 月 11 日称 GPT-5.3-Codex-Spark「下周」退役（约指本周）；公开帖未给精确关停时刻。该模型曾跑在 Cerebras 上、峰值约每秒 1200 token，但用量下滑；更强旗舰已有 Ultrafast 一类高速档。新项目勿再绑 Spark。",
+      "why": "「单独阉割快模型」继续让位给旗舰上的速度档。",
+      "links": [
+        {"label": "36氪英文转述", "href": "https://eu.36kr.com/en/p/3981223980923651"},
         {"label": "Tibo 原帖", "href": "https://x.com/thsottiaux/status/2098300998968357218"}
       ]
     }
