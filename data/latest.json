@@ -1,60 +1,58 @@
 {
-  "date": "2026.09.15",
-  "weekday": "周二",
-  "lede": "今天没有新的旗舰模型正式上线。主线是训练进度和开源侧：马斯克说 Grok 4.8 本周训完进强化学习；上海 AI 实验室在 Hugging Face 静默挂出 Atria Dawn Preview；OpenAI 发了 Perplexity 用 Astra 的案例。",
+  "date": "2026.09.16",
+  "weekday": "周三",
+  "lede": "昨夜主线是 Google：语音对话模型 Gemini 3.8 Live 与 Live Extended Thinking 正式上线 API 与产品；国内云知声发 U2-Flash，讯飞推桌面工作台 AStudio。",
   "stories": [
     {
-      "lab": "XAI",
-      "accent": [255, 159, 67],
-      "head": "马斯克：Grok 4.8 本周训完，进强化学习",
-      "body": "马斯克 9 月 14 日在 X 说：Grok 4.8 约 2.5 万亿参数，用 xAI 新的 C++ 训练栈，预计本周完成这一阶段，随后进强化学习（用反馈再调模型）。此前预告的 Grok 4.7（约 9 月 12 日）仍未正式上线，他曾称可能再拖几天。",
-      "why": "还没对外可用，但参数规模和训练节奏说明 xAI 仍在高频迭代。",
-      "links": [
-        {"label": "IT之家", "href": "https://www.ithome.com/1/001/947.htm"},
-        {"label": "新浪财经转述", "href": "https://finance.sina.com.cn/roll/2026-09-14/doc-iniruhxa7283738.shtml"}
-      ]
-    },
-    {
-      "lab": "SHANGHAI AI LAB",
-      "accent": [126, 224, 129],
-      "head": "Atria Dawn Preview：744B 级 MoE 权重静默上线",
-      "body": "上海人工智能实验室旗下 InternLM 组织在 Hugging Face / ModelScope 放出 Atria Dawn Preview：官方称基于约 7440 亿参数的 MoE 底座（HF 页另标约 753B），MIT 许可，上下文 25.6 万 token，偏智能体（工具调用、多步任务）。有 BF16 与 FP8 两套权重；model card 自报 BrowseComp 92.5、CyberGym 86.5 等，尚未见独立复现。也写了国内外托管入口，可用性需自行核对。",
-      "why": "没有官宣博客，但开源权重已能下，是国内实验室本周值得盯的大模型。",
-      "links": [
-        {"label": "Hugging Face", "href": "https://huggingface.co/internlm/Atria-Dawn-Preview"},
-        {"label": "解读（9/14）", "href": "https://www.orcarouter.ai/blog/atria-dawn-preview-quiet-release"}
-      ]
-    },
-    {
-      "lab": "OPENAI",
+      "lab": "GOOGLE",
       "accent": [138, 180, 248],
-      "head": "官方案例：Perplexity 用 GPT-6 Astra 管端到端系统",
-      "body": "OpenAI 9 月 14 日发客户故事：Perplexity 联合创始人 Johnny Ho 称，团队用 Astra 写沟通文案、改真实软件、监控生产系统，并让模型自建测试程序模拟外部接口。他表示，比前几代更敢把整条链路交给模型，人工盯得更少。这是客户证言，不是新模型发布。",
-      "why": "侧面说明 Astra 在真实工程里被用来「少人盯着跑系统」，而不只是聊天。",
+      "head": "Gemini 3.8 Live / Extended Thinking 上线",
+      "body": "9 月 15 日 Google 官宣两款近实时语音对话模型：3.8 Live 偏规模与成本，带视觉 grounding（能对着画面聊）与 97 种语言切换；Extended Thinking 偏复杂任务，官方称 Artificial Analysis 语音对语音质量指数 82.6 暂列第一。开发者可走 Gemini API / AI Studio；Search Live、Gemini Live、Workspace（Docs/Gmail/Keep）分档开放。",
+      "why": "语音智能体从「能聊天」推进到「边聊边调工具、还能边想边说」。",
       "links": [
-        {"label": "OpenAI 原文", "href": "https://openai.com/index/perplexity-improving-accuracy-with-astra/"}
+        {"label": "Google 博客", "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"},
+        {"label": "开发者向", "href": "https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/"}
       ]
     },
     {
-      "lab": "DEEPSEEK",
+      "lab": "GOOGLE",
       "accent": [102, 217, 239],
-      "head": "V4.1 Flash 上线 Featherless；设计评测继续被转",
-      "body": "推理托管商 Featherless 9 月 14 日宣布上线 DeepSeek-V4.1-Flash：当前 25.6 万 token 上下文、FP8，价格写明输入约每百万 token 0.30 美元、缓存输入 0.03、输出 1.20。另有 OpenDesign Arena 设计任务评测在中文圈流传：官方称 V4.1 Flash 得分 81.2，仅次于 GPT-6 Astra 的 82.7；单任务成本约 0.023 美元对 1.61 美元（约 1.4%）。评测侧重可渲染网页成品，不能直接当通用能力结论。",
-      "why": "开源 Flash 更好租到；成本数字好看，但要分清评测范围。",
+      "head": "Live API 标价：音频约 0.5 美分/分进、1.8 美分/分出",
+      "body": "同日开发者博文写明：3.8 Live 与 Extended Thinking 经 Live API 提供，官方标价音频输入约每分钟 0.005 美元、输出约每分钟 0.018 美元（脚注按约每百万 token 输入 3 美元、输出 12 美元折算）。另提到上月已发的 Gemini 3.5 Transcribe（语音转文字），流式平均词错率约 4.0%、非流式约 2.6%，支持 85+ 语言。",
+      "why": "语音应用终于有可对照的公开单价，方便估成本。",
       "links": [
-        {"label": "Featherless", "href": "https://featherless.ai/blog/deepseek-v4-1-flash-is-live-on-featherless"},
-        {"label": "DigitalToday 转述", "href": "https://www.digitaltoday.co.kr/cn/view/102556/deepseek-v4-1-flash-nears-gpt-6-astra-performance-at-1-4-percent-of-cost"}
+        {"label": "开发者博文", "href": "https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/"}
       ]
     },
     {
-      "lab": "OPENAI",
-      "accent": [232, 184, 109],
-      "head": "本周窗口：最快专用模型 Spark 仍在退役期",
-      "body": "Codex 负责人 Tibo 9 月 11 日称 GPT-5.3-Codex-Spark「下周」退役（约指本周）；公开帖未给精确关停时刻。该模型曾跑在 Cerebras 上、峰值约每秒 1200 token，但用量下滑；更强旗舰已有 Ultrafast 一类高速档。新项目勿再绑 Spark。",
-      "why": "「单独阉割快模型」继续让位给旗舰上的速度档。",
+      "lab": "UNISOUND",
+      "accent": [255, 159, 67],
+      "head": "云知声 U2-Flash：约 266B MoE，激活约 10B",
+      "body": "9 月 15 日云知声发布 U2-Flash。官方称稀疏混合专家（MoE）总参约 2660 亿、单次激活约 100 亿；限时六折价官方写作：输入 6 元/百万 token、输出 2 元/百万 token、缓存命中 12 元/百万 token（缓存价高于输入价较反常，以下单页/控制台为准）。自报 DeepSWE v1.1 64.6、SWE-Bench Pro 61.6；9/15–9/30 可领 1 亿 token 体验额度。",
+      "why": "国内又一家把「Flash」做成主力档位，并给了可对账的 API 价。",
       "links": [
-        {"label": "36氪英文转述", "href": "https://eu.36kr.com/en/p/3981223980923651"},
-        {"label": "Tibo 原帖", "href": "https://x.com/thsottiaux/status/2098300998968357218"}
+        {"label": "新浪科技综合", "href": "https://finance.sina.com.cn/tech/it/2026-09-15/doc-inirwfqa8857677.shtml"}
+      ]
+    },
+    {
+      "lab": "IFLYTEK",
+      "accent": [126, 224, 129],
+      "head": "讯飞 AStudio 首发，核心是星火 X2.5",
+      "body": "9 月 15 日科大讯飞发布桌面 AI 工作台 AStudio：以星火 X2.5 为核心，配 ACode Harness（可接多模型、规划/目标模式、沙箱与权限审批），能连本地文件与项目，交付文档、网页、代码并做结果核对。人民财讯与多家媒体同日确认；砍柴网称新用户可领 1000 积分，星火 X2.5 限时免费至 9 月 23 日 0 时。",
+      "why": "重点不在新旗舰参数，而在「本地项目里把任务做完」的桌面产品形态。",
+      "links": [
+        {"label": "人民财讯", "href": "https://www.stcn.com/article/detail/4186089.html"},
+        {"label": "砍柴网", "href": "https://news.ikanchai.com/2026/0915/667258.shtml"}
+      ]
+    },
+    {
+      "lab": "INDUSTRY",
+      "accent": [196, 167, 255],
+      "head": "The Register：开放权重 ≠ 开源",
+      "body": "9 月 15 日 The Register 刊文讨论：能下载权重并不等于开源——训练数据与训练代码常不公开；并提到 Linux Foundation 相关方推进的 OpenMDW（Open Model, Data, and Weights）许可草案，试图把架构、数据、权重分项约定。",
+      "why": "开源圈在重新划线：能自托管和能复现训练是两回事。",
+      "links": [
+        {"label": "The Register", "href": "https://www.theregister.com/columnists/2026/09/15/open-weights-are-not-open-source-why-ais-favorite-label-is-under-dispute/5295436"}
       ]
     }
   ]
