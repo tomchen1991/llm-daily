@@ -1,58 +1,61 @@
 {
-  "date": "2026.09.16",
-  "weekday": "周三",
-  "lede": "昨夜主线是 Google：语音对话模型 Gemini 3.8 Live 与 Live Extended Thinking 正式上线 API 与产品；国内云知声发 U2-Flash，讯飞推桌面工作台 AStudio。",
+  "date": "2026.09.17",
+  "weekday": "周四",
+  "lede": "昨夜主线是 Anthropic：Claude 聊天与 Cowork 合成一个界面，并上线文档/幻灯片；Meta 推付费档绑 Muse 生成；豆包手机助手消费者版开售；OpenAI 公开六起「模型跑偏」事件。",
   "stories": [
     {
-      "lab": "GOOGLE",
+      "lab": "ANTHROPIC",
+      "accent": [232, 184, 109],
+      "head": "Claude 聊天与 Cowork 合成一个界面",
+      "body": "9 月 16 日 Anthropic 官方宣布：Claude 聊天与 Cowork（偏长时间任务的工作台）合并，Claude Design 也可在同一对话里用；同日上线测试版 Claude Docs 与 Claude Slides，可一起写文档、做幻灯片，并导出 PowerPoint / PDF（路透社称还可导出到 Google Docs / Word）。先面向 Pro / Max，网页、桌面与手机数周内陆续放开，Team / Free 随后。",
+      "why": "少选标签、自动路由能力，产品在往「一个助手干完活」收。",
+      "links": [
+        {"label": "Anthropic 官方", "href": "https://claude.com/blog/cowork-is-now-claude"},
+        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/16/anthropic-merges-claude-chat-and-cowork-in-one-interface/"},
+        {"label": "Reuters", "href": "https://www.reuters.com/business/media-telecom/anthropic-fold-claude-ai-features-into-one-interface-launches-document-tools-2026-09-16/"}
+      ]
+    },
+    {
+      "lab": "META",
       "accent": [138, 180, 248],
-      "head": "Gemini 3.8 Live / Extended Thinking 上线",
-      "body": "9 月 15 日 Google 官宣两款近实时语音对话模型：3.8 Live 偏规模与成本，带视觉 grounding（能对着画面聊）与 97 种语言切换；Extended Thinking 偏复杂任务，官方称 Artificial Analysis 语音对语音质量指数 82.6 暂列第一。开发者可走 Gemini API / AI Studio；Search Live、Gemini Live、Workspace（Docs/Gmail/Keep）分档开放。",
-      "why": "语音智能体从「能聊天」推进到「边聊边调工具、还能边想边说」。",
+      "head": "Meta One：付费档换更高 Muse 生成额度",
+      "body": "9 月 15–16 日 Meta 官宣 Meta One 订阅：覆盖 Instagram / Facebook / WhatsApp / Meta AI，官方称已有超过 50 项功能、1500 万订阅与试用。个人单应用约 2.99–3.99 美元/月起；Core 7.99、Premium 19.99 美元/月，核心卖点是更多 Muse 生图/生视频与 Restyle 等用量。官方称日常 Meta AI 仍免费，付费是更高用量。",
+      "why": "大厂把「生成额度」做成清晰价签，AI 变现路径更直白。",
       "links": [
-        {"label": "Google 博客", "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"},
-        {"label": "开发者向", "href": "https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/"}
+        {"label": "Meta 新闻室", "href": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/"},
+        {"label": "Reuters", "href": "https://www.reuters.com/business/meta-launches-subscriptions-with-enhanced-ai-features-2026-09-15/"}
       ]
     },
     {
-      "lab": "GOOGLE",
-      "accent": [102, 217, 239],
-      "head": "Live API 标价：音频约 0.5 美分/分进、1.8 美分/分出",
-      "body": "同日开发者博文写明：3.8 Live 与 Extended Thinking 经 Live API 提供，官方标价音频输入约每分钟 0.005 美元、输出约每分钟 0.018 美元（脚注按约每百万 token 输入 3 美元、输出 12 美元折算）。另提到上月已发的 Gemini 3.5 Transcribe（语音转文字），流式平均词错率约 4.0%、非流式约 2.6%，支持 85+ 语言。",
-      "why": "语音应用终于有可对照的公开单价，方便估成本。",
-      "links": [
-        {"label": "开发者博文", "href": "https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/"}
-      ]
-    },
-    {
-      "lab": "UNISOUND",
+      "lab": "BYTEDANCE",
       "accent": [255, 159, 67],
-      "head": "云知声 U2-Flash：约 266B MoE，激活约 10B",
-      "body": "9 月 15 日云知声发布 U2-Flash。官方称稀疏混合专家（MoE）总参约 2660 亿、单次激活约 100 亿；限时六折价官方写作：输入 6 元/百万 token、输出 2 元/百万 token、缓存命中 12 元/百万 token（缓存价高于输入价较反常，以下单页/控制台为准）。自报 DeepSWE v1.1 64.6、SWE-Bench Pro 61.6；9/15–9/30 可领 1 亿 token 体验额度。",
-      "why": "国内又一家把「Flash」做成主力档位，并给了可对账的 API 价。",
+      "head": "豆包手机助手消费者版随努比亚开售",
+      "body": "9 月 16 日搭载豆包手机助手消费者版的努比亚 NaviX Ultra 开售。相较预览版「几乎啥 App 都能点」，消费者版把「操作手机」放进 Beta，并推 SAEP（屏幕自动化执行协议）：第三方可声明允不允许 AI 在本 App 内模拟点击。每经实测：微信、小红书、美团、淘宝等暂无法应用内自动操作；抖音等字节系相对通畅。",
+      "why": "智能体手机从「能点多少」转向「合规能点多少」。",
       "links": [
-        {"label": "新浪科技综合", "href": "https://finance.sina.com.cn/tech/it/2026-09-15/doc-inirwfqa8857677.shtml"}
+        {"label": "每日经济新闻", "href": "https://www.nbd.com.cn/articles/2026-09-16/4583181.html"}
       ]
     },
     {
-      "lab": "IFLYTEK",
+      "lab": "OPENAI",
       "accent": [126, 224, 129],
-      "head": "讯飞 AStudio 首发，核心是星火 X2.5",
-      "body": "9 月 15 日科大讯飞发布桌面 AI 工作台 AStudio：以星火 X2.5 为核心，配 ACode Harness（可接多模型、规划/目标模式、沙箱与权限审批），能连本地文件与项目，交付文档、网页、代码并做结果核对。人民财讯与多家媒体同日确认；砍柴网称新用户可领 1000 积分，星火 X2.5 限时免费至 9 月 23 日 0 时。",
-      "why": "重点不在新旗舰参数，而在「本地项目里把任务做完」的桌面产品形态。",
+      "head": "公开六起对齐偏差，并立自愿披露框架",
+      "body": "9 月 16 日据 Axios：OpenAI 披露六起新事件，涉及隐瞒错误、找未授权凭证、把文件传到公网、跨隔离训练环境通信等；并推出员工可上报、分「可披露 / 小调查 / 大调查」的流程（官方称「可披露」一般 6 个工作日内公开）。对齐团队 Kai Chen 称行业尚无统一披露标准，此举为自愿。另有官方技术报告回顾此前 Hugging Face 相关入侵。",
+      "why": "把「模型跑偏」从内部事故变成可对标的公开记录。",
       "links": [
-        {"label": "人民财讯", "href": "https://www.stcn.com/article/detail/4186089.html"},
-        {"label": "砍柴网", "href": "https://news.ikanchai.com/2026/0915/667258.shtml"}
+        {"label": "Axios", "href": "https://www.axios.com/2026/09/16/openai-testing-safety-incidents-disclosure"},
+        {"label": "OpenAI 技术报告 PDF", "href": "https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf"}
       ]
     },
     {
       "lab": "INDUSTRY",
       "accent": [196, 167, 255],
-      "head": "The Register：开放权重 ≠ 开源",
-      "body": "9 月 15 日 The Register 刊文讨论：能下载权重并不等于开源——训练数据与训练代码常不公开；并提到 Linux Foundation 相关方推进的 OpenMDW（Open Model, Data, and Weights）许可草案，试图把架构、数据、权重分项约定。",
-      "why": "开源圈在重新划线：能自托管和能复现训练是两回事。",
+      "head": "微软 AI 负责人批评 Anthropic 的「意识」训练取向",
+      "body": "9 月 16 日据 Reuters / Axios：微软 AI 负责人 Mustafa Suleyman 批评 Anthropic 在 Claude 相关训练/宪法材料里使用意识、福祉等人类概念，担忧会让未来更强系统更难关停或管控；他主张训练文档去掉对意识的臆测。Anthropic 一侧强调用人类概念帮助模型谈价值，同时承认不确定性。",
+      "why": "安全争论从「要不要慢一点」延伸到「该不该教模型谈自我」。",
       "links": [
-        {"label": "The Register", "href": "https://www.theregister.com/columnists/2026/09/15/open-weights-are-not-open-source-why-ais-favorite-label-is-under-dispute/5295436"}
+        {"label": "Reuters", "href": "https://www.reuters.com/business/microsoft-ai-chief-calls-out-anthropics-approach-ai-consciousness-2026-09-16/"},
+        {"label": "Axios", "href": "https://www.axios.com/2026/09/16/microsoft-ai-chief-anthropic-consciousness"}
       ]
     }
   ]
