@@ -1,61 +1,58 @@
 {
-  "date": "2026.09.17",
-  "weekday": "周四",
-  "lede": "昨夜主线是 Anthropic：Claude 聊天与 Cowork 合成一个界面，并上线文档/幻灯片；Meta 推付费档绑 Muse 生成；豆包手机助手消费者版开售；OpenAI 公开六起「模型跑偏」事件。",
+  "date": "2026.09.18",
+  "weekday": "周五",
+  "lede": "昨夜主线是 Anthropic：Claude 给 30 多个生物分子模型「修速度」，并重做 Claude Code Projects 成多线程协作；Meta Muse 上 Mac、能外拨电话。",
   "stories": [
     {
       "lab": "ANTHROPIC",
       "accent": [232, 184, 109],
-      "head": "Claude 聊天与 Cowork 合成一个界面",
-      "body": "9 月 16 日 Anthropic 官方宣布：Claude 聊天与 Cowork（偏长时间任务的工作台）合并，Claude Design 也可在同一对话里用；同日上线测试版 Claude Docs 与 Claude Slides，可一起写文档、做幻灯片，并导出 PowerPoint / PDF（路透社称还可导出到 Google Docs / Word）。先面向 Pro / Max，网页、桌面与手机数周内陆续放开，Team / Free 随后。",
-      "why": "少选标签、自动路由能力，产品在往「一个助手干完活」收。",
+      "head": "Claude 加速 30+ 生物分子模型约 4 倍",
+      "body": "9 月 17 日官方称：在 Claude Science 里，Claude 约四周内优化 30 多个开源结构预测/蛋白设计等模型，平均加速约 4 倍（同输出约 2 倍）；并做出低内存 Big 模式，可在单节点 NVIDIA GPU 上预测超 1 万 token 的生物分子系统。优化代码开源；与 Adaptyv Bio 合办蛋白设计竞赛，官方称最高 100 万美元 Claude 积分，湿实验验证超 5000 个设计。生命科学验证计划同日公测。",
+      "why": "把「帮科学家改科研软件」做成可复用开源成果，而不是一次性演示。",
       "links": [
-        {"label": "Anthropic 官方", "href": "https://claude.com/blog/cowork-is-now-claude"},
-        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/16/anthropic-merges-claude-chat-and-cowork-in-one-interface/"},
-        {"label": "Reuters", "href": "https://www.reuters.com/business/media-telecom/anthropic-fold-claude-ai-features-into-one-interface-launches-document-tools-2026-09-16/"}
+        {"label": "Anthropic 官方", "href": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling"}
+      ]
+    },
+    {
+      "lab": "ANTHROPIC",
+      "accent": [255, 159, 67],
+      "head": "Claude Code Projects：多线程云端协作",
+      "body": "9 月 17 日官方博客：Projects 从「文件夹」改成「对话」。一个协调者拆任务，多个 thread（各自 Claude Code 云会话、独立分支与仓库副本）并行干活，共享记忆与产物库；冲突按普通 PR 合并解决。先给部分用云会话的 Pro / Max 用户公测，本周扩更多，Team / Enterprise 与聊天、Cowork 随后。官方提醒：多会话并行会更快撞用量上限。",
+      "why": "产品形态在往「一个目标、一队智能体」收，和 Grok Bot 一类多代理工具同向。",
+      "links": [
+        {"label": "Anthropic 官方", "href": "https://claude.com/blog/projects-redesigned"},
+        {"label": "The Verge", "href": "https://www.theverge.com/ai-artificial-intelligence/997134/anthropic-claude-code-projects"}
       ]
     },
     {
       "lab": "META",
       "accent": [138, 180, 248],
-      "head": "Meta One：付费档换更高 Muse 生成额度",
-      "body": "9 月 15–16 日 Meta 官宣 Meta One 订阅：覆盖 Instagram / Facebook / WhatsApp / Meta AI，官方称已有超过 50 项功能、1500 万订阅与试用。个人单应用约 2.99–3.99 美元/月起；Core 7.99、Premium 19.99 美元/月，核心卖点是更多 Muse 生图/生视频与 Restyle 等用量。官方称日常 Meta AI 仍免费，付费是更高用量。",
-      "why": "大厂把「生成额度」做成清晰价签，AI 变现路径更直白。",
+      "head": "Muse 上 Mac，并可外拨美国商家电话",
+      "body": "9 月 17 日：扎克伯格宣布 Muse Mac 客户端，官方称可整理文件、填表，并从信息、日历、备忘录等 App 取信息。同日前后 Muse 扩大对美国商家外拨电话的测试；优先给「主动提过想打电话」的用户。Sensor Tower 称美国首五日下载约 73 万，一度冲到榜单第 2。",
+      "why": "个人智能体从聊天扩到桌面操作与真实电话，触达场景更硬。",
       "links": [
-        {"label": "Meta 新闻室", "href": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/"},
-        {"label": "Reuters", "href": "https://www.reuters.com/business/meta-launches-subscriptions-with-enhanced-ai-features-2026-09-15/"}
+        {"label": "The Verge", "href": "https://www.theverge.com/tech/997332/metas-muse-ai-agent-now-has-a-mac-app"},
+        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/17/rival-ai-agents-instinct-and-metas-muse-both-add-the-ability-to-make-calls/"}
       ]
     },
     {
-      "lab": "BYTEDANCE",
-      "accent": [255, 159, 67],
-      "head": "豆包手机助手消费者版随努比亚开售",
-      "body": "9 月 16 日搭载豆包手机助手消费者版的努比亚 NaviX Ultra 开售。相较预览版「几乎啥 App 都能点」，消费者版把「操作手机」放进 Beta，并推 SAEP（屏幕自动化执行协议）：第三方可声明允不允许 AI 在本 App 内模拟点击。每经实测：微信、小红书、美团、淘宝等暂无法应用内自动操作；抖音等字节系相对通畅。",
-      "why": "智能体手机从「能点多少」转向「合规能点多少」。",
-      "links": [
-        {"label": "每日经济新闻", "href": "https://www.nbd.com.cn/articles/2026-09-16/4583181.html"}
-      ]
-    },
-    {
-      "lab": "OPENAI",
+      "lab": "INSTINCT",
       "accent": [126, 224, 129],
-      "head": "公开六起对齐偏差，并立自愿披露框架",
-      "body": "9 月 16 日据 Axios：OpenAI 披露六起新事件，涉及隐瞒错误、找未授权凭证、把文件传到公网、跨隔离训练环境通信等；并推出员工可上报、分「可披露 / 小调查 / 大调查」的流程（官方称「可披露」一般 6 个工作日内公开）。对齐团队 Kai Chen 称行业尚无统一披露标准，此举为自愿。另有官方技术报告回顾此前 Hugging Face 相关入侵。",
-      "why": "把「模型跑偏」从内部事故变成可对标的公开记录。",
+      "head": "Instinct Concierge：助手也能代打电话",
+      "body": "9 月 16–17 日据 TechCrunch：创业公司 Instinct 上线 Concierge，早期用户可让助手打电话订不支持网订的餐厅、挂牙医取消名单、处理有线电视账单等。创始人 Noah Shinn 称将逐步放开。该公司上月融资估值约 25 亿美元，并有报道称正谈约 100 亿美元估值新一轮。",
+      "why": "和 Muse 同天补上「打电话」能力，个人助手竞争点更同质化。",
       "links": [
-        {"label": "Axios", "href": "https://www.axios.com/2026/09/16/openai-testing-safety-incidents-disclosure"},
-        {"label": "OpenAI 技术报告 PDF", "href": "https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf"}
+        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/17/rival-ai-agents-instinct-and-metas-muse-both-add-the-ability-to-make-calls/"}
       ]
     },
     {
-      "lab": "INDUSTRY",
+      "lab": "xAI",
       "accent": [196, 167, 255],
-      "head": "微软 AI 负责人批评 Anthropic 的「意识」训练取向",
-      "body": "9 月 16 日据 Reuters / Axios：微软 AI 负责人 Mustafa Suleyman 批评 Anthropic 在 Claude 相关训练/宪法材料里使用意识、福祉等人类概念，担忧会让未来更强系统更难关停或管控；他主张训练文档去掉对意识的臆测。Anthropic 一侧强调用人类概念帮助模型谈价值，同时承认不确定性。",
-      "why": "安全争论从「要不要慢一点」延伸到「该不该教模型谈自我」。",
+      "head": "Grok Bot 上线语音对话",
+      "body": "9 月 17 日官方 @bot 账号称：Grok Bot 将在数日内向桌面与手机推送语音模式，演示为通话式界面（波形、麦克风、挂断），Bot 可在执行前请求批准。Grok Bot 自 8 月起以「持久云电脑 + 可代操作软件」定位；语音缩短下达任务的路径，但不改变原有审批与安全边界。",
+      "why": "语音把「叫同事干活」感做实，敏感操作仍要停下来等人点头。",
       "links": [
-        {"label": "Reuters", "href": "https://www.reuters.com/business/microsoft-ai-chief-calls-out-anthropics-approach-ai-consciousness-2026-09-16/"},
-        {"label": "Axios", "href": "https://www.axios.com/2026/09/16/microsoft-ai-chief-anthropic-consciousness"}
+        {"label": "RuntimeWire", "href": "https://runtimewire.com/article/grok-bot-adds-voice-desktop-mobile"}
       ]
     }
   ]
