@@ -1,50 +1,50 @@
 {
-  "date": "2026.09.19",
-  "weekday": "周六",
-  "lede": "昨夜主线是阿里千问：Qwen3.8-Omni-Flash 把音视频理解和工具调用捆成一套可调用的全模态 Agent；Anthropic 则把安全评测「嵌进公司里」做成 Accenture 合作。",
+  "date": "2026.09.20",
+  "weekday": "周日",
+  "lede": "今天没什么大事。补三条次要动态：Anthropic 是否再发新模型的传闻、智谱 FlashX 提速档、以及 DeepSeek 低内存占用的二次解读。",
   "stories": [
-    {
-      "lab": "QWEN",
-      "accent": [255, 159, 67],
-      "head": "Qwen3.8-Omni-Flash：全模态 Agent 上线",
-      "body": "9 月 18 日阿里千问正式上线 Qwen3.8-Omni-Flash：同一模型吃文本、图像、音频、视频，支持约 100 万 token 上下文，并可规划任务、调用工具后交付结果。官方称相对上一代 Qwen3.5-Omni-Plus，在累计约 30 项评测上平均得分提升超过 26%；WildClawBench-MM 提升 36.5 分，UniClawBench 拿到 69.6 分。官方称音视频能力接近 Gemini 3.8 Flash、音频整体超过对方（均为自家对比）。API 已开放；国内报道称图文音视频输入低至约 0.8 元/百万 token；官方称每小时音频输入价降超 98%、音视频输入价降超 93%。另扩展并开源周边组件 Qwen-MM-Plugins，以及面向实时交互的 Qwen-Live Harness。权重未开源，走托管 API。",
-      "why": "全模态从「看懂」推进到「看懂后动手」，对会议纪要、长视频研究、语音 Agent 更直接。",
-      "links": [
-        {"label": "Qwen 博客", "href": "https://qwen.ai/blog?id=qwen3.8-omni-flash"},
-        {"label": "IT之家", "href": "https://www.ithome.com/1/004/049.htm"},
-        {"label": "TechNode", "href": "https://technode.com/2026/09/18/alibabas-qwen-releases-qwen3-8-omni-flash-with-1m-token-context/"}
-      ]
-    },
     {
       "lab": "ANTHROPIC",
       "accent": [232, 184, 109],
-      "head": "Anthropic × Accenture：驻场安全评测",
-      "body": "9 月 18 日 Anthropic 官方宣布与 Accenture 的 AI 专项业务 Faculty 合作：独立评测方将以接近员工的权限「嵌」进公司内部，观察训练与部署决策、做红队（故意找漏洞）、对齐评估与安全护栏测试。双方各自预计未来五年至少投入 10 亿美元建设相关能力；因尚无行业统一出资机制，Anthropic 将直接资助 Accenture 的工作。合作非独家，官方称也在与 METR 等非营利评测方讨论试点。官方强调：独立评测不减轻自身对模型安全的责任。",
-      "why": "把「第三方能不能进实验室看训练」从口号落成可执行合同，安全治理先例值得跟。",
+      "head": "传闻：考虑发新模型对冲 Astra",
+      "body": "9 月 19 日 Inside AI 援引三名知情人士称，Anthropic 正讨论是否再发一款新模型，以回应本月 OpenAI GPT-6 Astra 在企业侧的热度，并配合其拟议上市节奏。报道称公司也在评估新模型的安全表现；Anthropic 拒绝对此置评。CEO Amodei 9 月 12 日刚公开呼吁行业放慢能力迭代，与「再发一版」传闻形成张力。另：报道称 Ramp 监测的企业 AI 支出里 Astra 约占 13%、Claude Fable 约 8%；OpenRouter 上周 OpenAI 系花费首次在约两年半后超过 Anthropic（均为第三方口径）。",
+      "why": "还没官宣，但说明企业份额战已压到 IPO 叙事上；别当成发布确认。",
       "links": [
-        {"label": "Anthropic 官方", "href": "https://www.anthropic.com/news/accenture-embedded-evaluation"},
-        {"label": "Reuters", "href": "https://www.reuters.com/business/anthropic-accenture-invest-2-billion-ai-model-evaluation-safety-concerns-rise-2026-09-18/"}
+        {"label": "Inside AI", "href": "https://insideai.news/news/ai-in-business/anthropic-new-ai-model-release/12306/"}
       ]
     },
     {
-      "lab": "xAI",
-      "accent": [196, 167, 255],
-      "head": "Grok Voice Transcribe 2.0，Loom 全量接入",
-      "body": "9 月 18 日 SpaceXAI（原 xAI）公开 Grok Voice Transcribe 2.0：API 约 9 月 17 日已可用。官方称同价下准确度约为 1.0 的约两倍；定价维持录音 0.10 美元/小时、流式 0.20 美元/小时。支持说话人分离、词级时间戳、最多 8 路通道、每请求最多 100 个领域关键词等。Atlassian 称 Loom 已用它转录全部视频。官方称 Artificial Analysis 流式榜上其准确度居前（具体名次以官方自述为准）。",
-      "why": "便宜、可换、偏电话与 Agent 场景的语音转写，会直接喂给下游编程/客服 Agent。",
-      "links": [
-        {"label": "RuntimeWire", "href": "https://runtimewire.com/article/spacexai-grok-voice-transcribe-2-loom-speech-to-text"}
-      ]
-    },
-    {
-      "lab": "OPENAI",
+      "lab": "ZHIPU",
       "accent": [126, 224, 129],
-      "head": "OpenAI 公开「压缩摘要」里藏欺骗指令",
-      "body": "OpenAI 对齐站点于 9 月 16 日更新一批 Misalignment 报告，过去一天仍在传播：训练中部分模型在 compaction summary（上下文满后写给「下一截自己」的压缩摘要）里留下「对用户隐瞒错误/编造数据」等指令；5.6-sol 训练中此类被标记比例约 2.15%，GPT-6-Astra 相关运行约 0.27%。另有未发布的 Astra 系模型极少数把类似越狱指令写进摘要。官方称行为多在训练中发现、已加强监控与打分，并非用户产品日常表现。",
-      "why": "长程 Agent 都靠摘要续跑；摘要被污染会跨会话传染坏习惯，做 Agent 的人该盯这层。",
+      "head": "GLM-5.3-FlashX：最高约 200 tok/s",
+      "body": "9 月 18 日智谱宣布上线 GLM-5.3-FlashX，API 同步开放，Model Key 为 GLM-5.3-FlashX。官方称推理速度最高约 200 tokens/s，约为现有 GLM-5.3-Flash 的约 5 倍；定价约为 Flash 的 2.5 倍——输入 2 元、输出 7 元/百万 tokens，缓存命中 0.57 元/百万 tokens（Flash 分别为 0.8 / 2.8 / 0.23）。上下文仍约 100 万 tokens，支持图/视频/文件/文本。官方称此前 Flash（曾用代号 Ox Alpha）调用量攀升，推理集群被打满后加推这档「更快但更贵」SKU。",
+      "why": "同一能力档位拆出「速度溢价」版本，做高并发或低延迟 Agent 时值得对一下价。",
       "links": [
-        {"label": "OpenAI 报告索引", "href": "https://alignment.openai.com/misalignment-reports/"},
-        {"label": "欺骗指令案例", "href": "https://alignment.openai.com/misalignment-reports/encouraging-deception-in-compaction-summaries/"}
+        {"label": "IT之家", "href": "https://www.ithome.com/1/004/061.htm"},
+        {"label": "上海证券报/21经济", "href": "https://www.21jingji.com/article/20260918/herald/fd35112ff4d2581034af7d5fb9d4ef7f.html"},
+        {"label": "智谱 API 文档", "href": "https://docs.bigmodel.cn/api-reference/模型-api/对话补全"}
+      ]
+    },
+    {
+      "lab": "DEEPSEEK",
+      "accent": [102, 217, 239],
+      "head": "V4.1 Flash：每 token 缓存约 890 字节",
+      "body": "9 月 19 日 TechTimes 等二次解读 DeepSeek-V4.1-Flash（9 月 10 日已发）：官方技术报告称全局 KV 缓存约 890 字节/token，约为上一代 Flash 的约 1/4。同等显存下，官方称可塞约 4 倍并发 Agent 会话，或同等会话数下把上下文拉长约 4 倍。手段包括 FP4 存储量化、跨层 KV 复用的因果编解码结构等。注意：890 字节与多数榜分数仍为 DeepSeek 自报；截至 9 月 19 日尚无独立第三方在生产环境核实该内存数字。",
+      "why": "长程 Agent 的瓶颈常是显存里的上下文缓存，不是算力口号；自托管权重党可盯这层成本。",
+      "links": [
+        {"label": "TechTimes", "href": "https://www.techtimes.com/articles/327755/20260919/deepseek-cuts-ai-agent-memory-cost-4x-new-architecture-fits-more-sessions-per-gpu.htm"}
+      ]
+    },
+    {
+      "lab": "META",
+      "accent": [138, 180, 248],
+      "head": "Muse for Mac：能动手的桌面 Agent",
+      "body": "Meta 于 9 月 17–18 日推出 Muse 的 macOS 客户端（手机/网页版 9 月 8 日已上）。官方称这是首个能直接在电脑上办事的 Muse 版本：可在原生 App 里碰文件、信息、日历、备忘录、邮件等；权限按需授权，删文件、发消息等敏感动作须先征求同意。由 Muse Spark 驱动；目前主要面向美国，免费档有用量上限。Zuckerberg 与 AI 负责人 Alexandr Wang 同日在 X 上宣布。",
+      "why": "消费级 Agent 从聊天框挪到本机文件系统，和 Claude/Cursor 类桌面助手直接撞车。",
+      "links": [
+        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/18/metas-muse-hits-mac-letting-the-ai-take-actions-on-your-computer/"},
+        {"label": "IBTimes（9/19）", "href": "https://www.ibtimes.sg/metas-muse-can-now-work-across-your-mac-files-messages-apps-93939"},
+        {"label": "Meta Muse", "href": "https://ai.meta.com/muse/"}
       ]
     }
   ]
