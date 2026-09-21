@@ -1,50 +1,41 @@
 {
-  "date": "2026.09.20",
-  "weekday": "周日",
-  "lede": "今天没什么大事。补三条次要动态：Anthropic 是否再发新模型的传闻、智谱 FlashX 提速档、以及 DeepSeek 低内存占用的二次解读。",
+  "date": "2026.09.21",
+  "weekday": "周一",
+  "lede": "昨夜主线：阶跃星辰放出 Step 5 Preview。另有 Claude Code 终于认 AGENTS.md，以及 xAI 语音转写 2.0。",
   "stories": [
+    {
+      "lab": "STEPFUN",
+      "accent": [255, 159, 67],
+      "head": "Step 5 Preview：600B / 激活 27B",
+      "body": "9 月 20 日阶跃星辰宣布 Step 5 Preview：稀疏 MoE，总参数 6000 亿、每 token 激活约 270 亿，官方称 100 万 token 上下文，原生图文输入、只出文本。API 与 Studio 同日开放；完整权重计划 10 月 15 日放出。第三方 Artificial Analysis 智能指数约 44 分（官方称全球开源前三）。价格方面，第三方整理为输入约 1 美元、输出约 2.7 美元/百万 tokens；官方称单任务成本约为 Claude Opus 5 的 1/8（自报口径）。注意：HF 上仓库目前多为占位，权重还没真下。",
+      "why": "国产旗舰又跳了一代；想自托管的先记 10 月 15，今天只能先调 API 摸底。",
+      "links": [
+        {"label": "IT之家", "href": "https://www.ithome.com/1/004/705.htm"},
+        {"label": "阶跃产品页", "href": "https://www.stepfun.com/step-5-preview"},
+        {"label": "每日经济新闻", "href": "https://finance.sina.com.cn/roll/2026-09-21/doc-inispuek6072137.shtml"},
+        {"label": "OrcaRouter 解读", "href": "https://www.orcarouter.ai/zh-CN/blog/step-5-preview-open-weights"}
+      ]
+    },
     {
       "lab": "ANTHROPIC",
       "accent": [232, 184, 109],
-      "head": "传闻：考虑发新模型对冲 Astra",
-      "body": "9 月 19 日 Inside AI 援引三名知情人士称，Anthropic 正讨论是否再发一款新模型，以回应本月 OpenAI GPT-6 Astra 在企业侧的热度，并配合其拟议上市节奏。报道称公司也在评估新模型的安全表现；Anthropic 拒绝对此置评。CEO Amodei 9 月 12 日刚公开呼吁行业放慢能力迭代，与「再发一版」传闻形成张力。另：报道称 Ramp 监测的企业 AI 支出里 Astra 约占 13%、Claude Fable 约 8%；OpenRouter 上周 OpenAI 系花费首次在约两年半后超过 Anthropic（均为第三方口径）。",
-      "why": "还没官宣，但说明企业份额战已压到 IPO 叙事上；别当成发布确认。",
+      "head": "Claude Code 终于读 AGENTS.md",
+      "body": "Claude Code 2.1.277（约 9 月 18 日）起：目录里没有 CLAUDE.md 时，会改读 AGENTS.md；可在 /config → Project instructions 切换。AGENTS.md 是跨工具的项目指令文件（Codex、Cursor、Gemini CLI、Copilot 等已支持）。The Register 9 月 20 日跟进。限制：官方称 Bedrock / Vertex / Foundry 等第三方部署尚未支持。",
+      "why": "多 Agent 共用一个仓库指令文件，少写两套配置；做 Agent 开发的人直接受益。",
       "links": [
-        {"label": "Inside AI", "href": "https://insideai.news/news/ai-in-business/anthropic-new-ai-model-release/12306/"}
+        {"label": "The Register / TEXXR", "href": "https://texxr.com/1287467/anthropic-adds-agents-md-support-claude-code"},
+        {"label": "Creative AI News", "href": "https://www.creativeainews.com/articles/claude-code-agents-md-support-conditions-2026/"}
       ]
     },
     {
-      "lab": "ZHIPU",
-      "accent": [126, 224, 129],
-      "head": "GLM-5.3-FlashX：最高约 200 tok/s",
-      "body": "9 月 18 日智谱宣布上线 GLM-5.3-FlashX，API 同步开放，Model Key 为 GLM-5.3-FlashX。官方称推理速度最高约 200 tokens/s，约为现有 GLM-5.3-Flash 的约 5 倍；定价约为 Flash 的 2.5 倍——输入 2 元、输出 7 元/百万 tokens，缓存命中 0.57 元/百万 tokens（Flash 分别为 0.8 / 2.8 / 0.23）。上下文仍约 100 万 tokens，支持图/视频/文件/文本。官方称此前 Flash（曾用代号 Ox Alpha）调用量攀升，推理集群被打满后加推这档「更快但更贵」SKU。",
-      "why": "同一能力档位拆出「速度溢价」版本，做高并发或低延迟 Agent 时值得对一下价。",
-      "links": [
-        {"label": "IT之家", "href": "https://www.ithome.com/1/004/061.htm"},
-        {"label": "上海证券报/21经济", "href": "https://www.21jingji.com/article/20260918/herald/fd35112ff4d2581034af7d5fb9d4ef7f.html"},
-        {"label": "智谱 API 文档", "href": "https://docs.bigmodel.cn/api-reference/模型-api/对话补全"}
-      ]
-    },
-    {
-      "lab": "DEEPSEEK",
-      "accent": [102, 217, 239],
-      "head": "V4.1 Flash：每 token 缓存约 890 字节",
-      "body": "9 月 19 日 TechTimes 等二次解读 DeepSeek-V4.1-Flash（9 月 10 日已发）：官方技术报告称全局 KV 缓存约 890 字节/token，约为上一代 Flash 的约 1/4。同等显存下，官方称可塞约 4 倍并发 Agent 会话，或同等会话数下把上下文拉长约 4 倍。手段包括 FP4 存储量化、跨层 KV 复用的因果编解码结构等。注意：890 字节与多数榜分数仍为 DeepSeek 自报；截至 9 月 19 日尚无独立第三方在生产环境核实该内存数字。",
-      "why": "长程 Agent 的瓶颈常是显存里的上下文缓存，不是算力口号；自托管权重党可盯这层成本。",
-      "links": [
-        {"label": "TechTimes", "href": "https://www.techtimes.com/articles/327755/20260919/deepseek-cuts-ai-agent-memory-cost-4x-new-architecture-fits-more-sessions-per-gpu.htm"}
-      ]
-    },
-    {
-      "lab": "META",
+      "lab": "XAI",
       "accent": [138, 180, 248],
-      "head": "Muse for Mac：能动手的桌面 Agent",
-      "body": "Meta 于 9 月 17–18 日推出 Muse 的 macOS 客户端（手机/网页版 9 月 8 日已上）。官方称这是首个能直接在电脑上办事的 Muse 版本：可在原生 App 里碰文件、信息、日历、备忘录、邮件等；权限按需授权，删文件、发消息等敏感动作须先征求同意。由 Muse Spark 驱动；目前主要面向美国，免费档有用量上限。Zuckerberg 与 AI 负责人 Alexandr Wang 同日在 X 上宣布。",
-      "why": "消费级 Agent 从聊天框挪到本机文件系统，和 Claude/Cursor 类桌面助手直接撞车。",
+      "head": "Grok Voice Transcribe 2.0",
+      "body": "xAI（SpaceXAI）正式发布语音转写模型 Grok Voice Transcribe 2.0。官方称在自家真实场景评测上比 1.0「准约一倍」；公开 Artificial Analysis 流式榜排名第一（官方口径）。支持批量与实时流式、说话人分离、词级时间戳、多语种自动识别等。价格不变：批量 0.10 美元/音频小时，流式 0.20 美元/小时。官方称即将成默认模型，1.0 几周内弃用；过渡期可钉住 grok-voice-transcribe-1.0。",
+      "why": "语音进 Agent / 客服流水线时，转写准不准直接决定下游幻觉；同价升级值得试一把。",
       "links": [
-        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/18/metas-muse-hits-mac-letting-the-ai-take-actions-on-your-computer/"},
-        {"label": "IBTimes（9/19）", "href": "https://www.ibtimes.sg/metas-muse-can-now-work-across-your-mac-files-messages-apps-93939"},
-        {"label": "Meta Muse", "href": "https://ai.meta.com/muse/"}
+        {"label": "xAI 官方", "href": "https://x.ai/news/grok-voice-transcribe-2"},
+        {"label": "Speech-to-Text 文档", "href": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-text"}
       ]
     }
   ]
