@@ -1,41 +1,56 @@
 {
-  "date": "2026.09.21",
-  "weekday": "周一",
-  "lede": "昨夜主线：阶跃星辰放出 Step 5 Preview。另有 Claude Code 终于认 AGENTS.md，以及 xAI 语音转写 2.0。",
+  "date": "2026.09.22",
+  "weekday": "周二",
+  "lede": "昨夜主线：小米开源 MiMo-V2.6；xAI 同步放出 Grok 4.7。另有通义图像 2.1 许可证收紧，以及 OpenAI / Anthropic 互测安全的报道。",
   "stories": [
     {
-      "lab": "STEPFUN",
+      "lab": "XIAOMI",
       "accent": [255, 159, 67],
-      "head": "Step 5 Preview：600B / 激活 27B",
-      "body": "9 月 20 日阶跃星辰宣布 Step 5 Preview：稀疏 MoE，总参数 6000 亿、每 token 激活约 270 亿，官方称 100 万 token 上下文，原生图文输入、只出文本。API 与 Studio 同日开放；完整权重计划 10 月 15 日放出。第三方 Artificial Analysis 智能指数约 44 分（官方称全球开源前三）。价格方面，第三方整理为输入约 1 美元、输出约 2.7 美元/百万 tokens；官方称单任务成本约为 Claude Opus 5 的 1/8（自报口径）。注意：HF 上仓库目前多为占位，权重还没真下。",
-      "why": "国产旗舰又跳了一代；想自托管的先记 10 月 15，今天只能先调 API 摸底。",
+      "head": "MiMo-V2.6：开源旗舰 Pro + Flash",
+      "body": "9 月 22 日小米正式发布并开源 MiMo-V2.6 系列：原生全模态 Pro / Flash，支持文本、图像、视频、音频。官方称 Pro 在 Artificial Analysis 综合智能指数约 46 分，超过 Kimi K3、Qwen3.8 Max，仍低于 Claude Fable 5.1 / GPT-6 Astra。架构方面第三方整理为稀疏 MoE：Pro 总参约 1.02 万亿、每 token 激活约 420 亿；Flash 约 3090 亿 / 激活 150 亿。官方称不到 6 天 RL 训练成本约 262 万与 85 万美元；DeepSWE v1.1 上 Pro 从 58.4 提到约 72.6。API 价沿用 V2.5；另有 UltraSpeed（官方称最高约 20 倍输出速度）。权重、技术报告与 RL 环境一并开源。",
+      "why": "开源榜又换了头名；做 Agent / 自托管的人可以先摸 Pro，便宜场景看 Flash。",
       "links": [
-        {"label": "IT之家", "href": "https://www.ithome.com/1/004/705.htm"},
-        {"label": "阶跃产品页", "href": "https://www.stepfun.com/step-5-preview"},
-        {"label": "每日经济新闻", "href": "https://finance.sina.com.cn/roll/2026-09-21/doc-inispuek6072137.shtml"},
-        {"label": "OrcaRouter 解读", "href": "https://www.orcarouter.ai/zh-CN/blog/step-5-preview-open-weights"}
-      ]
-    },
-    {
-      "lab": "ANTHROPIC",
-      "accent": [232, 184, 109],
-      "head": "Claude Code 终于读 AGENTS.md",
-      "body": "Claude Code 2.1.277（约 9 月 18 日）起：目录里没有 CLAUDE.md 时，会改读 AGENTS.md；可在 /config → Project instructions 切换。AGENTS.md 是跨工具的项目指令文件（Codex、Cursor、Gemini CLI、Copilot 等已支持）。The Register 9 月 20 日跟进。限制：官方称 Bedrock / Vertex / Foundry 等第三方部署尚未支持。",
-      "why": "多 Agent 共用一个仓库指令文件，少写两套配置；做 Agent 开发的人直接受益。",
-      "links": [
-        {"label": "The Register / TEXXR", "href": "https://texxr.com/1287467/anthropic-adds-agents-md-support-claude-code"},
-        {"label": "Creative AI News", "href": "https://www.creativeainews.com/articles/claude-code-agents-md-support-conditions-2026/"}
+        {"label": "小米官方说明", "href": "https://mimo.mi.com/docs/en-US/news/latest/v2-6"},
+        {"label": "凤凰网科技", "href": "https://tech.ifeng.com/c/8wcMkoqYmJc"},
+        {"label": "TestingCatalog", "href": "https://www.testingcatalog.com/xiaomi-open-sources-mimo-v2-6-pro-and-flash-models/"},
+        {"label": "Hugging Face 合集", "href": "https://huggingface.co/collections/XiaomiMiMo/mimo-v26"}
       ]
     },
     {
       "lab": "XAI",
       "accent": [138, 180, 248],
-      "head": "Grok Voice Transcribe 2.0",
-      "body": "xAI（SpaceXAI）正式发布语音转写模型 Grok Voice Transcribe 2.0。官方称在自家真实场景评测上比 1.0「准约一倍」；公开 Artificial Analysis 流式榜排名第一（官方口径）。支持批量与实时流式、说话人分离、词级时间戳、多语种自动识别等。价格不变：批量 0.10 美元/音频小时，流式 0.20 美元/小时。官方称即将成默认模型，1.0 几周内弃用；过渡期可钉住 grok-voice-transcribe-1.0。",
-      "why": "语音进 Agent / 客服流水线时，转写准不准直接决定下游幻觉；同价升级值得试一把。",
+      "head": "Grok 4.7：同价升级，长任务向",
+      "body": "9 月 21 日 xAI（SpaceXAI）放出 Grok 4.7：官方称更大基座、更长强化学习，主打编码、Agent 与知识工作；上下文 50 万 tokens；推理档 low / medium / high / xhigh。API 名 grok-4.7；官方标价与 4.6 同档：每百万 tokens 输入 2 美元、缓存输入 0.5 美元、输出 6 美元（提示超 20 万 tokens 翻倍）。已进 Cursor、Grok Build 等。第三方 Artificial Analysis 综合指数约 46；The Decoder 引用的 Terminal-Bench 4.0 约 26%，明显落后 GPT-6 Astra（约 60%）与 Claude Fable 5.1（约 55%）。",
+      "why": "配额紧的人同价可换新模型；别只看官方涨分，Agent 终端任务仍偏弱。",
       "links": [
-        {"label": "xAI 官方", "href": "https://x.ai/news/grok-voice-transcribe-2"},
-        {"label": "Speech-to-Text 文档", "href": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-text"}
+        {"label": "xAI 模型文档", "href": "https://docs.x.ai/developers/models/grok-4.7"},
+        {"label": "The Decoder", "href": "https://the-decoder.com/xai-launches-grok-4-7-at-bargain-prices-but-benchmarks-reveal-a-wide-gap-to-claude-and-gpt-6/"},
+        {"label": "Vercel Changelog", "href": "https://vercel.com/changelog/grok-4-7-now-available-and-40-off-on-ai-gateway-fx-eve"},
+        {"label": "Data Studios 整理", "href": "https://www.datastudios.org/post/xai-launches-grok-4-7-its-most-powerful-model-yet-for-coding-agents-and-knowledge-work"}
+      ]
+    },
+    {
+      "lab": "QWEN",
+      "accent": [126, 224, 129],
+      "head": "Qwen-Image-2.1：能透明，但非商用",
+      "body": "阿里通义约 9 月 20 日放出 Qwen-Image-2.1：文生图与编辑合一，官方强调原生透明通道（RGBA）、最多约 10 张参考图。视觉生成组件官方称约 70 亿参数量级。权重可下，但 LICENSE 改为 Qwen Research License（非商用）；商用需另申请。上一代曾用 Apache 2.0，社区争议集中在「开源」措辞与商用限制。",
+      "why": "做设计流水线的人可试透明图层；公司内商用自托管先别当 Apache 白嫖。",
+      "links": [
+        {"label": "阿里云社区博文", "href": "https://www.alibabacloud.com/blog/qwen-image-2-1-compact-efficient-and-unified-image-creation_603586"},
+        {"label": "Hugging Face", "href": "https://huggingface.co/Qwen/Qwen-Image-2.1"},
+        {"label": "Traictory 解读", "href": "https://traictory.com/news/2026-09-21-qwen-image-2-1"}
+      ]
+    },
+    {
+      "lab": "LABS",
+      "accent": [232, 184, 109],
+      "head": "OpenAI ↔ Anthropic：互测安全在谈",
+      "body": "The Information 报道（9 月 21 日多家转载）：OpenAI 与 Anthropic 年内曾谈具法律约束力的协议，拟互相用 API 压测对方商用模型的安全漏洞与异常行为，且不留存对方测试数据。报道称律师曾起草条款，但协议是否最终签成尚不清楚。背景是 Amodei 呼吁放慢前沿节奏、Altman 公开附和「pace the frontier」。",
+      "why": "若落地，安全评测从「自家测自家」多了一层对手交叉验证；目前仍是报道阶段，别当已官宣。",
+      "links": [
+        {"label": "NY Post 转载", "href": "https://nypost.com/2026/09/21/business/openai-anthropic-held-talks-to-stress-test-each-others-ai-models-report/"},
+        {"label": "Mint 转载", "href": "https://www.livemint.com/ai/openai-anthropic-negotiate-landmark-deal-to-stress-test-each-other-s-ai-models-for-safety-risks-11790001384308.html"},
+        {"label": "BNN Bloomberg 放慢前沿分歧", "href": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/21/tech-leaders-governments-split-over-ai-doom-fears/"}
       ]
     }
   ]
