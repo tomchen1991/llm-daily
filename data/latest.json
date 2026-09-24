@@ -1,53 +1,60 @@
 {
-  "date": "2026.09.23",
-  "weekday": "周三",
-  "lede": "昨夜主线：Anthropic 与 OpenAI 隔约 90 分钟对发——Claude Opus 5.5 与 GPT-6 Sol / Luna 同日降价上新。另有通义在云栖预告 Qwen4 路线图，以及 DeepSeek 扩参与押注华为训练芯片的报道。",
+  "date": "2026.09.24",
+  "weekday": "周四",
+  "lede": "昨夜主线：Meta Connect 把 Muse 从手机应用推到独立硬件 Muse Charm，并预告上眼镜；同日 Google 让 Antigravity SDK 能离线跑 Gemma 4 本地 Agent。另有小米开源 MiMo-V2.6-Pro，以及 Anthropic 用 Claude 把 claude.ai 提速约 3 倍。",
   "stories": [
     {
-      "lab": "ANTHROPIC",
-      "accent": [255, 159, 67],
-      "head": "Claude Opus 5.5：旗舰档降价提速",
-      "body": "9 月 22 日 Anthropic 发布 Claude Opus 5.5，官方称是 Claude 5.5 系列首款；多数工作上达到 Claude Fable 5.1 水平，典型负载成本约比 Opus 5 低 40%。API：输入 / 输出每百万 tokens 4 / 20 美元（比 Opus 5 低约 20%），缓存读取 0.20 美元（低约 60%）；官方称输出速度大约快 30% 以上。模型名 claude-opus-5-5，已上 Claude 平台及 AWS、Google Cloud、Azure。Sonnet 5.5 与 Haiku 5.5 官方称「未来几周」跟进。生物与网络安全能力接近 Mythos，部署了与 Fable 相近的防护。",
-      "why": "做 Agent / 编码的主力档位更便宜更快；先看默认档成本，别只盯榜分。",
-      "links": [
-        {"label": "Anthropic 官方", "href": "https://www.anthropic.com/claude-opus-5-5"},
-        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/"},
-        {"label": "System Card PDF", "href": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf"}
-      ]
-    },
-    {
-      "lab": "OPENAI",
+      "lab": "META",
       "accent": [138, 180, 248],
-      "head": "GPT-6 Sol / Luna：中档腰斩价",
-      "body": "同日约 90 分钟后，OpenAI 放出 GPT-6 Sol 与 Luna（落在旗舰 Astra 之下）。官方称相对 GPT-5.6 同档 API 价约降一半：Sol 输入 / 输出每百万 tokens 2 / 10 美元，Luna 0.10 / 0.50 美元；并称内部事实性评测上 Sol 出错大约减半。Sol 偏复杂编码与工作流，Luna 偏高并发摘要抽取。已进 ChatGPT Work、Codex（付费档），Luna 还进桌面端 Free / Go；网页版 ChatGPT 官方称当日逐步放量。",
-      "why": "日常 Agent / 工作流别再默认顶配；同日两家一起砍价，账单会立刻变。",
+      "head": "Connect：Muse Charm + 上眼镜",
+      "body": "9 月 23 日美西 Meta Connect 上，扎克伯格末段亮相独立硬件 Muse Charm：形似无表带厚手表 + 挂绳，指纹键唤醒语音对话，机身有摄像头与多个麦克风孔；官方称不必解锁手机或打开 App 就能用，连接方式未细说。同场宣布正在把 Muse 接到智能眼镜（说名字唤醒，可指路运动、记饮食、对着眼前商品问购）；Muse Agent 将有专用邮箱可收发办事，并支持视频通话；近日上线的 Mac 版还将获得「使用你的电脑」能力。",
+      "why": "消费级 Agent 开始绑硬件与眼镜；邮件与电脑控制是真正干活的入口，不只聊天。",
       "links": [
-        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/"},
-        {"label": "Decrypt", "href": "https://decrypt.co/378986/openai-launches-gpt-6-sol-luna-anthropic-claude-opus-5-5"},
-        {"label": "9to5Google", "href": "https://9to5google.com/2026/09/22/claude-opus-5-5-and-openai-gpt-6-sol-luna-both-launch-today-with-lower-costs/"}
+        {"label": "The Verge 汇总", "href": "https://www.theverge.com/tech/998480/meta-connect-2026-biggest-news-announcements"},
+        {"label": "Muse Charm", "href": "https://www.theverge.com/tech/998480/meta-connect-2026-biggest-news-announcements"},
+        {"label": "Muse 加能力", "href": "https://www.theverge.com/tech/999454/meta-muse-ai-agent-video-chat-connect-2026"}
       ]
     },
     {
-      "lab": "QWEN",
+      "lab": "GOOGLE",
       "accent": [126, 224, 129],
-      "head": "云栖预告 Qwen4：还没能调",
-      "body": "9 月 22 日阿里云栖大会上，通义团队首次公开 Qwen4 系列路线图：屏幕出现 Qwen4-Max、Qwen4-Flash & Plus、Qwen4-27B，标注 Coming Soon。现场未给模型卡、权重、API 名、上下文或定价；当前可调用的仍是 Qwen3.8 一代。报道称 Max 冲能力上限，Flash / Plus 偏效率与价格，27B 偏本地部署。",
-      "why": "别当成已上线；接 API 或自托管仍用 3.8，把 4 当路线图盯着就行。",
+      "head": "Antigravity：离线跑 Gemma 4",
+      "body": "9 月 23 日 Google Developers Blog：Antigravity SDK（官方 Agent 开发套件）正式支持本地离线工作流，首发对接 Google AI Edge 的 LiteRT 与 Gemma 4 26B A4B。官方示例：pip 装 google-antigravity + litert-lm，从 Hugging Face 拉约 16.8 GB 权重；建议机器至少约 24 GB 显存或统一内存。也可经 LocalOpenAIAgentConfig 接 Ollama / LM Studio / vLLM。演示里用云端 Gemini 3.8 Flash 做规划、本地 Gemma 4 改代码，称一次跑里约 97.2% token 在本地。",
+      "why": "隐私与无网环境下也能跑同套 Agent 编排；本地大模型终于进了官方 SDK 主路径。",
       "links": [
-        {"label": "OrcaRouter 整理", "href": "https://www.orcarouter.ai/blog/qwen-4-max-lineup-announced-apsara-2026"},
-        {"label": "KOCPC 现场", "href": "https://en.kocpc.com.tw/archives/25682"}
+        {"label": "Google Developers Blog", "href": "https://developers.googleblog.com/en/introducing-support-for-local-ai-models-in-the-antigravity-sdk/"},
+        {"label": "本地模型文档", "href": "https://antigravity.google/docs/sdk/local-models/"}
       ]
     },
     {
-      "lab": "DEEPSEEK",
-      "accent": [196, 167, 255],
-      "head": "梁文锋：训 2 万亿，押华为芯片",
-      "body": "多家转述 The Information：梁文锋在闭门投资者会上称，DeepSeek 正在训练约 2 万亿参数新模型，并计划后续做到约 8 万亿；同时把「大规模用华为等国产芯片训练」称作最大押注之一，预计华为最早 2026 年四季度或 2027 年一季度交付训练芯片。报道称短期仍会并行使用英伟达。市场猜测 2 万亿档或对应后续 V4.1 Pro，未获官方产品页确认。",
-      "why": "国内开源阵营也在卷总参数；训练算力国产化若做成，会影响后续 Flash / Pro 供给节奏。",
+      "lab": "XIAOMI",
+      "accent": [255, 159, 67],
+      "head": "MiMo-V2.6-Pro：1T 开源权重",
+      "body": "小米官方页标注更新时间 9 月 22 日：开源 MiMo-V2.6 系列（Pro / Flash），MIT 许可。Pro 为稀疏 MoE，总参约 1.02 万亿、每 token 激活约 420 亿，上下文 100 万 tokens，原生文本/图像/视频/音频。官方称 Artificial Analysis 综合指数约 46 分，开源侧超过 Kimi K3 与 Qwen3.8 Max，仍低于 Claude Fable 5.1 与 GPT-6 Astra；API 价与 V2.5 同档，另有 UltraSpeed（官方称同质量下输出最高约 20 倍速）。同步开源技术报告、RL 环境与训练代码；Hugging Face 集合 XiaomiMiMo/mimo-v26。",
+      "why": "非「六大」里少见的万亿级开源权重，还公开训练配方；做 Agent 便宜试错又多了一个可选开源模型。",
       "links": [
-        {"label": "虎嗅", "href": "https://www.huxiu.com/article/4893210.html"},
-        {"label": "联合新闻网", "href": "https://udn.com/news/story/7333/9771699"},
-        {"label": "The Standard", "href": "https://www.thestandard.com.hk/innovation/article/343489/DeepSeek-to-use-more-domestic-chips-like-Huawei-for-AI-training"}
+        {"label": "小米官方说明", "href": "https://mimo.mi.com/docs/en-US/news/latest/v2-6"},
+        {"label": "Hugging Face 集合", "href": "https://huggingface.co/collections/XiaomiMiMo/mimo-v26"}
+      ]
+    },
+    {
+      "lab": "ANTHROPIC",
+      "accent": [232, 184, 109],
+      "head": "claude.ai：两周提速约 3 倍",
+      "body": "9 月 23 日 Anthropic 工程博文：八月两周冲刺，claude.ai 与桌面端核心路径约快 3 倍。75 分位：新开页可输入从约 3.1 秒到 0.55 秒，新 Claude Code 会话约 0.8 秒到 0.3 秒，Cowork 云会话约 2.6 秒到 0.73 秒。官方称在单一 Slack 频道里用 Claude Tag（内部研究模型，能力大致对标 Opus 5.5）找瓶颈、写基准、提 PR，合并逾 3000 改动且无客户侧事故回滚。",
+      "why": "产品变快是真体感；也说明「Claude 当队友改自家产品」已跑通规模化流程。",
+      "links": [
+        {"label": "Anthropic 博文", "href": "https://claude.dev/blog/how-we-made-claude-ai-faster/"}
+      ]
+    },
+    {
+      "lab": "ANTHROPIC",
+      "accent": [196, 167, 255],
+      "head": "Opus 5.5：训前沿模型会降档",
+      "body": "Claude 帮助中心近两日更新：Opus 5.5 对「前沿大模型研发」一小类请求（例如某些机器学习加速器的内核开发）会自动回落到 Opus 5；普通 AI/ML 研究与一般编码官方称大多不受影响。另有网络安全、生物双用途、以及试图抽干推理链（蒸馏）的分类器；蒸馏类直接拦，不换模型。网页/客户端默认自动换模，API 需自行配置回落。",
+      "why": "做芯片内核或模型训练相关编码时可能突然掉到弱档；接到「已切换模型」提示别当偶发故障。",
+      "links": [
+        {"label": "Claude 帮助中心", "href": "https://support.claude.com/en/articles/16049681-why-claude-switched-models-in-your-conversation-with-opus-5-or-opus-5-5"}
       ]
     }
   ]
