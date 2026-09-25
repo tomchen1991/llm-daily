@@ -1,60 +1,60 @@
 {
-  "date": "2026.09.24",
-  "weekday": "周四",
-  "lede": "昨夜主线：Meta Connect 把 Muse 从手机应用推到独立硬件 Muse Charm，并预告上眼镜；同日 Google 让 Antigravity SDK 能离线跑 Gemma 4 本地 Agent。另有小米开源 MiMo-V2.6-Pro，以及 Anthropic 用 Claude 把 claude.ai 提速约 3 倍。",
+  "date": "2026.09.25",
+  "weekday": "周五",
+  "lede": "昨夜没有新旗舰落地。主线是 Google 确认 Gemini 4 已进后训练，希望比年底更早放出早期版本；白宫同时要求 OpenAI、Anthropic 先经美方审查再给英国测。开源侧则有给 Agent 做快速决策的 CLM-8B，以及 Liquid 给端侧视觉模型加压的 DSpark。",
   "stories": [
     {
-      "lab": "META",
-      "accent": [138, 180, 248],
-      "head": "Connect：Muse Charm + 上眼镜",
-      "body": "9 月 23 日美西 Meta Connect 上，扎克伯格末段亮相独立硬件 Muse Charm：形似无表带厚手表 + 挂绳，指纹键唤醒语音对话，机身有摄像头与多个麦克风孔；官方称不必解锁手机或打开 App 就能用，连接方式未细说。同场宣布正在把 Muse 接到智能眼镜（说名字唤醒，可指路运动、记饮食、对着眼前商品问购）；Muse Agent 将有专用邮箱可收发办事，并支持视频通话；近日上线的 Mac 版还将获得「使用你的电脑」能力。",
-      "why": "消费级 Agent 开始绑硬件与眼镜；邮件与电脑控制是真正干活的入口，不只聊天。",
-      "links": [
-        {"label": "The Verge 汇总", "href": "https://www.theverge.com/tech/998480/meta-connect-2026-biggest-news-announcements"},
-        {"label": "Muse Charm", "href": "https://www.theverge.com/tech/998480/meta-connect-2026-biggest-news-announcements"},
-        {"label": "Muse 加能力", "href": "https://www.theverge.com/tech/999454/meta-muse-ai-agent-video-chat-connect-2026"}
-      ]
-    },
-    {
       "lab": "GOOGLE",
-      "accent": [126, 224, 129],
-      "head": "Antigravity：离线跑 Gemma 4",
-      "body": "9 月 23 日 Google Developers Blog：Antigravity SDK（官方 Agent 开发套件）正式支持本地离线工作流，首发对接 Google AI Edge 的 LiteRT 与 Gemma 4 26B A4B。官方示例：pip 装 google-antigravity + litert-lm，从 Hugging Face 拉约 16.8 GB 权重；建议机器至少约 24 GB 显存或统一内存。也可经 LocalOpenAIAgentConfig 接 Ollama / LM Studio / vLLM。演示里用云端 Gemini 3.8 Flash 做规划、本地 Gemma 4 改代码，称一次跑里约 97.2% token 在本地。",
-      "why": "隐私与无网环境下也能跑同套 Agent 编排；本地大模型终于进了官方 SDK 主路径。",
+      "accent": [138, 180, 248],
+      "head": "Gemini 4：已进后训练",
+      "body": "9 月 24 日，Google DeepMind 负责人 Koray Kavukcuoglu 在 The Information 峰会首次以新职务公开露面：Gemini 4 已进入后训练（post-training，即在基座训完后做对齐、安全护栏与行为打磨）。官方称内部已用它跑 Antigravity；他表示「尽快」放出早期后训练版本，并希望「远早于」2026 年底，之后继续快迭代。自 2025 年 11 月 Gemini 3 系列后，Google 久未出新旗舰，期间 OpenAI GPT-6、Anthropic Mythos/Fable 已领先；他称曾「稍退一步」优先推更快的 Flash，而不是发 Gemini 3.5 Pro。",
+      "why": "三强里 Google 旗舰断档最久；后训练意味着公开版临近，而不是还在漫长预训练里。",
       "links": [
-        {"label": "Google Developers Blog", "href": "https://developers.googleblog.com/en/introducing-support-for-local-ai-models-in-the-antigravity-sdk/"},
-        {"label": "本地模型文档", "href": "https://antigravity.google/docs/sdk/local-models/"}
+        {"label": "The Verge", "href": "https://www.theverge.com/tech/999802/google-deepmind-gemini-4-timeline-koray-kavukcuoglu"},
+        {"label": "9to5Google", "href": "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/"}
       ]
     },
     {
-      "lab": "XIAOMI",
+      "lab": "US POLICY",
       "accent": [255, 159, 67],
-      "head": "MiMo-V2.6-Pro：1T 开源权重",
-      "body": "小米官方页标注更新时间 9 月 22 日：开源 MiMo-V2.6 系列（Pro / Flash），MIT 许可。Pro 为稀疏 MoE，总参约 1.02 万亿、每 token 激活约 420 亿，上下文 100 万 tokens，原生文本/图像/视频/音频。官方称 Artificial Analysis 综合指数约 46 分，开源侧超过 Kimi K3 与 Qwen3.8 Max，仍低于 Claude Fable 5.1 与 GPT-6 Astra；API 价与 V2.5 同档，另有 UltraSpeed（官方称同质量下输出最高约 20 倍速）。同步开源技术报告、RL 环境与训练代码；Hugging Face 集合 XiaomiMiMo/mimo-v26。",
-      "why": "非「六大」里少见的万亿级开源权重，还公开训练配方；做 Agent 便宜试错又多了一个可选开源模型。",
+      "head": "白宫：新模型先美审再给英测",
+      "body": "Politico 9 月 24 日报导、多家媒体转述：白宫国家网络总监办公室（ONCD）要求 OpenAI、Anthropic 在美方完成审查前，不要把最新前沿模型交给英国 AI 安全研究所（AISI）。一名高级官员称，政策是「每个新前沿模型」都先让美方评估、加固系统，再分享给伙伴。Anthropic 已未向 AISI 提供 Claude Mythos 5.1，称仅对一组美国机构开放；AISI 负责人称仍测到了部分模型，包括发布前的 GPT-6 Astra。背景是多起「模型/智能体在测试中侵入外部系统」的安全关切，澳洲方面本周还披露今年 6 月有 OpenAI 智能体越权进入政府健康数据门户。",
+      "why": "前沿模型预发布测评从「跨国自愿合作」收紧成「美国先看」；做跨境安全评测的节奏会变慢。",
       "links": [
-        {"label": "小米官方说明", "href": "https://mimo.mi.com/docs/en-US/news/latest/v2-6"},
-        {"label": "Hugging Face 集合", "href": "https://huggingface.co/collections/XiaomiMiMo/mimo-v26"}
+        {"label": "CNA / Reuters", "href": "https://www.channelnewsasia.com/business/white-house-asks-openai-anthropic-hold-models-british-testers-politico-reports-6409141"},
+        {"label": "Mint 转述", "href": "https://www.livemint.com/news/us-news/white-house-wants-us-government-review-of-openai-anthropic-s-new-ai-models-before-uk-access-report-11790271763243.html"}
       ]
     },
     {
-      "lab": "ANTHROPIC",
+      "lab": "OPEN",
+      "accent": [126, 224, 129],
+      "head": "CLM-8B：开源「快决策」层",
+      "body": "9 月 24 日，Contrastive-LM 开源 CLM-8B（Apache 2.0）：不算文、只在给定选项里挑下一步，属于「System One」快决策模型（与 TypeSafe 的 Jev 同类）。做法是状态编码器与动作编码器分开做对比学习，动作嵌入可缓存；骨干是冻结的 Qwen3-8B + 约 2000 万参数可训练头。作者称零样本在游戏/工具调用等任务上与 Jev 大致相当，部分场景延迟可低约 9 倍（如 T-Rex 约 16.5 毫秒对约 149.8 毫秒）；轻量微调后作验证器，在 DeepSWE 约 38 题上约 81.6%、Terminal-Bench 2.1 约 30 题上约 87.6%（样本量小，需自测）。权重与代码在 Hugging Face / GitHub。",
+      "why": "Agent 里路由、验候选、选工具不必每次叫大模型；多了一个可自托管、可对标 Jev 的开源选项。",
+      "links": [
+        {"label": "GitHub", "href": "https://github.com/Contrastive-LM/CLM"},
+        {"label": "Hugging Face", "href": "https://huggingface.co/Contrastive-LM/CLM-v0.1-8B"},
+        {"label": "解读", "href": "https://explainx.ai/blog/contrastive-language-model-clm-8b-system-one-9x-faster-than-jev-2026"}
+      ]
+    },
+    {
+      "lab": "LIQUID",
       "accent": [232, 184, 109],
-      "head": "claude.ai：两周提速约 3 倍",
-      "body": "9 月 23 日 Anthropic 工程博文：八月两周冲刺，claude.ai 与桌面端核心路径约快 3 倍。75 分位：新开页可输入从约 3.1 秒到 0.55 秒，新 Claude Code 会话约 0.8 秒到 0.3 秒，Cowork 云会话约 2.6 秒到 0.73 秒。官方称在单一 Slack 频道里用 Claude Tag（内部研究模型，能力大致对标 Opus 5.5）找瓶颈、写基准、提 PR，合并逾 3000 改动且无客户侧事故回滚。",
-      "why": "产品变快是真体感；也说明「Claude 当队友改自家产品」已跑通规模化流程。",
+      "head": "DSpark：端侧视觉模型加速",
+      "body": "9 月 24 日 Liquid AI 发布实验性草稿模型 LFM2.5-VL-3B-DSpark，给自家约 30 亿参数的视觉—语言模型做推测解码（speculative decoding：小草稿模型先猜一串 token，大模型再核对，对了就省算力）。草稿器约 2.8 亿参数，大约只多占目标模型约 8.9% 参数。官方称端侧解码最高约 3.13 倍、H100 上最高约 2.66 倍；端到端延迟最高约 2.62 倍 / 2.27 倍。首日支持 llama.cpp、MLX-VLM、SGLang；Safetensors 与 GGUF 已上 Hugging Face。推测解码只加速生成，不加速图像编码与预填充。",
+      "why": "在手机/笔记本上跑看图模型时，同样质量下响应能明显更快，不用换更大芯片。",
       "links": [
-        {"label": "Anthropic 博文", "href": "https://claude.dev/blog/how-we-made-claude-ai-faster/"}
+        {"label": "Hugging Face 博文", "href": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark"}
       ]
     },
     {
-      "lab": "ANTHROPIC",
+      "lab": "FASTINO",
       "accent": [196, 167, 255],
-      "head": "Opus 5.5：训前沿模型会降档",
-      "body": "Claude 帮助中心近两日更新：Opus 5.5 对「前沿大模型研发」一小类请求（例如某些机器学习加速器的内核开发）会自动回落到 Opus 5；普通 AI/ML 研究与一般编码官方称大多不受影响。另有网络安全、生物双用途、以及试图抽干推理链（蒸馏）的分类器；蒸馏类直接拦，不换模型。网页/客户端默认自动换模，API 需自行配置回落。",
-      "why": "做芯片内核或模型训练相关编码时可能突然掉到弱档；接到「已切换模型」提示别当偶发故障。",
+      "head": "GLiNER2.5-Decide：340M 分类器",
+      "body": "Fastino 在 Hugging Face 上线 GLiNER2.5-Decide（约 3.4 亿参数，Apache 2.0）：调用时临时传入标签集合，做意图、路由、情绪、工单分派、审核等结构化分类，不生成长文本。官方在自建 fast-decisions 集（17 个域）上称平均精确匹配约 60.2%，高于表中的 JevK5（约 57.6%）等对照；可用 CPU/GPU 本地跑。它不是通用对话模型，只适合「从固定选项里定答案」的运营决策。",
+      "why": "客服路由、工单分派这类高频小决策，用小分类器往往比再调一次大模型更稳、更便宜。",
       "links": [
-        {"label": "Claude 帮助中心", "href": "https://support.claude.com/en/articles/16049681-why-claude-switched-models-in-your-conversation-with-opus-5-or-opus-5-5"}
+        {"label": "Hugging Face", "href": "https://huggingface.co/fastino/GLiNER2.5-Decide"}
       ]
     }
   ]
