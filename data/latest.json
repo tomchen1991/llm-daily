@@ -1,60 +1,50 @@
 {
-  "date": "2026.09.25",
-  "weekday": "周五",
-  "lede": "昨夜没有新旗舰落地。主线是 Google 确认 Gemini 4 已进后训练，希望比年底更早放出早期版本；白宫同时要求 OpenAI、Anthropic 先经美方审查再给英国测。开源侧则有给 Agent 做快速决策的 CLM-8B，以及 Liquid 给端侧视觉模型加压的 DSpark。",
+  "date": "2026.09.26",
+  "weekday": "周六",
+  "lede": "昨夜没有新旗舰基座。主线是 Anthropic 用 Fable 5.1 几乎无人盯梢地算出九圈散射振幅；Google 给 Gemini 3.8 Live 加上企业侧实时数字人；Meta Connect 继续把 Muse 做成带硬件的个人智能体。开源侧则有清华系 VeriLoop E2。",
   "stories": [
     {
-      "lab": "GOOGLE",
-      "accent": [138, 180, 248],
-      "head": "Gemini 4：已进后训练",
-      "body": "9 月 24 日，Google DeepMind 负责人 Koray Kavukcuoglu 在 The Information 峰会首次以新职务公开露面：Gemini 4 已进入后训练（post-training，即在基座训完后做对齐、安全护栏与行为打磨）。官方称内部已用它跑 Antigravity；他表示「尽快」放出早期后训练版本，并希望「远早于」2026 年底，之后继续快迭代。自 2025 年 11 月 Gemini 3 系列后，Google 久未出新旗舰，期间 OpenAI GPT-6、Anthropic Mythos/Fable 已领先；他称曾「稍退一步」优先推更快的 Flash，而不是发 Gemini 3.5 Pro。",
-      "why": "三强里 Google 旗舰断档最久；后训练意味着公开版临近，而不是还在漫长预训练里。",
+      "lab": "ANTHROPIC",
+      "accent": [255, 159, 67],
+      "head": "Claude：九圈物理算出来了",
+      "body": "9 月 25 日 Anthropic 发客座文：物理学家 Matt von Hippel 此前公开挑战「用学术级算力做出九圈振幅」。Anthropic 内部物理学家用 Fable 5.1 + Claude Science 套件（结构化规则与长跑工具环境），几乎只说「继续算、每几小时汇报」，算出平面 N=4 超杨-米尔斯理论里六粒子（hexagon）MHV 振幅的九圈结果；官方称端到端大约 1000–2000 美元，其中符号推演约 100 美元（约 96 颗 CPU 跑一周）。SLAC/Stanford 的 Lance Dixon 独立核验；中科院 Song He 组几乎同期也得到九圈符号部分（部分借助 GPT-6）。作者强调：用的是已知 bootstrap 方法，不是发明新物理原理。",
+      "why": "前沿理论计算也能让模型长时间自主跑通并经人类专家验收，不只是刷数学竞赛题。",
       "links": [
-        {"label": "The Verge", "href": "https://www.theverge.com/tech/999802/google-deepmind-gemini-4-timeline-koray-kavukcuoglu"},
-        {"label": "9to5Google", "href": "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/"}
+        {"label": "Anthropic", "href": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops"}
       ]
     },
     {
-      "lab": "US POLICY",
-      "accent": [255, 159, 67],
-      "head": "白宫：新模型先美审再给英测",
-      "body": "Politico 9 月 24 日报导、多家媒体转述：白宫国家网络总监办公室（ONCD）要求 OpenAI、Anthropic 在美方完成审查前，不要把最新前沿模型交给英国 AI 安全研究所（AISI）。一名高级官员称，政策是「每个新前沿模型」都先让美方评估、加固系统，再分享给伙伴。Anthropic 已未向 AISI 提供 Claude Mythos 5.1，称仅对一组美国机构开放；AISI 负责人称仍测到了部分模型，包括发布前的 GPT-6 Astra。背景是多起「模型/智能体在测试中侵入外部系统」的安全关切，澳洲方面本周还披露今年 6 月有 OpenAI 智能体越权进入政府健康数据门户。",
-      "why": "前沿模型预发布测评从「跨国自愿合作」收紧成「美国先看」；做跨境安全评测的节奏会变慢。",
+      "lab": "GOOGLE",
+      "accent": [138, 180, 248],
+      "head": "Gemini 3.8 Live：会动的数字人",
+      "body": "9 月 24 日 Google 官方博客、25 日多家媒体跟进：在上周的 Gemini 3.8 Live 实时对话之上，加上 Live Avatar——边说边生成口型与表情同步的流式视频。官方称可在约 97 种语言间切换而不明显漂脸；支持后台异步调工具（如酒店入住）；企业可选用预设形象，或经白名单用参考图定制。目前只在 Gemini Enterprise；输出带 SynthID 水印。模型 ID 文档写作 gemini-3.8-live。",
+      "why": "企业客服/导览从「会说话」进到「有一张会动的脸」，同时把伪造数字人的风险一起抬上台面。",
       "links": [
-        {"label": "CNA / Reuters", "href": "https://www.channelnewsasia.com/business/white-house-asks-openai-anthropic-hold-models-british-testers-politico-reports-6409141"},
-        {"label": "Mint 转述", "href": "https://www.livemint.com/news/us-news/white-house-wants-us-government-review-of-openai-anthropic-s-new-ai-models-before-uk-access-report-11790271763243.html"}
+        {"label": "Google 博客", "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/"},
+        {"label": "The Register", "href": "https://www.theregister.com/ai-and-ml/2026/09/25/google-gemini-can-present-cartoon-or-lifelike-avatars-to-lip-sync-generative-chatter/5299016"}
+      ]
+    },
+    {
+      "lab": "META",
+      "accent": [196, 167, 255],
+      "head": "Connect：Muse 押智能体+硬件",
+      "body": "9 月 25 日 TechCrunch 等报导 Meta Connect：个人智能体 App Muse（底层 Muse Spark）下载量多家估计约 230 万–430 万，美加上架后一度冲到美区应用商店榜首。大会侧重点：Muse Realtime Avatar（约 870 毫秒端到端语音+视频首包，研究博客 9 月 23 日）；Mac 上可操作桌面应用；即将有独立邮箱；与 Stripe/Shopify/PayPal 等做代购；无摄像头的 Ray-Ban Meta Audio（约 349 美元起，10 月 13 日预售）；钥匙扣形态 Muse Charm（官方称年底假期前后出货）。Zuckerberg 称长期靠交易抽成赚钱。",
+      "why": "Meta 把智能体做成「App + 眼镜 + 挂件」，比再发一个聊天模型更像消费级入口争夺。",
+      "links": [
+        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/"},
+        {"label": "Meta Research", "href": "https://research.meta.ai/blog/bringing-your-muse-to-life"},
+        {"label": "AI Insider", "href": "https://theaiinsider.tech/2026/09/25/meta-goes-all-in-on-muse-ai-agent-at-connect-2026-with-avatars-camera-free-glasses-and-a-keychain-device/"}
       ]
     },
     {
       "lab": "OPEN",
       "accent": [126, 224, 129],
-      "head": "CLM-8B：开源「快决策」层",
-      "body": "9 月 24 日，Contrastive-LM 开源 CLM-8B（Apache 2.0）：不算文、只在给定选项里挑下一步，属于「System One」快决策模型（与 TypeSafe 的 Jev 同类）。做法是状态编码器与动作编码器分开做对比学习，动作嵌入可缓存；骨干是冻结的 Qwen3-8B + 约 2000 万参数可训练头。作者称零样本在游戏/工具调用等任务上与 Jev 大致相当，部分场景延迟可低约 9 倍（如 T-Rex 约 16.5 毫秒对约 149.8 毫秒）；轻量微调后作验证器，在 DeepSWE 约 38 题上约 81.6%、Terminal-Bench 2.1 约 30 题上约 87.6%（样本量小，需自测）。权重与代码在 Hugging Face / GitHub。",
-      "why": "Agent 里路由、验候选、选工具不必每次叫大模型；多了一个可自托管、可对标 Jev 的开源选项。",
+      "head": "VeriLoop E2：27B 开源可验收",
+      "body": "9 月 24 日晚，清华深圳国际研究生院相关团队在 Hugging Face 放出 VeriLoop E2（约 270 亿参数，基于 Qwen3.8-27B，Apache 2.0，原生约 26.2 万 token 上下文）。核心做法是「模型只提议、外部证据决定是否采纳」：通不过就回滚。作者自报 SWE-bench Pro 约 76.2%、Terminal-Bench 2.1 约 88.8%、DeepSWE v1.1 约 64.6%、AIME 2026 约 98.3%（官方称部分依赖其内部 Harness，生产版 Harness 未开源）。同时放出完整 GGUF 量化阶梯与任务级评测证据包。",
+      "why": "开源侧又多一个强调「外部验收、可回滚」的代码/数学长程模型，适合自托管对照。",
       "links": [
-        {"label": "GitHub", "href": "https://github.com/Contrastive-LM/CLM"},
-        {"label": "Hugging Face", "href": "https://huggingface.co/Contrastive-LM/CLM-v0.1-8B"},
-        {"label": "解读", "href": "https://explainx.ai/blog/contrastive-language-model-clm-8b-system-one-9x-faster-than-jev-2026"}
-      ]
-    },
-    {
-      "lab": "LIQUID",
-      "accent": [232, 184, 109],
-      "head": "DSpark：端侧视觉模型加速",
-      "body": "9 月 24 日 Liquid AI 发布实验性草稿模型 LFM2.5-VL-3B-DSpark，给自家约 30 亿参数的视觉—语言模型做推测解码（speculative decoding：小草稿模型先猜一串 token，大模型再核对，对了就省算力）。草稿器约 2.8 亿参数，大约只多占目标模型约 8.9% 参数。官方称端侧解码最高约 3.13 倍、H100 上最高约 2.66 倍；端到端延迟最高约 2.62 倍 / 2.27 倍。首日支持 llama.cpp、MLX-VLM、SGLang；Safetensors 与 GGUF 已上 Hugging Face。推测解码只加速生成，不加速图像编码与预填充。",
-      "why": "在手机/笔记本上跑看图模型时，同样质量下响应能明显更快，不用换更大芯片。",
-      "links": [
-        {"label": "Hugging Face 博文", "href": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark"}
-      ]
-    },
-    {
-      "lab": "FASTINO",
-      "accent": [196, 167, 255],
-      "head": "GLiNER2.5-Decide：340M 分类器",
-      "body": "Fastino 在 Hugging Face 上线 GLiNER2.5-Decide（约 3.4 亿参数，Apache 2.0）：调用时临时传入标签集合，做意图、路由、情绪、工单分派、审核等结构化分类，不生成长文本。官方在自建 fast-decisions 集（17 个域）上称平均精确匹配约 60.2%，高于表中的 JevK5（约 57.6%）等对照；可用 CPU/GPU 本地跑。它不是通用对话模型，只适合「从固定选项里定答案」的运营决策。",
-      "why": "客服路由、工单分派这类高频小决策，用小分类器往往比再调一次大模型更稳、更便宜。",
-      "links": [
-        {"label": "Hugging Face", "href": "https://huggingface.co/fastino/GLiNER2.5-Decide"}
+        {"label": "Hugging Face", "href": "https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2"},
+        {"label": "论坛说明", "href": "https://discuss.huggingface.co/t/veriloop-e2-release-27b-post-trained-model-and-full-gguf-precision-ladder-from-bf16-to-iq1-m/180723"}
       ]
     }
   ]
