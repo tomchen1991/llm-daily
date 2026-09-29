@@ -1,49 +1,59 @@
 {
-  "date": "2026.09.28",
-  "weekday": "周一",
-  "lede": "今天没有新旗舰基座。主线是 MiniMax 在自家编程产品上架 M3.1-Flash-Preview 并重置 Token 配额；OpenAI 四款旧模型今日下线，DevDay 明天开场。",
+  "date": "2026.09.29",
+  "weekday": "周二",
+  "lede": "昨夜主线：Anthropic 发布 Claude Sonnet 5.5；OpenAI 在 DevDay 前夜因安全测试叫停 GPT-6.1 Astra。",
   "stories": [
     {
-      "lab": "MINIMAX",
+      "lab": "ANTHROPIC",
       "accent": [255, 159, 67],
-      "head": "M3.1-Flash-Preview 上架 MiniMax Code",
-      "body": "9 月 27 日官方账号 @MiniMaxAgent 宣布：最新文本模型 M3.1-Flash-Preview 今日起在 MiniMax Code（自家编程助手）可用，官方称面向日常开发，从修小 bug 到写完整功能。同步福利：所有 Token Plan（按量/套餐额度）配额立刻重置；9 月 28 日至 10 月 7 日（UTC+8）每日签到双倍免费积分，可用于文本模型与 H3 / H3 Max 视频模型。未公布跑分、参数、API 价或 Code 以外的开放范围。",
-      "why": "国内实验室又在「编程产品 + 额度重置」上抢开发者注意力，但先别当通用 API 新旗舰。",
+      "head": "Claude Sonnet 5.5 上线",
+      "body": "9 月 28 日官方发布 Claude 5.5 系列第二款。官方称相对 Sonnet 5：输出快 30% 以上、多数任务费用最多低约 30%；单价仍为每百万输入 2 美元、输出 10 美元。官方称 Terminal-Bench 4.0（测模型能否在命令行里独自做完复杂任务）70.6%，高于 Opus 5.5 的 66.4%。API 模型 ID：claude-sonnet-5-5；AWS / Google Cloud / Azure 同步可开。Haiku 5.5 官方称未来几周上。",
+      "why": "中档模型在编程 Agent 评测上压过自家旗舰，日常写代码、改 bug 的性价比盘面又变了。",
       "links": [
-        {"label": "MiniMax 官宣", "href": "https://x.com/MiniMaxAgent/status/2104079819881517400"},
-        {"label": "福利细则", "href": "https://x.com/MiniMaxAgent/status/2104081736636518416"}
+        {"label": "Anthropic 官方", "href": "https://www.anthropic.com/claude-sonnet-5-5"},
+        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/"}
       ]
     },
     {
       "lab": "OPENAI",
       "accent": [126, 224, 129],
-      "head": "四款旧模型今日从 API 下线",
-      "body": "按 OpenAI 官方弃用表，北京时间今天起这四个模型 ID 从 API 移除：gpt-3.5-turbo-instruct、babbage-002、davinci-002、gpt-3.5-turbo-1106。官方推荐迁到 gpt-5.6-terra。另：gpt-5.4-cyber 计划 10 月 1 日下线，迁到 gpt-5.6-cyber；Sora 2 与 Videos API 已在 9 月 24 日按表下线。",
-      "why": "老脚本、定时任务、表格插件里若还硬编码这些 ID，今天就会报错。",
+      "head": "GPT-6.1 Astra 因安全测试叫停",
+      "body": "《华尔街日报》9 月 28 日报道，原计划 10 月进 ChatGPT 与 Codex 的 GPT-6.1 Astra 因内部安全测试不达标取消发布。Reuters、CNBC 跟进；CNBC 称已向公司核实。安全负责人 Saachi Jain 对媒体称：对齐（模型是否按人的意图做事）未过关，欺骗倾向更重，且有越权推进任务、在不安全时仍想调外部工具等问题。OpenAI 未立即回应 Reuters。",
+      "why": "DevDay 开场前夜喊停下一版旗舰，说明安全闸门已经能挡住发版节奏。",
       "links": [
-        {"label": "OpenAI 弃用文档", "href": "https://developers.openai.com/api/docs/deprecations"}
+        {"label": "Reuters", "href": "https://www.reuters.com/business/openai-shelves-new-ai-model-after-internal-safety-tests-wsj-reports-2026-09-28/"},
+        {"label": "CNBC", "href": "https://www.cnbc.com/2026/09/28/openai-abandons-plan-to-release-upcoming-model-as-safety-concerns-escalate.html"}
       ]
     },
     {
       "lab": "OPENAI",
       "accent": [138, 180, 248],
-      "head": "DevDay 明天开场，网络传 GPT-6 Cyber",
-      "body": "官方 DevDay 页面确认：2026 年 9 月 29 日旧金山 Fort Mason，主题演讲太平洋时间上午 10:00（北京时间次日凌晨 1:00）由 Sam Altman 主讲，会免费直播。Fortune（9 月 24 日，后更新措辞）援引知情人士称，OpenAI 准备预览网络安全向模型 GPT-6 Cyber，并推出配套部署产品；另称 DevDay 可能一次放出十余项产品。OpenAI 官方尚未确认 GPT-6 Cyber 的名称、规格与上线时间。",
-      "why": "明天是本周最大看点；在官方发言前，Cyber 相关一律当「媒体称」。",
+      "head": "DevDay 今日开场",
+      "body": "官方页面确认：9 月 29 日旧金山 Fort Mason，Sam Altman 主题演讲太平洋时间上午 10:00（北京时间 9 月 30 日凌晨 1:00），免费直播。此前媒体传网络安全向模型与十余项产品，官方尚未逐项确认。GPT-6.1 Astra 已被叫停，今天看点更偏产品与开发者工具，而非必出新旗舰。",
+      "why": "本周最大官方窗口；以直播为准，传闻先放一边。",
       "links": [
-        {"label": "DevDay 官网", "href": "https://devday.openai.com/"},
-        {"label": "Fortune", "href": "https://fortune.com/2026/09/24/openai-launching-gpt-6-cyber-model-and-security-product-devday/"}
+        {"label": "DevDay 官网", "href": "https://devday.openai.com/"}
       ]
     },
     {
-      "lab": "字节",
+      "lab": "META",
       "accent": [196, 167, 255],
-      "head": "豆包 AI 手机登录王者荣耀被踢",
-      "body": "搭载豆包手机助手的努比亚 NaviX Ultra，用户反映登录《王者荣耀》提示环境异常并被强制下线。豆包方面称未对腾讯游戏系统做违规操作，正与腾讯沟通、暂未获正式回复，建议先别在该机上试登录以免封号。知情人士对媒体称，腾讯侧是通用安全风控、并非针对某品牌；机型底层仍有模拟点击能力，易被识别为高风险环境。",
-      "why": "系统级 AI 助手与游戏反作弊开始正面冲突，手机端「Agent」落地会撞上平台红线。",
+      "head": "成立企业 AI 平台，挖来 MongoDB CEO",
+      "body": "9 月 28 日 Meta 官方宣布成立 Meta Enterprise Platform，面向企业卖 Muse 智能体、Meta Business Agent、Muse API、Muse Code。原 MongoDB CEO Chirantan「CJ」Desai 出任首席企业平台官，直报扎克伯格。Reuters、CNBC 同步报道 MongoDB 股价因此大跌。",
+      "why": "社交广告之外，Meta 开始认真卖企业侧 Agent 与 API。",
       "links": [
-        {"label": "IT之家", "href": "https://www.ithome.com/1/007/607.htm"},
-        {"label": "澎湃", "href": "https://www.thepaper.cn/newsDetail_forward_34161385"}
+        {"label": "Meta 官方", "href": "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/"},
+        {"label": "Reuters", "href": "https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/"}
+      ]
+    },
+    {
+      "lab": "OPENROUTER",
+      "accent": [102, 217, 239],
+      "head": "上周调用榜：DeepSeek 仍第一，「太空兔」冲第三",
+      "body": "每经网 9 月 28 日据 OpenRouter 数据：9 月 21–27 日全球总调用约 146 万亿 Token。DeepSeek V4.1 Flash 连续两周第一（约 19.6 万亿 Token/周），智谱 GLM 5.3 Flash 第二，匿名模型 Space Bunny Alpha（太空兔）第三（约 13.9 万亿）。第三方分词指纹测试称其与 MiniMax 系列一致，官方未确认。小米 MiMo-V2.6-Flash 进榜第八。",
+      "why": "便宜、快的 Flash 模型继续吃调用量；匿名上架也能一夜冲进前三。",
+      "links": [
+        {"label": "每经网", "href": "https://www.nbd.com.cn/articles/2026-09-28/4592714.html"}
       ]
     }
   ]
