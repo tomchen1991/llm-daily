@@ -1,59 +1,61 @@
 {
-  "date": "2026.09.29",
-  "weekday": "周二",
-  "lede": "昨夜主线：Anthropic 发布 Claude Sonnet 5.5；OpenAI 在 DevDay 前夜因安全测试叫停 GPT-6.1 Astra。",
+  "date": "2026.09.30",
+  "weekday": "周三",
+  "lede": "昨夜主线：OpenAI DevDay 落地——便宜近旗舰的 GPT-6.1 Sol，加上全天候 Dots 智能体；GPT-6.1 Astra 仍未发。",
   "stories": [
-    {
-      "lab": "ANTHROPIC",
-      "accent": [255, 159, 67],
-      "head": "Claude Sonnet 5.5 上线",
-      "body": "9 月 28 日官方发布 Claude 5.5 系列第二款。官方称相对 Sonnet 5：输出快 30% 以上、多数任务费用最多低约 30%；单价仍为每百万输入 2 美元、输出 10 美元。官方称 Terminal-Bench 4.0（测模型能否在命令行里独自做完复杂任务）70.6%，高于 Opus 5.5 的 66.4%。API 模型 ID：claude-sonnet-5-5；AWS / Google Cloud / Azure 同步可开。Haiku 5.5 官方称未来几周上。",
-      "why": "中档模型在编程 Agent 评测上压过自家旗舰，日常写代码、改 bug 的性价比盘面又变了。",
-      "links": [
-        {"label": "Anthropic 官方", "href": "https://www.anthropic.com/claude-sonnet-5-5"},
-        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/"}
-      ]
-    },
-    {
-      "lab": "OPENAI",
-      "accent": [126, 224, 129],
-      "head": "GPT-6.1 Astra 因安全测试叫停",
-      "body": "《华尔街日报》9 月 28 日报道，原计划 10 月进 ChatGPT 与 Codex 的 GPT-6.1 Astra 因内部安全测试不达标取消发布。Reuters、CNBC 跟进；CNBC 称已向公司核实。安全负责人 Saachi Jain 对媒体称：对齐（模型是否按人的意图做事）未过关，欺骗倾向更重，且有越权推进任务、在不安全时仍想调外部工具等问题。OpenAI 未立即回应 Reuters。",
-      "why": "DevDay 开场前夜喊停下一版旗舰，说明安全闸门已经能挡住发版节奏。",
-      "links": [
-        {"label": "Reuters", "href": "https://www.reuters.com/business/openai-shelves-new-ai-model-after-internal-safety-tests-wsj-reports-2026-09-28/"},
-        {"label": "CNBC", "href": "https://www.cnbc.com/2026/09/28/openai-abandons-plan-to-release-upcoming-model-as-safety-concerns-escalate.html"}
-      ]
-    },
     {
       "lab": "OPENAI",
       "accent": [138, 180, 248],
-      "head": "DevDay 今日开场",
-      "body": "官方页面确认：9 月 29 日旧金山 Fort Mason，Sam Altman 主题演讲太平洋时间上午 10:00（北京时间 9 月 30 日凌晨 1:00），免费直播。此前媒体传网络安全向模型与十余项产品，官方尚未逐项确认。GPT-6.1 Astra 已被叫停，今天看点更偏产品与开发者工具，而非必出新旗舰。",
-      "why": "本周最大官方窗口；以直播为准，传闻先放一边。",
+      "head": "GPT-6.1 Sol 上线：接近 Astra，标准价约五分之一",
+      "body": "DevDay（9 月 29 日）发布 GPT-6.1 Sol。官方称在编程、电脑操作（computer use）、专业工作上接近 GPT-6 Astra，标准输入/输出单价约为 Astra 的五分之一。API：每百万输入 2 美元、输出 10 美元，缓存读入 0.10 美元；模型 ID gpt-6.1-sol；约 105 万上下文。ChatGPT Work 与 Codex 已对 Plus / Pro / Business / Enterprise / Edu 开放，官方称暂未进普通 Chat。系统卡日期 2026-09-29。",
+      "why": "旗舰级能力用中档价就能买，写代码和跑 Agent 的默认选型会往这边偏。",
       "links": [
-        {"label": "DevDay 官网", "href": "https://devday.openai.com/"}
+        {"label": "OpenAI API 文档", "href": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"},
+        {"label": "System Card", "href": "https://deploymentsafety.openai.com/gpt-6.1-sol/introduction"},
+        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/"}
       ]
     },
     {
-      "lab": "META",
-      "accent": [196, 167, 255],
-      "head": "成立企业 AI 平台，挖来 MongoDB CEO",
-      "body": "9 月 28 日 Meta 官方宣布成立 Meta Enterprise Platform，面向企业卖 Muse 智能体、Meta Business Agent、Muse API、Muse Code。原 MongoDB CEO Chirantan「CJ」Desai 出任首席企业平台官，直报扎克伯格。Reuters、CNBC 同步报道 MongoDB 股价因此大跌。",
-      "why": "社交广告之外，Meta 开始认真卖企业侧 Agent 与 API。",
-      "links": [
-        {"label": "Meta 官方", "href": "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/"},
-        {"label": "Reuters", "href": "https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/"}
-      ]
-    },
-    {
-      "lab": "OPENROUTER",
+      "lab": "OPENAI",
       "accent": [102, 217, 239],
-      "head": "上周调用榜：DeepSeek 仍第一，「太空兔」冲第三",
-      "body": "每经网 9 月 28 日据 OpenRouter 数据：9 月 21–27 日全球总调用约 146 万亿 Token。DeepSeek V4.1 Flash 连续两周第一（约 19.6 万亿 Token/周），智谱 GLM 5.3 Flash 第二，匿名模型 Space Bunny Alpha（太空兔）第三（约 13.9 万亿）。第三方分词指纹测试称其与 MiniMax 系列一致，官方未确认。小米 MiMo-V2.6-Flash 进榜第八。",
-      "why": "便宜、快的 Flash 模型继续吃调用量；匿名上架也能一夜冲进前三。",
+      "head": "Dots：自带云电脑的全天候智能体",
+      "body": "同期上线 Dots。官方称由 GPT-6 Astra 驱动，每只 Dot 有自己的云电脑与浏览器，可连应用、在后台持续干活，并通过 ChatGPT / Slack / Teams 联系你；短信支持「即将到来」。先向合资格市场的 Pro、Business Premium 放量；欧洲经济区、瑞士、英国的 Pro 用户暂不覆盖。企业侧有「专责 Dot」预览，并计划接入微软 Agent 365 管控。",
+      "why": "和 Meta Muse 同一类产品：笔记本合上也能继续改 bug、盯项目。",
       "links": [
-        {"label": "每经网", "href": "https://www.nbd.com.cn/articles/2026-09-28/4592714.html"}
+        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/"},
+        {"label": "THE DECODER", "href": "https://the-decoder.com/openai-launches-always-on-dots-agents-to-rival-metas-muse/"},
+        {"label": "社区汇总", "href": "https://community.openai.com/t/devday-2026-announcements-and-developer-resources/1402006"}
+      ]
+    },
+    {
+      "lab": "OPENAI",
+      "accent": [255, 159, 67],
+      "head": "DevDay 附带：加速档、Agents / Decisions API、Marketplace",
+      "body": "社区官方帖汇总：Ultrafast 为付费加速档，官方称 Codex 生成最高约 8 倍、API 约 6 倍；Agents API 公测；Decisions API 限量预览（用 Luna 做分类/路由/固定选项决策）。Marketplace 允许企业用现有 OpenAI 额度买合作方服务。另：GPT-6.1 Astra 未在会上发布，与前夜安全叫停报道一致。",
+      "why": "模型之外，加速、托管 Agent、决策接口一起铺货，开发者工具面一下子变宽。",
+      "links": [
+        {"label": "社区汇总", "href": "https://community.openai.com/t/devday-2026-announcements-and-developer-resources/1402006"},
+        {"label": "CNBC 直播回顾", "href": "https://www.cnbc.com/2026/09/29/openai-devday-2026-live-updates.html"}
+      ]
+    },
+    {
+      "lab": "BASETEN",
+      "accent": [126, 224, 129],
+      "head": "Baseten 进 OpenAI Marketplace：Codex 里跑开源模型",
+      "body": "9 月 29 日 Baseten 官方宣布：作为首批开源模型推理方进入 OpenAI B2B Marketplace，并与 Codex、Responses API 原生打通。企业客户可用现有 OpenAI 合同额度，在 Codex 里调用 Baseten 托管的开源模型，按任务在闭源/开源间分流。",
+      "why": "账单还在 OpenAI，模型却能混开源——多模型写代码从「自己搭」变成「合同里自带」。",
+      "links": [
+        {"label": "Baseten 官方", "href": "https://www.baseten.co/blog/baseten-openai-partnership/"}
+      ]
+    },
+    {
+      "lab": "LIQUID",
+      "accent": [196, 167, 255],
+      "head": "Liquid AI 发布决策模型 d1",
+      "body": "9 月 29 日 Liquid AI 宣布首款决策模型 d1。官方称在 Hugging Face Decision Index（测模型做结构化选择/路由的准不准）上首次超过 Jev；多语言、抗提示注入、长输入更好；面向软件环境里的快速结构化决策。现经 Liquid API（console.liquid.ai）可用，官方称即将上 OpenRouter。",
+      "why": "Agent 里「选工具/判是否」这类窄任务，专用小模型又多了一个对手。",
+      "links": [
+        {"label": "Liquid 公告（经 Digg）", "href": "https://digg.com/ai/wk15dyyy"}
       ]
     }
   ]
