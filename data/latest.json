@@ -11,7 +11,7 @@
       "why": "旗舰级能力用中档价就能买，写代码和跑 Agent 的默认选型会往这边偏。",
       "links": [
         {"label": "OpenAI API 文档", "href": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"},
-        {"label": "System Card", "href": "https://deploymentsafety.openai.com/gpt-6.1-sol/introduction"},
+        {"label": "System Card", "href": "https://deploymentsafety.openai.com/gpt-6-1-sol/introduction"},
         {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/"}
       ]
     },
