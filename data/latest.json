@@ -1,61 +1,62 @@
 {
-  "date": "2026.09.30",
-  "weekday": "周三",
-  "lede": "昨夜主线：OpenAI DevDay 落地——便宜近旗舰的 GPT-6.1 Sol，加上全天候 Dots 智能体；GPT-6.1 Astra 仍未发。",
+  "date": "2026.10.01",
+  "weekday": "周四",
+  "lede": "昨夜主线：Google 推出 Gemini 4 旗舰 Argon——先给网安伙伴试用，公众与普通开发者还拿不到。",
   "stories": [
     {
-      "lab": "OPENAI",
+      "lab": "GOOGLE",
       "accent": [138, 180, 248],
-      "head": "GPT-6.1 Sol 上线：接近 Astra，标准价约五分之一",
-      "body": "DevDay（9 月 29 日）发布 GPT-6.1 Sol。官方称在编程、电脑操作（computer use）、专业工作上接近 GPT-6 Astra，标准输入/输出单价约为 Astra 的五分之一。API：每百万输入 2 美元、输出 10 美元，缓存读入 0.10 美元；模型 ID gpt-6.1-sol；约 105 万上下文。ChatGPT Work 与 Codex 已对 Plus / Pro / Business / Enterprise / Edu 开放，官方称暂未进普通 Chat。系统卡日期 2026-09-29。",
-      "why": "旗舰级能力用中档价就能买，写代码和跑 Agent 的默认选型会往这边偏。",
+      "head": "Gemini 4 Argon 发布：旗舰换代，暂不对公众开放",
+      "body": "9 月 30 日 Google DeepMind 宣布 Gemini 4 旗舰 Argon。官方称面向复杂软件工程、法务/金融类知识工作与网络安全防御；输出上限提到 100 万 token（此前约 6.4 万）。先经 Fairwind 计划给可信网安防御方试用，并参与美国政府自愿预发布访问；后续优先给付费 API 与 Google AI Ultra。官宣入门价：每百万输入 2 美元、输出 10 美元，缓存读入再打九五折；入门期结束后变为 4 / 20 美元。官方称 DeepSWE v1.1（长程写代码基准）77.9%。路透社称 Google 已不再计划发 Gemini 3.5 Pro。",
+      "why": "谷歌旗舰线从「3.x Pro」直接跳到 4，但先锁在网安小圈子——能力对标 Astra/Opus 的说法还要等公开评测。",
       "links": [
-        {"label": "OpenAI API 文档", "href": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"},
-        {"label": "System Card", "href": "https://deploymentsafety.openai.com/gpt-6-1-sol/introduction"},
-        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/"}
+        {"label": "Google 官方博客", "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"},
+        {"label": "路透社", "href": "https://www.reuters.com/legal/litigation/google-announces-gemini-4-flagship-ai-model-after-months-delays-2026-09-30/"},
+        {"label": "Ars Technica", "href": "https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/"}
       ]
     },
     {
-      "lab": "OPENAI",
+      "lab": "DEEPSEEK",
       "accent": [102, 217, 239],
-      "head": "Dots：自带云电脑的全天候智能体",
-      "body": "同期上线 Dots。官方称由 GPT-6 Astra 驱动，每只 Dot 有自己的云电脑与浏览器，可连应用、在后台持续干活，并通过 ChatGPT / Slack / Teams 联系你；短信支持「即将到来」。先向合资格市场的 Pro、Business Premium 放量；欧洲经济区、瑞士、英国的 Pro 用户暂不覆盖。企业侧有「专责 Dot」预览，并计划接入微软 Agent 365 管控。",
-      "why": "和 Meta Muse 同一类产品：笔记本合上也能继续改 bug、盯项目。",
+      "head": "DeepSeek 开源华为昇腾全套基础组件",
+      "body": "9 月 30 日多家媒体报道：DeepSeek 宣布开源面向华为昇腾的基础设施，覆盖 TileLang、DeepGEMM-Ascend、DeepEP-Ascend、TileKernels、FlashMLA、DeepSelect 等，与此前英伟达侧开源件一一对应。报道称双方在推进基于昇腾 950 的 128 卡超节点；华为侧亦在 CANN 社区放出联合优化成果。部分通信能力与性能测试仍基于概念验证硬件套件，商用环境需自行配齐固件与驱动。",
+      "why": "国产卡上跑 DeepSeek 栈少了一层「自己从零适配」的门槛，训练/推理迁移成本下降。",
       "links": [
-        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/"},
-        {"label": "THE DECODER", "href": "https://the-decoder.com/openai-launches-always-on-dots-agents-to-rival-metas-muse/"},
-        {"label": "社区汇总", "href": "https://community.openai.com/t/devday-2026-announcements-and-developer-resources/1402006"}
+        {"label": "网易智能", "href": "https://www.163.com/tech/article/L82N0RQQ00097U7T.html"},
+        {"label": "科创板日报（经富途）", "href": "https://news.futunn.com/post/1000448163/challenging-nvidia-s-cuda-deepseek-open-sources-huawei-ascend-full"}
+      ]
+    },
+    {
+      "lab": "POLICY",
+      "accent": [255, 159, 67],
+      "head": "FTC 调查 OpenAI 与 Anthropic 模型安全",
+      "body": "9 月 30 日《华盛顿邮报》、Axios 等报道：美国联邦贸易委员会（FTC）对 Anthropic、OpenAI 等公司的 AI 系统安全展开广泛调查，关注是否构成对消费者的不公平或欺骗性做法；或将发出民事调查令要求高管作证与交材料。报道称调查已进行数周，早于近期沙箱逃逸等事件的公开披露。",
+      "why": "白宫刚推自愿安全承诺的第二天就传来执法侧调查——合规与公关压力同时上升。",
+      "links": [
+        {"label": "华盛顿邮报", "href": "https://www.washingtonpost.com/technology/2026/09/30/ftc-launches-broad-investigation-into-anthropic-openai/"},
+        {"label": "Axios", "href": "https://www.axios.com/2026/09/30/ftc-openai-anthropic-ai-safety-investigation"}
+      ]
+    },
+    {
+      "lab": "POLICY",
+      "accent": [126, 224, 129],
+      "head": "白宫前沿责任承诺：六家签自愿审计",
+      "body": "9 月 29 日 OpenAI、Anthropic、Google、Meta、xAI、Nvidia 签署白宫《前沿责任联合承诺》（报道多在 30 日跟进）。要点是加强内部控制并引入外部审计评估安全措施；无强制处罚、披露期限或统一审计方要求，特朗普称其为「道德上有约束力」。背景包括近期实验性智能体越权访问系统等事件。",
+      "why": "监管仍偏「自己管自己」，但和 FTC 调查叠在一起，各家对外讲安全时会更谨慎。",
+      "links": [
+        {"label": "CoinDesk", "href": "https://www.coindesk.com/tech/2026/09/30/openai-google-and-meta-pledge-outside-ai-audits-under-voluntary-white-house-deal"},
+        {"label": "IAPP", "href": "https://iapp.org/news/a/white-house-major-ai-developers-reach-morally-binding-safety-commitments"}
       ]
     },
     {
       "lab": "OPENAI",
-      "accent": [255, 159, 67],
-      "head": "DevDay 附带：加速档、Agents / Decisions API、Marketplace",
-      "body": "社区官方帖汇总：Ultrafast 为付费加速档，官方称 Codex 生成最高约 8 倍、API 约 6 倍；Agents API 公测；Decisions API 限量预览（用 Luna 做分类/路由/固定选项决策）。Marketplace 允许企业用现有 OpenAI 额度买合作方服务。另：GPT-6.1 Astra 未在会上发布，与前夜安全叫停报道一致。",
-      "why": "模型之外，加速、托管 Agent、决策接口一起铺货，开发者工具面一下子变宽。",
-      "links": [
-        {"label": "社区汇总", "href": "https://community.openai.com/t/devday-2026-announcements-and-developer-resources/1402006"},
-        {"label": "CNBC 直播回顾", "href": "https://www.cnbc.com/2026/09/29/openai-devday-2026-live-updates.html"}
-      ]
-    },
-    {
-      "lab": "BASETEN",
-      "accent": [126, 224, 129],
-      "head": "Baseten 进 OpenAI Marketplace：Codex 里跑开源模型",
-      "body": "9 月 29 日 Baseten 官方宣布：作为首批开源模型推理方进入 OpenAI B2B Marketplace，并与 Codex、Responses API 原生打通。企业客户可用现有 OpenAI 合同额度，在 Codex 里调用 Baseten 托管的开源模型，按任务在闭源/开源间分流。",
-      "why": "账单还在 OpenAI，模型却能混开源——多模型写代码从「自己搭」变成「合同里自带」。",
-      "links": [
-        {"label": "Baseten 官方", "href": "https://www.baseten.co/blog/baseten-openai-partnership/"}
-      ]
-    },
-    {
-      "lab": "LIQUID",
       "accent": [196, 167, 255],
-      "head": "Liquid AI 发布决策模型 d1",
-      "body": "9 月 29 日 Liquid AI 宣布首款决策模型 d1。官方称在 Hugging Face Decision Index（测模型做结构化选择/路由的准不准）上首次超过 Jev；多语言、抗提示注入、长输入更好；面向软件环境里的快速结构化决策。现经 Liquid API（console.liquid.ai）可用，官方称即将上 OpenRouter。",
-      "why": "Agent 里「选工具/判是否」这类窄任务，专用小模型又多了一个对手。",
+      "head": "GPT-6.1 Sol 余波：社区补了一轮基准数字",
+      "body": "DevDay 次日（9 月 30 日）OpenAI 开发者社区帖汇总：官方称 DeepSWE v1.1 高推理力度 75.2%（对比前代 Sol 最高约 68.8%）；AutomationBench 中等力度 31.7%；OSWorld 2.0 离线集最大力度 71.4%（Astra 约 73.5%）。价仍为每百万输入 2 / 输出 10 美元，缓存读入 0.10 美元；API 文档确认上下文约 105 万、最大输出 12.8 万。",
+      "why": "昨天讲了上线，今天数字更齐——选型时可以把「接近 Astra、便宜一截」落到具体基准上。",
       "links": [
-        {"label": "Liquid 公告（经 Digg）", "href": "https://digg.com/ai/wk15dyyy"}
+        {"label": "OpenAI 社区", "href": "https://community.openai.com/t/gpt-6-1-sol-in-the-api-a-meaningful-step-up-in-cost-performance/1402388"},
+        {"label": "API 文档", "href": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"}
       ]
     }
   ]
