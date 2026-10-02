@@ -1,62 +1,71 @@
 {
-  "date": "2026.10.01",
-  "weekday": "周四",
-  "lede": "昨夜主线：Google 推出 Gemini 4 旗舰 Argon——先给网安伙伴试用，公众与普通开发者还拿不到。",
+  "date": "2026.10.02",
+  "weekday": "周五",
+  "lede": "昨夜主线：Cloudflare 交出首款自研开源「决策模型」Clef——专给智能体做分类/路由，和 Jev 一类。",
   "stories": [
     {
-      "lab": "GOOGLE",
-      "accent": [138, 180, 248],
-      "head": "Gemini 4 Argon 发布：旗舰换代，暂不对公众开放",
-      "body": "9 月 30 日 Google DeepMind 宣布 Gemini 4 旗舰 Argon。官方称面向复杂软件工程、法务/金融类知识工作与网络安全防御；输出上限提到 100 万 token（此前约 6.4 万）。先经 Fairwind 计划给可信网安防御方试用，并参与美国政府自愿预发布访问；后续优先给付费 API 与 Google AI Ultra。官宣入门价：每百万输入 2 美元、输出 10 美元，缓存读入再打九五折；入门期结束后变为 4 / 20 美元。官方称 DeepSWE v1.1（长程写代码基准）77.9%。路透社称 Google 已不再计划发 Gemini 3.5 Pro。",
-      "why": "谷歌旗舰线从「3.x Pro」直接跳到 4，但先锁在网安小圈子——能力对标 Astra/Opus 的说法还要等公开评测。",
-      "links": [
-        {"label": "Google 官方博客", "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"},
-        {"label": "路透社", "href": "https://www.reuters.com/legal/litigation/google-announces-gemini-4-flagship-ai-model-after-months-delays-2026-09-30/"},
-        {"label": "Ars Technica", "href": "https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/"}
-      ]
-    },
-    {
-      "lab": "DEEPSEEK",
-      "accent": [102, 217, 239],
-      "head": "DeepSeek 开源华为昇腾全套基础组件",
-      "body": "9 月 30 日多家媒体报道：DeepSeek 宣布开源面向华为昇腾的基础设施，覆盖 TileLang、DeepGEMM-Ascend、DeepEP-Ascend、TileKernels、FlashMLA、DeepSelect 等，与此前英伟达侧开源件一一对应。报道称双方在推进基于昇腾 950 的 128 卡超节点；华为侧亦在 CANN 社区放出联合优化成果。部分通信能力与性能测试仍基于概念验证硬件套件，商用环境需自行配齐固件与驱动。",
-      "why": "国产卡上跑 DeepSeek 栈少了一层「自己从零适配」的门槛，训练/推理迁移成本下降。",
-      "links": [
-        {"label": "网易智能", "href": "https://www.163.com/tech/article/L82N0RQQ00097U7T.html"},
-        {"label": "科创板日报（经富途）", "href": "https://news.futunn.com/post/1000448163/challenging-nvidia-s-cuda-deepseek-open-sources-huawei-ascend-full"}
-      ]
-    },
-    {
-      "lab": "POLICY",
+      "lab": "CLOUDFLARE",
       "accent": [255, 159, 67],
-      "head": "FTC 调查 OpenAI 与 Anthropic 模型安全",
-      "body": "9 月 30 日《华盛顿邮报》、Axios 等报道：美国联邦贸易委员会（FTC）对 Anthropic、OpenAI 等公司的 AI 系统安全展开广泛调查，关注是否构成对消费者的不公平或欺骗性做法；或将发出民事调查令要求高管作证与交材料。报道称调查已进行数周，早于近期沙箱逃逸等事件的公开披露。",
-      "why": "白宫刚推自愿安全承诺的第二天就传来执法侧调查——合规与公关压力同时上升。",
+      "head": "Clef / Clef-flash：首款自研开源决策模型上线",
+      "body": "10 月 1 日 Cloudflare 官宣：Workers AI 上线 Clef（约 270 亿参数，基于 Qwen3.8-27B）与 Clef-flash（约 90 亿，基于 Qwen3.5-9B）。它们不做长文生成，而是读一段状态 + 一组带类型的问题，直接返回各选项概率，方便智能体立刻分流、拦截或升级。官方称上下文约 6.5 万 token，可带最多 4 张图；权重 Apache 2.0 开源到 Hugging Face，并兼容 Jev 的 System One API。托管价：每百万输入 token，Clef 0.24 美元、Clef-flash 0.09 美元。官方称中位延迟约 209 毫秒 / 38.8 毫秒（对比其测到的 Jev 约 524 毫秒）。同日还宣布面向 Clef 的强化学习微调服务（先人手协作）。",
+      "why": "智能体热路径上需要「又快又稳的二选一」，不必每次都叫大模型写一段话——Cloudflare 把这条产品线开源并挂到边缘 GPU 上。",
       "links": [
-        {"label": "华盛顿邮报", "href": "https://www.washingtonpost.com/technology/2026/09/30/ftc-launches-broad-investigation-into-anthropic-openai/"},
-        {"label": "Axios", "href": "https://www.axios.com/2026/09/30/ftc-openai-anthropic-ai-safety-investigation"}
+        {"label": "Cloudflare 官方博客", "href": "https://blog.cloudflare.com/clef-decision-models/"},
+        {"label": "Changelog", "href": "https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/"},
+        {"label": "Clef 模型页", "href": "https://developers.cloudflare.com/workers-ai/models/clef/"}
       ]
     },
     {
-      "lab": "POLICY",
-      "accent": [126, 224, 129],
-      "head": "白宫前沿责任承诺：六家签自愿审计",
-      "body": "9 月 29 日 OpenAI、Anthropic、Google、Meta、xAI、Nvidia 签署白宫《前沿责任联合承诺》（报道多在 30 日跟进）。要点是加强内部控制并引入外部审计评估安全措施；无强制处罚、披露期限或统一审计方要求，特朗普称其为「道德上有约束力」。背景包括近期实验性智能体越权访问系统等事件。",
-      "why": "监管仍偏「自己管自己」，但和 FTC 调查叠在一起，各家对外讲安全时会更谨慎。",
+      "lab": "ANTHROPIC",
+      "accent": [196, 167, 255],
+      "head": "Claude Code 上线 Mods：TypeScript 改行为与界面",
+      "body": "10 月 1 日 Anthropic 官方博客与 Claude Code 2.1.287 更新说明：Mods 是装在插件里的小型 TypeScript 函数，可拦截工具调用、改写提示、画新界面，甚至替换内置功能（官方举例：/diff 已改成 mod）。CLI 与桌面端可用；官方明确警告：Mods 与 Claude Code 同等机器权限、无沙箱，只装可信来源。同版本还修了危险 rm 与 always-ask 失效、MCP 工具名 __proto__ 绕过组织权限上限等问题，并加入可选侧路插件「You should know」。",
+      "why": "编码助手从「挂钩脚本」升级到「可替换核心功能」——团队自定义更深了，供应链与权限风险也同步升高。",
       "links": [
-        {"label": "CoinDesk", "href": "https://www.coindesk.com/tech/2026/09/30/openai-google-and-meta-pledge-outside-ai-audits-under-voluntary-white-house-deal"},
-        {"label": "IAPP", "href": "https://iapp.org/news/a/white-house-major-ai-developers-reach-morally-binding-safety-commitments"}
+        {"label": "Anthropic 官方博客", "href": "https://claude.com/blog/claude-code-mods"},
+        {"label": "CHANGELOG", "href": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"}
+      ]
+    },
+    {
+      "lab": "CLOUDFLARE",
+      "accent": [138, 180, 248],
+      "head": "AI Search 正式商用：原生图像检索 + OCR",
+      "body": "同日 Cloudflare 宣布 AI Search（托管检索：Workers AI + Vectorize + R2 等）全面可用。新增原生图像嵌入（不再只靠给图写说明再搜文字）、PDF OCR、单文件上限提到约 10 MiB。计费自 2026 年 11 月 1 日起生效；所有 Workers 套餐仍有免费额度（官方写明每月含 500 万摄取 token、10 GB 存储、各 1000 次语义/全文查询等）。",
+      "why": "做站内/文档检索的人少了一套自建流水线；十一月起要按摄取、存储、查询三项算账。",
+      "links": [
+        {"label": "Cloudflare 官方博客", "href": "https://blog.cloudflare.com/ai-search-ga/"}
+      ]
+    },
+    {
+      "lab": "META",
+      "accent": [102, 217, 239],
+      "head": "Muse 上线 22 天美区下载破 500 万",
+      "body": "10 月 1 日多家媒体援引 Sensor Tower：Meta 的 Muse 应用自 9 月 8 日上线后约 22 天，美国下载量超过 500 万；对比其口径下 ChatGPT 约 56 天、Grok 约 103 天、Claude 约 492 天。报道同时指出 Meta 大量用自家广告位推广，且 Muse 同时上了 iOS/Android，对比口径并不完全对称。产品侧是可长期代劳的个人智能体（浏览、填表、订票等），搭载 Muse Spark 系列模型。",
+      "why": "分发渠道能把「可行动的智能体」装进手机的速度，正在压过「谁先做出聊天机器人」。",
+      "links": [
+        {"label": "Tech Startups", "href": "https://techstartups.com/2026/10/01/metas-muse-ai-hits-5-million-downloads-in-22-days-outpacing-chatgpt-grok-and-claude/"}
       ]
     },
     {
       "lab": "OPENAI",
-      "accent": [196, 167, 255],
-      "head": "GPT-6.1 Sol 余波：社区补了一轮基准数字",
-      "body": "DevDay 次日（9 月 30 日）OpenAI 开发者社区帖汇总：官方称 DeepSWE v1.1 高推理力度 75.2%（对比前代 Sol 最高约 68.8%）；AutomationBench 中等力度 31.7%；OSWorld 2.0 离线集最大力度 71.4%（Astra 约 73.5%）。价仍为每百万输入 2 / 输出 10 美元，缓存读入 0.10 美元；API 文档确认上下文约 105 万、最大输出 12.8 万。",
-      "why": "昨天讲了上线，今天数字更齐——选型时可以把「接近 Astra、便宜一截」落到具体基准上。",
+      "accent": [126, 224, 129],
+      "head": "Dots 对上 Muse：先做 Pro 专属「长期干活」",
+      "body": "10 月 1 日《The Verge》《WIRED》跟进 DevDay：OpenAI 的 Dots（由 GPT-6 Astra 驱动的常驻智能体）目前主要面向约 100 美元/月的 ChatGPT Pro 及更高档；官方称适合长周期委派。Altman 在会后对媒体说 Dots 很吃算力、先当高端产品。报道对比 Meta 免费可领 Muse、以及 Muse 曾误把地址发给 Marketplace 买家等安全争议；OpenAI 则强调审慎接插件与支付。",
+      "why": "个人智能体战场已打开：一边用免费拉下载量，一边用订阅换更长任务与更紧的安全默认。",
       "links": [
-        {"label": "OpenAI 社区", "href": "https://community.openai.com/t/gpt-6-1-sol-in-the-api-a-meaningful-step-up-in-cost-performance/1402388"},
-        {"label": "API 文档", "href": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"}
+        {"label": "The Verge", "href": "https://www.theverge.com/ai-artificial-intelligence/1003399/meta-openai-ai-agents-muse-dots-battle"},
+        {"label": "MediaNama（DevDay 汇总）", "href": "https://www.medianama.com/2026/10/223-openai-launches-dots-devday-2026/"}
+      ]
+    },
+    {
+      "lab": "GOOGLE",
+      "accent": [232, 184, 109],
+      "head": "Gemini 4 Argon：媒体继续盯「先给网安、不给公众」",
+      "body": "10 月 1 日《卫报》等跟进 9 月 30 日发布的 Gemini 4 Argon：目前只给经筛选的网络安全防御方试用，并参与美国政府自愿预发布流程；官方称强项包括复杂软件工程与找漏洞。报道把它和 Anthropic 把最强模型锁在可信组织、以及白宫前一天的自愿安全承诺放在同一语境。公开 API / Ultra 用户仍要等后续放开。",
+      "why": "旗舰能力到了「能修医院软件漏洞」这一档后，各家默认先缩权限再谈全民可用。",
+      "links": [
+        {"label": "卫报", "href": "https://www.theguardian.com/technology/2026/oct/01/google-releases-gemini-model-restrictions"},
+        {"label": "Google 官方博客", "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"}
       ]
     }
   ]
