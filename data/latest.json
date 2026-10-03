@@ -1,71 +1,63 @@
 {
-  "date": "2026.10.02",
-  "weekday": "周五",
-  "lede": "昨夜主线：Cloudflare 交出首款自研开源「决策模型」Clef——专给智能体做分类/路由，和 Jev 一类。",
+  "date": "2026.10.03",
+  "weekday": "周六",
+  "lede": "昨夜主线：Gemini 4 Argon 仍只给网安试用、公众还没份；Meta 把 Muse 开到 DIY 硬件；DeepSeek Harness 桌面端可直接装。",
   "stories": [
     {
-      "lab": "CLOUDFLARE",
-      "accent": [255, 159, 67],
-      "head": "Clef / Clef-flash：首款自研开源决策模型上线",
-      "body": "10 月 1 日 Cloudflare 官宣：Workers AI 上线 Clef（约 270 亿参数，基于 Qwen3.8-27B）与 Clef-flash（约 90 亿，基于 Qwen3.5-9B）。它们不做长文生成，而是读一段状态 + 一组带类型的问题，直接返回各选项概率，方便智能体立刻分流、拦截或升级。官方称上下文约 6.5 万 token，可带最多 4 张图；权重 Apache 2.0 开源到 Hugging Face，并兼容 Jev 的 System One API。托管价：每百万输入 token，Clef 0.24 美元、Clef-flash 0.09 美元。官方称中位延迟约 209 毫秒 / 38.8 毫秒（对比其测到的 Jev 约 524 毫秒）。同日还宣布面向 Clef 的强化学习微调服务（先人手协作）。",
-      "why": "智能体热路径上需要「又快又稳的二选一」，不必每次都叫大模型写一段话——Cloudflare 把这条产品线开源并挂到边缘 GPU 上。",
-      "links": [
-        {"label": "Cloudflare 官方博客", "href": "https://blog.cloudflare.com/clef-decision-models/"},
-        {"label": "Changelog", "href": "https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/"},
-        {"label": "Clef 模型页", "href": "https://developers.cloudflare.com/workers-ai/models/clef/"}
-      ]
-    },
-    {
-      "lab": "ANTHROPIC",
-      "accent": [196, 167, 255],
-      "head": "Claude Code 上线 Mods：TypeScript 改行为与界面",
-      "body": "10 月 1 日 Anthropic 官方博客与 Claude Code 2.1.287 更新说明：Mods 是装在插件里的小型 TypeScript 函数，可拦截工具调用、改写提示、画新界面，甚至替换内置功能（官方举例：/diff 已改成 mod）。CLI 与桌面端可用；官方明确警告：Mods 与 Claude Code 同等机器权限、无沙箱，只装可信来源。同版本还修了危险 rm 与 always-ask 失效、MCP 工具名 __proto__ 绕过组织权限上限等问题，并加入可选侧路插件「You should know」。",
-      "why": "编码助手从「挂钩脚本」升级到「可替换核心功能」——团队自定义更深了，供应链与权限风险也同步升高。",
-      "links": [
-        {"label": "Anthropic 官方博客", "href": "https://claude.com/blog/claude-code-mods"},
-        {"label": "CHANGELOG", "href": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"}
-      ]
-    },
-    {
-      "lab": "CLOUDFLARE",
+      "lab": "GOOGLE",
       "accent": [138, 180, 248],
-      "head": "AI Search 正式商用：原生图像检索 + OCR",
-      "body": "同日 Cloudflare 宣布 AI Search（托管检索：Workers AI + Vectorize + R2 等）全面可用。新增原生图像嵌入（不再只靠给图写说明再搜文字）、PDF OCR、单文件上限提到约 10 MiB。计费自 2026 年 11 月 1 日起生效；所有 Workers 套餐仍有免费额度（官方写明每月含 500 万摄取 token、10 GB 存储、各 1000 次语义/全文查询等）。",
-      "why": "做站内/文档检索的人少了一套自建流水线；十一月起要按摄取、存储、查询三项算账。",
+      "head": "Gemini 4 Argon：媒体继续盯「先给网安、不给公众」",
+      "body": "9 月 30 日官宣的旗舰 Gemini 4 Argon，10 月 2 日 CNBC、TechRepublic 等继续跟进：目前通过 Fairwind 计划只给经筛选的网络安全防御方试用（官方称可自主找漏洞、验证并打补丁），并参与美国政府自愿预发布流程。官方称 DeepSWE v1.1 得分 77.9%，输出上限提到约 100 万 token；引入价每百万输入/输出 token 为 2 / 10 美元，过了引入期涨到 4 / 20 美元。公开 API 与 Google AI Ultra 仍无明确时间表。",
+      "why": "旗舰到了「能修医院软件漏洞」这一档后，默认先缩权限再谈全民可用——买 API 的人也得继续等。",
       "links": [
-        {"label": "Cloudflare 官方博客", "href": "https://blog.cloudflare.com/ai-search-ga/"}
+        {"label": "Google 官方博客", "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"},
+        {"label": "CNBC", "href": "https://www.cnbc.com/2026/10/02/tech-download-google-argon-frontier-openai-anthropic.html"},
+        {"label": "TechRepublic", "href": "https://www.techrepublic.com/article/news-google-gemini-4-argon-cyber-defenders/"}
       ]
     },
     {
       "lab": "META",
       "accent": [102, 217, 239],
-      "head": "Muse 上线 22 天美区下载破 500 万",
-      "body": "10 月 1 日多家媒体援引 Sensor Tower：Meta 的 Muse 应用自 9 月 8 日上线后约 22 天，美国下载量超过 500 万；对比其口径下 ChatGPT 约 56 天、Grok 约 103 天、Claude 约 492 天。报道同时指出 Meta 大量用自家广告位推广，且 Muse 同时上了 iOS/Android，对比口径并不完全对称。产品侧是可长期代劳的个人智能体（浏览、填表、订票等），搭载 Muse Spark 系列模型。",
-      "why": "分发渠道能把「可行动的智能体」装进手机的速度，正在压过「谁先做出聊天机器人」。",
+      "head": "Muse Gadgets：开源固件/SDK，自己做 Muse 小硬件",
+      "body": "10 月 2 日 Nat Friedman 等官宣 Muse Gadgets：开源 ESP32 固件与 Linux SDK，可用现成 ESP32 / 树莓派板子做口袋屏、遥控器、HDMI 棒等 Muse 智能体设备。官方还准备约 5000 台盘形 Muse Home Link（控制灯光/电视等智能家居），声称对新订阅者免费，未来几周发。官方自嘲：「黑客给黑客玩的，可能砖机、保修作废。」",
+      "why": "个人智能体从手机 App 走到可挂网的实体外设——渠道与形态在扩，权限与安全风险也同步放大。",
       "links": [
-        {"label": "Tech Startups", "href": "https://techstartups.com/2026/10/01/metas-muse-ai-hits-5-million-downloads-in-22-days-outpacing-chatgpt-grok-and-claude/"}
+        {"label": "Digital Trends", "href": "https://www.digitaltrends.com/computing/meta-now-lets-you-build-your-own-ai-gadgets-running-muse-agent-for-free/"}
       ]
     },
     {
-      "lab": "OPENAI",
+      "lab": "DEEPSEEK",
       "accent": [126, 224, 129],
-      "head": "Dots 对上 Muse：先做 Pro 专属「长期干活」",
-      "body": "10 月 1 日《The Verge》《WIRED》跟进 DevDay：OpenAI 的 Dots（由 GPT-6 Astra 驱动的常驻智能体）目前主要面向约 100 美元/月的 ChatGPT Pro 及更高档；官方称适合长周期委派。Altman 在会后对媒体说 Dots 很吃算力、先当高端产品。报道对比 Meta 免费可领 Muse、以及 Muse 曾误把地址发给 Marketplace 买家等安全争议；OpenAI 则强调审慎接插件与支付。",
-      "why": "个人智能体战场已打开：一边用免费拉下载量，一边用订阅换更长任务与更紧的安全默认。",
+      "head": "Harness 桌面端：macOS / Windows 可直接装",
+      "body": "10 月 2 日 DeepSeek 官方账号宣布：开源智能体套件 DeepSeek Harness 提供 macOS（Apple 芯片、系统 13+）与 Windows（64 位）现成安装包；Linux 可用 npm 包 @deepseek-ai/dsh。产品为全球公开预览，插件可扩展；内置官方模型需 DeepSeek API 余额，也可接 Anthropic / OpenAI / Kimi / GLM 等自备密钥。",
+      "why": "开源权重之后，本地/桌面「套件」（跑工具、插件、工作区的那一层）成了下一战场。",
       "links": [
-        {"label": "The Verge", "href": "https://www.theverge.com/ai-artificial-intelligence/1003399/meta-openai-ai-agents-muse-dots-battle"},
-        {"label": "MediaNama（DevDay 汇总）", "href": "https://www.medianama.com/2026/10/223-openai-launches-dots-devday-2026/"}
+        {"label": "DeepSeek Harness 官网", "href": "https://www.deepseek.com/en/harness/"},
+        {"label": "安装说明（第三方整理）", "href": "https://vibecoding.tech/news/2026/10/02/deepseek-harness-desktop-macos-windows"},
+        {"label": "GitHub", "href": "https://github.com/deepseek-ai/deepseek-harness"}
       ]
     },
     {
-      "lab": "GOOGLE",
-      "accent": [232, 184, 109],
-      "head": "Gemini 4 Argon：媒体继续盯「先给网安、不给公众」",
-      "body": "10 月 1 日《卫报》等跟进 9 月 30 日发布的 Gemini 4 Argon：目前只给经筛选的网络安全防御方试用，并参与美国政府自愿预发布流程；官方称强项包括复杂软件工程与找漏洞。报道把它和 Anthropic 把最强模型锁在可信组织、以及白宫前一天的自愿安全承诺放在同一语境。公开 API / Ultra 用户仍要等后续放开。",
-      "why": "旗舰能力到了「能修医院软件漏洞」这一档后，各家默认先缩权限再谈全民可用。",
+      "lab": "AI2",
+      "accent": [255, 159, 67],
+      "head": "Olmo-core 3：把混合专家训练推到万亿参数规模",
+      "body": "10 月 1 日 Allen Institute for AI 发布 Olmo-core 3：面向混合专家（MoE，每次只激活部分专家参数）的开源训练框架。官方称专家数从 8 扩到 128、每 token 仍只选 4 个时，吞吐下降不到约 5%；在 8 张 NVIDIA B300 上测 470 亿参数 MoE，约 5.2 万 token/秒/GPU，约为其旧实现的 2.7 倍。框架已在约 1.2 万亿总参数配置上做过基准，代码开源到 GitHub。",
+      "why": "下一代 Olmo 要走 MoE；把训练栈开源，等于把「怎么训大钱」也摊开给学界和小实验室。",
       "links": [
-        {"label": "卫报", "href": "https://www.theguardian.com/technology/2026/oct/01/google-releases-gemini-model-restrictions"},
-        {"label": "Google 官方博客", "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"}
+        {"label": "Ai2 官方博客", "href": "https://allenai.org/blog/olmocore3"},
+        {"label": "GitHub", "href": "https://github.com/allenai/olmo-core"},
+        {"label": "SiliconANGLE", "href": "https://siliconangle.com/2026/10/02/ai2-releases-olmo-core-3-to-make-developing-large-mixture-of-experts-llms-more-efficient/"}
+      ]
+    },
+    {
+      "lab": "COPILOTKIT",
+      "accent": [196, 167, 255],
+      "head": "OpenDots：开源、可自托管的「常驻同事」模板",
+      "body": "10 月 1 日 CopilotKit 发布 OpenDots，定位为 OpenAI DevDay 闭源产品 Dots 的开源替代：每个 Dot 可有独立电脑（浏览器/文件/终端，默认关闭）、网页与语音、Slack 提及、草稿审批与定时任务；接任意 OpenAI 兼容模型，基于 AG-UI。需自行克隆部署，官方称仍是早期单用户起点。",
+      "why": "「常驻干活的智能体」不再只能订 Pro：开源模板把形态拆开了，模型与算力可自选。",
+      "links": [
+        {"label": "CopilotKit 官方博客", "href": "https://www.copilotkit.ai/blog/introducing-opendots"},
+        {"label": "OpenDots 介绍页", "href": "https://www.copilotkit.ai/opendots"}
       ]
     }
   ]
