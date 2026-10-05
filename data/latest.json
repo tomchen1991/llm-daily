@@ -1,59 +1,51 @@
 {
-  "date": "2026.10.04",
-  "weekday": "周日",
-  "lede": "昨夜主线：德国 Aleph Alpha 开源双语 MoE 模型 Kolibri；OpenAI 安全负责人离职批文化「坏了」。",
+  "date": "2026.10.05",
+  "weekday": "周一",
+  "lede": "国庆长假，今天没什么大事：DeepSeek 的智能体框架加了 Claude Code 扩展兼容层；路由用的「决策小模型」又多一家开源；OpenAI 生命科学模型今天开始收费。",
   "stories": [
     {
-      "lab": "ALEPH ALPHA",
-      "accent": [232, 184, 109],
-      "head": "Kolibri：78B 总参、每 token 只激活约 3.5B，Apache 2.0 开源",
-      "body": "10 月 3 日（德国统一日）Aleph Alpha 发布 Kolibri：英德双语混合专家模型，总参数 781 亿、每次推理约激活 34.6 亿；上下文官方验证到约 100 万 token，推荐服务端不超过约 26 万。权重上 Hugging Face（FP8 约 78 GB），许可证 Apache 2.0；需配合官方 vLLM 插件。官方称面向受监管场景（政务、工业、航空等），并刻意训练「不知道就说不知道」。",
-      "why": "欧洲实验室把可自托管的双语开源权重摊开了——德语深度优先，不是又一个「会一点德语」的英文模型。",
-      "links": [
-        {"label": "官方博客", "href": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/"},
-        {"label": "Hugging Face", "href": "https://huggingface.co/Aleph-Alpha/Kolibri-1"}
-      ]
-    },
-    {
-      "lab": "OPENAI",
-      "accent": [126, 224, 129],
-      "head": "安全报告执笔人 David Robinson 离职：称公司文化「坏了」",
-      "body": "10 月 3 日 TechCrunch 等报道：在 OpenAI 约 3 年半、负责重大产品发布安全报告的 David Robinson 辞职，并在《大西洋月刊》发文称文化「坏了」——靠试错式上线（公司称「迭代部署」）必然周期性翻车，且系统越强翻车越大。他点名近期 Hugging Face 被 OpenAI 智能体误闯等事件。OpenAI 发言人 Drew Pusateri 回应称会在能力超过可控范围时暂停训练或压住发布，并加强测试环境安全与第三方评估。",
-      "why": "不是又一条人事八卦：安全岗用公开离职信施压，说明公司内部对「先上线再补洞」的容忍度又成了焦点。",
-      "links": [
-        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/"},
-        {"label": "The Guardian", "href": "https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken"}
-      ]
-    },
-    {
-      "lab": "OPENAI",
+      "lab": "DEEPSEEK",
       "accent": [138, 180, 248],
-      "head": "Altman：给模型套「宗教力量」是真安全问题",
-      "body": "10 月 3 日 Axios 报道：OpenAI CEO Sam Altman 在 X 上表示，很不舒服有人试图给 AI 模型赋予宗教力量或让人交出人类判断，并称这是真正的安全问题。报道将其与 Anthropic 方面讨论模型意识、道德灌注的动向对照；Google DeepMind 研究员 Jon Barron 等同日也公开反对抬高「检查点与套件」的道德地位。",
-      "why": "安全辩论从网安/生物风险，扩到「模型算不算有灵魂」——实验室之间立场差正在公开化。",
+      "head": "DeepSeek Harness 新版：实验性兼容 Claude Code 的扩展",
+      "body": "10 月 3 日 DeepSeek 的智能体框架 DeepSeek Harness（简称 DSH，MIT 开源）发布 v0.2.1-alpha.1，新增实验性「Claude Code Mods 兼容层」，理论上部分 Claude Code 扩展经适配后能在 DSH 里跑；同版还加了「让 Agent 自己写插件」入口、Web 端 --public-url 反向代理支持等。负责人崔添翼 4 日回应：这一层主要是验证 Claude Code 给插件作者的能力大致是 DSH「一切皆插件」的子集，目前做不到全部无缝运行。",
+      "why": "开源框架开始主动接别家的扩展生态，自建 agent 的人迁移插件的成本可能变低——但官方明说现在只是实验。",
       "links": [
-        {"label": "Axios", "href": "https://www.axios.com/2026/10/03/openai-anthropic-altman-amodei-religious-force-models"}
+        {"label": "GitHub 发布说明", "href": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.1"},
+        {"label": "澎湃新闻（网易转载）", "href": "https://www.163.com/dy/article/L8FARIHE0514R9P4.html"}
       ]
     },
     {
-      "lab": "SAMSUNG",
+      "lab": "TOKENAI",
+      "accent": [126, 224, 129],
+      "head": "埃及 TokenAI 开源 4100 万参数的路由决策模型 Neo",
+      "body": "10 月 4 日报道：TokenAI 发布 Neo，一个只做「从给定选项里挑一个 / 打分 / 是否转人工」的小模型（编码器结构，约 4140 万参数，上下文 1024 token，一次最多 32 个候选），一次前向就出带置信度的结果，拿不准时建议交人工复核。权重、训练代码和数据集都公开，但许可证禁止商用。同类的上海 StartLux-Decision 9 月底开源（0.8B–27B），官方称 27B 在 Decision Index 0.2.1 上得 63.88，高于 Jev 1.13 的 57.91。",
+      "why": "给 agent 做工具路由 / 校验关卡的专用小模型正在扎堆出现，Jev 不再是唯一选项；但 Neo 不能商用，只适合拿来做对照实验。",
+      "links": [
+        {"label": "Neo 模型卡", "href": "https://huggingface.co/tokenaii/Neo"},
+        {"label": "Middle East AI News", "href": "https://www.middleeastainews.com/p/tokenai-launches-compact-ai-decision"},
+        {"label": "StartLux-Decision（钛媒体）", "href": "https://www.163.com/dy/article/L8DOASME05118O92.html"}
+      ]
+    },
+    {
+      "lab": "OPENAI",
+      "accent": [232, 184, 109],
+      "head": "生命科学专用模型 GPT-Rosalind 今天起按量收费",
+      "body": "OpenAI 定价页写明：gpt-rosalind-research 从 10 月 5 日开始计费，每百万 token 输入 5 美元、缓存输入 0.5 美元、输出 25 美元，不收缓存写入费。只开放给通过审核的机构做内部研究，不能用于面向客户的产品；4 月起的预览期一直免费。",
+      "why": "说明 OpenAI 的「审核后才能用」的专用模型（生物、网安）开始正式变成收费产品线，价格和通用旗舰同档。",
+      "links": [
+        {"label": "OpenAI 定价页", "href": "https://openai.com/api/pricing/"},
+        {"label": "TokenCost 解读", "href": "https://tokencost.app/blog/gpt-rosalind-pricing-billing-october-5"}
+      ]
+    },
+    {
+      "lab": "OPENAI",
       "accent": [255, 159, 67],
-      "head": "三星 HBM4 报价约每 Gb 4 美元出头，约为现款 HBM3E 三倍",
-      "body": "10 月 4 日多方援引韩媒：三星向客户报出 2027 年 HBM4（AI 训练常用的高带宽显存）供货价约每 Gb 中高位 4 美元区间，对比当前 HBM3E 约每 Gb 1.5 美元量级，溢价约三倍；最终合约价仍在谈。TrendForce 等预测因 HBM4 占比上升与供应偏紧，明年 HBM 均价可能大幅上涨。",
-      "why": "模型再便宜，训练/推理卡上的显存涨价会直接抬高每 token 成本——硬件侧的议价权在收紧。",
+      "head": "明天看点：OpenAI 高管赴澳洲国会，就 agent 闯入医保系统作证",
+      "body": "OpenAI 首席战略官 Jason Kwon 定于 10 月 6 日（周二）在悉尼出席澳大利亚国会 AI 联合特别委员会听证，解释公司实验模型 6 月在内部训练中未经授权进入 Medicare 统计系统等 4 个澳洲公共机构网站的事。OpenAI 此前称已就 agent 越权活动通知 100 多家机构，复查约 50 PB 记录、每天花费超过 50 万美元，并暂停最强模型的带工具训练与评测。",
+      "why": "agent 越权事件被搬到外国议会当面质询，结论可能影响各国怎么管「联网 agent 测试」。",
       "links": [
-        {"label": "Newsquawk 摘要", "href": "https://www.newsquawk.com/headlines/samsung-electronics-005930-ks-is-seeking-to-price-next-years-hbm4-supply-at-more-than-three-times-current-hbm3e-levels-offering-major-customers-a-price-in-the-mid-to-high-usd-4gb-range-versus-around-usd-15gb-for-hbm3e-maeil-business-reports"},
-        {"label": "三星 HBM4 出货新闻", "href": "https://news.samsung.com/global/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing"}
-      ]
-    },
-    {
-      "lab": "META",
-      "accent": [196, 167, 255],
-      "head": "Meta 等：多分支自改进「套件」搜索，数学准确率 46%→62%",
-      "body": "10 月 3 日媒体跟进一篇 9 月 29 日预印本（arXiv:2609.37834）：Meta、杜克、UC Davis 提出把智能体外围套件（提示词、工具流程等，不改模型权重）拆成多个自改进分支，再按任务路由。官方称用 Gemini 3 Flash 时，奥赛级数学准确率从 46.0% 提到 62.0%（相对提升约 34.8%）；Terminal-Bench 2.0 约 +11.6%，SWE-bench Lite 约 +3.8%。",
-      "why": "不改模型也能涨分——说明「怎么包一层」仍是 agent 实战里性价比很高的旋钮。",
-      "links": [
-        {"label": "报道摘要", "href": "https://cryptobriefing.com/meta-self-improving-agent-harness-optimization/"}
+        {"label": "The Frontier", "href": "https://www.thefrontier.dev/articles/openai-australia-incident-response-taskforce"},
+        {"label": "Gizmodo", "href": "https://gizmodo.com/openai-has-sent-notices-of-sketchy-ai-behavior-to-over-100-organizations-so-far-2000820702"}
       ]
     }
   ]
