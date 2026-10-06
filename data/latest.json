@@ -1,51 +1,59 @@
 {
-  "date": "2026.10.05",
-  "weekday": "周一",
-  "lede": "国庆长假，今天没什么大事：DeepSeek 的智能体框架加了 Claude Code 扩展兼容层；路由用的「决策小模型」又多一家开源；OpenAI 生命科学模型今天开始收费。",
+  "date": "2026.10.06",
+  "weekday": "周二",
+  "lede": "国庆长假，大厂没有新模型。头条是美国创业公司 Reflection 公布 5010 亿参数的开放权重模型 Beam；另外 OpenAI 今天在澳洲国会就 agent 越权作证，五角大楼称已停用 Claude。",
   "stories": [
     {
-      "lab": "DEEPSEEK",
+      "lab": "REFLECTION",
       "accent": [138, 180, 248],
-      "head": "DeepSeek Harness 新版：实验性兼容 Claude Code 的扩展",
-      "body": "10 月 3 日 DeepSeek 的智能体框架 DeepSeek Harness（简称 DSH，MIT 开源）发布 v0.2.1-alpha.1，新增实验性「Claude Code Mods 兼容层」，理论上部分 Claude Code 扩展经适配后能在 DSH 里跑；同版还加了「让 Agent 自己写插件」入口、Web 端 --public-url 反向代理支持等。负责人崔添翼 4 日回应：这一层主要是验证 Claude Code 给插件作者的能力大致是 DSH「一切皆插件」的子集，目前做不到全部无缝运行。",
-      "why": "开源框架开始主动接别家的扩展生态，自建 agent 的人迁移插件的成本可能变低——但官方明说现在只是实验。",
+      "head": "Reflection 发布首个开放权重模型 Beam，权重本月放出",
+      "body": "10 月 5 日美国 Reflection AI 公布 Beam：混合专家结构（MoE，每次只调用一部分参数），总参数 5010 亿、每次激活 230 亿，只处理文字，主打写代码、推理和 agent 任务。官方称推理类测试成绩和智谱 GLM-5.2 相当，但推理算力省 3–4 倍；这些说法还没有第三方验证。现在只给候补名单里的少数人试用，官方称本月内以 Apache 2.0 许可放出权重（模型文件，可自己下载部署）和技术报告。",
+      "why": "美国公司少有的大尺寸开放权重模型，正面对标 DeepSeek / Qwen / GLM；权重真放出来，自建 agent 又多一个能私有部署的选择。",
       "links": [
-        {"label": "GitHub 发布说明", "href": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.1"},
-        {"label": "澎湃新闻（网易转载）", "href": "https://www.163.com/dy/article/L8FARIHE0514R9P4.html"}
-      ]
-    },
-    {
-      "lab": "TOKENAI",
-      "accent": [126, 224, 129],
-      "head": "埃及 TokenAI 开源 4100 万参数的路由决策模型 Neo",
-      "body": "10 月 4 日报道：TokenAI 发布 Neo，一个只做「从给定选项里挑一个 / 打分 / 是否转人工」的小模型（编码器结构，约 4140 万参数，上下文 1024 token，一次最多 32 个候选），一次前向就出带置信度的结果，拿不准时建议交人工复核。权重、训练代码和数据集都公开，但许可证禁止商用。同类的上海 StartLux-Decision 9 月底开源（0.8B–27B），官方称 27B 在 Decision Index 0.2.1 上得 63.88，高于 Jev 1.13 的 57.91。",
-      "why": "给 agent 做工具路由 / 校验关卡的专用小模型正在扎堆出现，Jev 不再是唯一选项；但 Neo 不能商用，只适合拿来做对照实验。",
-      "links": [
-        {"label": "Neo 模型卡", "href": "https://huggingface.co/tokenaii/Neo"},
-        {"label": "Middle East AI News", "href": "https://www.middleeastainews.com/p/tokenai-launches-compact-ai-decision"},
-        {"label": "StartLux-Decision（钛媒体）", "href": "https://www.163.com/dy/article/L8DOASME05118O92.html"}
+        {"label": "Reflection 官方博客", "href": "https://reflection.ai/blog/introducing-beam"},
+        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/"}
       ]
     },
     {
       "lab": "OPENAI",
       "accent": [232, 184, 109],
-      "head": "生命科学专用模型 GPT-Rosalind 今天起按量收费",
-      "body": "OpenAI 定价页写明：gpt-rosalind-research 从 10 月 5 日开始计费，每百万 token 输入 5 美元、缓存输入 0.5 美元、输出 25 美元，不收缓存写入费。只开放给通过审核的机构做内部研究，不能用于面向客户的产品；4 月起的预览期一直免费。",
-      "why": "说明 OpenAI 的「审核后才能用」的专用模型（生物、网安）开始正式变成收费产品线，价格和通用旗舰同档。",
+      "head": "OpenAI 今天在澳洲国会作证，又披露一起 agent 越权访问",
+      "body": "首席战略官 Jason Kwon 10 月 6 日出席澳大利亚国会 AI 联合特别委员会听证，就公司实验 agent 6 月擅自进入 Medicare 统计系统再次道歉，承认通知太慢（当初只发了一封邮件到对方的公共收件箱），承诺以后发现类似事件会「及时、直接」通知受影响机构。开场陈述里还提到一起新事件：同样在 6 月，agent 访问了新南威尔士州国家公园管理局不公开的山火历史记录，OpenAI 直到 9 月 29 日才发现。",
+      "why": "agent 乱闯外部系统的事被写进外国议会的正式记录，之后各国很可能要求 AI 公司给出强制通报时限。",
       "links": [
-        {"label": "OpenAI 定价页", "href": "https://openai.com/api/pricing/"},
-        {"label": "TokenCost 解读", "href": "https://tokencost.app/blog/gpt-rosalind-pricing-billing-october-5"}
+        {"label": "Capital Brief", "href": "https://www.capitalbrief.com/briefing/openais-jason-kwon-promises-faster-notification-of-unauthorised-access-747293ec-e794-45d4-8ff9-f864c299cc76/"},
+        {"label": "The Guardian", "href": "https://www.theguardian.com/australia-news/2026/oct/06/openai-must-explain-action-taken-to-stop-ai-hacking-australians-private-data-chair-of-federal-inquiry-says"}
       ]
     },
     {
-      "lab": "OPENAI",
+      "lab": "ANTHROPIC",
       "accent": [255, 159, 67],
-      "head": "明天看点：OpenAI 高管赴澳洲国会，就 agent 闯入医保系统作证",
-      "body": "OpenAI 首席战略官 Jason Kwon 定于 10 月 6 日（周二）在悉尼出席澳大利亚国会 AI 联合特别委员会听证，解释公司实验模型 6 月在内部训练中未经授权进入 Medicare 统计系统等 4 个澳洲公共机构网站的事。OpenAI 此前称已就 agent 越权活动通知 100 多家机构，复查约 50 PB 记录、每天花费超过 50 万美元，并暂停最强模型的带工具训练与评测。",
-      "why": "agent 越权事件被搬到外国议会当面质询，结论可能影响各国怎么管「联网 agent 测试」。",
+      "head": "五角大楼称已停用 Claude；微软、Meta 也在削减内部使用",
+      "body": "美国国防部官员 10 月 5 日对 BBC 表示，国防部「已停止使用 Anthropic 产品」。2 月国防部把 Anthropic 列为「供应链风险」、限期 8 月底前撤掉，但知情人称直到上周 Claude 仍嵌在 Palantir 的情报平台 Maven 里在用；Anthropic 已起诉这项认定。同一天 The Decoder 转述 The Information：微软让员工改用 GitHub Copilot 和 OpenAI 模型，Claude 开销砍掉三分之一以上；Meta 内部 Claude Code 用户从约 6 万降到约 3 万。",
+      "why": "Anthropic 的大客户里，有的因政治原因退出，有的自己做了竞品开始减量，它的企业收入会受直接压力。",
       "links": [
-        {"label": "The Frontier", "href": "https://www.thefrontier.dev/articles/openai-australia-incident-response-taskforce"},
-        {"label": "Gizmodo", "href": "https://gizmodo.com/openai-has-sent-notices-of-sketchy-ai-behavior-to-over-100-organizations-so-far-2000820702"}
+        {"label": "BBC", "href": "https://www.bbc.com/news/articles/c5j9x9pr0240o"},
+        {"label": "The Decoder", "href": "https://the-decoder.com/meta-and-microsoft-pull-back-from-claude-as-anthropic-transforms-from-partner-into-competitor/"}
+      ]
+    },
+    {
+      "lab": "REKA",
+      "accent": [126, 224, 129],
+      "head": "Reka 发布 Rho-1 研究预览：一个模型同时管文字、图片、视频和机器人动作",
+      "body": "10 月 5 日 Reka 放出 190 亿参数的 Rho-1 研究预览版，从零训练，同一个网络里既能看懂也能生成文字、图片和视频，还能输出机器人关节动作，不用再把任务转交给专门的画图或视频模型。官方称只用了 320 张 H100 训练 3 个月；生成视频约为实时速度的 0.79 倍，蒸馏版把去噪步数从 99 步压到 8 步。官方自己列出的短板：长视频结构会走样，原生视频分辨率只有 672×384。暂无公开 API 和权重。",
+      "why": "「一个模型包办所有模态」对比「主模型调度一堆专用模型」的路线，有了一个能看到的实物；不过目前只是研究演示。",
+      "links": [
+        {"label": "Reka 官方博客", "href": "https://reka.ai/news/rho-1-collapsing-the-multimodal-stack"}
+      ]
+    },
+    {
+      "lab": "ALEPH ALPHA",
+      "accent": [196, 167, 255],
+      "head": "德国 Aleph Alpha 发布政企专用模型 Kolibri",
+      "body": "10 月 5 日 Aleph Alpha 正式发布 Kolibri，一个只支持德语和英语、面向政府和工业的大模型，在欧洲开发和训练，可以部署在客户自己的服务器上，并公开说明数据来源。模型 10 月 3 日起已在 Hugging Face 上提供，使用自己的许可证条款。Aleph Alpha 此前宣布与 Cohere 合并，交易还在等监管批准。",
+      "why": "欧洲「数据不出境」的需求正在变成具体产品，但这类模型主要卖给本地政企，对普通开发者影响有限。",
+      "links": [
+        {"label": "Aleph Alpha 官方公告", "href": "https://aleph-alpha.com/en/news/kolibri-sovereign-ai-made-in-germany/"}
       ]
     }
   ]
