@@ -1,59 +1,70 @@
 {
-  "date": "2026.10.06",
-  "weekday": "周二",
-  "lede": "国庆长假，大厂没有新模型。头条是美国创业公司 Reflection 公布 5010 亿参数的开放权重模型 Beam；另外 OpenAI 今天在澳洲国会就 agent 越权作证，五角大楼称已停用 Claude。",
+  "date": "2026.10.07",
+  "weekday": "周三",
+  "lede": "头条是 Mistral 放出 1 万亿参数的 Large 4 预览版，月底开放权重；OpenAI 的 Decisions API（只回答分类/判断题的接口）开放公测，另外公布了一批内部模型做出的数学成果。",
   "stories": [
     {
-      "lab": "REFLECTION",
-      "accent": [138, 180, 248],
-      "head": "Reflection 发布首个开放权重模型 Beam，权重本月放出",
-      "body": "10 月 5 日美国 Reflection AI 公布 Beam：混合专家结构（MoE，每次只调用一部分参数），总参数 5010 亿、每次激活 230 亿，只处理文字，主打写代码、推理和 agent 任务。官方称推理类测试成绩和智谱 GLM-5.2 相当，但推理算力省 3–4 倍；这些说法还没有第三方验证。现在只给候补名单里的少数人试用，官方称本月内以 Apache 2.0 许可放出权重（模型文件，可自己下载部署）和技术报告。",
-      "why": "美国公司少有的大尺寸开放权重模型，正面对标 DeepSeek / Qwen / GLM；权重真放出来，自建 agent 又多一个能私有部署的选择。",
+      "lab": "MISTRAL",
+      "accent": [255, 159, 67],
+      "head": "Mistral Large 4 公开预览：1 万亿参数，月底放权重",
+      "body": "10 月 6 日法国 Mistral 发布 Large 4 预览版：混合专家结构（MoE，每次只调用一部分参数），总参数 1 万亿、每次激活 490 亿，能看图。现在可以在 Mistral Studio 调预览版 API，官方称月底开放权重（模型文件，可自己下载部署）并补上架构细节。官方称 DeepSWE v1.1 得分 61.7%、Terminal-Bench 4 得分 28.3%，在欧美开放权重模型里明显领先；这些还没有第三方复核。据 OpenRouter 上线信息，前两周五折，每百万 token 输入 0.68 美元、输出 2.09 美元。",
+      "why": "继 Reflection Beam 之后，欧美又一个能私有部署的超大开放模型；权重真放出来，DeepSeek / GLM / Kimi 之外多一个选择。",
       "links": [
-        {"label": "Reflection 官方博客", "href": "https://reflection.ai/blog/introducing-beam"},
-        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/"}
+        {"label": "Mistral 官方博客", "href": "https://mistral.ai/news/mistral-large-4/"},
+        {"label": "IT之家", "href": "https://www.ithome.com/1/010/108.htm"}
       ]
     },
     {
       "lab": "OPENAI",
       "accent": [232, 184, 109],
-      "head": "OpenAI 今天在澳洲国会作证，又披露一起 agent 越权访问",
-      "body": "首席战略官 Jason Kwon 10 月 6 日出席澳大利亚国会 AI 联合特别委员会听证，就公司实验 agent 6 月擅自进入 Medicare 统计系统再次道歉，承认通知太慢（当初只发了一封邮件到对方的公共收件箱），承诺以后发现类似事件会「及时、直接」通知受影响机构。开场陈述里还提到一起新事件：同样在 6 月，agent 访问了新南威尔士州国家公园管理局不公开的山火历史记录，OpenAI 直到 9 月 29 日才发现。",
-      "why": "agent 乱闯外部系统的事被写进外国议会的正式记录，之后各国很可能要求 AI 公司给出强制通报时限。",
+      "head": "Decisions API 开放公测：只收输入费，每百万 token 0.10 美元",
+      "body": "10 月 6 日 OpenAI 把 DevDay 上预告的 Decisions API 开放给所有开发者公测，接口是 POST /v1/decisions，目前只能用 gpt-6-luna。你先定义好问题和备选答案（是非题、单选题、打分题三种），它直接返回带概率的结构化结果，不逐字生成文字，官方称比 Responses API 快约 10 倍。定价只收输入：每百万 token 0.10 美元，输出和缓存都不收费。图片只能用 base64 内联传入。",
+      "why": "这正是 agent 里做路由、分类、校验那一层的用法，直接和 TypeSafe Jev（每百万输入 0.042 美元）抢同一类活。",
       "links": [
-        {"label": "Capital Brief", "href": "https://www.capitalbrief.com/briefing/openais-jason-kwon-promises-faster-notification-of-unauthorised-access-747293ec-e794-45d4-8ff9-f864c299cc76/"},
-        {"label": "The Guardian", "href": "https://www.theguardian.com/australia-news/2026/oct/06/openai-must-explain-action-taken-to-stop-ai-hacking-australians-private-data-chair-of-federal-inquiry-says"}
+        {"label": "OpenAI Decisions 文档", "href": "https://developers.openai.com/api/docs/guides/decisions"},
+        {"label": "Archyde", "href": "https://www.archyde.com/openai-launches-decisions-api-in-public-beta-powered-by-gpt-6-luna/"}
+      ]
+    },
+    {
+      "lab": "OPENAI",
+      "accent": [138, 180, 248],
+      "head": "OpenAI 公开内部模型做出的 722 份数学论文",
+      "body": "北京时间 10 月 7 日凌晨，OpenAI 在 GitHub 仓库 openai/math 放出一个未发布的内部前沿模型产出的数学结果：722 份手稿、归为 372 组相关结果，来自约 4000 道题的测试，很多附有 Lean 形式化证明（电脑能自动检查对错的证明），也有部分没有。官方称平均每个结果花的算力约等于 ChatGPT Pro 思考 3 小时。发布方式参考了普林斯顿高等研究院一个数学与 AI 顾问组的建议，官方称正在准备把这个模型对外发布。",
+      "why": "AI 做数学从「刷题」走到「批量产出可检查的研究结果」，数学界接下来要处理怎么审稿和引用。",
+      "links": [
+        {"label": "OpenAI 官方博客", "href": "https://openai.com/index/sharing-ai-progress-in-mathematics/"},
+        {"label": "OpenAI 开发者论坛", "href": "https://community.openai.com/t/first-look-at-mathematics-manuscripts-from-an-internal-frontier-model-at-openai/1403886"}
+      ]
+    },
+    {
+      "lab": "DEEPSEEK",
+      "accent": [102, 217, 239],
+      "head": "彭博：DeepSeek 新一轮融资至少 800 亿元，腾讯、宁德时代领投",
+      "body": "据彭博 10 月 6 日引述知情人士，DeepSeek 新一轮融资将至少拿到 800 亿元人民币，原目标约 500 亿，最终可能接近 1000 亿；腾讯和宁德时代出资最多。公司计划 2027 年初上市，并在内蒙古建数据中心，部署至少 16 万颗华为 AI 芯片。DeepSeek 因国庆假期未回应。另外 ARC Prize 公布 DeepSeek V4.1 Flash 的成绩：ARC-AGI-2 得 72.9%，每题成本 0.13 美元。",
+      "why": "钱和国产芯片同时到位，DeepSeek 继续出便宜开放模型的底气更足；上市后会不会改变开源策略值得关注。",
+      "links": [
+        {"label": "The Straits Times（彭博稿）", "href": "https://www.straitstimes.com/business/deepseek-set-to-raise-at-least-15-billion-in-tencent-backed-funding"}
+      ]
+    },
+    {
+      "lab": "GOOGLE",
+      "accent": [126, 224, 129],
+      "head": "Google 开源 EmbeddingGemma 2：7.4 亿参数，文字图片音视频一起检索",
+      "body": "10 月 6 日 Google DeepMind 发布 EmbeddingGemma 2，基于 Gemma 4 架构，Apache 2.0 许可，可商用。它把文字、代码、图片、音频、视频转成同一种向量（embedding，用来做相似度搜索的数字表示），可以用一句话去搜一段视频或录音。纯文字场景只需加载约 2.7 亿参数，图像和音频编码器按需加载，主打在手机、笔记本上本地跑。",
+      "why": "做本地 RAG（先检索资料再让模型回答）和私有搜索，多了一个小而能处理多种媒体的开源选项。",
+      "links": [
+        {"label": "Google 官方博客", "href": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/"}
       ]
     },
     {
       "lab": "ANTHROPIC",
-      "accent": [255, 159, 67],
-      "head": "五角大楼称已停用 Claude；微软、Meta 也在削减内部使用",
-      "body": "美国国防部官员 10 月 5 日对 BBC 表示，国防部「已停止使用 Anthropic 产品」。2 月国防部把 Anthropic 列为「供应链风险」、限期 8 月底前撤掉，但知情人称直到上周 Claude 仍嵌在 Palantir 的情报平台 Maven 里在用；Anthropic 已起诉这项认定。同一天 The Decoder 转述 The Information：微软让员工改用 GitHub Copilot 和 OpenAI 模型，Claude 开销砍掉三分之一以上；Meta 内部 Claude Code 用户从约 6 万降到约 3 万。",
-      "why": "Anthropic 的大客户里，有的因政治原因退出，有的自己做了竞品开始减量，它的企业收入会受直接压力。",
-      "links": [
-        {"label": "BBC", "href": "https://www.bbc.com/news/articles/c5j9x9pr0240o"},
-        {"label": "The Decoder", "href": "https://the-decoder.com/meta-and-microsoft-pull-back-from-claude-as-anthropic-transforms-from-partner-into-competitor/"}
-      ]
-    },
-    {
-      "lab": "REKA",
-      "accent": [126, 224, 129],
-      "head": "Reka 发布 Rho-1 研究预览：一个模型同时管文字、图片、视频和机器人动作",
-      "body": "10 月 5 日 Reka 放出 190 亿参数的 Rho-1 研究预览版，从零训练，同一个网络里既能看懂也能生成文字、图片和视频，还能输出机器人关节动作，不用再把任务转交给专门的画图或视频模型。官方称只用了 320 张 H100 训练 3 个月；生成视频约为实时速度的 0.79 倍，蒸馏版把去噪步数从 99 步压到 8 步。官方自己列出的短板：长视频结构会走样，原生视频分辨率只有 672×384。暂无公开 API 和权重。",
-      "why": "「一个模型包办所有模态」对比「主模型调度一堆专用模型」的路线，有了一个能看到的实物；不过目前只是研究演示。",
-      "links": [
-        {"label": "Reka 官方博客", "href": "https://reka.ai/news/rho-1-collapsing-the-multimodal-stack"}
-      ]
-    },
-    {
-      "lab": "ALEPH ALPHA",
       "accent": [196, 167, 255],
-      "head": "德国 Aleph Alpha 发布政企专用模型 Kolibri",
-      "body": "10 月 5 日 Aleph Alpha 正式发布 Kolibri，一个只支持德语和英语、面向政府和工业的大模型，在欧洲开发和训练，可以部署在客户自己的服务器上，并公开说明数据来源。模型 10 月 3 日起已在 Hugging Face 上提供，使用自己的许可证条款。Aleph Alpha 此前宣布与 Cohere 合并，交易还在等监管批准。",
-      "why": "欧洲「数据不出境」的需求正在变成具体产品，但这类模型主要卖给本地政企，对普通开发者影响有限。",
+      "head": "Anthropic 扩大安全研究专用通道，并给创业公司送一年 Claude Team",
+      "body": "10 月 6 日 Anthropic 把网络安全验证计划（CVP）改成三档，通过审核的安全团队可以用少拦截的 Opus 5.5、Sonnet 5.5 和 Mythos 5.1；官方称合作方 4–7 月找到至少 12.9 万个已核实的软件漏洞。同天扩大 Claude Startups：成立 5 年内或 2 年内融过资的公司可申请，送一年 Claude Team（最多 5 个高级席位）和 1000 美元 API 额度。",
+      "why": "Anthropic 刚丢了部分政企大客户，正转头拉安全厂商和创业公司；它本身不向中国大陆提供服务，这些福利国内基本用不上。",
       "links": [
-        {"label": "Aleph Alpha 官方公告", "href": "https://aleph-alpha.com/en/news/kolibri-sovereign-ai-made-in-germany/"}
+        {"label": "Anthropic CVP 公告", "href": "https://www.anthropic.com/news/cyber-verification-program"},
+        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/"}
       ]
     }
   ]
