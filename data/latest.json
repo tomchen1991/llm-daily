@@ -1,70 +1,48 @@
 {
-  "date": "2026.10.07",
-  "weekday": "周三",
-  "lede": "头条是 Mistral 放出 1 万亿参数的 Large 4 预览版，月底开放权重；OpenAI 的 Decisions API（只回答分类/判断题的接口）开放公测，另外公布了一批内部模型做出的数学成果。",
+  "date": "2026.10.08",
+  "weekday": "周四",
+  "lede": "昨夜两件大事：Anthropic 发布小模型 Claude Haiku 5.5，价格比上一代便宜约 75%；OpenAI 把 ChatGPT 聊天默认换成 GPT-6，回答里能直接出图表、按钮和小工具。另有 Liquid AI 开源两款做判断题的小模型。",
   "stories": [
     {
-      "lab": "MISTRAL",
-      "accent": [255, 159, 67],
-      "head": "Mistral Large 4 公开预览：1 万亿参数，月底放权重",
-      "body": "10 月 6 日法国 Mistral 发布 Large 4 预览版：混合专家结构（MoE，每次只调用一部分参数），总参数 1 万亿、每次激活 490 亿，能看图。现在可以在 Mistral Studio 调预览版 API，官方称月底开放权重（模型文件，可自己下载部署）并补上架构细节。官方称 DeepSWE v1.1 得分 61.7%、Terminal-Bench 4 得分 28.3%，在欧美开放权重模型里明显领先；这些还没有第三方复核。据 OpenRouter 上线信息，前两周五折，每百万 token 输入 0.68 美元、输出 2.09 美元。",
-      "why": "继 Reflection Beam 之后，欧美又一个能私有部署的超大开放模型；权重真放出来，DeepSeek / GLM / Kimi 之外多一个选择。",
+      "lab": "ANTHROPIC",
+      "accent": [196, 167, 255],
+      "head": "Claude Haiku 5.5 发布：输入每百万 token 0.10 美元，Sonnet 5.5 缓存读取同时降价一半",
+      "body": "10 月 7 日（美国时间）Anthropic 发布 Haiku 5.5，API 名 claude-haiku-5-5，各大云平台同步上线。提示词不超过 10 万 token 时，每百万 token 输入 0.10 美元、输出 0.50 美元，缓存读取 0.01 美元；超过 10 万 token 分别是 0.50 和 2.50 美元。官方称平均比 Haiku 4.5 便宜约 75%，也是第一个能调思考力度（effort）的 Haiku。官方跑分：Terminal-Bench 4.0 得 39.2%（Sonnet 5.5 是 70.6%），OSWorld 2.1 离线子集 72.4%。同时 Sonnet 5.5 的缓存读取从每百万 0.20 降到 0.10 美元，官方称 agent 任务整体便宜约 20%；本周起 Max 5x、Max 20x 订阅每月送 100 / 200 美元 API 额度，Team 最多 500 美元。",
+      "why": "Anthropic 自己定位它做摘要、压缩上下文、分类和子 agent 这类小活，输入价和 OpenAI Decisions API 一样；不过 Anthropic 不向中国大陆提供服务，国内用要考虑封号风险。",
       "links": [
-        {"label": "Mistral 官方博客", "href": "https://mistral.ai/news/mistral-large-4/"},
-        {"label": "IT之家", "href": "https://www.ithome.com/1/010/108.htm"}
+        {"label": "Anthropic 官方公告", "href": "https://www.anthropic.com/claude-haiku-5-5"}
       ]
     },
     {
       "lab": "OPENAI",
       "accent": [232, 184, 109],
-      "head": "Decisions API 开放公测：只收输入费，每百万 token 0.10 美元",
-      "body": "10 月 6 日 OpenAI 把 DevDay 上预告的 Decisions API 开放给所有开发者公测，接口是 POST /v1/decisions，目前只能用 gpt-6-luna。你先定义好问题和备选答案（是非题、单选题、打分题三种），它直接返回带概率的结构化结果，不逐字生成文字，官方称比 Responses API 快约 10 倍。定价只收输入：每百万 token 0.10 美元，输出和缓存都不收费。图片只能用 base64 内联传入。",
-      "why": "这正是 agent 里做路由、分类、校验那一层的用法，直接和 TypeSafe Jev（每百万输入 0.042 美元）抢同一类活。",
+      "head": "ChatGPT 聊天换上 GPT-6：回答可以直接是图表、按钮和小工具",
+      "body": "10 月 7 日 OpenAI 开始给 Plus、Pro、Business、Enterprise 用户的聊天（Chat）换上 GPT-6（背后是 GPT-6 Sol），10 月 8 日起免费版和 Go 版也陆续推送（背后是 GPT-6 Luna）。新功能叫 Intelligent UI（智能界面）：模型会自己决定用文字、图表、可点的按钮、表单还是做个小计算器来回答，界面边生成边显示。另外它可以边想边答，不用等想完才出字；官方称需要联网搜索的问题，GPT-6 Instant 开始回答的时间比 GPT-5.6 Instant 早 44%。官方说明 Work 和 Codex 用的模型这次不变。",
+      "why": "ChatGPT 每周 12 亿用户的默认体验变了；对写代码的人影响不大，因为 Codex 没换模型。",
       "links": [
-        {"label": "OpenAI Decisions 文档", "href": "https://developers.openai.com/api/docs/guides/decisions"},
-        {"label": "Archyde", "href": "https://www.archyde.com/openai-launches-decisions-api-in-public-beta-powered-by-gpt-6-luna/"}
+        {"label": "OpenAI 官方博客", "href": "https://openai.com/index/gpt-6-for-everyone"},
+        {"label": "IT之家", "href": "https://www.ithome.com/1/010/327.htm"}
       ]
     },
     {
-      "lab": "OPENAI",
-      "accent": [138, 180, 248],
-      "head": "OpenAI 公开内部模型做出的 722 份数学论文",
-      "body": "北京时间 10 月 7 日凌晨，OpenAI 在 GitHub 仓库 openai/math 放出一个未发布的内部前沿模型产出的数学结果：722 份手稿、归为 372 组相关结果，来自约 4000 道题的测试，很多附有 Lean 形式化证明（电脑能自动检查对错的证明），也有部分没有。官方称平均每个结果花的算力约等于 ChatGPT Pro 思考 3 小时。发布方式参考了普林斯顿高等研究院一个数学与 AI 顾问组的建议，官方称正在准备把这个模型对外发布。",
-      "why": "AI 做数学从「刷题」走到「批量产出可检查的研究结果」，数学界接下来要处理怎么审稿和引用。",
-      "links": [
-        {"label": "OpenAI 官方博客", "href": "https://openai.com/index/sharing-ai-progress-in-mathematics/"},
-        {"label": "OpenAI 开发者论坛", "href": "https://community.openai.com/t/first-look-at-mathematics-manuscripts-from-an-internal-frontier-model-at-openai/1403886"}
-      ]
-    },
-    {
-      "lab": "DEEPSEEK",
+      "lab": "LIQUID AI",
       "accent": [102, 217, 239],
-      "head": "彭博：DeepSeek 新一轮融资至少 800 亿元，腾讯、宁德时代领投",
-      "body": "据彭博 10 月 6 日引述知情人士，DeepSeek 新一轮融资将至少拿到 800 亿元人民币，原目标约 500 亿，最终可能接近 1000 亿；腾讯和宁德时代出资最多。公司计划 2027 年初上市，并在内蒙古建数据中心，部署至少 16 万颗华为 AI 芯片。DeepSeek 因国庆假期未回应。另外 ARC Prize 公布 DeepSeek V4.1 Flash 的成绩：ARC-AGI-2 得 72.9%，每题成本 0.13 美元。",
-      "why": "钱和国产芯片同时到位，DeepSeek 继续出便宜开放模型的底气更足；上市后会不会改变开源策略值得关注。",
+      "head": "Liquid AI 开源 d1 判断模型：30 亿参数，能看图，十几毫秒出答案",
+      "body": "10 月 7 日 Liquid AI 在 Hugging Face 放出两款开放权重的「判断模型」（decision model，不逐字写回答，只对给定选项直接给出概率）：d1-3B 能读文字和图片；d1-omni-600M 是实验版，能读文字加图片或文字加音频。官方称 d1-3B 在 NVIDIA Jetson AGX Thor 上一次判断约 16 毫秒，在他们的 Decision Index 上得 48.57，高于总参数 350 亿的 Decider 35B-A3B（47.11）。首日支持 llama.cpp。",
+      "why": "和 Jev、Clef、OpenAI Decisions API 做同一类路由/分类活，但可以完全在本地跑，不用担心国内出口被 OpenAI 拒的问题。",
       "links": [
-        {"label": "The Straits Times（彭博稿）", "href": "https://www.straitstimes.com/business/deepseek-set-to-raise-at-least-15-billion-in-tencent-backed-funding"}
+        {"label": "Liquid AI 官方博客", "href": "https://www.liquid.ai/blog/d1-open"},
+        {"label": "Hugging Face 博客", "href": "https://huggingface.co/blog/LiquidAI/open-d1"}
       ]
     },
     {
-      "lab": "GOOGLE",
+      "lab": "PERPLEXITY",
       "accent": [126, 224, 129],
-      "head": "Google 开源 EmbeddingGemma 2：7.4 亿参数，文字图片音视频一起检索",
-      "body": "10 月 6 日 Google DeepMind 发布 EmbeddingGemma 2，基于 Gemma 4 架构，Apache 2.0 许可，可商用。它把文字、代码、图片、音频、视频转成同一种向量（embedding，用来做相似度搜索的数字表示），可以用一句话去搜一段视频或录音。纯文字场景只需加载约 2.7 亿参数，图像和音频编码器按需加载，主打在手机、笔记本上本地跑。",
-      "why": "做本地 RAG（先检索资料再让模型回答）和私有搜索，多了一个小而能处理多种媒体的开源选项。",
+      "head": "Perplexity 开源 pplx-embed-v2-late：直接检索 PDF 和幻灯片，不用先做文字识别",
+      "body": "10 月 7 日 Perplexity 在 Hugging Face 放出两个开放权重的检索向量模型，分 6 亿和 90 亿参数两档。它们属于 late interaction（细粒度匹配：每个词或图块各留一个向量，查询时再逐一比对），能把文字、图片、表格和整页 PDF、幻灯片一起建索引，不用先 OCR（把图片里的字识别出来）。",
+      "why": "做文档类 RAG（先检索资料再让模型回答）时，扫描件和带图表的页面可以少一道识别工序。",
       "links": [
-        {"label": "Google 官方博客", "href": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/"}
-      ]
-    },
-    {
-      "lab": "ANTHROPIC",
-      "accent": [196, 167, 255],
-      "head": "Anthropic 扩大安全研究专用通道，并给创业公司送一年 Claude Team",
-      "body": "10 月 6 日 Anthropic 把网络安全验证计划（CVP）改成三档，通过审核的安全团队可以用少拦截的 Opus 5.5、Sonnet 5.5 和 Mythos 5.1；官方称合作方 4–7 月找到至少 12.9 万个已核实的软件漏洞。同天扩大 Claude Startups：成立 5 年内或 2 年内融过资的公司可申请，送一年 Claude Team（最多 5 个高级席位）和 1000 美元 API 额度。",
-      "why": "Anthropic 刚丢了部分政企大客户，正转头拉安全厂商和创业公司；它本身不向中国大陆提供服务，这些福利国内基本用不上。",
-      "links": [
-        {"label": "Anthropic CVP 公告", "href": "https://www.anthropic.com/news/cyber-verification-program"},
-        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/"}
+        {"label": "Crypto Briefing 报道", "href": "https://cryptobriefing.com/perplexity-pplx-embed-v2-late-multimodal-models/"}
       ]
     }
   ]
