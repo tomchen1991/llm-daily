@@ -1,48 +1,57 @@
 {
-  "date": "2026.10.08",
-  "weekday": "周四",
-  "lede": "昨夜两件大事：Anthropic 发布小模型 Claude Haiku 5.5，价格比上一代便宜约 75%；OpenAI 把 ChatGPT 聊天默认换成 GPT-6，回答里能直接出图表、按钮和小工具。另有 Liquid AI 开源两款做判断题的小模型。",
+  "date": "2026.10.10",
+  "weekday": "周六",
+  "lede": "昨夜没有新旗舰公开上架。主线是 Google 内部在测更强的 Gemini 4（代号 Carbon），Anthropic 更新使用政策禁止「持续虐待」Claude，OpenAI 澄清年化营收约 500 亿美元。",
   "stories": [
+    {
+      "lab": "GOOGLE",
+      "accent": [138, 180, 248],
+      "head": "员工在测 Gemini 4 内部版 Carbon；有人说写代码「感觉像 Opus 5.5」",
+      "body": "Business Insider 10 月 9 日报道：Google 正准备把 Gemini 4 Argon 推给更广用户，同时员工已在内部写代码平台 Jetski 上试用代号 Carbon 的新版本。一名员工称 Carbon 写代码「感觉像 Opus 5.5」（Anthropic 目前最强的长任务写代码模型），但说还要再测。内部文件显示 Gemini 4 系列测过 Argon、Barium、Carbon；公开叫 Argon 的，对应内部选中的 Barium-B。Carbon 最终会叫什么、会不会公开，尚不清楚。Google 拒绝置评。",
+      "why": "Argon 9 月 30 日才宣布、还主要给网络安全测试伙伴；若 Carbon 真接近 Opus 5.5，说明 Google 还在快速迭代，但对外还不能当已发布产品用。",
+      "links": [
+        {"label": "Business Insider", "href": "https://www.businessinsider.com/google-employees-test-new-gemini-4-model-argon-barium-carbon-2026-10"},
+        {"label": "Google 官方 Argon 公告（9/30）", "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"}
+      ]
+    },
     {
       "lab": "ANTHROPIC",
       "accent": [196, 167, 255],
-      "head": "Claude Haiku 5.5 发布：输入每百万 token 0.10 美元，Sonnet 5.5 缓存读取同时降价一半",
-      "body": "10 月 7 日（美国时间）Anthropic 发布 Haiku 5.5，API 名 claude-haiku-5-5，各大云平台同步上线。提示词不超过 10 万 token 时，每百万 token 输入 0.10 美元、输出 0.50 美元，缓存读取 0.01 美元；超过 10 万 token 分别是 0.50 和 2.50 美元。官方称平均比 Haiku 4.5 便宜约 75%，也是第一个能调思考力度（effort）的 Haiku。官方跑分：Terminal-Bench 4.0 得 39.2%（Sonnet 5.5 是 70.6%），OSWorld 2.1 离线子集 72.4%。同时 Sonnet 5.5 的缓存读取从每百万 0.20 降到 0.10 美元，官方称 agent 任务整体便宜约 20%；本周起 Max 5x、Max 20x 订阅每月送 100 / 200 美元 API 额度，Team 最多 500 美元。",
-      "why": "Anthropic 自己定位它做摘要、压缩上下文、分类和子 agent 这类小活，输入价和 OpenAI Decisions API 一样；不过 Anthropic 不向中国大陆提供服务，国内用要考虑封号风险。",
+      "head": "使用政策更新：禁止对 Claude「持续、无必要的虐待」，11 月 12 日生效",
+      "body": "Anthropic 10 月 8 日发布 2026 年使用政策。新增：禁止对模型施加持续且没有正当目的的虐待或残忍行为；普通抱怨、反驳、黑暗题材创作、以及测试研究都不算。官方称主要执法方式仍是让 Claude 主动结束对话。同期还合并了「欺骗性宣传/假账号」禁令，写清武器相关软件、无同意追踪人、以及健康/金融等高风险场景必须有人把关。",
+      "why": "这是 Anthropic「模型福利」探索的政策落地；国内用户本来就面临区域限制，规则收紧后更要留意账号风险。",
       "links": [
-        {"label": "Anthropic 官方公告", "href": "https://www.anthropic.com/claude-haiku-5-5"}
+        {"label": "Anthropic 官方公告", "href": "https://www.anthropic.com/news/2026-usage-policy-update"}
       ]
     },
     {
       "lab": "OPENAI",
       "accent": [232, 184, 109],
-      "head": "ChatGPT 聊天换上 GPT-6：回答可以直接是图表、按钮和小工具",
-      "body": "10 月 7 日 OpenAI 开始给 Plus、Pro、Business、Enterprise 用户的聊天（Chat）换上 GPT-6（背后是 GPT-6 Sol），10 月 8 日起免费版和 Go 版也陆续推送（背后是 GPT-6 Luna）。新功能叫 Intelligent UI（智能界面）：模型会自己决定用文字、图表、可点的按钮、表单还是做个小计算器来回答，界面边生成边显示。另外它可以边想边答，不用等想完才出字；官方称需要联网搜索的问题，GPT-6 Instant 开始回答的时间比 GPT-5.6 Instant 早 44%。官方说明 Work 和 Codex 用的模型这次不变。",
-      "why": "ChatGPT 每周 12 亿用户的默认体验变了；对写代码的人影响不大，因为 Codex 没换模型。",
+      "head": "澄清：截至 9 月底年化营收约 500 亿美元，不是此前流传的约 700 亿",
+      "body": "多家媒体 10 月 8–9 日报道：OpenAI 向投资者称，截至 9 月底年化经常性收入（把当月收入 ×12）接近 500 亿美元。此前约 700 亿美元的数字，是为了和 Anthropic 口径对齐、把云合作伙伴销售额加进去后的「毛额」估算，不是业绩突然掉了约 200 亿。另有报道称公司预期到 2026 年底年化营收达到或超过 700 亿美元，并在谈约 300 亿美元融资、估约 1.4 万亿美元。OpenAI 未就细节置评。",
+      "why": "口径差会直接影响市场对 AI 烧钱与回报的判断；比模型发布本身更能解释这两天芯片股情绪波动。",
       "links": [
-        {"label": "OpenAI 官方博客", "href": "https://openai.com/index/gpt-6-for-everyone"},
-        {"label": "IT之家", "href": "https://www.ithome.com/1/010/327.htm"}
+        {"label": "Axios", "href": "https://www.axios.com/2026/10/08/openai-50-billion-arr-anthropic-revenue-accounting"}
       ]
     },
     {
-      "lab": "LIQUID AI",
-      "accent": [102, 217, 239],
-      "head": "Liquid AI 开源 d1 判断模型：30 亿参数，能看图，十几毫秒出答案",
-      "body": "10 月 7 日 Liquid AI 在 Hugging Face 放出两款开放权重的「判断模型」（decision model，不逐字写回答，只对给定选项直接给出概率）：d1-3B 能读文字和图片；d1-omni-600M 是实验版，能读文字加图片或文字加音频。官方称 d1-3B 在 NVIDIA Jetson AGX Thor 上一次判断约 16 毫秒，在他们的 Decision Index 上得 48.57，高于总参数 350 亿的 Decider 35B-A3B（47.11）。首日支持 llama.cpp。",
-      "why": "和 Jev、Clef、OpenAI Decisions API 做同一类路由/分类活，但可以完全在本地跑，不用担心国内出口被 OpenAI 拒的问题。",
+      "lab": "字节 SEED",
+      "accent": [255, 159, 67],
+      "head": "测 DeepSeek-V4：同一答案放不同位置，准确率最多差 40.2 个百分点",
+      "body": "字节跳动 Seed 团队论文《Periodic Weak Spots》指出：DeepSeek-V4-Flash 用分块压缩 KV 缓存（把相邻若干 token 的注意力记忆压成一条）时，会出现「相位敏感」——同一条信息只是挪位置，长上下文检索准确率可差最多 40.2 个百分点，波动周期和压缩步长一致。官方对照显示全注意力模型没有这种规律；V4.1 把步长改小后差距缩小，但仍未消失。",
+      "why": "评估和上线时不能只看平均分；做长文档检索要专门测答案在不同位置时的表现。",
       "links": [
-        {"label": "Liquid AI 官方博客", "href": "https://www.liquid.ai/blog/d1-open"},
-        {"label": "Hugging Face 博客", "href": "https://huggingface.co/blog/LiquidAI/open-d1"}
+        {"label": "Hugging Face 论文页", "href": "https://huggingface.co/papers/2609.36322"}
       ]
     },
     {
-      "lab": "PERPLEXITY",
+      "lab": "xAI",
       "accent": [126, 224, 129],
-      "head": "Perplexity 开源 pplx-embed-v2-late：直接检索 PDF 和幻灯片，不用先做文字识别",
-      "body": "10 月 7 日 Perplexity 在 Hugging Face 放出两个开放权重的检索向量模型，分 6 亿和 90 亿参数两档。它们属于 late interaction（细粒度匹配：每个词或图块各留一个向量，查询时再逐一比对），能把文字、图片、表格和整页 PDF、幻灯片一起建索引，不用先 OCR（把图片里的字识别出来）。",
-      "why": "做文档类 RAG（先检索资料再让模型回答）时，扫描件和带图表的页面可以少一道识别工序。",
+      "head": "Grok Imagine Video 1.5 Lite 上 API：文字/图片生成视频，约 0.02 美元/秒",
+      "body": "xAI 文档显示模型名 grok-imagine-video-1.5-lite，输入文字或图片，输出视频；官方标价输出约每秒 0.02 美元（480p 档常见报价），支持批量接口。多家目录站记为 10 月 8 日上线，定位比完整版 Video 1.5 更便宜的工作量档。",
+      "why": "视频生成单价继续下探；若你只做短预览或批量草稿，Lite 比旗舰档更划算。",
       "links": [
-        {"label": "Crypto Briefing 报道", "href": "https://cryptobriefing.com/perplexity-pplx-embed-v2-late-multimodal-models/"}
+        {"label": "xAI 官方文档", "href": "https://docs.x.ai/developers/models/grok-imagine-video-1.5-lite"}
       ]
     }
   ]
