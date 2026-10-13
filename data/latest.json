@@ -1,59 +1,50 @@
 {
-  "date": "2026.10.12",
-  "weekday": "周一",
-  "lede": "今天没有新旗舰语言模型正式上架。主线是《金融时报》称英伟达在谈收购或加码 Reflection（做开源权重编程/智能体模型的美国公司），以及微软 CEO 纳德拉发文：把模型当「内部风险」来管，默认要能中途急停。",
+  "date": "2026.10.13",
+  "weekday": "周二",
+  "lede": "昨夜主线：Meta 推出旗舰智能体模型 Muse Wonder / Wonder Full（标准档已上 API）；明天起 ChatGPT 侧将下线 GPT-5.5。",
   "stories": [
     {
-      "lab": "NVIDIA",
-      "accent": [118, 185, 0],
-      "head": "《金融时报》：英伟达洽谈收购或加码 Reflection AI",
-      "body": "《金融时报》10 月 10 日援引知情人士称，英伟达正就收购 Reflection、追加投资、提供算力，或以「招人+授权技术」（acqui-hire）等方式深化合作进行早期商谈；协议可能数周内谈成，也可能谈崩。路透转述称双方未立即置评。据 FT，英伟达已向该公司投入约 8 亿美元；Reflection 估值此前约 250 亿美元，做开源权重编程与智能体相关模型，常被称作「美国版 DeepSeek」。",
-      "why": "芯片厂往「模型侧」再伸一脚：若谈成，美国本土开源权重生态会多一个有算力背书的玩家；目前仍是报道中的谈判，不是已成交。",
+      "lab": "META",
+      "accent": [102, 140, 255],
+      "head": "Muse Wonder / Wonder Full 上线：Meta 首批「前沿档」智能体模型",
+      "body": "10 月 12 日 Meta 官方宣布 Muse Wonder 与更强的 Wonder Full。官方称面向保险理赔、租约解读、写可用应用等长任务；带 Active Memory（跨对话记要点）与 Active Focus（卡住会换路、重要动作前先确认）。Wonder 已通过 Meta Model API（模型名 muse-wonder-1.0）与 Muse Code 开放；Wonder Full 仅 Muse Code 订阅可用。TechCrunch / VentureBeat 转述 API 价约 输入 4 / 输出 20 美元每百万 token（缓存输入约 0.20）；上下文约 100 万 token。权重不开源。第三方 Artificial Analysis Intelligence Index：Wonder Full 56、Wonder 52（同榜 Opus 5.5 为 58）。",
+      "why": "Meta 在 Muse Spark 之后首次正面打「前沿模型」定位；能 API 调用的是 Wonder，最强 Full 仍锁在自家编程助手订阅里。",
       "links": [
-        {"label": "金融时报（付费）", "href": "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a"},
-        {"label": "Investing.com 转述", "href": "https://www.investing.com/news/company-news/nvidia-in-talks-to-acquire-reflection-ai-or-increase-investment-ft-reports-4942324"}
+        {"label": "Meta 官方", "href": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/"},
+        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"},
+        {"label": "VentureBeat", "href": "https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api"}
       ]
     },
     {
-      "lab": "MICROSOFT",
-      "accent": [0, 120, 212],
-      "head": "纳德拉：把前沿模型当「内部风险」，系统外要有急停闸",
-      "body": "微软 CEO 萨提亚·纳德拉 10 月 10 日在个人 X 长文《Models as Insider Risks in the Super Intelligence Era》提出七条工程原则：多模型、全动作可观测、持续可验证、权限独立于模型、独立审计、默认假设模型已失控并保留人工中途暂停/关停（「急停闸」）、事故及时披露。文中未点名新产品，强调控制层要在模型之外。",
-      "why": "和昨天 Anthropic 公开的「测评里误交真实表单」同一主题：智能体一旦能点网页、填表，权限与急停要比「模型自称安全」更硬。",
+      "lab": "OPENAI",
+      "accent": [16, 163, 127],
+      "head": "明天起 GPT-5.5 退出 ChatGPT / Work / Codex（API 不受影响）",
+      "body": "OpenAI 官方 ChatGPT 文档写明：2026 年 10 月 14 日起，GPT-5.5 将从 ChatGPT、ChatGPT Work、Codex（用 ChatGPT 账号登录）全计划下线；明确写「不适用于 OpenAI API」。Codex 侧建议替换：Plus/Pro/Business/Enterprise/Edu 用 GPT-6 Sol（gpt-6-sol），Free/Go 桌面端用 GPT-6 Luna（gpt-6-luna），均注明「有可用时」。需提前改工作区默认、已存模型设置、自定义 agent、定时任务与选模型的脚本。",
+      "why": "订阅侧选模型的人明天就会碰到；走 API Key 的 Codex / 自建调用不受这次下线影响。",
       "links": [
-        {"label": "纳德拉 X 原文", "href": "https://x.com/satyanadella/status/2108931348857827686"},
-        {"label": "IT之家中文转述", "href": "https://m.163.com/dy/article/L8UMDGE80511B8LM.html"}
+        {"label": "OpenAI 官方说明", "href": "https://learn.chatgpt.com/docs/models"}
       ]
     },
     {
-      "lab": "MANUS",
-      "accent": [255, 159, 67],
-      "head": "Manus 独立后再融超 5 亿美元，投后估值报道约 40 亿",
-      "body": "Manus 母公司「蝴蝶效应」10 月 8 日微信公众号称，近日完成超过 5 亿美元新一轮融资，由博裕投资、IDG 资本领投，腾讯、红杉中国、真格基金等老股东跟投。这是 9 月 1 日恢复独立运营后首笔公开大额融资；彭博此前称本轮或使估值升至约 40 亿美元。公司 9 月 28 日面向海外发了 2.0，并推个人助理 Cue。",
-      "why": "通用桌面智能体仍在烧钱扩招；基础模型厂商（Kimi、Claude 等）也在抢同类任务，产品层和模型层边界越来越糊。",
+      "lab": "阿里",
+      "accent": [255, 106, 0],
+      "head": "Qoder 桌面端 Fast 模式：官方称首响约 3 秒、Credits 约 0.8x",
+      "body": "阿里智能编程/智能体产品 Qoder 官方文档：北京时间 10 月 10 日起桌面端上线 Fast；需客户端 ≥0.4.4。官方称保持同等输出质量，首响约 3 秒，Credits 消耗约 0.8x；从模型路由、Agent 链路、网络延迟三层优化。国内媒体 10 月 12 日称中英文版已全量开放。IDE / JetBrains / CLI / Cloud Agents 等后续跟进。",
+      "why": "日常写代码、修 bug 想更快更省额度时，多了一档不必拉满推理的默认选择。",
       "links": [
-        {"label": "中新经纬", "href": "https://www.jwview.com/jingwei/html/10-08/691488.shtml"}
+        {"label": "Qoder CN 公告", "href": "https://docs.qoder.cn/product-overview/fast-mode-announcement"},
+        {"label": "国际版公告", "href": "https://docs.qoder.com/product-overview/fast-mode-announcement"}
       ]
     },
     {
-      "lab": "ODYSSEY",
+      "lab": "学界",
       "accent": [196, 167, 255],
-      "head": "Odyssey-3 世界模型开放研究预览：免费试玩 Flash",
-      "body": "加州公司 Odyssey 10 月 8 日发文推出 Odyssey-3（官方称其最强基础世界模型）：用文本提示生成可互动环境，实时预测动作后的变化。浏览器研究预览跑 Odyssey-3 Flash（experience.odyssey.systems），可申请 API；权重未开源。官方称 Odyssey-3 Pro 在 Physics-IQ Verified 的 video-to-video 上拿到 66.1（有报道指出对应该榜 best-of-8 条目，需对照榜单解读）。",
-      "why": "世界模型（学物理与场景怎么变）常被用在机器人/自动驾驶仿真里；今天能免费点开试，但还不是可下载的开源权重。",
+      "head": "丘成桐牵头：数学与人工智能实验室联盟在清华成立",
+      "body": "10 月 11 日，丘成桐数学与人工智能实验室联盟在清华大学成立。新京报等报道：联合八家机构，约千名数学相关人才；首个实验室落地求真书院，后续计划在京沪宁深港布局。六项任务包括研发数学专用模型、建 AI 辅助研究基础设施、支撑可解释性与安全、交叉学科、国际合作与期刊。丘成桐称近半年来 AI 对数学冲击「前所未有」，主张合理使用。",
+      "why": "把「AI 写证明 / 验证明」从实验室散点尝试，推进成有组织的国内数学—模型协作框架。",
       "links": [
-        {"label": "官方介绍", "href": "https://odyssey.systems/meet-odyssey-3"},
-        {"label": "The Decoder", "href": "https://the-decoder.com/odyssey-3-is-a-new-generative-world-model-that-you-can-try-for-free/"}
-      ]
-    },
-    {
-      "lab": "ORCA",
-      "accent": [126, 224, 129],
-      "head": "OrcaCyber Zero 1.5：面向授权安全研究的 100 万上下文模型",
-      "body": "OrcaRouter 10 月 10 日发布 OrcaCyber Zero 1.5（接替 9 月 17 日的 1.0）：后训练偏漏洞复现、渗透与安全审计，官方称 100 万 token 上下文、原生函数调用；托管 API 价约 输入 3 / 输出 7.5 美元每百万 token，需安全研究档审核。厂商自评 Cybench 39/39，尚无独立复现与技术报告。",
-      "why": "「网络安全专用」模型继续分档、门禁访问；数字都是厂商自报，别当第三方实测。",
-      "links": [
-        {"label": "MarkTechPost", "href": "https://www.marktechpost.com/2026/10/10/orcarouter-releases-orcacyber-zero-1-5-cybersecurity-model-with-1m-context/"}
+        {"label": "新京报", "href": "https://www.bjnews.com.cn/detail/1791728032129598.html"},
+        {"label": "科技日报", "href": "https://www.stdaily.com/web/gdxw/2026-10/12/content_594436.html"}
       ]
     }
   ]
