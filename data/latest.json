@@ -1,50 +1,71 @@
 {
-  "date": "2026.10.13",
-  "weekday": "周二",
-  "lede": "昨夜主线：Meta 推出旗舰智能体模型 Muse Wonder / Wonder Full（标准档已上 API）；明天起 ChatGPT 侧将下线 GPT-5.5。",
+  "date": "2026.10.14",
+  "weekday": "周三",
+  "lede": "今天没有新的旗舰模型发布。主线：千问把 Personal Agent 推进到眼镜/耳机；字节 Seed 单独拉出安全对齐部门；Anthropic 评估小模型在物联网上自我复制。另有 Sora 复活谈判与 DeepSeek 千亿融资传闻；ChatGPT 侧 GPT-5.5 今日下线。",
   "stories": [
     {
-      "lab": "META",
-      "accent": [102, 140, 255],
-      "head": "Muse Wonder / Wonder Full 上线：Meta 首批「前沿档」智能体模型",
-      "body": "10 月 12 日 Meta 官方宣布 Muse Wonder 与更强的 Wonder Full。官方称面向保险理赔、租约解读、写可用应用等长任务；带 Active Memory（跨对话记要点）与 Active Focus（卡住会换路、重要动作前先确认）。Wonder 已通过 Meta Model API（模型名 muse-wonder-1.0）与 Muse Code 开放；Wonder Full 仅 Muse Code 订阅可用。TechCrunch / VentureBeat 转述 API 价约 输入 4 / 输出 20 美元每百万 token（缓存输入约 0.20）；上下文约 100 万 token。权重不开源。第三方 Artificial Analysis Intelligence Index：Wonder Full 56、Wonder 52（同榜 Opus 5.5 为 58）。",
-      "why": "Meta 在 Muse Spark 之后首次正面打「前沿模型」定位；能 API 调用的是 Wonder，最强 Full 仍锁在自家编程助手订阅里。",
+      "lab": "阿里",
+      "accent": [255, 106, 0],
+      "head": "千问发布 AI 眼镜 N1 / N1 Pro 与 Bose 联名耳夹耳机",
+      "body": "10 月 13 日千问发布三款 Personal Agent 穿戴：眼镜 N1、N1 Pro，以及与 Bose 联名的 AI 耳夹耳机，已在电商现货开售。媒体报道叠加补贴后眼镜约 2218 元起、耳机约 1099 元起。官方称 N1 系列约 5000 万像素、支持 4K 录像与全天候环境感知；N1 Pro 增加体征监测、眼动交互与虹膜核身；耳机支持约 89 种语言实时翻译与听记。千问事业部副总裁宋刚称穿戴是「物理世界的延伸」。同日媒体还称即将推出可办航班理赔、价保等任务的「千问 Go！」。",
+      "why": "把聊天助手推进到「随身、能办事」的硬件入口，是国内大厂把智能体落到日常场景的一步。",
       "links": [
-        {"label": "Meta 官方", "href": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/"},
-        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"},
-        {"label": "VentureBeat", "href": "https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api"}
+        {"label": "科技日报", "href": "https://www.stdaily.com/web/gdxw/2026-10/13/content_595525.html"},
+        {"label": "钛媒体", "href": "https://awtmt.com/articles/3783541"},
+        {"label": "每经网·千问Go", "href": "https://www.nbd.com.cn/articles/2026-10-13/4602666.html"}
+      ]
+    },
+    {
+      "lab": "字节",
+      "accent": [50, 200, 140],
+      "head": "Seed 成立「Model-Alignment & Preparedness」安全对齐部门",
+      "body": "10 月 13 日多家媒体据内部邮件报道：字节跳动 Seed 成立 Seed Model-Alignment & Preparedness 部门，由严林负责，向 Seed 负责人吴永辉汇报；原 Responsible AI 与部分 Chat 团队转入。官方口径（经媒体转述）称要加强安全与对齐投入，提升智能体模型安全，并防范 CBRN（化学、生物、放射、核）等前沿风险。澎湃、财新等称这是国内首家单独设立此类部门的前沿 AI 实验室。",
+      "why": "智能体能自主操作后，安全从「内容合规」扩到「行为与滥用」；组织架构单列说明字节把这当核心能力，而不只是合规附属。",
+      "links": [
+        {"label": "澎湃新闻", "href": "https://www.thepaper.cn/newsDetail_forward_34241236"},
+        {"label": "财新", "href": "https://companies.caixin.com/2026-10-13/102492842.html"}
+      ]
+    },
+    {
+      "lab": "ANTHROPIC",
+      "accent": [196, 140, 100],
+      "head": "官方研究：小模型或数月内具备在物联网设备上自我复制的能力",
+      "body": "Anthropic Frontier Red Team 10 月 12 日发文：实验显示约 300 亿参数及以下模型已能完成自我复制链条中的多步；在简化评测里，开源权重模型 GLM-5.2 在 5 次试验中有 4 次把载荷传到全部 8 个模拟 Android 节点（评测刻意弱化了入侵难度，作者称这是现实世界成功率的上界）。约 90 亿参数模型曾在 9 类硬件中的 8 类上成功拉起推理。官方称按历史能力增速，年底前小模型或触及该门槛；复制可能较慢（翻倍时间以天计），但无单点关停。",
+      "why": "把「AI 蠕虫」从科幻拉到可测的能力门槛，对开源小模型部署与物联网厂商防护都有直接含义。",
+      "links": [
+        {"label": "Anthropic 官方", "href": "https://www.anthropic.com/research/self-replicating-ai"},
+        {"label": "SecurityWeek", "href": "https://www.securityweek.com/small-ai-models-may-soon-be-able-to-self-replicate-on-iot-devices-anthropic-warns/"}
       ]
     },
     {
       "lab": "OPENAI",
       "accent": [16, 163, 127],
-      "head": "明天起 GPT-5.5 退出 ChatGPT / Work / Codex（API 不受影响）",
-      "body": "OpenAI 官方 ChatGPT 文档写明：2026 年 10 月 14 日起，GPT-5.5 将从 ChatGPT、ChatGPT Work、Codex（用 ChatGPT 账号登录）全计划下线；明确写「不适用于 OpenAI API」。Codex 侧建议替换：Plus/Pro/Business/Enterprise/Edu 用 GPT-6 Sol（gpt-6-sol），Free/Go 桌面端用 GPT-6 Luna（gpt-6-luna），均注明「有可用时」。需提前改工作区默认、已存模型设置、自定义 agent、定时任务与选模型的脚本。",
-      "why": "订阅侧选模型的人明天就会碰到；走 API Key 的 Codex / 自建调用不受这次下线影响。",
+      "head": "今天起 GPT-5.5 退出 ChatGPT / Work / Codex（API 不受影响）",
+      "body": "OpenAI 官方文档写明：2026 年 10 月 14 日起，GPT-5.5 从 ChatGPT、ChatGPT Work、以及用 ChatGPT 账号登录的 Codex 全计划下线；明确「不适用于 OpenAI API」。订阅侧建议：Plus/Pro/Business/Enterprise/Edu 改用 GPT-6 Sol（gpt-6-sol），Free/Go 桌面端改用 GPT-6 Luna（gpt-6-luna），均注明「有可用时」。需检查工作区默认、已存设置、自定义 agent、定时任务与选模型脚本。",
+      "why": "今天就会踩坑：走订阅登录的 Codex / ChatGPT 选模型的人要换掉 gpt-5.5；纯 API Key 调用不受影响。",
       "links": [
         {"label": "OpenAI 官方说明", "href": "https://learn.chatgpt.com/docs/models"}
       ]
     },
     {
-      "lab": "阿里",
-      "accent": [255, 106, 0],
-      "head": "Qoder 桌面端 Fast 模式：官方称首响约 3 秒、Credits 约 0.8x",
-      "body": "阿里智能编程/智能体产品 Qoder 官方文档：北京时间 10 月 10 日起桌面端上线 Fast；需客户端 ≥0.4.4。官方称保持同等输出质量，首响约 3 秒，Credits 消耗约 0.8x；从模型路由、Agent 链路、网络延迟三层优化。国内媒体 10 月 12 日称中英文版已全量开放。IDE / JetBrains / CLI / Cloud Agents 等后续跟进。",
-      "why": "日常写代码、修 bug 想更快更省额度时，多了一档不必拉满推理的默认选择。",
+      "lab": "OPENAI",
+      "accent": [120, 180, 160],
+      "head": "媒体：OpenAI 与影视向创业公司谈重启 Sora",
+      "body": "The Information 10 月 12 日报道（PYMNTS、DIGITIMES 等 13 日跟进）：OpenAI 正与一家面向电影制作人的 AI 视频创业公司讨论，让对方深度定制并商业化已关停的视频模型 Sora。该公司由前 Sora 研究负责人 Bill Peebles、梦工厂联合创始人 Jeffrey Katzenberg、Dropbox 前 CFO Sujay Jaswa 共同创办；公司名与是否共享核心权重均未披露。报道称双方仍在谈判，产品形态与时间表未定。",
+      "why": "Sora 若以外包式专业影视工具复活，说明 OpenAI 更想砍掉高算力消费侧业务、把视频能力交给外部变现。",
       "links": [
-        {"label": "Qoder CN 公告", "href": "https://docs.qoder.cn/product-overview/fast-mode-announcement"},
-        {"label": "国际版公告", "href": "https://docs.qoder.com/product-overview/fast-mode-announcement"}
+        {"label": "The Information", "href": "https://www.theinformation.com/newsletters/ai-agenda/openais-plan-revive-sora"},
+        {"label": "PYMNTS", "href": "https://www.pymnts.com/news/artificial-intelligence/2026/openais-video-model-sora-could-get-a-second-act/"}
       ]
     },
     {
-      "lab": "学界",
-      "accent": [196, 167, 255],
-      "head": "丘成桐牵头：数学与人工智能实验室联盟在清华成立",
-      "body": "10 月 11 日，丘成桐数学与人工智能实验室联盟在清华大学成立。新京报等报道：联合八家机构，约千名数学相关人才；首个实验室落地求真书院，后续计划在京沪宁深港布局。六项任务包括研发数学专用模型、建 AI 辅助研究基础设施、支撑可解释性与安全、交叉学科、国际合作与期刊。丘成桐称近半年来 AI 对数学冲击「前所未有」，主张合理使用。",
-      "why": "把「AI 写证明 / 验证明」从实验室散点尝试，推进成有组织的国内数学—模型协作框架。",
+      "lab": "DEEPSEEK",
+      "accent": [80, 140, 255],
+      "head": "《财经》称 DeepSeek 本轮拟融资约 1000 亿元（公司未回应）",
+      "body": "《财经》10 月 13 日援引多位交易人士：DeepSeek 第二轮融资拟由约 500 亿元增至约 1000 亿元，投前估值仍约 5000 亿元；新老股东拟各出一半。新进方据称含石溪资本、吉利等，老股东含宁德时代（拟追加约 100 亿元）、腾讯等。报道称公司正加快科创板 IPO 筹备，目标最快今年底递表、2027 年挂牌；9 月下旬任命新 CFO 严文韬。文末写明向 DeepSeek 求证截至发稿未获回应——属融资进展报道，非官方公告。",
+      "why": "若属实，半年累计融资约 1500 亿元，是国内一级市场体量信号；但未获公司确认，宜当「在谈」而非「已交割」。",
       "links": [
-        {"label": "新京报", "href": "https://www.bjnews.com.cn/detail/1791728032129598.html"},
-        {"label": "科技日报", "href": "https://www.stdaily.com/web/gdxw/2026-10/12/content_594436.html"}
+        {"label": "21经济网转《财经》", "href": "https://www.21jingji.com/article/20261013/herald/e445af80c18bdf8f76491b2226c2c22c.html"}
       ]
     }
   ]
