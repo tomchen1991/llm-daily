@@ -1,71 +1,71 @@
 {
-  "date": "2026.10.15",
-  "weekday": "周四",
-  "lede": "主线：Google 把 Gemini 4 Argon 全面放开；Meta 的 Muse Wonder 仍在发酵；Character.ai 申请破产保护。另有 OpenAI 员工窃听案、Anthropic 智能体可观测性、千问电商 Agent。",
+  "date": "2026.10.16",
+  "weekday": "周五",
+  "lede": "主线：Meta 放出 Muse Spark Open 的模型权重（8160 亿参数），智谱、阶跃、英伟达同一天也开源了新模型。另有一个按输入计费的「判断题」模型、DeepSeek 停服近 5 小时、微软自研大模型预训练完成。",
   "stories": [
-    {
-      "lab": "GOOGLE",
-      "accent": [138, 180, 248],
-      "head": "Gemini 4 Argon 全球开放：API / 应用同步上线",
-      "body": "Google 官方 10 月 13 日宣布 Gemini 4 Argon 全面可用：开发者经 Gemini API（AI Studio）付费档调用；Google AI Ultra / Pro 订阅可在 Gemini 应用与搜索 AI 模式使用。官方称面向复杂编码、金融、法律、网络安全与科研；API 统一上下文约 100 万 token。介绍价每百万输入/输出 token 约 2 / 10 美元（缓存输入约 95% 折扣），至 2026 年 11 月 30 日后改为约 4 / 20 美元。",
-      "why": "这是近两天最硬的旗舰模型放量：能直接改默认选型与账单，不是传闻。",
-      "links": [
-        {"label": "Google 官方博客", "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"}
-      ]
-    },
     {
       "lab": "META",
       "accent": [102, 180, 255],
-      "head": "Muse Wonder / Wonder Full 上线：Meta 第一代旗舰模型",
-      "body": "Meta 10 月 12 日发布 Muse Wonder 与更强的 Muse Wonder Full。官方称面向智能体式编码与长任务；上下文约 100 万 token，支持文本/图/视频/音频输入。Wonder 经 Muse Code 与 Meta Model API 开放，官方标价每百万输入/输出约 4 / 20 美元；Wonder Full 仅随 Muse Code 的 Power / Maximum Usage 订阅提供，不走公开 API。",
-      "why": "Meta 终于正面推出旗舰闭源模型，直接跟 OpenAI / Anthropic 抢开发者付费入口。",
+      "head": "Muse Spark Open 开放权重：816B 参数，两台 Mac Studio 能跑",
+      "body": "Meta 10 月 15 日发布 Muse Spark Open 的权重：总参数 8160 亿、每个 token 只用 420 亿（MoE，混合专家），上下文 100 万 token，能读文字、图片、音频、视频，输出文字。官方称主打编程和长任务智能体，是「美国最强的开放权重模型」。权重在 Hugging Face 等处下载，也可经 OpenRouter、Together、Groq、Fireworks 等直接调 API；用两台 M5 Ultra Mac Studio 加 MLX 能在本地跑。许可是 Muse Model License，商用有限制，不是 Apache 那种完全放开。",
+      "why": "继 Muse Wonder 之后 Meta 又拿出能自己部署的大模型，开源阵营的上限又被抬高了一档；但商用前要先看清许可条款。",
       "links": [
-        {"label": "Meta 开发者博客", "href": "https://dev.meta.ai/resources/blog/build-with-muse-wonder"},
-        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"}
+        {"label": "Meta 官方博客", "href": "https://research.meta.ai/blog/muse-spark-open"},
+        {"label": "Hugging Face 介绍", "href": "https://huggingface.co/blog/meta-muse-spark-open"}
       ]
     },
     {
-      "lab": "CHARACTER",
-      "accent": [255, 159, 67],
-      "head": "Character.ai 申请 Chapter 11，迪士尼作 stalking horse",
-      "body": "Character.ai 官方 10 月 12 日称已启动自愿 Chapter 11（美国破产重整），以便法院监督出售资产。平台暂可继续使用；若卖不出去「能继续运营」的方案，可能关停。CNBC、WSJ 等报道：迪士尼作 stalking horse（意向底价买家），拟约 2000 万美元换部分知识产权的非独家许可；出售流程预计 11 月底或 12 月初结束。官方称算力成本高、诉讼与监管压力大，现金流撑不住现有形态。",
-      "why": "消费级角色陪伴产品的高算力成本与合规风险，终于把一家头部应用推到破产出售。",
+      "lab": "智谱",
+      "accent": [126, 224, 129],
+      "head": "GLM-5.3-Flash 开源：原生多模态，API 每百万输入 0.8 元",
+      "body": "智谱 10 月 15 日发布并开源 GLM-5.3-Flash：总参数 3200 亿、激活 180 亿，上下文 100 万 token，能直接读图片、视频和文件。官方称在 Artificial Analysis 综合智能指数拿 57 分，与 Claude Opus 4.8 持平，编程体感也相当。API 标准价每百万 token 输入 0.8 元、输出 2.8 元，现在限时五折（0.4 / 1.4 元）。",
+      "why": "国内直连、便宜、还能看图，对要省钱跑智能体的开发者是很现实的新选项。",
       "links": [
-        {"label": "Character.ai 官方", "href": "https://blog.character.ai/an-update-on-character-ai/"},
-        {"label": "CNBC", "href": "https://www.cnbc.com/2026/10/13/character-ai-chapter-11-disney-bid.html"}
+        {"label": "Hugging Face 模型页", "href": "https://huggingface.co/zai-org/GLM-5.3-Flash"},
+        {"label": "智谱开放文档", "href": "https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash"}
       ]
     },
     {
-      "lab": "OPENAI",
-      "accent": [16, 163, 127],
-      "head": "FBI 逮捕 OpenAI 工程师：高管会议室藏录音设备",
-      "body": "美国司法部与多家媒体 10 月 13–14 日报道：沙特籍工程师 Abdulrahman Alfozan 被控在旧金山 OpenAI 办公楼高管会议室电视 USB 口安装隐蔽录音设备。OpenAI 称约 9 月 30 日发现设备后报案，并用自家模型协助溯源；嫌疑人约 10 月 9 日被解雇并逮捕。公司称暂无迹象显示核心数据或源码泄露，调查仍在进行。",
-      "why": "实验室安全从「模型对齐」扩到「物理与内部人员」：机密会议被偷听是实打实的运营风险。",
+      "lab": "阶跃 / 英伟达",
+      "accent": [118, 185, 0],
+      "head": "同日还有两款开源：Step 5 Preview 与 Nemotron 3.5 Super VL",
+      "body": "阶跃星辰 10 月 15 日放出 Step 5 Preview 完整权重：6000 亿参数、激活 270 亿，100 万上下文，能读文字和图片，API 每百万 token 输入 1 美元、输出 2.7 美元。英伟达同日发布 Nemotron 3.5 Super VL（1200 亿参数、激活 120 亿，多模态），连训练数据和配方一起公开；另有压到 24GB 的 Bolt 74B 本地版，4GB 手机版计划 10 月 23 日上线。蚂蚁的 Ling-3.1-flash（5600 亿参数，MIT 许可）也在前一天开源。",
+      "why": "一天之内多款大参数开源模型同时出来，自己部署或挑便宜 API 的选择明显变多了。",
       "links": [
-        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/10/13/fbi-arrests-openai-employee-accused-of-planting-hidden-recording-device-in-conference-room/"},
-        {"label": "BBC", "href": "https://www.bbc.com/news/articles/cwg5jq4vlddzo"}
+        {"label": "腾讯新闻：Step 5 Preview", "href": "https://news.qq.com/rain/a/20261015A02TKV00"},
+        {"label": "IT之家：Nemotron 3.5", "href": "https://www.ithome.com/1/013/679.htm"}
       ]
     },
     {
-      "lab": "ANTHROPIC",
-      "accent": [196, 140, 100],
-      "head": "Claude 平台公测导出 OpenTelemetry 智能体轨迹",
-      "body": "Anthropic 文档显示：Claude Managed Agents、Messages API 与 SDK 已支持把 OpenTelemetry 轨迹导出到 Langfuse、LangSmith、Sentry 等。跨度可含耗时、token、模型与工具调用；可选只传元数据或带上完整提示与回复。管理员在 Claude Console 配置 HTTPS OTLP 终点即可。",
-      "why": "智能体出问题常在「中间哪一步歪了」；标准可观测性降低排障成本，也方便做生产评估。",
+      "lab": "LIQUID AI",
+      "accent": [196, 167, 255],
+      "head": "d1-ultra：只回答「是/否、选哪个」的判断模型，每百万输入 0.042 美元",
+      "body": "Liquid AI 10 月 15 日发布 d1-ultra，一种「决策模型」：不生成文字，只对你给的是非题、选择题或打分题返回带置信度的概率，一次前向计算就出结果。能读文字和图片，上下文 32,768 token。只按输入收费，每百万 token 0.042 美元，输出不收钱；已上 Liquid API 和 Vercel AI Gateway，官方称不久接入 OpenRouter。",
+      "why": "价格和 Jev 1.13 一样，但能看图；做智能体路由、分类这一层又多了一个候选。",
       "links": [
-        {"label": "Claude 官方说明", "href": "https://claude.com/resources/articles/agent-observability-on-the-claude-platform"},
-        {"label": "平台文档", "href": "https://platform.claude.com/docs/en/manage-claude/opentelemetry"}
+        {"label": "Liquid AI 官方博客", "href": "https://www.liquid.ai/blog/d1-ultra"},
+        {"label": "Vercel 上线说明", "href": "https://vercel.com/changelog/liquid-ais-d1-ultra-now-available-on-ai-gateway"}
       ]
     },
     {
-      "lab": "阿里",
-      "accent": [255, 106, 0],
-      "head": "千问办公电商版 Agent 开启邀测",
-      "body": "10 月 14 日千问办公发布面向电商商家的「电商版」并开启邀测，定位独立第三方电商 Agent、面向全平台商家。新华网等报道首批能力含跨平台经营看板、趋势与卖点分析、爆款素材批量生成、跨平台 ROI 优化等，并打通生意参谋、有赞、千牛、阿里妈妈万相台等工具。",
-      "why": "把通用办公助手收窄成能直接动店铺数据的垂直 Agent，是落地变现的一条清晰路径。",
+      "lab": "DEEPSEEK",
+      "accent": [77, 107, 254],
+      "head": "DeepSeek 网页和 API 中断近 5 小时",
+      "body": "10 月 15 日北京时间 8:11 到 13:04，DeepSeek 网页、App 和 API 部分中断，前后 4 小时 52 分钟，受影响的有 V4 Pro 和 V4.1 Flash 两个 API；9:08 起对话服务一度完全不可用。财新统计，9 月以来 DeepSeek 已出过 13 次故障。",
+      "why": "如果产品直接依赖 DeepSeek API，最好准备一个备用模型，出故障时能自动切过去。",
       "links": [
-        {"label": "新华网", "href": "http://www.news.cn/tech/20261014/fc39a7dd2ad544afac093315a45306d3/c.html"},
-        {"label": "IT之家", "href": "https://www.ithome.com/1/012/875.htm"}
+        {"label": "DeepSeek 状态页", "href": "https://status.deepseek.com/incidents/7116348214287"},
+        {"label": "财新", "href": "https://www.caixin.com/2026-10-15/102493714.html"}
+      ]
+    },
+    {
+      "lab": "MICROSOFT",
+      "accent": [255, 185, 0],
+      "head": "微软自研 MAI-Base-2 完成预训练：2.8 万亿参数",
+      "body": "微软 AI 负责人苏莱曼披露，MAI-Base-2 已完成预训练：总参数 2.8 万亿、激活 800 亿的 MoE 模型，用 16,000 块 GB200 训练了 38 天。现在进入后训练（把基础模型调成能对话、会用工具的阶段），成绩之后公布；下一代 MAI-Base-3 已在准备。",
+      "why": "微软在认真造自己的前沿模型，未来对 OpenAI 的依赖会变少。",
+      "links": [
+        {"label": "Microsoft AI 官方", "href": "https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/"}
       ]
     }
   ]
