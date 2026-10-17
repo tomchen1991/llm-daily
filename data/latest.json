@@ -1,71 +1,128 @@
 {
-  "date": "2026.10.16",
-  "weekday": "周五",
-  "lede": "主线：Meta 放出 Muse Spark Open 的模型权重（8160 亿参数），智谱、阶跃、英伟达同一天也开源了新模型。另有一个按输入计费的「判断题」模型、DeepSeek 停服近 5 小时、微软自研大模型预训练完成。",
+  "date": "2026.10.17",
+  "weekday": "周六",
+  "lede": "主线：Reflection 放出 Beam 1.0 开放权重（Apache 2.0）；可灵 Kling 4.0 全量上线；Anthropic 代码评审正式商用。另有 DeepSeek 整合产品部、ChatGPT 语音升级。",
   "stories": [
     {
-      "lab": "META",
-      "accent": [102, 180, 255],
-      "head": "Muse Spark Open 开放权重：816B 参数，两台 Mac Studio 能跑",
-      "body": "Meta 10 月 15 日发布 Muse Spark Open 的权重：总参数 8160 亿、每个 token 只用 420 亿（MoE，混合专家），上下文 100 万 token，能读文字、图片、音频、视频，输出文字。官方称主打编程和长任务智能体，是「美国最强的开放权重模型」。权重在 Hugging Face 等处下载，也可经 OpenRouter、Together、Groq、Fireworks 等直接调 API；用两台 M5 Ultra Mac Studio 加 MLX 能在本地跑。许可是 Muse Model License，商用有限制，不是 Apache 那种完全放开。",
-      "why": "继 Muse Wonder 之后 Meta 又拿出能自己部署的大模型，开源阵营的上限又被抬高了一档；但商用前要先看清许可条款。",
+      "lab": "REFLECTION",
+      "accent": [
+        196,
+        167,
+        255
+      ],
+      "head": "Beam 1.0 开放权重：5010 亿参数，Apache 2.0",
+      "body": "Reflection 10 月 16 日发布首个开放权重模型 Beam 1.0：总参数约 5010 亿、每个 token 激活约 230 亿（稀疏 MoE），上下文 100 万 token，主打编程、推理和长任务智能体。权重以 Apache 2.0 许可上架 Hugging Face（BF16 / FP8 / NVFP4），并配有推测解码草稿模型；官方称已对接 40 多家推理、云和智能体工具伙伴。",
+      "why": "继昨天 Meta Muse Spark Open 之后，又多了一款可商用更宽松的大参数开放权重模型，自己部署的选择又宽了一档。",
       "links": [
-        {"label": "Meta 官方博客", "href": "https://research.meta.ai/blog/muse-spark-open"},
-        {"label": "Hugging Face 介绍", "href": "https://huggingface.co/blog/meta-muse-spark-open"}
+        {
+          "label": "Reflection 官方博客",
+          "href": "https://reflection.ai/blog/beam-is-available"
+        },
+        {
+          "label": "Hugging Face 模型页",
+          "href": "https://huggingface.co/reflection/Beam-1.0-501B-A23B"
+        }
       ]
     },
     {
-      "lab": "智谱",
-      "accent": [126, 224, 129],
-      "head": "GLM-5.3-Flash 开源：原生多模态，API 每百万输入 0.8 元",
-      "body": "智谱 10 月 15 日发布并开源 GLM-5.3-Flash：总参数 3200 亿、激活 180 亿，上下文 100 万 token，能直接读图片、视频和文件。官方称在 Artificial Analysis 综合智能指数拿 57 分，与 Claude Opus 4.8 持平，编程体感也相当。API 标准价每百万 token 输入 0.8 元、输出 2.8 元，现在限时五折（0.4 / 1.4 元）。",
-      "why": "国内直连、便宜、还能看图，对要省钱跑智能体的开发者是很现实的新选项。",
+      "lab": "可灵 / 快手",
+      "accent": [
+        255,
+        159,
+        67
+      ],
+      "head": "Kling 4.0 全量上线：原生 30 秒视频，接 MCP/CLI",
+      "body": "快手可灵 10 月 15 日全量上线视频生成模型 Kling 4.0（公司 IR 16 日正式通告）：单次可原生生成最长 30 秒，全能参考最多 15 项素材、最多 10 张关键帧，文本上限 8000 token；官方称将支持 4K / 1080p 的 10-bit HDR 输出，并已接入 Kling MCP 与 CLI，企业与开发者 API「近期开放」。",
+      "why": "视频模型从「能出片」进一步走向可被智能体调用；做内容生产或要接工作流的人可以直接试。",
       "links": [
-        {"label": "Hugging Face 模型页", "href": "https://huggingface.co/zai-org/GLM-5.3-Flash"},
-        {"label": "智谱开放文档", "href": "https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash"}
+        {
+          "label": "快手 IR 通告",
+          "href": "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-officially-launches-next-generation-kling-40-raising/"
+        },
+        {
+          "label": "可灵产品博客",
+          "href": "https://kling.ai/blog/kling40-kling-visual-realism-creative-control-introducing-storytelling"
+        }
       ]
     },
     {
-      "lab": "阶跃 / 英伟达",
-      "accent": [118, 185, 0],
-      "head": "同日还有两款开源：Step 5 Preview 与 Nemotron 3.5 Super VL",
-      "body": "阶跃星辰 10 月 15 日放出 Step 5 Preview 完整权重：6000 亿参数、激活 270 亿，100 万上下文，能读文字和图片，API 每百万 token 输入 1 美元、输出 2.7 美元。英伟达同日发布 Nemotron 3.5 Super VL（1200 亿参数、激活 120 亿，多模态），连训练数据和配方一起公开；另有压到 24GB 的 Bolt 74B 本地版，4GB 手机版计划 10 月 23 日上线。蚂蚁的 Ling-3.1-flash（5600 亿参数，MIT 许可）也在前一天开源。",
-      "why": "一天之内多款大参数开源模型同时出来，自己部署或挑便宜 API 的选择明显变多了。",
+      "lab": "ANTHROPIC",
+      "accent": [
+        232,
+        184,
+        109
+      ],
+      "head": "Claude Code Review 正式商用：Team / Enterprise 可用",
+      "body": "Anthropic 宣布 Code Review 结束研究预览，面向 Claude Team 与 Enterprise：管理员开启并安装 GitHub App 后，新 PR 可自动评审。官方称多数评审约快 3 倍（约 20 分钟降到 6–10 分钟），可按仓库选 Quick / Standard / Deep；符合条件的 Enterprise 组织可在 2027 年 1 月 15 日前领取至少 1 万美元评审额度（领取后 30 天有效）。",
+      "why": "智能体写代码越来越快，评审成了瓶颈；Anthropic 把「自动看 PR」做成按用量计费的正式产品。",
       "links": [
-        {"label": "腾讯新闻：Step 5 Preview", "href": "https://news.qq.com/rain/a/20261015A02TKV00"},
-        {"label": "IT之家：Nemotron 3.5", "href": "https://www.ithome.com/1/013/679.htm"}
+        {
+          "label": "Anthropic 公告",
+          "href": "https://claude.com/resources/articles/code-review-is-now-generally-available"
+        },
+        {
+          "label": "Code Review 文档",
+          "href": "https://code.claude.com/docs/en/code-review"
+        }
       ]
     },
     {
-      "lab": "LIQUID AI",
-      "accent": [196, 167, 255],
-      "head": "d1-ultra：只回答「是/否、选哪个」的判断模型，每百万输入 0.042 美元",
-      "body": "Liquid AI 10 月 15 日发布 d1-ultra，一种「决策模型」：不生成文字，只对你给的是非题、选择题或打分题返回带置信度的概率，一次前向计算就出结果。能读文字和图片，上下文 32,768 token。只按输入收费，每百万 token 0.042 美元，输出不收钱；已上 Liquid API 和 Vercel AI Gateway，官方称不久接入 OpenRouter。",
-      "why": "价格和 Jev 1.13 一样，但能看图；做智能体路由、分类这一层又多了一个候选。",
+      "lab": "GOOGLE",
+      "accent": [
+        138,
+        180,
+        248
+      ],
+      "head": "Gemini 4 Argon 继续向 Pro / Ultra 用户铺开",
+      "body": "Google 10 月 13 日宣布的 Gemini 4 Argon，过去一天仍在多渠道铺量：官方称开发者可通过 AI Studio / Gemini API 调用，符合条件的 Pro 与 Ultra 订阅用户可在 Gemini 应用、Search 的 AI Mode、Antigravity 等处使用。入门 API 价官方报过：每百万 token 输入约 2 美元、输出约 10 美元（限时优惠至 11 月 30 日前后，之后涨到约 4 / 20 美元）；缓存输入可大幅打折。",
+      "why": "付费用户和开发者都能摸到这代前沿模型，长任务和写代码又多了一个可选。",
       "links": [
-        {"label": "Liquid AI 官方博客", "href": "https://www.liquid.ai/blog/d1-ultra"},
-        {"label": "Vercel 上线说明", "href": "https://vercel.com/changelog/liquid-ais-d1-ultra-now-available-on-ai-gateway"}
+        {
+          "label": "Google 官方介绍",
+          "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
+        },
+        {
+          "label": "Gemini 应用可用性",
+          "href": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
+        }
       ]
     },
     {
       "lab": "DEEPSEEK",
-      "accent": [77, 107, 254],
-      "head": "DeepSeek 网页和 API 中断近 5 小时",
-      "body": "10 月 15 日北京时间 8:11 到 13:04，DeepSeek 网页、App 和 API 部分中断，前后 4 小时 52 分钟，受影响的有 V4 Pro 和 V4.1 Flash 两个 API；9:08 起对话服务一度完全不可用。财新统计，9 月以来 DeepSeek 已出过 13 次故障。",
-      "why": "如果产品直接依赖 DeepSeek API，最好准备一个备用模型，出故障时能自动切过去。",
+      "accent": [
+        77,
+        107,
+        254
+      ],
+      "head": "DeepSeek 整合「产品部」，崔添翼任负责人",
+      "body": "澎湃新闻 10 月 16 日证实：DeepSeek 将 Harness、Web、App、Platform 团队合并为「产品部」，统一管产品、设计和研发，由今年 3 月加入的崔添翼负责。另：15 日 API 故障（约 8:11–13:04）后，公司按账号近 7 日（10.8–10.14）消耗金额以赠金全额补偿，赠金自动到账。",
+      "why": "一边收拢产品线、一边用赠金止血，说明 DeepSeek 在补稳定性和产品化，而不只是堆模型。",
       "links": [
-        {"label": "DeepSeek 状态页", "href": "https://status.deepseek.com/incidents/7116348214287"},
-        {"label": "财新", "href": "https://www.caixin.com/2026-10-15/102493714.html"}
+        {
+          "label": "澎湃报道",
+          "href": "https://m.163.com/dy/article/L9CCM7BN0514R9P4.html"
+        }
       ]
     },
     {
-      "lab": "MICROSOFT",
-      "accent": [255, 185, 0],
-      "head": "微软自研 MAI-Base-2 完成预训练：2.8 万亿参数",
-      "body": "微软 AI 负责人苏莱曼披露，MAI-Base-2 已完成预训练：总参数 2.8 万亿、激活 800 亿的 MoE 模型，用 16,000 块 GB200 训练了 38 天。现在进入后训练（把基础模型调成能对话、会用工具的阶段），成绩之后公布；下一代 MAI-Base-3 已在准备。",
-      "why": "微软在认真造自己的前沿模型，未来对 OpenAI 的依赖会变少。",
+      "lab": "OPENAI",
+      "accent": [
+        126,
+        224,
+        129
+      ],
+      "head": "ChatGPT 语音升到 GPT-Live-1.1，口音更好听",
+      "body": "OpenAI 帮助中心更新：ChatGPT Voice 正推送 GPT-Live-1.1 与轻量版 Quip，官方称多语口音更自然，并减少「正在查询」类停顿提示；新增多语音色（法/德/印地/日/韩/墨西哥西语等）及英语 Bubbie。另：GPT-6 Pro 在聊天里支持多智能体并行处理同一任务的不同部分（面向合格 Pro 用户滚动开通）。",
+      "why": "语音日常好用一点，Pro 侧则开始把「多个智能体同时干活」做成产品能力。",
       "links": [
-        {"label": "Microsoft AI 官方", "href": "https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/"}
+        {
+          "label": "ChatGPT 更新说明",
+          "href": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+        },
+        {
+          "label": "Voice 帮助页",
+          "href": "https://help.openai.com/en/articles/20001274-chatgpt-voice"
+        }
       ]
     }
   ]
