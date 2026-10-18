@@ -1,128 +1,59 @@
 {
-  "date": "2026.10.17",
-  "weekday": "周六",
-  "lede": "主线：Reflection 放出 Beam 1.0 开放权重（Apache 2.0）；可灵 Kling 4.0 全量上线；Anthropic 代码评审正式商用。另有 DeepSeek 整合产品部、ChatGPT 语音升级。",
+  "date": "2026.10.18",
+  "weekday": "周日",
+  "lede": "主线：DeepSeek 推送 V4.1-Flash-1017 并公开搜索/抓取 API；商务部就大模型权重出口征求意见。另有 Elorian Glimpse、ChatGPT 幻灯片与 Astra Pro 多智能体。",
   "stories": [
     {
-      "lab": "REFLECTION",
-      "accent": [
-        196,
-        167,
-        255
-      ],
-      "head": "Beam 1.0 开放权重：5010 亿参数，Apache 2.0",
-      "body": "Reflection 10 月 16 日发布首个开放权重模型 Beam 1.0：总参数约 5010 亿、每个 token 激活约 230 亿（稀疏 MoE），上下文 100 万 token，主打编程、推理和长任务智能体。权重以 Apache 2.0 许可上架 Hugging Face（BF16 / FP8 / NVFP4），并配有推测解码草稿模型；官方称已对接 40 多家推理、云和智能体工具伙伴。",
-      "why": "继昨天 Meta Muse Spark Open 之后，又多了一款可商用更宽松的大参数开放权重模型，自己部署的选择又宽了一档。",
-      "links": [
-        {
-          "label": "Reflection 官方博客",
-          "href": "https://reflection.ai/blog/beam-is-available"
-        },
-        {
-          "label": "Hugging Face 模型页",
-          "href": "https://huggingface.co/reflection/Beam-1.0-501B-A23B"
-        }
-      ]
-    },
-    {
-      "lab": "可灵 / 快手",
-      "accent": [
-        255,
-        159,
-        67
-      ],
-      "head": "Kling 4.0 全量上线：原生 30 秒视频，接 MCP/CLI",
-      "body": "快手可灵 10 月 15 日全量上线视频生成模型 Kling 4.0（公司 IR 16 日正式通告）：单次可原生生成最长 30 秒，全能参考最多 15 项素材、最多 10 张关键帧，文本上限 8000 token；官方称将支持 4K / 1080p 的 10-bit HDR 输出，并已接入 Kling MCP 与 CLI，企业与开发者 API「近期开放」。",
-      "why": "视频模型从「能出片」进一步走向可被智能体调用；做内容生产或要接工作流的人可以直接试。",
-      "links": [
-        {
-          "label": "快手 IR 通告",
-          "href": "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-officially-launches-next-generation-kling-40-raising/"
-        },
-        {
-          "label": "可灵产品博客",
-          "href": "https://kling.ai/blog/kling40-kling-visual-realism-creative-control-introducing-storytelling"
-        }
-      ]
-    },
-    {
-      "lab": "ANTHROPIC",
-      "accent": [
-        232,
-        184,
-        109
-      ],
-      "head": "Claude Code Review 正式商用：Team / Enterprise 可用",
-      "body": "Anthropic 宣布 Code Review 结束研究预览，面向 Claude Team 与 Enterprise：管理员开启并安装 GitHub App 后，新 PR 可自动评审。官方称多数评审约快 3 倍（约 20 分钟降到 6–10 分钟），可按仓库选 Quick / Standard / Deep；符合条件的 Enterprise 组织可在 2027 年 1 月 15 日前领取至少 1 万美元评审额度（领取后 30 天有效）。",
-      "why": "智能体写代码越来越快，评审成了瓶颈；Anthropic 把「自动看 PR」做成按用量计费的正式产品。",
-      "links": [
-        {
-          "label": "Anthropic 公告",
-          "href": "https://claude.com/resources/articles/code-review-is-now-generally-available"
-        },
-        {
-          "label": "Code Review 文档",
-          "href": "https://code.claude.com/docs/en/code-review"
-        }
-      ]
-    },
-    {
-      "lab": "GOOGLE",
-      "accent": [
-        138,
-        180,
-        248
-      ],
-      "head": "Gemini 4 Argon 继续向 Pro / Ultra 用户铺开",
-      "body": "Google 10 月 13 日宣布的 Gemini 4 Argon，过去一天仍在多渠道铺量：官方称开发者可通过 AI Studio / Gemini API 调用，符合条件的 Pro 与 Ultra 订阅用户可在 Gemini 应用、Search 的 AI Mode、Antigravity 等处使用。入门 API 价官方报过：每百万 token 输入约 2 美元、输出约 10 美元（限时优惠至 11 月 30 日前后，之后涨到约 4 / 20 美元）；缓存输入可大幅打折。",
-      "why": "付费用户和开发者都能摸到这代前沿模型，长任务和写代码又多了一个可选。",
-      "links": [
-        {
-          "label": "Google 官方介绍",
-          "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
-        },
-        {
-          "label": "Gemini 应用可用性",
-          "href": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
-        }
-      ]
-    },
-    {
       "lab": "DEEPSEEK",
-      "accent": [
-        77,
-        107,
-        254
-      ],
-      "head": "DeepSeek 整合「产品部」，崔添翼任负责人",
-      "body": "澎湃新闻 10 月 16 日证实：DeepSeek 将 Harness、Web、App、Platform 团队合并为「产品部」，统一管产品、设计和研发，由今年 3 月加入的崔添翼负责。另：15 日 API 故障（约 8:11–13:04）后，公司按账号近 7 日（10.8–10.14）消耗金额以赠金全额补偿，赠金自动到账。",
-      "why": "一边收拢产品线、一边用赠金止血，说明 DeepSeek 在补稳定性和产品化，而不只是堆模型。",
+      "accent": [77, 107, 254],
+      "head": "V4.1-Flash-1017 上线：更快更短，并开放搜索 API",
+      "body": "DeepSeek 10 月 17 日把网页/App/API 的 deepseek-flash 切到 V4.1-Flash-1017，权重以 MIT 许可上架 Hugging Face（约 7630 亿参数）。官方称用「自我反馈」强化学习做后训练，自测 DeepSWE v1.1 从 74.2 升到 77.0、Terminal-Bench 4.0 从 31.2 升到 42.3，任务更快、输出更短；API 调用方式与价格不变。同日开放自建搜索引擎的 Search / Fetch API：成功调用约每千次 0.75 美元（约合 ¥5），失败与空结果不计费；至 11 月 1 日（北京时间）经 DeepSeek Harness、Claude Code、Codex 走的服务端搜索免费。",
+      "why": "便宜的开放权重 Flash 又强了一截，还把网页检索当成按次卖的独立能力，写智能体时少绑一家搜索供应商。",
       "links": [
-        {
-          "label": "澎湃报道",
-          "href": "https://m.163.com/dy/article/L9CCM7BN0514R9P4.html"
-        }
+        {"label": "Hugging Face 模型页", "href": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"},
+        {"label": "DeepSeek API 文档", "href": "https://api-docs.deepseek.com/"}
+      ]
+    },
+    {
+      "lab": "商务部 / 科技部",
+      "accent": [232, 184, 109],
+      "head": "拟修订出口技术目录：前沿模型权重出境要先登记",
+      "body": "商务部、科技部 10 月 16 日发 2026 年第 48 号公告：就修订《中国禁止出口限制出口技术目录》公开征求意见（至 11 月 15 日），并自当日起对附件所列技术实施出口前登记。人工智能拟增列大模型、智能体、算力集群等约 23 项；官方称已开源或论文公开的技术不纳入管理。答记者问写明：用受限模型对外提供 API / App / 网页 / SaaS 不属大模型技术出口管理；海外本地化部署属出口，境外自有云可走自动许可等便利措施。",
+      "why": "管的是「权重和控制权出境」，不是禁止外国人调 API；以后超门槛开源或对外授权权重，要先走登记。",
+      "links": [
+        {"label": "商务部公告原文", "href": "https://www.mofcom.gov.cn/zcfb/blgg/art/2026/art_1666fcaa24424766afe0683498ff0908.html"},
+        {"label": "答记者问", "href": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_a4acff07e134447fbe7bbeb486df3ea6.html"}
+      ]
+    },
+    {
+      "lab": "ELORIAN",
+      "accent": [196, 167, 255],
+      "head": "Glimpse：边看边改观察的视觉推理模型",
+      "body": "前 Google 研究者创办的 Elorian 10 月 16 日发布 Glimpse（研究预览）：官方称推理过程中可放大局部、提高帧率重看视频片段，或写代码测量，把「视觉草稿区」带进思考。定价每百万 token 输入 0.60 美元、输出 3.00 美元；公司自称在多项多模态评测上接近或超过 GPT-6 Astra、Claude Opus 5.5，团队仅用数百块 GPU 在开放权重基础模型上后训练。API 与聊天界面已开，聊天需排队。",
+      "why": "机器人、实验室视频、短视频打标这类「得看懂画面再下结论」的活，多了一个更便宜的专门选项；分数以公司自报为主。",
+      "links": [
+        {"label": "Elorian 官方介绍", "href": "https://elorian.ai/blog/introducing-glimpse"},
+        {"label": "TechCrunch 报道", "href": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/"}
       ]
     },
     {
       "lab": "OPENAI",
-      "accent": [
-        126,
-        224,
-        129
-      ],
-      "head": "ChatGPT 语音升到 GPT-Live-1.1，口音更好听",
-      "body": "OpenAI 帮助中心更新：ChatGPT Voice 正推送 GPT-Live-1.1 与轻量版 Quip，官方称多语口音更自然，并减少「正在查询」类停顿提示；新增多语音色（法/德/印地/日/韩/墨西哥西语等）及英语 Bubbie。另：GPT-6 Pro 在聊天里支持多智能体并行处理同一任务的不同部分（面向合格 Pro 用户滚动开通）。",
-      "why": "语音日常好用一点，Pro 侧则开始把「多个智能体同时干活」做成产品能力。",
+      "accent": [126, 224, 129],
+      "head": "ChatGPT 可做幻灯片；Astra Pro 支持多智能体并行",
+      "body": "OpenAI 帮助中心更新：符合条件的 Pro / Business / Enterprise（有 Space）可在 ChatGPT 里创建并协作编辑幻灯片，网页可导出 PowerPoint、PDF 或 Google 幻灯片。另：聊天里的 GPT-6 Pro（Astra）滚动开通更快回复、更好用插件，以及多个智能体并行拆分同一任务、可跟进度并打开已完成子任务；面向合格 Pro 用户。",
+      "why": "交付物从「一段文字」扩到可协作的幻灯片；Pro 侧则把「几个智能体同时干活」做成正式产品能力。",
       "links": [
-        {
-          "label": "ChatGPT 更新说明",
-          "href": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
-        },
-        {
-          "label": "Voice 帮助页",
-          "href": "https://help.openai.com/en/articles/20001274-chatgpt-voice"
-        }
+        {"label": "ChatGPT 更新说明", "href": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"}
+      ]
+    },
+    {
+      "lab": "OPENAI / CODEX",
+      "accent": [138, 180, 248],
+      "head": "Codex「28 天」系列第 13 天额度重置已落地",
+      "body": "Codex 负责人 Tibo 10 月 17 日宣布当日太平洋时间结束前完成额度重置，随后发帖确认「Done」。这是其约 28 天「每天改进或全量重置」系列中的第 13 天；此前多日已有类似重置与缓存/子智能体用量优化。",
+      "why": "靠订阅额度写代码的人，重置节奏直接决定当天还能不能继续冲任务。",
+      "links": [
+        {"label": "Retro AI Tracker 周报", "href": "https://retroaitracker.com/news/week/2026-W42"}
       ]
     }
   ]
