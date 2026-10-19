@@ -1,59 +1,95 @@
 {
-  "date": "2026.10.18",
-  "weekday": "周日",
-  "lede": "主线：DeepSeek 推送 V4.1-Flash-1017 并公开搜索/抓取 API；商务部就大模型权重出口征求意见。另有 Elorian Glimpse、ChatGPT 幻灯片与 Astra Pro 多智能体。",
+  "date": "2026.10.19",
+  "weekday": "周一",
+  "lede": "今天没什么大事：过去一天没有重磅模型发布。Google 开源 agent 自动调优框架 Harness²；另有 Kimi K3.1 线索、OpenAI 图像模型闪现、Anthropic 公益基金、OpenCode 自建 DeepSeek 推理。",
   "stories": [
     {
-      "lab": "DEEPSEEK",
-      "accent": [77, 107, 254],
-      "head": "V4.1-Flash-1017 上线：更快更短，并开放搜索 API",
-      "body": "DeepSeek 10 月 17 日把网页/App/API 的 deepseek-flash 切到 V4.1-Flash-1017，权重以 MIT 许可上架 Hugging Face（约 7630 亿参数）。官方称用「自我反馈」强化学习做后训练，自测 DeepSWE v1.1 从 74.2 升到 77.0、Terminal-Bench 4.0 从 31.2 升到 42.3，任务更快、输出更短；API 调用方式与价格不变。同日开放自建搜索引擎的 Search / Fetch API：成功调用约每千次 0.75 美元（约合 ¥5），失败与空结果不计费；至 11 月 1 日（北京时间）经 DeepSeek Harness、Claude Code、Codex 走的服务端搜索免费。",
-      "why": "便宜的开放权重 Flash 又强了一截，还把网页检索当成按次卖的独立能力，写智能体时少绑一家搜索供应商。",
+      "lab": "GOOGLE RESEARCH",
+      "accent": [
+        138,
+        180,
+        248
+      ],
+      "head": "开源 Harness²：不动模型，自动改 agent 外壳",
+      "body": "代码与论文已公开（Apache 2.0），10 月 18 日起在 X 上传开。它自动改系统提示词、护栏、记忆、技能、子 agent 等 8 类文件：同一任务改完重跑对比，留下有效改动并存成经验。执行器支持 OpenCode、Codex 两个 CLI。论文自测：改一轮后 GLM-5 在 WorkBuddy-Bench 上最多 +11.5 分。",
+      "why": "自建 harness 可拿来做实验；分数是自测，负责改的是 Claude Opus 4.8",
       "links": [
-        {"label": "Hugging Face 模型页", "href": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"},
-        {"label": "DeepSeek API 文档", "href": "https://api-docs.deepseek.com/"}
+        {
+          "label": "GitHub 仓库",
+          "href": "https://github.com/google-research/harness2"
+        },
+        {
+          "label": "arXiv 论文",
+          "href": "https://arxiv.org/abs/2610.14224"
+        }
       ]
     },
     {
-      "lab": "商务部 / 科技部",
-      "accent": [232, 184, 109],
-      "head": "拟修订出口技术目录：前沿模型权重出境要先登记",
-      "body": "商务部、科技部 10 月 16 日发 2026 年第 48 号公告：就修订《中国禁止出口限制出口技术目录》公开征求意见（至 11 月 15 日），并自当日起对附件所列技术实施出口前登记。人工智能拟增列大模型、智能体、算力集群等约 23 项；官方称已开源或论文公开的技术不纳入管理。答记者问写明：用受限模型对外提供 API / App / 网页 / SaaS 不属大模型技术出口管理；海外本地化部署属出口，境外自有云可走自动许可等便利措施。",
-      "why": "管的是「权重和控制权出境」，不是禁止外国人调 API；以后超门槛开源或对外授权权重，要先走登记。",
+      "lab": "KIMI",
+      "accent": [
+        126,
+        224,
+        129
+      ],
+      "head": "Kimi K3.1 又露痕迹，官方还没发布",
+      "body": "快科技 10 月 18 日报道：月之暗面网页前端出现 k3d1-agent 标识，还多了一个疑似「Kimi Bot」的常驻 agent 模块；前一天官网的模型指纹也有变化。月之暗面尚未官宣。K3 发布 3 个月，定价、速度、用量一直被吐槽。",
+      "why": "可能很快有新一代 Kimi agent；官方文档出来前别把这个名字写进代码",
       "links": [
-        {"label": "商务部公告原文", "href": "https://www.mofcom.gov.cn/zcfb/blgg/art/2026/art_1666fcaa24424766afe0683498ff0908.html"},
-        {"label": "答记者问", "href": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_a4acff07e134447fbe7bbeb486df3ea6.html"}
-      ]
-    },
-    {
-      "lab": "ELORIAN",
-      "accent": [196, 167, 255],
-      "head": "Glimpse：边看边改观察的视觉推理模型",
-      "body": "前 Google 研究者创办的 Elorian 10 月 16 日发布 Glimpse（研究预览）：官方称推理过程中可放大局部、提高帧率重看视频片段，或写代码测量，把「视觉草稿区」带进思考。定价每百万 token 输入 0.60 美元、输出 3.00 美元；公司自称在多项多模态评测上接近或超过 GPT-6 Astra、Claude Opus 5.5，团队仅用数百块 GPU 在开放权重基础模型上后训练。API 与聊天界面已开，聊天需排队。",
-      "why": "机器人、实验室视频、短视频打标这类「得看懂画面再下结论」的活，多了一个更便宜的专门选项；分数以公司自报为主。",
-      "links": [
-        {"label": "Elorian 官方介绍", "href": "https://elorian.ai/blog/introducing-glimpse"},
-        {"label": "TechCrunch 报道", "href": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/"}
+        {
+          "label": "快科技报道",
+          "href": "https://news.mydrivers.com/1/1158/1158391.htm"
+        }
       ]
     },
     {
       "lab": "OPENAI",
-      "accent": [126, 224, 129],
-      "head": "ChatGPT 可做幻灯片；Astra Pro 支持多智能体并行",
-      "body": "OpenAI 帮助中心更新：符合条件的 Pro / Business / Enterprise（有 Space）可在 ChatGPT 里创建并协作编辑幻灯片，网页可导出 PowerPoint、PDF 或 Google 幻灯片。另：聊天里的 GPT-6 Pro（Astra）滚动开通更快回复、更好用插件，以及多个智能体并行拆分同一任务、可跟进度并打开已完成子任务；面向合格 Pro 用户。",
-      "why": "交付物从「一段文字」扩到可协作的幻灯片；Pro 侧则把「几个智能体同时干活」做成正式产品能力。",
+      "accent": [
+        255,
+        159,
+        67
+      ],
+      "head": "三个 aurora 模型在 API 闪现后撤下",
+      "body": "10 月 18 日，aurora-red / green / blue-alpha 三个名字出现在 OpenAI API 模型列表，很快被撤下；随后在 Arena（匿名对比评测网站）里被测出是生成图片的模型。没有文档和定价，外界猜是 GPT-Image-3，未证实。",
+      "why": "是图像模型，不是新的文本或编码模型，做文本 agent 的不用等",
       "links": [
-        {"label": "ChatGPT 更新说明", "href": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"}
+        {
+          "label": "TestingCatalog",
+          "href": "https://www.testingcatalog.com/openai-possibly-testing-gpt-image-3/"
+        }
       ]
     },
     {
-      "lab": "OPENAI / CODEX",
-      "accent": [138, 180, 248],
-      "head": "Codex「28 天」系列第 13 天额度重置已落地",
-      "body": "Codex 负责人 Tibo 10 月 17 日宣布当日太平洋时间结束前完成额度重置，随后发帖确认「Done」。这是其约 28 天「每天改进或全量重置」系列中的第 13 天；此前多日已有类似重置与缓存/子智能体用量优化。",
-      "why": "靠订阅额度写代码的人，重置节奏直接决定当天还能不能继续冲任务。",
+      "lab": "ANTHROPIC",
+      "accent": [
+        232,
+        184,
+        109
+      ],
+      "head": "拿出 5% 股份成立公益基金",
+      "body": "10 月 18 日宣布：经股东批准后，先把 5% 股份放进 Anthropic Public Benefit Fund；估值比基准每涨 50%，董事会可再加 2%。官方称可用于捐助非营利机构、或直接帮扶受 AI 冲击的劳动者，不得用于游说和政治献金。",
+      "why": "公司治理新闻，不影响 Claude 的产品、价格和额度",
       "links": [
-        {"label": "Retro AI Tracker 周报", "href": "https://retroaitracker.com/news/week/2026-W42"}
+        {
+          "label": "Anthropic 官方",
+          "href": "https://www.anthropic.com/news/public-benefit-fund"
+        }
+      ]
+    },
+    {
+      "lab": "OPENCODE",
+      "accent": [
+        196,
+        167,
+        255
+      ],
+      "head": "OpenCode 自建机架跑 DeepSeek 推理",
+      "body": "开源命令行编码 agent OpenCode 的作者 dax 10 月 18 日发帖：在新 GPU 机架上首次试跑自家的 DeepSeek 推理，称性价比好过他们找过的所有供应商，还在继续优化。没给价格和具体数字。",
+      "why": "若后续变成更便宜的订阅或更多额度，CLI 用户受益；目前只是一条推文",
+      "links": [
+        {
+          "label": "dax 的推文",
+          "href": "https://x.com/thdxr/status/2111849415204065611"
+        }
       ]
     }
   ]
