@@ -1,43 +1,60 @@
 {
-  "date": "2026.10.19",
-  "weekday": "周一",
-  "lede": "今天没什么大事：过去一天没有重磅模型发布。Google 开源 agent 自动调优框架 Harness²；另有 Kimi K3.1 线索、OpenAI 图像模型闪现、Anthropic 公益基金、OpenCode 自建 DeepSeek 推理。",
+  "date": "2026.10.20",
+  "weekday": "周二",
+  "lede": "昨夜主线：MiniMax 发布 M3.1 Flash，便宜又快，主打 agent。",
   "stories": [
     {
-      "lab": "GOOGLE RESEARCH",
-      "accent": [
-        138,
-        180,
-        248
-      ],
-      "head": "开源 Harness²：不动模型，自动改 agent 外壳",
-      "body": "代码与论文已公开（Apache 2.0），10 月 18 日起在 X 上传开。它自动改系统提示词、护栏、记忆、技能、子 agent 等 8 类文件：同一任务改完重跑对比，留下有效改动并存成经验。执行器支持 OpenCode、Codex 两个 CLI。论文自测：改一轮后 GLM-5 在 WorkBuddy-Bench 上最多 +11.5 分。",
-      "why": "自建 harness 可拿来做实验；分数是自测，负责改的是 Claude Opus 4.8",
-      "links": [
-        {
-          "label": "GitHub 仓库",
-          "href": "https://github.com/google-research/harness2"
-        },
-        {
-          "label": "arXiv 论文",
-          "href": "https://arxiv.org/abs/2610.14224"
-        }
-      ]
-    },
-    {
-      "lab": "KIMI",
+      "lab": "MINIMAX",
       "accent": [
         126,
         224,
         129
       ],
-      "head": "Kimi K3.1 又露痕迹，官方还没发布",
-      "body": "快科技 10 月 18 日报道：月之暗面网页前端出现 k3d1-agent 标识，还多了一个疑似「Kimi Bot」的常驻 agent 模块；前一天官网的模型指纹也有变化。月之暗面尚未官宣。K3 发布 3 个月，定价、速度、用量一直被吐槽。",
-      "why": "可能很快有新一代 Kimi agent；官方文档出来前别把这个名字写进代码",
+      "head": "M3.1 Flash 上线：每百万输入 $0.15",
+      "body": "10 月 19 日发布，每百万 token 输入 $0.15、输出 $0.60、缓存 $0.015。官方称 agent 任务成本比上代低 70%，输出 200+ token/秒；能看图和视频，上下文 100 万 token。API、M Plan 和 MiniMax Code 已可用，权重稍后开源。",
+      "why": "又一个能看图的便宜 Flash，可拿来和 Clef-flash、Jev 比路由；跑分都是官方自测",
       "links": [
         {
-          "label": "快科技报道",
-          "href": "https://news.mydrivers.com/1/1158/1158391.htm"
+          "label": "MiniMax 官方博客",
+          "href": "https://www.minimax.io/blog/minimax-m31f"
+        },
+        {
+          "label": "SiliconANGLE 报道",
+          "href": "https://siliconangle.com/2026/10/19/minimax-launches-m3-1-flash-model-says-it-cuts-ai-agent-costs-by-70/"
+        }
+      ]
+    },
+    {
+      "lab": "INCEPTION",
+      "accent": [
+        102,
+        217,
+        239
+      ],
+      "head": "扩散模型 Mercury 3：每秒 1000+ token",
+      "body": "10 月 19 日发布。它是扩散语言模型（不是一个字一个字往外吐，而是整段一起反复修改成形），所以特别快。官方称质量追平或超过 GPT-6 Luna 和 Claude Haiku 5.5，速度快 4–8 倍；上下文从 26 万扩到 100 万 token。标价每百万输入 $0.20、输出 $0.70，上线期间打五折。兼容 OpenAI 接口，OpenRouter 上也能用。",
+      "why": "要求低延迟的步骤（分类、改写、实时搜索）多了一个选项，换起来不用改代码",
+      "links": [
+        {
+          "label": "发布新闻稿",
+          "href": "https://finance.yahoo.com/technology/ai/articles/inception-launches-mercury-3-setting-164800350.html"
+        }
+      ]
+    },
+    {
+      "lab": "传闻",
+      "accent": [
+        232,
+        184,
+        109
+      ],
+      "head": "The Information：三大家都在备新模型",
+      "body": "10 月 19 日报道：Anthropic 有个更会揣摩用户意图的新模型，试用者称它修 bug 时会主动问要不要顺手修相关问题，还不清楚属于 Fable 还是 Opus 系列；Google 在做代号 Gemini 4 Carbon 的模型，比刚发的 Argon 高一档；OpenAI 几周内可能发中档 Terra 系列新模型，据称比 GPT-6.1 Sol 更强也更便宜。三家都没官宣。",
+      "why": "近期订阅或 API 选型可以先等几周；名字和时间都未证实",
+      "links": [
+        {
+          "label": "Digital Today 转述",
+          "href": "https://www.digitaltoday.co.kr/en/view/116605/anthropic-readies-new-ai-model-to-better-grasp-user-intent"
         }
       ]
     },
@@ -48,47 +65,30 @@
         159,
         67
       ],
-      "head": "三个 aurora 模型在 API 闪现后撤下",
-      "body": "10 月 18 日，aurora-red / green / blue-alpha 三个名字出现在 OpenAI API 模型列表，很快被撤下；随后在 Arena（匿名对比评测网站）里被测出是生成图片的模型。没有文档和定价，外界猜是 GPT-Image-3，未证实。",
-      "why": "是图像模型，不是新的文本或编码模型，做文本 agent 的不用等",
+      "head": "冷门语言编程测评：COBOL 迁移准确率 97.9%",
+      "body": "10 月 19 日发文并开源 MultiLangBench（让模型用 20 种语言从零写一个兼容 SQLite 的数据库）。官方称 GPT-6 Astra 平均通过率 87.4%，上一代 GPT-5.6 Sol 只有 26.8%；把 COBOL 程序改写成 Java、Rust 等语言的测试里，GPT-6.1 Sol 低推理档 86.6%，高推理档 97.9%。",
+      "why": "测试集已放到 GitHub，可以拿去测别家模型；分数是 OpenAI 自测",
       "links": [
         {
-          "label": "TestingCatalog",
-          "href": "https://www.testingcatalog.com/openai-possibly-testing-gpt-image-3/"
+          "label": "OpenAI 官方文章",
+          "href": "https://openai.com/index/low-resource-programming-languages/"
         }
       ]
     },
     {
-      "lab": "ANTHROPIC",
+      "lab": "CHATGPT",
       "accent": [
-        232,
-        184,
-        109
+        138,
+        180,
+        248
       ],
-      "head": "拿出 5% 股份成立公益基金",
-      "body": "10 月 18 日宣布：经股东批准后，先把 5% 股份放进 Anthropic Public Benefit Fund；估值比基准每涨 50%，董事会可再加 2%。官方称可用于捐助非营利机构、或直接帮扶受 AI 冲击的劳动者，不得用于游说和政治献金。",
-      "why": "公司治理新闻，不影响 Claude 的产品、价格和额度",
+      "head": "Chrome 插件能读你开着的标签页",
+      "body": "10 月 19 日更新：在 ChatGPT 里点名 Chrome 后，它能读取已打开的标签页内容来回答，比如比较三个页面里的沙发；ChatGPT Work（处理多步任务的 agent）还能直接操作标签页，填表、下载文件、整理分组。Edge、Brave 等 Chromium 浏览器也能用，官方称所有套餐可用。",
+      "why": "独立浏览器 Atlas 8 月已停，OpenAI 改用插件和 Gemini 抢浏览器入口",
       "links": [
         {
-          "label": "Anthropic 官方",
-          "href": "https://www.anthropic.com/news/public-benefit-fund"
-        }
-      ]
-    },
-    {
-      "lab": "OPENCODE",
-      "accent": [
-        196,
-        167,
-        255
-      ],
-      "head": "OpenCode 自建机架跑 DeepSeek 推理",
-      "body": "开源命令行编码 agent OpenCode 的作者 dax 10 月 18 日发帖：在新 GPU 机架上首次试跑自家的 DeepSeek 推理，称性价比好过他们找过的所有供应商，还在继续优化。没给价格和具体数字。",
-      "why": "若后续变成更便宜的订阅或更多额度，CLI 用户受益；目前只是一条推文",
-      "links": [
-        {
-          "label": "dax 的推文",
-          "href": "https://x.com/thdxr/status/2111849415204065611"
+          "label": "Yahoo Tech 报道",
+          "href": "https://tech.yahoo.com/ai/chatgpt/articles/chatgpts-chrome-extension-now-read-195900411.html"
         }
       ]
     }
