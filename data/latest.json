@@ -1,94 +1,98 @@
 {
-  "date": "2026.10.20",
-  "weekday": "周二",
-  "lede": "昨夜主线：MiniMax 发布 M3.1 Flash，便宜又快，主打 agent。",
+  "date": "2026.10.21",
+  "weekday": "周三",
+  "lede": "昨夜没有新模型，主线是 DeepSeek 开源推理框架、Anthropic 上市文件曝光。",
   "stories": [
     {
-      "lab": "MINIMAX",
-      "accent": [
-        126,
-        224,
-        129
-      ],
-      "head": "M3.1 Flash 上线：每百万输入 $0.15",
-      "body": "10 月 19 日发布，每百万 token 输入 $0.15、输出 $0.60、缓存 $0.015。官方称 agent 任务成本比上代低 70%，输出 200+ token/秒；能看图和视频，上下文 100 万 token。API、M Plan 和 MiniMax Code 已可用，权重稍后开源。",
-      "why": "又一个能看图的便宜 Flash，可拿来和 Clef-flash、Jev 比路由；跑分都是官方自测",
-      "links": [
-        {
-          "label": "MiniMax 官方博客",
-          "href": "https://www.minimax.io/blog/minimax-m31f"
-        },
-        {
-          "label": "SiliconANGLE 报道",
-          "href": "https://siliconangle.com/2026/10/19/minimax-launches-m3-1-flash-model-says-it-cuts-ai-agent-costs-by-70/"
-        }
-      ]
-    },
-    {
-      "lab": "INCEPTION",
+      "lab": "DEEPSEEK",
       "accent": [
         102,
         217,
         239
       ],
-      "head": "扩散模型 Mercury 3：每秒 1000+ token",
-      "body": "10 月 19 日发布。它是扩散语言模型（不是一个字一个字往外吐，而是整段一起反复修改成形），所以特别快。官方称质量追平或超过 GPT-6 Luna 和 Claude Haiku 5.5，速度快 4–8 倍；上下文从 26 万扩到 100 万 token。标价每百万输入 $0.20、输出 $0.70，上线期间打五折。兼容 OpenAI 接口，OpenRouter 上也能用。",
-      "why": "要求低延迟的步骤（分类、改写、实时搜索）多了一个选项，换起来不用改代码",
+      "head": "开源推理框架 DeepInfer",
+      "body": "10 月 20 日把线上跑 V4.1 Flash 的推理引擎开源（Apache 2.0，可商用），含投机解码（先猜几个字再批量核对，加快输出）、结构化输出等，支持英伟达 SM100 和华为昇腾 950。目前只支持 V4.1 Flash、只能离线跑；KV 缓存系统、负载均衡这些做成在线服务必需的部件没放出来。",
+      "why": "能看到 DeepSeek 如何压低成本；自建 API 还得自己补齐部件",
       "links": [
         {
-          "label": "发布新闻稿",
-          "href": "https://finance.yahoo.com/technology/ai/articles/inception-launches-mercury-3-setting-164800350.html"
+          "label": "GitHub：DeepInfer",
+          "href": "https://github.com/deepseek-ai/DeepInfer"
+        },
+        {
+          "label": "IT之家报道",
+          "href": "https://www.ithome.com/1/015/429.htm"
         }
       ]
     },
     {
-      "lab": "传闻",
+      "lab": "ANTHROPIC",
       "accent": [
         232,
         184,
         109
       ],
-      "head": "The Information：三大家都在备新模型",
-      "body": "10 月 19 日报道：Anthropic 有个更会揣摩用户意图的新模型，试用者称它修 bug 时会主动问要不要顺手修相关问题，还不清楚属于 Fable 还是 Opus 系列；Google 在做代号 Gemini 4 Carbon 的模型，比刚发的 Argon 高一档；OpenAI 几周内可能发中档 Terra 系列新模型，据称比 GPT-6.1 Sol 更强也更便宜。三家都没官宣。",
-      "why": "近期订阅或 API 选型可以先等几周；名字和时间都未证实",
+      "head": "上市草稿：半年收入 163 亿美元",
+      "body": "《华尔街日报》10 月 20 日看到的 S-1 草稿（上市申请文件）显示：2026 年上半年收入 163 亿美元，去年同期 11 亿；净亏损 807 亿美元，大部分是融资相关的非现金费用；同期算力和基础设施花了近 90 亿美元。公司计划 11 月上市。",
+      "why": "算力开销和亏损都很大，上市后 Claude 的定价和用量额度值得留意",
       "links": [
         {
-          "label": "Digital Today 转述",
-          "href": "https://www.digitaltoday.co.kr/en/view/116605/anthropic-readies-new-ai-model-to-better-grasp-user-intent"
+          "label": "WSJ 独家",
+          "href": "https://www.wsj.com/tech/ai/anthropic-revenue-growth-ipo-accaf0f1"
+        },
+        {
+          "label": "Reuters 转述",
+          "href": "https://www.investing.com/news/stock-market-news/anthropic-recorded-net-loss-of-over-80-billion-in-first-half-of-this-year-wsj-reports-4960917"
+        }
+      ]
+    },
+    {
+      "lab": "ANTHROPIC",
+      "accent": [
+        126,
+        224,
+        129
+      ],
+      "head": "Claude 自主设计蝎毒结合蛋白",
+      "body": "10 月 20 日发布：内部研究模型在 64 小时里基本自主生成 31.8 万个蛋白设计，挑出的 211 个交两家实验室实测，17 个能牢牢结合目标蝎毒素。官方明说还没测过能否中和毒性，不算解毒药。全部设计和数据已公开。",
+      "why": "这是长时间自主跑的 agent 做出实验能验证结果的案例，不只是跑分",
+      "links": [
+        {
+          "label": "Anthropic 官方文章",
+          "href": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design"
+        }
+      ]
+    },
+    {
+      "lab": "MISTRAL",
+      "accent": [
+        255,
+        159,
+        67
+      ],
+      "head": "Voxtral 3 语音模型 + 语音 agent SDK",
+      "body": "10 月 20 日发布一组语音模型：转写（覆盖 50 多种语言，含实时版）和语音合成，另有做语音 agent 的开发包。官方价：Mini 批量转写每分钟 $0.0035，实时转写每分钟 $0.008，语音合成每百万字符 $13。",
+      "why": "做语音类 agent 多了一个便宜的欧洲选项，可和 Whisper、ElevenLabs 比",
+      "links": [
+        {
+          "label": "Mistral 官方公告",
+          "href": "https://mistral.ai/news/voxtral-3/"
         }
       ]
     },
     {
       "lab": "OPENAI",
       "accent": [
-        255,
-        159,
-        67
-      ],
-      "head": "冷门语言编程测评：COBOL 迁移准确率 97.9%",
-      "body": "10 月 19 日发文并开源 MultiLangBench（让模型用 20 种语言从零写一个兼容 SQLite 的数据库）。官方称 GPT-6 Astra 平均通过率 87.4%，上一代 GPT-5.6 Sol 只有 26.8%；把 COBOL 程序改写成 Java、Rust 等语言的测试里，GPT-6.1 Sol 低推理档 86.6%，高推理档 97.9%。",
-      "why": "测试集已放到 GitHub，可以拿去测别家模型；分数是 OpenAI 自测",
-      "links": [
-        {
-          "label": "OpenAI 官方文章",
-          "href": "https://openai.com/index/low-resource-programming-languages/"
-        }
-      ]
-    },
-    {
-      "lab": "CHATGPT",
-      "accent": [
         138,
         180,
         248
       ],
-      "head": "Chrome 插件能读你开着的标签页",
-      "body": "10 月 19 日更新：在 ChatGPT 里点名 Chrome 后，它能读取已打开的标签页内容来回答，比如比较三个页面里的沙发；ChatGPT Work（处理多步任务的 agent）还能直接操作标签页，填表、下载文件、整理分组。Edge、Brave 等 Chromium 浏览器也能用，官方称所有套餐可用。",
-      "why": "独立浏览器 Atlas 8 月已停，OpenAI 改用插件和 Gemini 抢浏览器入口",
+      "head": "收购药研软件公司 Orchestra Bio",
+      "body": "10 月 20 日宣布收购，把这家协调药物研发流程的平台和团队并进 OpenAI 的生命科学套件 Rosalind。交易金额未公布。",
+      "why": "和 Anthropic 同天都在押药研，两家都在找付费大客户",
       "links": [
         {
-          "label": "Yahoo Tech 报道",
-          "href": "https://tech.yahoo.com/ai/chatgpt/articles/chatgpts-chrome-extension-now-read-195900411.html"
+          "label": "OpenAI 新闻页",
+          "href": "https://openai.com/news/"
         }
       ]
     }
