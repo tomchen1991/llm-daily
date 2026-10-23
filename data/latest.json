@@ -1,90 +1,57 @@
 {
-  "date": "2026.10.22",
-  "weekday": "周四",
-  "lede": "昨夜主线：OpenAI 模型上架谷歌云；Anthropic 推出主动式助手 Claude Duet。",
+  "date": "2026.10.23",
+  "weekday": "周五",
+  "lede": "昨夜主线：决策层模型扎堆——OpenAI Decisions API 正式商用，SubQ 与蚂蚁也各推一版。",
   "stories": [
     {
-      "lab": "OPENAI / GOOGLE",
-      "accent": [
-        138,
-        180,
-        248
-      ],
-      "head": "GPT-6 系列进谷歌云 Model Garden",
-      "body": "10 月 21 日双方官宣：GPT-6 Astra、GPT-6.1 Sol、GPT-6 Luna 以私有预览进入 Google Cloud Model Garden；计费走 Marketplace，可扣 GCP 已有承诺额度。官方称谷歌云因此成为唯一同时提供 Gemini、Claude、GPT 的超大规模云。后续还将进 Antigravity 与 Gemini Agent；微软仍是 OpenAI 主云伙伴。全面开放计划在未来几周。",
-      "why": "企业可在同一云账单里换模型；多云采购门槛明显下降",
-      "links": [
-        {
-          "label": "OpenAI 公告",
-          "href": "https://openai.com/index/openai-models-google-cloud"
-        },
-        {
-          "label": "Google Cloud 博客",
-          "href": "https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers"
-        }
-      ]
-    },
-    {
-      "lab": "ANTHROPIC",
-      "accent": [
-        232,
-        184,
-        109
-      ],
-      "head": "研究预览：Claude Duet 主动式助手",
-      "body": "10 月 21 日上线：基于 Claude Opus 5.5，有独立 iOS/Android/网页应用；会发晨间简报、在云端虚拟机里后台干活，发消息、付款、签文件、删除前要你确认。目前仅美国 Pro/Max 等候名单，与现有 Claude 共用额度，不计额外费。",
-      "why": "和个人 AI 助手产品正面竞争；看实际审批与误判率",
-      "links": [
-        {
-          "label": "Anthropic 介绍页",
-          "href": "https://claude.com/resources/articles/claude-duet"
-        },
-        {
-          "label": "帮助中心",
-          "href": "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet"
-        }
-      ]
-    },
-    {
-      "lab": "RECURSIVE",
-      "accent": [
-        126,
-        224,
-        129
-      ],
-      "head": "开源编码模型 Flint",
-      "body": "10 月 21 日发布：约 400 亿参数混合专家（MoE，每次约 25 亿参数真正运算）编码模型，Apache 2.0 权重；官方称可在 MacBook Pro M4 Pro 上超过 125 token/秒，并称小团队用自动化研究系统在不到四个月做出。Hugging Face 有完整权重与 Apple Silicon INT4 版。",
-      "why": "又一个可本机跑的开源编码选项；公司自称数字需自行核验",
-      "links": [
-        {
-          "label": "Recursive 公告",
-          "href": "https://recursive.com/updates/introducing-recursive-flint"
-        },
-        {
-          "label": "Hugging Face",
-          "href": "https://huggingface.co/RecursiveSI/flint"
-        }
-      ]
-    },
-    {
       "lab": "OPENAI",
-      "accent": [
-        102,
-        217,
-        239
-      ],
-      "head": "Responses API：可选 12 小时提示缓存",
-      "body": "变更日志记在 10 月 20 日：GPT-5.6 及更新模型可把 prompt_cache_options.ttl 设为 12h（默认仍 30 分钟）。12 小时缓存写入按未缓存输入价的 2.5 倍计；官方称这是最短保留时长，不是删除期限。适合跨几小时复用的固定指令与工具说明。",
-      "why": "长间隔复用提示时能省钱，但写入更贵，要算清楚复用次数",
+      "accent": [138, 180, 248],
+      "head": "Decisions API 正式开放",
+      "body": "10 月 22 日宣布全面可用：跑在 GPT-6 Luna 上，专门回答「有限选项」问题（分类、路由、打分），官方称比用 Responses API 调同一模型最多约快 10 倍。单次最多 400 个问题；输入 0.10 美元/百万 token，缓存输入 0.01 美元/百万，输出不计费。支持图文与原生 JSON，可接 GPT-Live 语音。",
+      "why": "Agent 里大量小判断不必再走完整对话模型，延迟和账单都能压下来",
       "links": [
-        {
-          "label": "API 变更日志",
-          "href": "https://developers.openai.com/api/docs/changelog"
-        },
-        {
-          "label": "提示缓存指南",
-          "href": "https://developers.openai.com/api/docs/guides/prompt-caching"
-        }
+        {"label": "OpenAI 公告", "href": "https://openai.com/index/decisions-api/"}
+      ]
+    },
+    {
+      "lab": "SUBQ",
+      "accent": [102, 217, 239],
+      "head": "Snap 1.1：决策模型升版",
+      "body": "同日发布：官方称在 Artificial Analysis Decision Index（AADI，独立决策评测）上拿 65 分并列第一；上下文到 384K；API 价降到 0.04 美元/百万输入 token，输出不计费。公司自称在 When2Call（该不该调工具）上从 75.2 提到 96.2，并称相对 Jev 1.14 在 16 项企业任务上平均高出约 7.2 分。",
+      "why": "和 OpenAI Decisions 抢同一类「快速结构化判断」需求；数字多为官方自评",
+      "links": [
+        {"label": "SubQ 公告", "href": "https://subq.ai/subq-snap-1-1"}
+      ]
+    },
+    {
+      "lab": "ANT",
+      "accent": [255, 159, 67],
+      "head": "LingDT-Decision-1.0 上线",
+      "body": "蚂蚁数科 10 月 22 日推出 4B / 27B 两个版本，已在 DTMaaS 限时免费（官方称至 10 月 30 日）。官方称相对通用大模型，同类任务 Token 可少约 90%、响应约快 10 倍；并称在 23 项开源基测上 27B 综合分超过 Microsoft-Decision-1、Jev 1.13 等。另支持多选与按序（DAG）决策。",
+      "why": "国内云上多了一个可试用的专用决策接口，适合客服/风控类流水线",
+      "links": [
+        {"label": "AIBase 报道", "href": "https://news.aibase.com/zh/news/31800"},
+        {"label": "蚂蚁 DTMaaS", "href": "https://maas.antdigital.com/models"}
+      ]
+    },
+    {
+      "lab": "ANT LING",
+      "accent": [126, 224, 129],
+      "head": "Ling-3.1-flash-1019 报分 44",
+      "body": "蚂蚁百灵在 X 公布该检查点：Artificial Analysis Intelligence Index 得 44，与 Kimi K3 持平，较上代 flash 的 41 高 3 分。官方称「即将」开放权重与 API；截至报道时公开侧尚无可下载权重或可调用端点，不宜当已上线产品。",
+      "why": "榜单信号有，可跑产物还没有；别和「已开源」搞混",
+      "links": [
+        {"label": "观点网", "href": "https://www.guandian.cn/article/20261022/616966.html"}
+      ]
+    },
+    {
+      "lab": "BYTEDANCE",
+      "accent": [196, 167, 255],
+      "head": "Seedance 2.5 4K 定向试用",
+      "body": "火山引擎 10 月 22 日启动 Seedance 2.5 4K 首批企业试用，定向约 20 家工作室/导演。公开报道称可先用 480P 出样片，满意后再用 4K 重渲；并称已有约 20 部作品在用，最早下月或有卫视级 IP 落地。",
+      "why": "视频生成往「先低清验证、再高清付费」走，压试错成本",
+      "links": [
+        {"label": "网易智能", "href": "https://m.163.com/dy/article/L9RJA94T00098IEO.html"}
       ]
     }
   ]
