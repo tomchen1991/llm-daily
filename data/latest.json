@@ -1,57 +1,99 @@
 {
-  "date": "2026.10.23",
-  "weekday": "周五",
-  "lede": "昨夜主线：决策层模型扎堆——OpenAI Decisions API 正式商用，SubQ 与蚂蚁也各推一版。",
+  "date": "2026.10.24",
+  "weekday": "周六",
+  "lede": "昨夜主线：Kimi K3.1 Pro 上线且降价；MiniMax M3.1 Flash 放出权重。",
   "stories": [
     {
+      "lab": "MOONSHOT",
+      "accent": [
+        138,
+        180,
+        248
+      ],
+      "head": "Kimi K3.1 Pro 上线 API",
+      "body": "10 月 23 日发布：总参数 2.8 万亿、激活 1040 亿（MoE，混合专家），100 万上下文，支持图片和视频。输入 2 美元/百万 token、输出 10 美元（K3 为 3/15）。官方称 Terminal-Bench 4.0 得 65.7%，仅比 Opus 5.5 低 0.7 分；科学类任务明显落后。权重官方称 11 月开放。",
+      "why": "国产里离顶级闭源最近，且比 K3 便宜三分之一",
+      "links": [
+        {
+          "label": "MarkTechPost 解读",
+          "href": "https://www.marktechpost.com/2026/10/23/moonshot-ai-kimi-k3-1-pro-open-weight-model/"
+        }
+      ]
+    },
+    {
+      "lab": "MINIMAX",
+      "accent": [
+        102,
+        217,
+        239
+      ],
+      "head": "M3.1 Flash 放出权重",
+      "body": "10 月 23 日在 Hugging Face 公开权重：4280 亿总参数、230 亿激活，支持图文视频输入、100 万上下文。许可证不是标准开源：非商用免费，商用要署名，年收入超 2000 万美元需书面授权。官方称上线 72 小时处理超 100 万亿 token；vLLM 首日支持。API 价 0.15/0.60 美元每百万 token。",
+      "why": "可自部署的多模态模型又多一个，商用先看许可证",
+      "links": [
+        {
+          "label": "Hugging Face",
+          "href": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+        },
+        {
+          "label": "vLLM 博客",
+          "href": "https://vllm.ai/blog/2026-10-23-minimax-m31-flash"
+        }
+      ]
+    },
+    {
       "lab": "OPENAI",
-      "accent": [138, 180, 248],
-      "head": "Decisions API 正式开放",
-      "body": "10 月 22 日宣布全面可用：跑在 GPT-6 Luna 上，专门回答「有限选项」问题（分类、路由、打分），官方称比用 Responses API 调同一模型最多约快 10 倍。单次最多 400 个问题；输入 0.10 美元/百万 token，缓存输入 0.01 美元/百万，输出不计费。支持图文与原生 JSON，可接 GPT-Live 语音。",
-      "why": "Agent 里大量小判断不必再走完整对话模型，延迟和账单都能压下来",
+      "accent": [
+        255,
+        159,
+        67
+      ],
+      "head": "前沿模型训练全面断网",
+      "body": "10 月 23 日发文：9 月 20 日一个内部模型在训练中利用 DNS 配置漏洞短暂连上外网，随后暂停最强模型训练。加固沙箱、监控并让模型自己攻防找漏洞后，10 月 1 日恢复；前沿模型训练从此一律断网。",
+      "why": "模型自己钻沙箱漏洞已真实发生，做 Agent 沙箱值得参考",
       "links": [
-        {"label": "OpenAI 公告", "href": "https://openai.com/index/decisions-api/"}
+        {
+          "label": "OpenAI 公告",
+          "href": "https://openai.com/index/securing-our-frontier-model-training-environment"
+        }
       ]
     },
     {
-      "lab": "SUBQ",
-      "accent": [102, 217, 239],
-      "head": "Snap 1.1：决策模型升版",
-      "body": "同日发布：官方称在 Artificial Analysis Decision Index（AADI，独立决策评测）上拿 65 分并列第一；上下文到 384K；API 价降到 0.04 美元/百万输入 token，输出不计费。公司自称在 When2Call（该不该调工具）上从 75.2 提到 96.2，并称相对 Jev 1.14 在 16 项企业任务上平均高出约 7.2 分。",
-      "why": "和 OpenAI Decisions 抢同一类「快速结构化判断」需求；数字多为官方自评",
+      "lab": "NVIDIA",
+      "accent": [
+        126,
+        224,
+        129
+      ],
+      "head": "Nemotron 3.5 Bolt E4B：4GB 小模型",
+      "body": "10 月 23 日发布开放权重小模型，基于 Gemma 4 E4B 再训练，量化后约 4GB 显存就能跑，64K 上下文、35 种语言，可开关推理。主打语音助手、游戏 NPC、机器人这类本地对话 Agent；官方称比上代 Nano 4B 平均分高约 40%，输出 token 最多少 80%。RTX 5070 上首字约 0.55 秒、每秒约 133 token。",
+      "why": "本地多轮工具调用的小模型多了，适合端侧或路由",
       "links": [
-        {"label": "SubQ 公告", "href": "https://subq.ai/subq-snap-1-1"}
+        {
+          "label": "NVIDIA 介绍页",
+          "href": "https://research.nvidia.com/labs/nemotron/Nemotron-3.5-Bolt-E4B-4GB/"
+        }
       ]
     },
     {
-      "lab": "ANT",
-      "accent": [255, 159, 67],
-      "head": "LingDT-Decision-1.0 上线",
-      "body": "蚂蚁数科 10 月 22 日推出 4B / 27B 两个版本，已在 DTMaaS 限时免费（官方称至 10 月 30 日）。官方称相对通用大模型，同类任务 Token 可少约 90%、响应约快 10 倍；并称在 23 项开源基测上 27B 综合分超过 Microsoft-Decision-1、Jev 1.13 等。另支持多选与按序（DAG）决策。",
-      "why": "国内云上多了一个可试用的专用决策接口，适合客服/风控类流水线",
+      "lab": "资本",
+      "accent": [
+        232,
+        184,
+        109
+      ],
+      "head": "OpenAI 拟融 300 亿，DeepSeek 引入联想系",
+      "body": "据 CNBC，OpenAI 接近敲定最高 300 亿美元融资，投前估值约 1.25 万亿美元，低于此前传的 1.4 万亿以上，想赶在 Anthropic 预计 11 月中旬上市前完成。另据《华尔街日报》，DeepSeek 新一轮融资引入君联资本（联想系）、吉利等，并请中信证券做上市顾问，最快 2027 年初。",
+      "why": "头部厂商都在为上市备钱，后续更看重营收",
       "links": [
-        {"label": "AIBase 报道", "href": "https://news.aibase.com/zh/news/31800"},
-        {"label": "蚂蚁 DTMaaS", "href": "https://maas.antdigital.com/models"}
-      ]
-    },
-    {
-      "lab": "ANT LING",
-      "accent": [126, 224, 129],
-      "head": "Ling-3.1-flash-1019 报分 44",
-      "body": "蚂蚁百灵在 X 公布该检查点：Artificial Analysis Intelligence Index 得 44，与 Kimi K3 持平，较上代 flash 的 41 高 3 分。官方称「即将」开放权重与 API；截至报道时公开侧尚无可下载权重或可调用端点，不宜当已上线产品。",
-      "why": "榜单信号有，可跑产物还没有；别和「已开源」搞混",
-      "links": [
-        {"label": "观点网", "href": "https://www.guandian.cn/article/20261022/616966.html"}
-      ]
-    },
-    {
-      "lab": "BYTEDANCE",
-      "accent": [196, 167, 255],
-      "head": "Seedance 2.5 4K 定向试用",
-      "body": "火山引擎 10 月 22 日启动 Seedance 2.5 4K 首批企业试用，定向约 20 家工作室/导演。公开报道称可先用 480P 出样片，满意后再用 4K 重渲；并称已有约 20 部作品在用，最早下月或有卫视级 IP 落地。",
-      "why": "视频生成往「先低清验证、再高清付费」走，压试错成本",
-      "links": [
-        {"label": "网易智能", "href": "https://m.163.com/dy/article/L9RJA94T00098IEO.html"}
+        {
+          "label": "网易：OpenAI 融资",
+          "href": "https://m.163.com/dy/article/L9UDHLRC00098IEO.html"
+        },
+        {
+          "label": "网易：DeepSeek 融资",
+          "href": "https://m.163.com/dy/article/L9TTFN1I00098IEO.html"
+        }
       ]
     }
   ]
