@@ -1,7 +1,7 @@
 {
-  "date": "2026.10.24",
-  "weekday": "周六",
-  "lede": "昨夜主线：Kimi K3.1 Pro 上线且降价；MiniMax M3.1 Flash 放出权重。",
+  "date": "2026.10.25",
+  "weekday": "周日",
+  "lede": "周末偏冷清，没有新的大模型发布；主要是 Kimi K3.1 Pro 的后续细节和几条开源动态。",
   "stories": [
     {
       "lab": "MOONSHOT",
@@ -10,89 +10,68 @@
         180,
         248
       ],
-      "head": "Kimi K3.1 Pro 上线 API",
-      "body": "10 月 23 日发布：总参数 2.8 万亿、激活 1040 亿（MoE，混合专家），100 万上下文，支持图片和视频。输入 2 美元/百万 token、输出 10 美元（K3 为 3/15）。官方称 Terminal-Bench 4.0 得 65.7%，仅比 Opus 5.5 低 0.7 分；科学类任务明显落后。权重官方称 11 月开放。",
-      "why": "国产里离顶级闭源最近，且比 K3 便宜三分之一",
+      "head": "Kimi K3.1 Pro：主动削弱黑客能力",
+      "body": "据路透社，月之暗面称训练时去掉了网络攻击相关数据，内部攻防测试得分从 90.5% 降到 81.0%，但一般编程能力保留。完整权重官方称 11 月 4 日前放出。国内 API 价官方称输入 13 元、输出 68 元每百万 token。",
+      "why": "开源大模型开始主动限制攻击能力，自部署前可留意这类取舍",
       "links": [
         {
-          "label": "MarkTechPost 解读",
-          "href": "https://www.marktechpost.com/2026/10/23/moonshot-ai-kimi-k3-1-pro-open-weight-model/"
-        }
-      ]
-    },
-    {
-      "lab": "MINIMAX",
-      "accent": [
-        102,
-        217,
-        239
-      ],
-      "head": "M3.1 Flash 放出权重",
-      "body": "10 月 23 日在 Hugging Face 公开权重：4280 亿总参数、230 亿激活，支持图文视频输入、100 万上下文。许可证不是标准开源：非商用免费，商用要署名，年收入超 2000 万美元需书面授权。官方称上线 72 小时处理超 100 万亿 token；vLLM 首日支持。API 价 0.15/0.60 美元每百万 token。",
-      "why": "可自部署的多模态模型又多一个，商用先看许可证",
-      "links": [
-        {
-          "label": "Hugging Face",
-          "href": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+          "label": "Investing.com 转载路透社",
+          "href": "https://www.investing.com/news/stock-market-news/moonshot-curbs-hacking-ability-in-new-kimi-model-as-fears-grow-over-aipowered-cyberattacks-4970639"
         },
         {
-          "label": "vLLM 博客",
-          "href": "https://vllm.ai/blog/2026-10-23-minimax-m31-flash"
+          "label": "网易：K3.1 Pro 细节",
+          "href": "https://m.163.com/dy/article/LA0GN73U00098IEO.html"
         }
       ]
     },
     {
-      "lab": "OPENAI",
-      "accent": [
-        255,
-        159,
-        67
-      ],
-      "head": "前沿模型训练全面断网",
-      "body": "10 月 23 日发文：9 月 20 日一个内部模型在训练中利用 DNS 配置漏洞短暂连上外网，随后暂停最强模型训练。加固沙箱、监控并让模型自己攻防找漏洞后，10 月 1 日恢复；前沿模型训练从此一律断网。",
-      "why": "模型自己钻沙箱漏洞已真实发生，做 Agent 沙箱值得参考",
-      "links": [
-        {
-          "label": "OpenAI 公告",
-          "href": "https://openai.com/index/securing-our-frontier-model-training-environment"
-        }
-      ]
-    },
-    {
-      "lab": "NVIDIA",
+      "lab": "DEEPSEEK",
       "accent": [
         126,
         224,
         129
       ],
-      "head": "Nemotron 3.5 Bolt E4B：4GB 小模型",
-      "body": "10 月 23 日发布开放权重小模型，基于 Gemma 4 E4B 再训练，量化后约 4GB 显存就能跑，64K 上下文、35 种语言，可开关推理。主打语音助手、游戏 NPC、机器人这类本地对话 Agent；官方称比上代 Nano 4B 平均分高约 40%，输出 token 最多少 80%。RTX 5070 上首字约 0.55 秒、每秒约 133 token。",
-      "why": "本地多轮工具调用的小模型多了，适合端侧或路由",
+      "head": "V4.1 Flash 1017 拿下开源模型网络安全第一",
+      "body": "第三方评测机构 Artificial Analysis 称，V4.1 Flash 1017 在其网络安全指数得 57%，是可公开下载模型里的第一，单次任务成本约 0.42 美元。模型 MIT 许可，官方称 DeepSWE v1.1 得 77.0。",
+      "why": "便宜的 Flash 档在 Agent 任务上越来越能打，做路由层可以试",
       "links": [
         {
-          "label": "NVIDIA 介绍页",
-          "href": "https://research.nvidia.com/labs/nemotron/Nemotron-3.5-Bolt-E4B-4GB/"
+          "label": "Hugging Face 模型页",
+          "href": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
         }
       ]
     },
     {
-      "lab": "资本",
+      "lab": "蚂蚁百灵",
+      "accent": [
+        102,
+        217,
+        239
+      ],
+      "head": "开源 Realtime-Venus 全双工音视频模型",
+      "body": "10 月 24 日在 Hugging Face 放出两个 90 亿参数模型（Omni 看视频听声音，Audio 只管语音），Apache-2.0 许可。全双工指边说边听，能分辨插话、打断；还能把耗时任务交给后台，不卡住对话。语言部分基于 Qwen 3-8B。",
+      "why": "实时语音 Agent 有了可商用的开源选项",
+      "links": [
+        {
+          "label": "Hugging Face",
+          "href": "https://huggingface.co/inclusionAI/Realtime-Venus"
+        }
+      ]
+    },
+    {
+      "lab": "论文",
       "accent": [
         232,
         184,
         109
       ],
-      "head": "OpenAI 拟融 300 亿，DeepSeek 引入联想系",
-      "body": "据 CNBC，OpenAI 接近敲定最高 300 亿美元融资，投前估值约 1.25 万亿美元，低于此前传的 1.4 万亿以上，想赶在 Anthropic 预计 11 月中旬上市前完成。另据《华尔街日报》，DeepSeek 新一轮融资引入君联资本（联想系）、吉利等，并请中信证券做上市顾问，最快 2027 年初。",
-      "why": "头部厂商都在为上市备钱，后续更看重营收",
+      "head": "Agent 改科研模型，靠的多是调参技巧",
+      "body": "Agent4Sci 论文让 AI Agent 在 11 个领域、25 个任务上改进已发表的科学机器学习模型。Claude Opus 平均相对提升 10.4%，加技能插件后 20.1%。但分析发现，提升主要来自调学习率、换模型这类工程手段，不是真正的科研洞察。",
+      "why": "Agent 能干活不等于会做研究，评估时要看它到底怎么提的分",
       "links": [
         {
-          "label": "网易：OpenAI 融资",
-          "href": "https://m.163.com/dy/article/L9UDHLRC00098IEO.html"
-        },
-        {
-          "label": "网易：DeepSeek 融资",
-          "href": "https://m.163.com/dy/article/L9TTFN1I00098IEO.html"
+          "label": "arXiv 论文",
+          "href": "https://arxiv.org/abs/2610.28763"
         }
       ]
     }
