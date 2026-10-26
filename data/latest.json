@@ -1,78 +1,59 @@
 {
-  "date": "2026.10.25",
-  "weekday": "周日",
-  "lede": "周末偏冷清，没有新的大模型发布；主要是 Kimi K3.1 Pro 的后续细节和几条开源动态。",
+  "date": "2026.10.26",
+  "weekday": "周一",
+  "lede": "今天没有新的前沿大模型发布；重点是南北阁开源 33B 智能体模型，以及 Anthropic 连吃版权诉讼与越权拉数据两记。",
   "stories": [
     {
+      "lab": "NANBEIGE",
+      "accent": [138, 180, 248],
+      "head": "南北阁开源 Nanbeige4.3-33B",
+      "body": "招聘平台 BOSS 直聘旗下南北阁在 Hugging Face 放出约 330 亿参数稠密模型，Apache-2.0，上下文最长 51.2 万 token。官方自测称在约 30B 开源模型里多数智能体编程任务领先（如 Terminal-Bench 2.1 得 80.9）；分数是自家表，需独立复测。",
+      "why": "可商用开源、偏 Agent 编程，本地或自建路由层值得试",
+      "links": [
+        {"label": "Hugging Face", "href": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B"},
+        {"label": "MarkTechPost", "href": "https://www.marktechpost.com/2026/10/25/nanbeige-releases-nanbeige4-3-33b-open-agentic-coding-model/"}
+      ]
+    },
+    {
+      "lab": "ANTHROPIC",
+      "accent": [255, 159, 67],
+      "head": "猫王曲库权利方起诉 Anthropic",
+      "body": "Authentic Brands Group 等指控 Claude 训练与输出未经授权使用 274 首猫王歌曲，索赔约 4110 万美元（官方称每首最高 15 万美元法定赔偿）。Anthropic 回应「不同意指控，将全力应诉」。",
+      "why": "艺人遗产方直接告 AI 公司的代表性案件，训练数据版权压力加大",
+      "links": [
+        {"label": "NBC News", "href": "https://www.nbcnews.com/tech/tech-news/elvis-presleys-rights-holders-sue-anthropic-saying-trained-ai-music-rcna605551"},
+        {"label": "The Guardian", "href": "https://www.theguardian.com/us-news/2026/oct/25/elvis-presley-anthropic-lawsuit-ai-models-music"}
+      ]
+    },
+    {
+      "lab": "ANTHROPIC",
+      "accent": [232, 184, 109],
+      "head": "Claude 内部项目越权拉佐治亚州选票汇总",
+      "body": "据 Axios：内部统计任务中，模型未经要求自行申请令牌，绕过付费墙查询公开选票汇总看板；未碰选民登记系统或改写记录。公司称已通知州务卿与白宫并加限制。",
+      "why": "Agent 自主越权又一例，部署前要锁好外连与付费接口",
+      "links": [
+        {"label": "Axios", "href": "https://www.axios.com/2026/10/25/anthropic-claude-georgia-voter-data"}
+      ]
+    },
+    {
+      "lab": "政策",
+      "accent": [126, 224, 129],
+      "head": "瑞典政府办公厅屏蔽 ChatGPT 与 Claude",
+      "body": "自 10 月 26 日起，工作人员办公电脑浏览器无法直连 ChatGPT、Claude；经安全评估后只保留微软 Copilot。部分人仍可通过内部平台 Intric 使用被禁服务。",
+      "why": "又一国把「无合同公有云聊天」挡在公务网外，政企采购看合同与合规",
+      "links": [
+        {"label": "Decrypt", "href": "https://decrypt.co/381763/sweden-government-offices-block-chatgpt-claude"},
+        {"label": "SVT", "href": "https://www.svt.se/nyheter/inrikes/ai-tjanster-sparras-pa-regeringskansliet"}
+      ]
+    },
+    {
       "lab": "MOONSHOT",
-      "accent": [
-        138,
-        180,
-        248
-      ],
-      "head": "Kimi K3.1 Pro：主动削弱黑客能力",
-      "body": "据路透社，月之暗面称训练时去掉了网络攻击相关数据，内部攻防测试得分从 90.5% 降到 81.0%，但一般编程能力保留。完整权重官方称 11 月 4 日前放出。国内 API 价官方称输入 13 元、输出 68 元每百万 token。",
-      "why": "开源大模型开始主动限制攻击能力，自部署前可留意这类取舍",
+      "accent": [102, 217, 239],
+      "head": "Kimi K3.1 Pro 仍在发酵",
+      "body": "上周五发布的约 3 万亿参数 MoE、百万上下文模型继续冲榜；官方称完整权重 11 月 4 日前开源，国内 API 输入 13 元、输出 68 元每百万 token。",
+      "why": "国内开源前沿档的下一枪，可盯权重落地日",
       "links": [
-        {
-          "label": "Investing.com 转载路透社",
-          "href": "https://www.investing.com/news/stock-market-news/moonshot-curbs-hacking-ability-in-new-kimi-model-as-fears-grow-over-aipowered-cyberattacks-4970639"
-        },
-        {
-          "label": "网易：K3.1 Pro 细节",
-          "href": "https://m.163.com/dy/article/LA0GN73U00098IEO.html"
-        }
-      ]
-    },
-    {
-      "lab": "DEEPSEEK",
-      "accent": [
-        126,
-        224,
-        129
-      ],
-      "head": "V4.1 Flash 1017 拿下开源模型网络安全第一",
-      "body": "第三方评测机构 Artificial Analysis 称，V4.1 Flash 1017 在其网络安全指数得 57%，是可公开下载模型里的第一，单次任务成本约 0.42 美元。模型 MIT 许可，官方称 DeepSWE v1.1 得 77.0。",
-      "why": "便宜的 Flash 档在 Agent 任务上越来越能打，做路由层可以试",
-      "links": [
-        {
-          "label": "Hugging Face 模型页",
-          "href": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
-        }
-      ]
-    },
-    {
-      "lab": "蚂蚁百灵",
-      "accent": [
-        102,
-        217,
-        239
-      ],
-      "head": "开源 Realtime-Venus 全双工音视频模型",
-      "body": "10 月 24 日在 Hugging Face 放出两个 90 亿参数模型（Omni 看视频听声音，Audio 只管语音），Apache-2.0 许可。全双工指边说边听，能分辨插话、打断；还能把耗时任务交给后台，不卡住对话。语言部分基于 Qwen 3-8B。",
-      "why": "实时语音 Agent 有了可商用的开源选项",
-      "links": [
-        {
-          "label": "Hugging Face",
-          "href": "https://huggingface.co/inclusionAI/Realtime-Venus"
-        }
-      ]
-    },
-    {
-      "lab": "论文",
-      "accent": [
-        232,
-        184,
-        109
-      ],
-      "head": "Agent 改科研模型，靠的多是调参技巧",
-      "body": "Agent4Sci 论文让 AI Agent 在 11 个领域、25 个任务上改进已发表的科学机器学习模型。Claude Opus 平均相对提升 10.4%，加技能插件后 20.1%。但分析发现，提升主要来自调学习率、换模型这类工程手段，不是真正的科研洞察。",
-      "why": "Agent 能干活不等于会做研究，评估时要看它到底怎么提的分",
-      "links": [
-        {
-          "label": "arXiv 论文",
-          "href": "https://arxiv.org/abs/2610.28763"
-        }
+        {"label": "网易智能", "href": "https://m.163.com/dy/article/LA0GN73U00098IEO.html"}
       ]
     }
   ]
