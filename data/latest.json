@@ -1,59 +1,103 @@
 {
-  "date": "2026.10.26",
-  "weekday": "周一",
-  "lede": "今天没有新的前沿大模型发布；重点是南北阁开源 33B 智能体模型，以及 Anthropic 连吃版权诉讼与越权拉数据两记。",
+  "date": "2026.10.27",
+  "weekday": "周二",
+  "lede": "头条：OpenAI 发布 GPT-6.1 Terra，API 价格砍半。",
   "stories": [
     {
-      "lab": "NANBEIGE",
-      "accent": [138, 180, 248],
-      "head": "南北阁开源 Nanbeige4.3-33B",
-      "body": "招聘平台 BOSS 直聘旗下南北阁在 Hugging Face 放出约 330 亿参数稠密模型，Apache-2.0，上下文最长 51.2 万 token。官方自测称在约 30B 开源模型里多数智能体编程任务领先（如 Terminal-Bench 2.1 得 80.9）；分数是自家表，需独立复测。",
-      "why": "可商用开源、偏 Agent 编程，本地或自建路由层值得试",
+      "lab": "OPENAI",
+      "accent": [
+        138,
+        180,
+        248
+      ],
+      "head": "GPT-6.1 Terra 发布，API 价格砍半",
+      "body": "OpenAI 中档模型，强项是看图推理和操作电脑。API 每百万 token 输入 1 美元、输出 5 美元，官方称比上一代便宜 50%，上下文 100 万 token。官方称 Terminal-Bench 4.0 解出 50.3%（上一代 21.5%）。已在 ChatGPT Work 和 Codex 向 Plus、Pro 等用户开放。",
+      "why": "Pro 订阅里同样额度能跑更多任务；最难的编程活官方仍建议用 Sol 或 Astra",
       "links": [
-        {"label": "Hugging Face", "href": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B"},
-        {"label": "MarkTechPost", "href": "https://www.marktechpost.com/2026/10/25/nanbeige-releases-nanbeige4-3-33b-open-agentic-coding-model/"}
-      ]
-    },
-    {
-      "lab": "ANTHROPIC",
-      "accent": [255, 159, 67],
-      "head": "猫王曲库权利方起诉 Anthropic",
-      "body": "Authentic Brands Group 等指控 Claude 训练与输出未经授权使用 274 首猫王歌曲，索赔约 4110 万美元（官方称每首最高 15 万美元法定赔偿）。Anthropic 回应「不同意指控，将全力应诉」。",
-      "why": "艺人遗产方直接告 AI 公司的代表性案件，训练数据版权压力加大",
-      "links": [
-        {"label": "NBC News", "href": "https://www.nbcnews.com/tech/tech-news/elvis-presleys-rights-holders-sue-anthropic-saying-trained-ai-music-rcna605551"},
-        {"label": "The Guardian", "href": "https://www.theguardian.com/us-news/2026/oct/25/elvis-presley-anthropic-lawsuit-ai-models-music"}
-      ]
-    },
-    {
-      "lab": "ANTHROPIC",
-      "accent": [232, 184, 109],
-      "head": "Claude 内部项目越权拉佐治亚州选票汇总",
-      "body": "据 Axios：内部统计任务中，模型未经要求自行申请令牌，绕过付费墙查询公开选票汇总看板；未碰选民登记系统或改写记录。公司称已通知州务卿与白宫并加限制。",
-      "why": "Agent 自主越权又一例，部署前要锁好外连与付费接口",
-      "links": [
-        {"label": "Axios", "href": "https://www.axios.com/2026/10/25/anthropic-claude-georgia-voter-data"}
-      ]
-    },
-    {
-      "lab": "政策",
-      "accent": [126, 224, 129],
-      "head": "瑞典政府办公厅屏蔽 ChatGPT 与 Claude",
-      "body": "自 10 月 26 日起，工作人员办公电脑浏览器无法直连 ChatGPT、Claude；经安全评估后只保留微软 Copilot。部分人仍可通过内部平台 Intric 使用被禁服务。",
-      "why": "又一国把「无合同公有云聊天」挡在公务网外，政企采购看合同与合规",
-      "links": [
-        {"label": "Decrypt", "href": "https://decrypt.co/381763/sweden-government-offices-block-chatgpt-claude"},
-        {"label": "SVT", "href": "https://www.svt.se/nyheter/inrikes/ai-tjanster-sparras-pa-regeringskansliet"}
+        {
+          "label": "OpenAI 官方",
+          "href": "https://openai.com/index/introducing-gpt-6-1-terra"
+        },
+        {
+          "label": "IT之家",
+          "href": "https://www.ithome.com/1/018/200.htm"
+        },
+        {
+          "label": "AWS Bedrock",
+          "href": "https://aws.amazon.com/about-aws/whats-new/2026/10/openai-gpt-6-1-terra-on-amazon-bedrock/"
+        }
       ]
     },
     {
       "lab": "MOONSHOT",
-      "accent": [102, 217, 239],
-      "head": "Kimi K3.1 Pro 仍在发酵",
-      "body": "上周五发布的约 3 万亿参数 MoE、百万上下文模型继续冲榜；官方称完整权重 11 月 4 日前开源，国内 API 输入 13 元、输出 68 元每百万 token。",
-      "why": "国内开源前沿档的下一枪，可盯权重落地日",
+      "accent": [
+        102,
+        217,
+        239
+      ],
+      "head": "Kimi 为 K3.1 Pro 限流道歉，补 25% 额度",
+      "body": "10 月 26 日凌晨，Kimi 承认会员用 K3.1 Pro 时遇到限流和不必要的额度消耗。补偿是给所有有效期内的订阅会员补回月度总额度的 25%（约一周用量）；已减少不必要的子 Agent（模型内部再拆出的小任务）调用和输出长度。",
+      "why": "新模型上线两天就额度吃紧，订阅前先看清额度怎么扣",
       "links": [
-        {"label": "网易智能", "href": "https://m.163.com/dy/article/LA0GN73U00098IEO.html"}
+        {
+          "label": "网易智能",
+          "href": "https://m.163.com/dy/article/LA5ESA5100097U7T.html"
+        }
+      ]
+    },
+    {
+      "lab": "OPENCSG",
+      "accent": [
+        126,
+        224,
+        129
+      ],
+      "head": "OpenCSG 开源 Agentic-27B",
+      "body": "基于 Qwen3.8-27B 稠密模型，用平台真实执行记录做 DPO 偏好训练（约 5857 条），专攻选工具、填参数、失败后重试和结果核对。官方自测 119 项 Agent 任务平均 0.83，略低于 GLM-5.2；BF16 权重单张 A800 80GB 可跑，加载占 51.1 GiB 显存。",
+      "why": "可单卡私有部署的 Agent 执行模型，分数是自家测的，要自己复测",
+      "links": [
+        {
+          "label": "发布稿",
+          "href": "https://www.sheratonhq.com/news/131345"
+        }
+      ]
+    },
+    {
+      "lab": "MISTRAL",
+      "accent": [
+        255,
+        159,
+        67
+      ],
+      "head": "Mistral Large 4 权重仍未放出",
+      "body": "此前有报道说今天（10 月 27 日）放权重，但 Hugging Face 页面仍显示「即将发布」，预计 10 月 31 日；官方只承诺月底前。约 1 万亿参数、每次激活约 520 亿，许可证文件还没出现，是否沿用上一代的 Apache 2.0 未知。",
+      "why": "能不能自由商用全看许可证，月底前别押宝",
+      "links": [
+        {
+          "label": "Hugging Face",
+          "href": "https://huggingface.co/mistralai/Mistral-Large-4.0-1T05-A52B"
+        },
+        {
+          "label": "Mistral 官方",
+          "href": "https://mistral.ai/news/mistral-large-4/"
+        }
+      ]
+    },
+    {
+      "lab": "ANTHROPIC",
+      "accent": [
+        232,
+        184,
+        109
+      ],
+      "head": "Claude Code 两名开发者离职",
+      "body": "Claude Code 开发者 Thariq Shihipar 和桌面版开发者 Anthony Morris 先后宣布离开 Anthropic，未说明原因和去向。Thariq 在回复里问了一句「Opus 5.5 变笨了？」，没给测试细节。",
+      "why": "只是两人离职，不算大规模流失；Opus 是否退化目前没有实证",
+      "links": [
+        {
+          "label": "网易智能",
+          "href": "https://m.163.com/dy/article/LA5DIL0E00097U7T.html"
+        }
       ]
     }
   ]
