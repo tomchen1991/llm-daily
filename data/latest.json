@@ -1,103 +1,67 @@
 {
-  "date": "2026.10.27",
-  "weekday": "周二",
-  "lede": "头条：OpenAI 发布 GPT-6.1 Terra，API 价格砍半。",
+  "date": "2026.10.28",
+  "weekday": "周三",
+  "lede": "头条：Google DeepMind 发布 Genie 4 世界模型，首次原生带音频。",
   "stories": [
     {
+      "lab": "GOOGLE",
+      "accent": [138, 180, 248],
+      "head": "DeepMind 发布 Genie 4 世界模型",
+      "body": "官方称这是新一代实时可交互世界模型：用自然语言改天气、移镜头、加人，同时现场生成环境音、音乐和对话。仿真里会用到 Gemini 家族（含文中提到的 Gemini 3.8 Flash 做规划）。目前只对受信任测试者开放，随后会给 Google AI Ultra 的 Project Genie，以及 Gemini API / AI Studio 早期合作方。",
+      "why": "世界模型从「能看」迈到「能听、能对话」；机器人训练和影视预演都可能用上",
+      "links": [
+        {"label": "DeepMind 博客", "href": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"},
+        {"label": "Google 博客", "href": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/"}
+      ]
+    },
+    {
+      "lab": "LIQUID",
+      "accent": [102, 217, 239],
+      "head": "Liquid AI 开源 LFM3 全家桶",
+      "body": "约 20 亿参数级，文本 / 视觉 / 音频 / 全模态 / 决策共六款，共用新骨干，开源权重上 Hugging Face。官方称 LFM3-1.7B 预训练 22 万亿 token，文本版 4-bit 约 1 GB、上下文 25.6 万 token；视觉版首次支持视频输入。可单卡微调，面向端侧和本地 Agent。",
+      "why": "小模型也能做多模态 Agent，本地部署和私有微调成本更低",
+      "links": [
+        {"label": "Liquid 官方", "href": "https://www.liquid.ai/blog/lfm3"}
+      ]
+    },
+    {
       "lab": "OPENAI",
-      "accent": [
-        138,
-        180,
-        248
-      ],
-      "head": "GPT-6.1 Terra 发布，API 价格砍半",
-      "body": "OpenAI 中档模型，强项是看图推理和操作电脑。API 每百万 token 输入 1 美元、输出 5 美元，官方称比上一代便宜 50%，上下文 100 万 token。官方称 Terminal-Bench 4.0 解出 50.3%（上一代 21.5%）。已在 ChatGPT Work 和 Codex 向 Plus、Pro 等用户开放。",
-      "why": "Pro 订阅里同样额度能跑更多任务；最难的编程活官方仍建议用 Sol 或 Astra",
+      "accent": [126, 224, 129],
+      "head": "OpenAI 扩大与 Oracle 合作",
+      "body": "Oracle 应用和数据将接入 ChatGPT（规划中的 Oracle AI Workspace）；Oracle 同步推出 AI Security Mesh、面向中小企业的 AI SMB Bundle，以及用 Codex 做应用的 App Composer。美国 Oracle 客户可用 Universal Credits 在 Marketplace 买 OpenAI API、Codex、ChatGPT Work。",
+      "why": "企业客户可把现有云额度直接换成 OpenAI 能力，采购路径更短",
       "links": [
-        {
-          "label": "OpenAI 官方",
-          "href": "https://openai.com/index/introducing-gpt-6-1-terra"
-        },
-        {
-          "label": "IT之家",
-          "href": "https://www.ithome.com/1/018/200.htm"
-        },
-        {
-          "label": "AWS Bedrock",
-          "href": "https://aws.amazon.com/about-aws/whats-new/2026/10/openai-gpt-6-1-terra-on-amazon-bedrock/"
-        }
+        {"label": "OpenAI 官方", "href": "https://openai.com/index/oracle-apps-in-chatgpt/"}
       ]
     },
     {
-      "lab": "MOONSHOT",
-      "accent": [
-        102,
-        217,
-        239
-      ],
-      "head": "Kimi 为 K3.1 Pro 限流道歉，补 25% 额度",
-      "body": "10 月 26 日凌晨，Kimi 承认会员用 K3.1 Pro 时遇到限流和不必要的额度消耗。补偿是给所有有效期内的订阅会员补回月度总额度的 25%（约一周用量）；已减少不必要的子 Agent（模型内部再拆出的小任务）调用和输出长度。",
-      "why": "新模型上线两天就额度吃紧，订阅前先看清额度怎么扣",
+      "lab": "QWEN",
+      "accent": [255, 159, 67],
+      "head": "通义上架 qwen-audio-3.1-realtime-flash",
+      "body": "阿里云国际 Model Studio 10 月 27 日上架实时双工语音模型：支持文本和音频双向、工具调用、联网搜索、声音复刻；上下文 262,144 token。",
+      "why": "语音助手和实时客服类产品又多一个可接的官方 API",
       "links": [
-        {
-          "label": "网易智能",
-          "href": "https://m.163.com/dy/article/LA5ESA5100097U7T.html"
-        }
+        {"label": "阿里云文档", "href": "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/newly-released-models"}
       ]
     },
     {
-      "lab": "OPENCSG",
-      "accent": [
-        126,
-        224,
-        129
-      ],
-      "head": "OpenCSG 开源 Agentic-27B",
-      "body": "基于 Qwen3.8-27B 稠密模型，用平台真实执行记录做 DPO 偏好训练（约 5857 条），专攻选工具、填参数、失败后重试和结果核对。官方自测 119 项 Agent 任务平均 0.83，略低于 GLM-5.2；BF16 权重单张 A800 80GB 可跑，加载占 51.1 GiB 显存。",
-      "why": "可单卡私有部署的 Agent 执行模型，分数是自家测的，要自己复测",
+      "lab": "GOOGLE",
+      "accent": [196, 167, 255],
+      "head": "Gemini Robotics ER 2 上云公测",
+      "body": "具身推理模型（机器人高层「大脑」）在 Google Cloud / Gemini 平台公测。官方称可跨机械臂到人形机器人做长程规划、多机协作，并把底层动作模型当工具调用。",
+      "why": "企业做机器人 Agent 有了云上正式入口，不只是实验室演示",
       "links": [
-        {
-          "label": "发布稿",
-          "href": "https://www.sheratonhq.com/news/131345"
-        }
+        {"label": "Google Cloud", "href": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-robotics-embodied-reasoning-2-is-now-available-on-google-cloud"}
       ]
     },
     {
-      "lab": "MISTRAL",
-      "accent": [
-        255,
-        159,
-        67
-      ],
-      "head": "Mistral Large 4 权重仍未放出",
-      "body": "此前有报道说今天（10 月 27 日）放权重，但 Hugging Face 页面仍显示「即将发布」，预计 10 月 31 日；官方只承诺月底前。约 1 万亿参数、每次激活约 520 亿，许可证文件还没出现，是否沿用上一代的 Apache 2.0 未知。",
-      "why": "能不能自由商用全看许可证，月底前别押宝",
+      "lab": "MICROSOFT",
+      "accent": [232, 184, 109],
+      "head": "微软发布 MAI Image 2.7",
+      "body": "微软最新图像编辑模型进入预览。官方称在 Artificial Analysis 图像编辑榜排第 2，Arena Edit 排第 3；改场景风格、改图中文字、增强修复等能力相对 2.6 全面提升。",
+      "why": "图像编辑又多一家一线实验室的可试用选项",
       "links": [
-        {
-          "label": "Hugging Face",
-          "href": "https://huggingface.co/mistralai/Mistral-Large-4.0-1T05-A52B"
-        },
-        {
-          "label": "Mistral 官方",
-          "href": "https://mistral.ai/news/mistral-large-4/"
-        }
-      ]
-    },
-    {
-      "lab": "ANTHROPIC",
-      "accent": [
-        232,
-        184,
-        109
-      ],
-      "head": "Claude Code 两名开发者离职",
-      "body": "Claude Code 开发者 Thariq Shihipar 和桌面版开发者 Anthony Morris 先后宣布离开 Anthropic，未说明原因和去向。Thariq 在回复里问了一句「Opus 5.5 变笨了？」，没给测试细节。",
-      "why": "只是两人离职，不算大规模流失；Opus 是否退化目前没有实证",
-      "links": [
-        {
-          "label": "网易智能",
-          "href": "https://m.163.com/dy/article/LA5DIL0E00097U7T.html"
-        }
+        {"label": "Microsoft AI", "href": "https://microsoft.ai/news/mai-image-2-7-debut/"}
       ]
     }
   ]
