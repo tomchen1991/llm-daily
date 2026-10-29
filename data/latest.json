@@ -1,67 +1,61 @@
 {
-  "date": "2026.10.28",
-  "weekday": "周三",
-  "lede": "头条：Google DeepMind 发布 Genie 4 世界模型，首次原生带音频。",
+  "date": "2026.10.29",
+  "weekday": "周四",
+  "lede": "头条：Google 发布 Gemini 4 Carbon，主打网络安全与长程工程。",
   "stories": [
     {
       "lab": "GOOGLE",
       "accent": [138, 180, 248],
-      "head": "DeepMind 发布 Genie 4 世界模型",
-      "body": "官方称这是新一代实时可交互世界模型：用自然语言改天气、移镜头、加人，同时现场生成环境音、音乐和对话。仿真里会用到 Gemini 家族（含文中提到的 Gemini 3.8 Flash 做规划）。目前只对受信任测试者开放，随后会给 Google AI Ultra 的 Project Genie，以及 Gemini API / AI Studio 早期合作方。",
-      "why": "世界模型从「能看」迈到「能听、能对话」；机器人训练和影视预演都可能用上",
+      "head": "Gemini 4 Carbon 发布",
+      "body": "10 月 28 日官方宣布下一款前沿模型：在 Artificial Analysis Intelligence Index v5.0 拿下 59 分暂居第一；网络安全相关榜 SEC-bench Pro 88.2%、ExploitGym 54.8%、CWE-bench 71.0%。官方称内部可连续多日做大规模修 bug 一类长程任务。本周起经 Fairwind 计划先给部分做网络安全防护的团队试用，暂不对普通开发者和消费者全面开放。入门价与 Argon 相同：输入 $2 / 百万 token、输出 $10 / 百万 token（缓存输入再便宜 95%）。",
+      "why": "两周内又推一款旗舰，且先锁在安全场景，说明能力和风险管控同步在收紧",
       "links": [
-        {"label": "DeepMind 博客", "href": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"},
-        {"label": "Google 博客", "href": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/"}
+        {"label": "Google 博客", "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"},
+        {"label": "Reuters", "href": "https://www.investing.com/news/stock-market-news/google-launches-gemini-4-carbon-ai-model-with-cybersecurity-focus-4980426"}
       ]
     },
     {
-      "lab": "LIQUID",
-      "accent": [102, 217, 239],
-      "head": "Liquid AI 开源 LFM3 全家桶",
-      "body": "约 20 亿参数级，文本 / 视觉 / 音频 / 全模态 / 决策共六款，共用新骨干，开源权重上 Hugging Face。官方称 LFM3-1.7B 预训练 22 万亿 token，文本版 4-bit 约 1 GB、上下文 25.6 万 token；视觉版首次支持视频输入。可单卡微调，面向端侧和本地 Agent。",
-      "why": "小模型也能做多模态 Agent，本地部署和私有微调成本更低",
-      "links": [
-        {"label": "Liquid 官方", "href": "https://www.liquid.ai/blog/lfm3"}
-      ]
-    },
-    {
-      "lab": "OPENAI",
-      "accent": [126, 224, 129],
-      "head": "OpenAI 扩大与 Oracle 合作",
-      "body": "Oracle 应用和数据将接入 ChatGPT（规划中的 Oracle AI Workspace）；Oracle 同步推出 AI Security Mesh、面向中小企业的 AI SMB Bundle，以及用 Codex 做应用的 App Composer。美国 Oracle 客户可用 Universal Credits 在 Marketplace 买 OpenAI API、Codex、ChatGPT Work。",
-      "why": "企业客户可把现有云额度直接换成 OpenAI 能力，采购路径更短",
-      "links": [
-        {"label": "OpenAI 官方", "href": "https://openai.com/index/oracle-apps-in-chatgpt/"}
-      ]
-    },
-    {
-      "lab": "QWEN",
+      "lab": "ANT",
       "accent": [255, 159, 67],
-      "head": "通义上架 qwen-audio-3.1-realtime-flash",
-      "body": "阿里云国际 Model Studio 10 月 27 日上架实时双工语音模型：支持文本和音频双向、工具调用、联网搜索、声音复刻；上下文 262,144 token。",
-      "why": "语音助手和实时客服类产品又多一个可接的官方 API",
+      "head": "百灵开源 Ling-3.1-flash-1019",
+      "body": "蚂蚁百灵放出 MIT 许可权重（Hugging Face / ModelScope）。官方称面向个人 Agent 的复杂知识工作与流程自动化；AA Intelligence Index（v4.3.2）44 分，较上版 +3。同步开源基座 Ling-3.1-flash-base：混合线性 MoE，总参约 560B、每 token 激活约 25B。能力已用于灵光 2.0 助理。",
+      "why": "又多一个可商用开源的大 MoE 基座，做本地或私有 Agent 的可选面更宽",
       "links": [
-        {"label": "阿里云文档", "href": "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/newly-released-models"}
+        {"label": "Hugging Face", "href": "https://huggingface.co/inclusionAI/Ling-3.1-flash-1019"},
+        {"label": "网易报道", "href": "https://m.163.com/dy/article/LAB84OBP00098IEO.html"}
+      ]
+    },
+    {
+      "lab": "NVIDIA",
+      "accent": [126, 224, 129],
+      "head": "Nemotron 3.5 Transcribe 开源",
+      "body": "10 月 28 日发布可提示的语音转写大模型：约 30B MoE、激活约 4.3B；支持 40 种语言、最长约 1 小时录音、最多 8 人说话人标注，还可按自然语言指令选转写风格、翻译、词级时间戳。官方称英语公开 ASR 榜平均词错误率约 4.71%。权重 OpenMDW-1.1，附 NeMo Speech 微调工具。",
+      "why": "开会录音、客服质检一类「听写 + 谁在说」任务，开源可选又强了一截",
+      "links": [
+        {"label": "NVIDIA 研究页", "href": "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Transcribe/"},
+        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/"}
       ]
     },
     {
       "lab": "GOOGLE",
       "accent": [196, 167, 255],
-      "head": "Gemini Robotics ER 2 上云公测",
-      "body": "具身推理模型（机器人高层「大脑」）在 Google Cloud / Gemini 平台公测。官方称可跨机械臂到人形机器人做长程规划、多机协作，并把底层动作模型当工具调用。",
-      "why": "企业做机器人 Agent 有了云上正式入口，不只是实验室演示",
+      "head": "Alphabet 三季报：云翻倍、资本开支狂飙",
+      "body": "营收约 1276 亿美元（同比 +25%）。Google Cloud 约 307 亿美元、同比约翻倍，官方归因含 AI 基础设施与 TPU 系统销售。当季资本开支约 514 亿美元，多数砸在 AI 相关服务器与数据中心；全年资本开支指引仍约 1950–2050 亿美元。",
+      "why": "钱在往算力堆：模型供给背后是云厂商继续加码基建",
       "links": [
-        {"label": "Google Cloud", "href": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-robotics-embodied-reasoning-2-is-now-available-on-google-cloud"}
+        {"label": "Google CEO 季报备注", "href": "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/"},
+        {"label": "CNBC", "href": "https://www.cnbc.com/2026/10/28/alphabet-googl-earnings-q3-2026.html"}
       ]
     },
     {
-      "lab": "MICROSOFT",
+      "lab": "BYTEDANCE",
       "accent": [232, 184, 109],
-      "head": "微软发布 MAI Image 2.7",
-      "body": "微软最新图像编辑模型进入预览。官方称在 Artificial Analysis 图像编辑榜排第 2，Arena Edit 排第 3；改场景风格、改图中文字、增强修复等能力相对 2.6 全面提升。",
-      "why": "图像编辑又多一家一线实验室的可试用选项",
+      "head": "豆包工作：录操作成技能，Mac 锁屏也能跑",
+      "body": "豆包「工作」能力升级：可把演示过的电脑操作录成可复用个人技能；在设置里授权后，Mac 锁屏期间仍可继续执行任务，手机可下发与查看结果。需保持开机、联网、唤醒且客户端在跑。",
+      "why": "国内主流助手把「控电脑的 Agent」往日常可用再推了一步",
       "links": [
-        {"label": "Microsoft AI", "href": "https://microsoft.ai/news/mai-image-2-7-debut/"}
+        {"label": "IT之家", "href": "https://www.ithome.com/1/018/860.htm"},
+        {"label": "雷峰网", "href": "https://www.leiphone.com/category/industrynews/MYDTBZqQkhfVtkte.html"}
       ]
     }
   ]
