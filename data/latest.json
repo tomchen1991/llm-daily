@@ -1,61 +1,58 @@
 {
-  "date": "2026.10.29",
-  "weekday": "周四",
-  "lede": "头条：Google 发布 Gemini 4 Carbon，主打网络安全与长程工程。",
+  "date": "2026.10.30",
+  "weekday": "周五",
+  "lede": "头条：OpenAI 取消 Pro 200 额度下调，Pro / Business Premium 的 Work+Codex 配额加码。",
   "stories": [
     {
-      "lab": "GOOGLE",
-      "accent": [138, 180, 248],
-      "head": "Gemini 4 Carbon 发布",
-      "body": "10 月 28 日官方宣布下一款前沿模型：在 Artificial Analysis Intelligence Index v5.0 拿下 59 分暂居第一；网络安全相关榜 SEC-bench Pro 88.2%、ExploitGym 54.8%、CWE-bench 71.0%。官方称内部可连续多日做大规模修 bug 一类长程任务。本周起经 Fairwind 计划先给部分做网络安全防护的团队试用，暂不对普通开发者和消费者全面开放。入门价与 Argon 相同：输入 $2 / 百万 token、输出 $10 / 百万 token（缓存输入再便宜 95%）。",
-      "why": "两周内又推一款旗舰，且先锁在安全场景，说明能力和风险管控同步在收紧",
-      "links": [
-        {"label": "Google 博客", "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"},
-        {"label": "Reuters", "href": "https://www.investing.com/news/stock-market-news/google-launches-gemini-4-carbon-ai-model-with-cybersecurity-focus-4980426"}
-      ]
-    },
-    {
-      "lab": "ANT",
-      "accent": [255, 159, 67],
-      "head": "百灵开源 Ling-3.1-flash-1019",
-      "body": "蚂蚁百灵放出 MIT 许可权重（Hugging Face / ModelScope）。官方称面向个人 Agent 的复杂知识工作与流程自动化；AA Intelligence Index（v4.3.2）44 分，较上版 +3。同步开源基座 Ling-3.1-flash-base：混合线性 MoE，总参约 560B、每 token 激活约 25B。能力已用于灵光 2.0 助理。",
-      "why": "又多一个可商用开源的大 MoE 基座，做本地或私有 Agent 的可选面更宽",
-      "links": [
-        {"label": "Hugging Face", "href": "https://huggingface.co/inclusionAI/Ling-3.1-flash-1019"},
-        {"label": "网易报道", "href": "https://m.163.com/dy/article/LAB84OBP00098IEO.html"}
-      ]
-    },
-    {
-      "lab": "NVIDIA",
+      "lab": "OPENAI",
+      "head": "Pro 取消下调，Work+Codex 加码",
+      "body": "官方帮助中心 10 月 29 日更新：取消原定对 Pro 200 的 Work / Codex 额度下调。Pro 100 与 Pro 500 的 Work+Codex 额度翻倍；Pro 200 低档额度也翻到与高档一致，已有高档的保持不变。Business Premium 同步加码。现有订阅自动生效，不必取消重订。Codex 侧 Tibo 亦发帖确认即日起生效。",
+      "why": "大量用 Codex / Work 的 Pro 用户：额度立刻变宽，不必取消重订、也不用等账单日",
       "accent": [126, 224, 129],
-      "head": "Nemotron 3.5 Transcribe 开源",
-      "body": "10 月 28 日发布可提示的语音转写大模型：约 30B MoE、激活约 4.3B；支持 40 种语言、最长约 1 小时录音、最多 8 人说话人标注，还可按自然语言指令选转写风格、翻译、词级时间戳。官方称英语公开 ASR 榜平均词错误率约 4.71%。权重 OpenMDW-1.1，附 NeMo Speech 微调工具。",
-      "why": "开会录音、客服质检一类「听写 + 谁在说」任务，开源可选又强了一截",
       "links": [
-        {"label": "NVIDIA 研究页", "href": "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Transcribe/"},
-        {"label": "TechCrunch", "href": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/"}
+        {"label": "OpenAI 帮助中心 Release notes", "href": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"},
+        {"label": "Pro 档位说明", "href": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"}
       ]
     },
     {
-      "lab": "GOOGLE",
+      "lab": "TENCENT",
+      "head": "Buddy One 发布，Hy4 即将正式版",
+      "body": "腾讯全球数字生态大会：以 WorkBuddy 为工作台的一体化办公套件 Buddy One 正式发布，整合文档 / ima / 设计等，网盘统一存上下文与成果。汤道生称混元 Hy4 与 Hy4 flash 即将推出——相对 Hy4 preview，强调长程生产力与思维链效率，并首次引入视觉理解；flash 走性价比路线。正式版日期未给死。",
+      "why": "国内大厂办公 Agent 套件再加一档；Hy4 正式版若带视觉，混元产品线会更好用",
+      "accent": [138, 180, 248],
+      "links": [
+        {"label": "混元 Hy4 预告相关报道", "href": "https://finance.sina.com.cn/tech/roll/2026-10-29/doc-iniwwaxa2889054.shtml"}
+      ]
+    },
+    {
+      "lab": "OPENAI",
+      "head": "公开 Model Spec 按五条重组",
+      "body": "OpenAI 更新公开行为规范 Model Spec（2026/10/29）：按「忠实人类意图 / 减害 / 诚实透明 / 人类自主 / 关怀」五条重组，补上情境、监督、副作用沟通等原则，并砍掉大量细碎文风规定。规范对象称呼从 assistant 改为 GPT。",
+      "why": "这是他们怎么训模型「该怎么做」的公开说明书，比单条产品更新更能看出对齐方向",
       "accent": [196, 167, 255],
-      "head": "Alphabet 三季报：云翻倍、资本开支狂飙",
-      "body": "营收约 1276 亿美元（同比 +25%）。Google Cloud 约 307 亿美元、同比约翻倍，官方归因含 AI 基础设施与 TPU 系统销售。当季资本开支约 514 亿美元，多数砸在 AI 相关服务器与数据中心；全年资本开支指引仍约 1950–2050 亿美元。",
-      "why": "钱在往算力堆：模型供给背后是云厂商继续加码基建",
       "links": [
-        {"label": "Google CEO 季报备注", "href": "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/"},
-        {"label": "CNBC", "href": "https://www.cnbc.com/2026/10/28/alphabet-googl-earnings-q3-2026.html"}
+        {"label": "Model Spec 更新博文", "href": "https://openai.com/index/updated-model-spec"},
+        {"label": "Model Spec 2026/10/29", "href": "https://model-spec.openai.com/2026-10-29.html"}
       ]
     },
     {
-      "lab": "BYTEDANCE",
-      "accent": [232, 184, 109],
-      "head": "豆包工作：录操作成技能，Mac 锁屏也能跑",
-      "body": "豆包「工作」能力升级：可把演示过的电脑操作录成可复用个人技能；在设置里授权后，Mac 锁屏期间仍可继续执行任务，手机可下发与查看结果。需保持开机、联网、唤醒且客户端在跑。",
-      "why": "国内主流助手把「控电脑的 Agent」往日常可用再推了一步",
+      "lab": "BAIDU",
+      "head": "吴甜离职；文心下周有动静",
+      "body": "百度确认副总裁、研究院副院长吴甜已结束任职（她今年 5 月已不再管基础模型研发）。知情人士称文心模型下周有新进展对外发布。两天前刚开源文心 Unlimited OCR 2：称可任意页数文档解析，百页场景单步解码较全注意力快约 7 倍；权重与代码已上 GitHub / Hugging Face。",
+      "why": "人事变动叠模型预告，下周文心发布值得盯一眼",
+      "accent": [255, 159, 67],
       "links": [
-        {"label": "IT之家", "href": "https://www.ithome.com/1/018/860.htm"},
-        {"label": "雷峰网", "href": "https://www.leiphone.com/category/industrynews/MYDTBZqQkhfVtkte.html"}
+        {"label": "IT之家：吴甜离职", "href": "https://www.ithome.com/1/019/769.htm"}
+      ]
+    },
+    {
+      "lab": "BAIDU",
+      "head": "Unlimited OCR 2：超长文档解析",
+      "body": "文心 Unlimited OCR 2 开源：用稀疏参考滑动窗口注意力（SR-SWA）压视觉冗余，配合无限解码，官方称把多页 OCR 从「几十页」推到任意页数；实测可一次吃下《哈利·波特》全系列约 3600+ 页。MPDocBench / MarathonDocBench 端到端分数官方称达 SOTA。",
+      "why": "长研报、整本书入库一类需求，开源 OCR 上限又抬了一截",
+      "accent": [232, 184, 109],
+      "links": [
+        {"label": "新华网：Unlimited OCR 2", "href": "http://www.xinhuanet.com/tech/20261027/f97d067ddf65432f9e8024515d949784/c.html"}
       ]
     }
   ]
