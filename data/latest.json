@@ -1,58 +1,68 @@
 {
-  "date": "2026.10.30",
-  "weekday": "周五",
-  "lede": "头条：OpenAI 取消 Pro 200 额度下调，Pro / Business Premium 的 Work+Codex 配额加码。",
+  "date": "2026.10.31",
+  "weekday": "周六",
+  "lede": "今天没有大模型正式发布。最实用的是 OpenAI Pro 订阅开始每月送等额 API 额度；另外 DeepSeek 被曝完成千亿级融资，Qwen4 预告下周来。",
   "stories": [
     {
       "lab": "OPENAI",
-      "head": "Pro 取消下调，Work+Codex 加码",
-      "body": "官方帮助中心 10 月 29 日更新：取消原定对 Pro 200 的 Work / Codex 额度下调。Pro 100 与 Pro 500 的 Work+Codex 额度翻倍；Pro 200 低档额度也翻到与高档一致，已有高档的保持不变。Business Premium 同步加码。现有订阅自动生效，不必取消重订。Codex 侧 Tibo 亦发帖确认即日起生效。",
-      "why": "大量用 Codex / Work 的 Pro 用户：额度立刻变宽，不必取消重订、也不用等账单日",
+      "head": "Pro 订阅每月送等额 API 额度",
+      "body": "10 月 28 日起，Pro 100 / 200 / 500 每月分别送 $100 / $200 / $500 的 API 额度。条件：订阅已付费满 7 天、ChatGPT 和 API 账号同一邮箱、你是 API 组织的 owner。在 ChatGPT 设置的 Billing 里领一次，之后每次续费自动发；当期用不完作废。可用于 Responses、Agents、Decisions 等 API；用 API key 跑的 Codex 不算，也不会增加 ChatGPT / Codex 本身的额度。",
+      "why": "想试 Decisions API（结构化决策接口）这类按量付费的东西，可以先不额外掏钱",
       "accent": [126, 224, 129],
       "links": [
-        {"label": "OpenAI 帮助中心 Release notes", "href": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"},
-        {"label": "Pro 档位说明", "href": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"}
+        {"label": "OpenAI 帮助中心：API 额度福利", "href": "https://help.openai.com/en/articles/20001626-api-credits-benefit-for-eligible-chatgpt-subscriptions"},
+        {"label": "开发者文档：订阅送的 API 额度", "href": "https://developers.openai.com/api/docs/guides/chatgpt-api-credits"}
       ]
     },
     {
-      "lab": "TENCENT",
-      "head": "Buddy One 发布，Hy4 即将正式版",
-      "body": "腾讯全球数字生态大会：以 WorkBuddy 为工作台的一体化办公套件 Buddy One 正式发布，整合文档 / ima / 设计等，网盘统一存上下文与成果。汤道生称混元 Hy4 与 Hy4 flash 即将推出——相对 Hy4 preview，强调长程生产力与思维链效率，并首次引入视觉理解；flash 走性价比路线。正式版日期未给死。",
-      "why": "国内大厂办公 Agent 套件再加一档；Hy4 正式版若带视觉，混元产品线会更好用",
+      "lab": "DEEPSEEK",
+      "head": "曝第二轮融资约 1055 亿元",
+      "body": "IT之家等 10 月 30 日报道：DeepSeek 第二轮融资约 1055 亿元人民币，投后估值约 6155 亿元，腾讯、宁德时代、长鑫存储、中芯国际、美团、vivo 等近 30 家参与。同日还有开发者在官网前端代码里发现名为 Cyber 的安全模型入口，处于灰度测试，需实名并审批。",
+      "why": "国内开源模型头部玩家手里钱更多了，后续训练算力和降价空间都更足",
       "accent": [138, 180, 248],
       "links": [
-        {"label": "混元 Hy4 预告相关报道", "href": "https://finance.sina.com.cn/tech/roll/2026-10-29/doc-iniwwaxa2889054.shtml"}
+        {"label": "IT之家：DeepSeek 第二轮融资", "href": "https://www.ithome.com/1/020/121.htm"}
       ]
     },
     {
-      "lab": "OPENAI",
-      "head": "公开 Model Spec 按五条重组",
-      "body": "OpenAI 更新公开行为规范 Model Spec（2026/10/29）：按「忠实人类意图 / 减害 / 诚实透明 / 人类自主 / 关怀」五条重组，补上情境、监督、副作用沟通等原则，并砍掉大量细碎文风规定。规范对象称呼从 assistant 改为 GPT。",
-      "why": "这是他们怎么训模型「该怎么做」的公开说明书，比单条产品更新更能看出对齐方向",
-      "accent": [196, 167, 255],
-      "links": [
-        {"label": "Model Spec 更新博文", "href": "https://openai.com/index/updated-model-spec"},
-        {"label": "Model Spec 2026/10/29", "href": "https://model-spec.openai.com/2026-10-29.html"}
-      ]
-    },
-    {
-      "lab": "BAIDU",
-      "head": "吴甜离职；文心下周有动静",
-      "body": "百度确认副总裁、研究院副院长吴甜已结束任职（她今年 5 月已不再管基础模型研发）。知情人士称文心模型下周有新进展对外发布。两天前刚开源文心 Unlimited OCR 2：称可任意页数文档解析，百页场景单步解码较全注意力快约 7 倍；权重与代码已上 GitHub / Hugging Face。",
-      "why": "人事变动叠模型预告，下周文心发布值得盯一眼",
+      "lab": "QWEN",
+      "head": "Qwen4 系列预告，现场称下周",
+      "body": "阿里云 10 月 29 日在阿姆斯特丹开欧洲云栖大会，幻灯片写着 Qwen4 系列即将推出，包括 Qwen4-Max、Plus、Flash 和 27B。多位到场者转述阿里云 CTO 李飞飞说是下周。此前 Qwen Code 已合并的代码把 qwen4 的默认上下文设成 1M。官方还没给具体日期。",
+      "why": "如果下周真发，国内又多一档有 Flash 版的新一代模型可选",
       "accent": [255, 159, 67],
       "links": [
-        {"label": "IT之家：吴甜离职", "href": "https://www.ithome.com/1/019/769.htm"}
+        {"label": "AI Timeline 10/30 日报", "href": "https://aitimeline.news/en/Daily/2026-10-30-X%E6%97%A5%E6%8A%A5/"}
       ]
     },
     {
-      "lab": "BAIDU",
-      "head": "Unlimited OCR 2：超长文档解析",
-      "body": "文心 Unlimited OCR 2 开源：用稀疏参考滑动窗口注意力（SR-SWA）压视觉冗余，配合无限解码，官方称把多页 OCR 从「几十页」推到任意页数；实测可一次吃下《哈利·波特》全系列约 3600+ 页。MPDocBench / MarathonDocBench 端到端分数官方称达 SOTA。",
-      "why": "长研报、整本书入库一类需求，开源 OCR 上限又抬了一截",
+      "lab": "BASETEN",
+      "head": "joey-1：2B 决策模型，$0.01/百万 token",
+      "body": "Baseten 发布 joey-1：不生成文字，只对你给的选项直接返回概率（选择题、是非题、打分），一次前向就出结果。由 Qwen3.5-2B 后训练而来，支持文本和图片，上下文 16K，MIT 开源。官方称 P50 延迟约 20 毫秒，价格 $0.01/百万 token，在 Jev Decision Index 0.4 公开集上是 4B 以下第一（63.30 分）。",
+      "why": "做 agent 路由和分类的话，比 Jev 1.13、Clef-flash 便宜几倍，值得拿真实任务比一比",
+      "accent": [102, 217, 239],
+      "links": [
+        {"label": "Baseten 博客：joey-1", "href": "https://www.baseten.co/blog/decisions-for-a-penny-introducing-joey-1/"},
+        {"label": "Hugging Face：baselabs/joey-1", "href": "https://huggingface.co/baselabs/joey-1"}
+      ]
+    },
+    {
+      "lab": "DIFFUSPACE",
+      "head": "Clover-35B-A3B：开源扩散语言模型",
+      "body": "DiffuSpace 10 月 30 日开源 Clover-35B-A3B-Preview，Apache 协议。它是扩散语言模型（不是一个字一个字往后写，而是整段同时反复修改成形），MoE 结构，总参数 350 亿、每次激活 30 亿，支持思考模式，可用 SGLang 和 llama.cpp 跑。官方称多项测试超过同尺寸的 Qwen3.6-35B-A3B，生成速度明显更快。",
+      "why": "扩散路线第一次在这个尺寸上和主流模型正面比，本地部署想要快的可以关注",
       "accent": [232, 184, 109],
       "links": [
-        {"label": "新华网：Unlimited OCR 2", "href": "http://www.xinhuanet.com/tech/20261027/f97d067ddf65432f9e8024515d949784/c.html"}
+        {"label": "Hugging Face 博客：Clover", "href": "https://huggingface.co/blog/Diffuspace/clover-35b-a3b-preview"}
+      ]
+    },
+    {
+      "lab": "ANTHROPIC",
+      "head": "未发布模型自己串出 5 条漏洞利用链",
+      "body": "Anthropic 前沿红队披露：一个未发布的内部模型找到并串起漏洞，做出 5 条能用的攻击链，覆盖 Chrome、Safari、Android、Windows、Linux。仅 Chrome 一项报告后修了 62 个 CVE（公开漏洞编号）。全部先报给厂商、已修补后才公开。「人工参与很少」是官方说法，未拆分每一步人做了什么。",
+      "why": "前沿模型的攻防能力已经到能打穿主流浏览器的程度，各家收紧发布节奏的原因就在这",
+      "accent": [196, 167, 255],
+      "links": [
+        {"label": "Intelligence Unlocked 10/30 回顾", "href": "https://intelligenceunlocked.beehiiv.com/p/ai-tech-recap-october-30-gemini-4-carbon-takes-the-crown-anthropic-s-hacker-model"}
       ]
     }
   ]
