@@ -1,68 +1,99 @@
 {
-  "date": "2026.10.31",
-  "weekday": "周六",
-  "lede": "今天没有大模型正式发布。最实用的是 OpenAI Pro 订阅开始每月送等额 API 额度；另外 DeepSeek 被曝完成千亿级融资，Qwen4 预告下周来。",
+  "date": "2026.11.01",
+  "weekday": "周日",
+  "lede": "今天没有大模型正式发布。最值得看的是 DeepSeek 开源了一套「常驻在线的多任务 Agent」架构；另外 DeepSeek 网页搜索/抓取接口从今天零点开始收费。",
   "stories": [
     {
-      "lab": "OPENAI",
-      "head": "Pro 订阅每月送等额 API 额度",
-      "body": "10 月 28 日起，Pro 100 / 200 / 500 每月分别送 $100 / $200 / $500 的 API 额度。条件：订阅已付费满 7 天、ChatGPT 和 API 账号同一邮箱、你是 API 组织的 owner。在 ChatGPT 设置的 Billing 里领一次，之后每次续费自动发；当期用不完作废。可用于 Responses、Agents、Decisions 等 API；用 API key 跑的 Codex 不算，也不会增加 ChatGPT / Codex 本身的额度。",
-      "why": "想试 Decisions API（结构化决策接口）这类按量付费的东西，可以先不额外掏钱",
-      "accent": [126, 224, 129],
+      "lab": "DEEPSEEK",
+      "head": "开源 Super-agent 架构：轻模型分派、强模型干活",
+      "body": "10 月 31 日晚，DeepSeek Harness 团队公开 Super-agent 设计并开源原型（GitHub: deepseek-ai/dsh-superagent-prototype）。思路是两层：常驻的 Router 只和人对话、分派任务，可用较轻的模型；多个互相隔离的 Worker 用最强模型并行干活。另有事件驱动、跨 IM/GitHub 持续对话、外部看门狗自动恢复。官方称一半任务 12.4 分钟内完成、95% 在 15.7 分钟内；Router 把积压事件合并处理后，单个决定平均推理时间从 6.4 秒降到 1.6 秒。团队自己说明这是合成负载下的初步实验。",
+      "why": "和你在做的 agent 路由层是同一个问题，「路由用轻模型 + 批量合并事件」这条可以直接对照自己的实现",
+      "accent": [
+        138,
+        180,
+        248
+      ],
       "links": [
-        {"label": "OpenAI 帮助中心：API 额度福利", "href": "https://help.openai.com/en/articles/20001626-api-credits-benefit-for-eligible-chatgpt-subscriptions"},
-        {"label": "开发者文档：订阅送的 API 额度", "href": "https://developers.openai.com/api/docs/guides/chatgpt-api-credits"}
+        {
+          "label": "GitHub：dsh-superagent-prototype",
+          "href": "https://github.com/deepseek-ai/dsh-superagent-prototype"
+        },
+        {
+          "label": "新浪/智东西：DeepSeek 公布 Super-agent 架构",
+          "href": "https://finance.sina.cn/tech/csj/2026-11-01/detail-inixepty4335109.d.html"
+        }
       ]
     },
     {
       "lab": "DEEPSEEK",
-      "head": "曝第二轮融资约 1055 亿元",
-      "body": "IT之家等 10 月 30 日报道：DeepSeek 第二轮融资约 1055 亿元人民币，投后估值约 6155 亿元，腾讯、宁德时代、长鑫存储、中芯国际、美团、vivo 等近 30 家参与。同日还有开发者在官网前端代码里发现名为 Cyber 的安全模型入口，处于灰度测试，需实名并审批。",
-      "why": "国内开源模型头部玩家手里钱更多了，后续训练算力和降价空间都更足",
-      "accent": [138, 180, 248],
+      "head": "搜索/抓取接口今天起收费：每千次成功请求 5 元",
+      "body": "北京时间 11 月 1 日 00:00 起，DeepSeek API 的 Search（搜网页）和 Fetch（抓单页转 Markdown）按成功请求收费，各 5 元/千次；没结果、失败、超时不收。在 Claude Code、Codex、DeepSeek Harness 里用 DeepSeek API 时由服务端自动触发的搜索也开始计费。腾讯云 TokenHub 的 TokenPlan 套餐延到 11 月 18 日生效。",
+      "why": "如果你在编码工具里接了 DeepSeek，账单会多出一项按次费用；不需要联网就别传搜索工具参数",
+      "accent": [
+        126,
+        224,
+        129
+      ],
       "links": [
-        {"label": "IT之家：DeepSeek 第二轮融资", "href": "https://www.ithome.com/1/020/121.htm"}
+        {
+          "label": "DeepSeek 文档：网页搜索与抓取",
+          "href": "https://api-docs.deepseek.com/zh-cn/guides/search.md"
+        },
+        {
+          "label": "腾讯云 TokenHub 收费通知",
+          "href": "https://cloud.tencent.com/announce/detail/2538"
+        }
       ]
     },
     {
-      "lab": "QWEN",
-      "head": "Qwen4 系列预告，现场称下周",
-      "body": "阿里云 10 月 29 日在阿姆斯特丹开欧洲云栖大会，幻灯片写着 Qwen4 系列即将推出，包括 Qwen4-Max、Plus、Flash 和 27B。多位到场者转述阿里云 CTO 李飞飞说是下周。此前 Qwen Code 已合并的代码把 qwen4 的默认上下文设成 1M。官方还没给具体日期。",
-      "why": "如果下周真发，国内又多一档有 Flash 版的新一代模型可选",
-      "accent": [255, 159, 67],
+      "lab": "SENSETIME",
+      "head": "开源 Loop-9B-Preview：9B 参数循环复用",
+      "body": "商汤 10 月 31 日在 Hugging Face 放出 SenseNova Loop-9B-Preview 开源权重。它是循环 Transformer（同一组层反复跑几遍，用更少参数换更多计算），并加了一种改进层间信息流的连接方式 mHC。官方称在自家 WorkBuddy、RaccoonPPT、AutomationBench 等测试上超过 Qwen3.5-27B。",
+      "why": "小参数打大模型的新路子，本地部署显存紧的话值得留意，但目前只有自家榜单",
+      "accent": [
+        255,
+        159,
+        67
+      ],
       "links": [
-        {"label": "AI Timeline 10/30 日报", "href": "https://aitimeline.news/en/Daily/2026-10-30-X%E6%97%A5%E6%8A%A5/"}
+        {
+          "label": "DailyCited 10/31 汇总",
+          "href": "https://dailycited.com/d/2026-10-31/"
+        }
       ]
     },
     {
-      "lab": "BASETEN",
-      "head": "joey-1：2B 决策模型，$0.01/百万 token",
-      "body": "Baseten 发布 joey-1：不生成文字，只对你给的选项直接返回概率（选择题、是非题、打分），一次前向就出结果。由 Qwen3.5-2B 后训练而来，支持文本和图片，上下文 16K，MIT 开源。官方称 P50 延迟约 20 毫秒，价格 $0.01/百万 token，在 Jev Decision Index 0.4 公开集上是 4B 以下第一（63.30 分）。",
-      "why": "做 agent 路由和分类的话，比 Jev 1.13、Clef-flash 便宜几倍，值得拿真实任务比一比",
-      "accent": [102, 217, 239],
+      "lab": "RIGHTNOW",
+      "head": "System Zero：边读输入边给决策概率",
+      "body": "YC 创业公司 RightNow 10 月 31 日发布 System Zero，一个专做「做选择」的模型：可以流式吃进文本、JSON、PDF、图片、语音、代码库甚至视频，输入还没传完就返回每个选项的概率。官方称文本决策约 30 毫秒，一次调用最多 1024 个问题。",
+      "why": "又一个专门给路由/分类用的决策模型，可和 joey-1、Jev、Clef-flash 一起放进你的对比清单",
+      "accent": [
+        102,
+        217,
+        239
+      ],
       "links": [
-        {"label": "Baseten 博客：joey-1", "href": "https://www.baseten.co/blog/decisions-for-a-penny-introducing-joey-1/"},
-        {"label": "Hugging Face：baselabs/joey-1", "href": "https://huggingface.co/baselabs/joey-1"}
+        {
+          "label": "RightNow 官网",
+          "href": "https://rightnowai.co"
+        }
       ]
     },
     {
-      "lab": "DIFFUSPACE",
-      "head": "Clover-35B-A3B：开源扩散语言模型",
-      "body": "DiffuSpace 10 月 30 日开源 Clover-35B-A3B-Preview，Apache 协议。它是扩散语言模型（不是一个字一个字往后写，而是整段同时反复修改成形），MoE 结构，总参数 350 亿、每次激活 30 亿，支持思考模式，可用 SGLang 和 llama.cpp 跑。官方称多项测试超过同尺寸的 Qwen3.6-35B-A3B，生成速度明显更快。",
-      "why": "扩散路线第一次在这个尺寸上和主流模型正面比，本地部署想要快的可以关注",
-      "accent": [232, 184, 109],
+      "lab": "XIAOMI",
+      "head": "开源 0.8B 文档理解模型 Xiaomi-OCR-0",
+      "body": "小米 10 月 30 日晚开源 Xiaomi-OCR-0，只有 8 亿参数，把文档解析、关键信息抽取、看图问答三件事合在一个模型里。官方称在多项公开基准上领先同类。",
+      "why": "做票据、合同类文档 agent 时，可以用很小的本地模型先把文档转成结构化文字",
+      "accent": [
+        232,
+        184,
+        109
+      ],
       "links": [
-        {"label": "Hugging Face 博客：Clover", "href": "https://huggingface.co/blog/Diffuspace/clover-35b-a3b-preview"}
-      ]
-    },
-    {
-      "lab": "ANTHROPIC",
-      "head": "未发布模型自己串出 5 条漏洞利用链",
-      "body": "Anthropic 前沿红队披露：一个未发布的内部模型找到并串起漏洞，做出 5 条能用的攻击链，覆盖 Chrome、Safari、Android、Windows、Linux。仅 Chrome 一项报告后修了 62 个 CVE（公开漏洞编号）。全部先报给厂商、已修补后才公开。「人工参与很少」是官方说法，未拆分每一步人做了什么。",
-      "why": "前沿模型的攻防能力已经到能打穿主流浏览器的程度，各家收紧发布节奏的原因就在这",
-      "accent": [196, 167, 255],
-      "links": [
-        {"label": "Intelligence Unlocked 10/30 回顾", "href": "https://intelligenceunlocked.beehiiv.com/p/ai-tech-recap-october-30-gemini-4-carbon-takes-the-crown-anthropic-s-hacker-model"}
+        {
+          "label": "Token导航：模型发布汇总",
+          "href": "https://www.tokendh.com/news/model-releases"
+        }
       ]
     }
   ]
