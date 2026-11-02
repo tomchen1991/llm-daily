@@ -1,99 +1,57 @@
 {
-  "date": "2026.11.01",
-  "weekday": "周日",
-  "lede": "今天没有大模型正式发布。最值得看的是 DeepSeek 开源了一套「常驻在线的多任务 Agent」架构；另外 DeepSeek 网页搜索/抓取接口从今天零点开始收费。",
+  "date": "2026.11.02",
+  "weekday": "周一",
+  "lede": "今天没有大模型正式发布。和你最相关的是 OpenAI 改了订阅额度规则：12 月起 ChatGPT 和 Codex 共用一个按 token 计的额度。另外苹果确认在国内接入阿里千问。",
   "stories": [
     {
-      "lab": "DEEPSEEK",
-      "head": "开源 Super-agent 架构：轻模型分派、强模型干活",
-      "body": "10 月 31 日晚，DeepSeek Harness 团队公开 Super-agent 设计并开源原型（GitHub: deepseek-ai/dsh-superagent-prototype）。思路是两层：常驻的 Router 只和人对话、分派任务，可用较轻的模型；多个互相隔离的 Worker 用最强模型并行干活。另有事件驱动、跨 IM/GitHub 持续对话、外部看门狗自动恢复。官方称一半任务 12.4 分钟内完成、95% 在 15.7 分钟内；Router 把积压事件合并处理后，单个决定平均推理时间从 6.4 秒降到 1.6 秒。团队自己说明这是合成负载下的初步实验。",
-      "why": "和你在做的 agent 路由层是同一个问题，「路由用轻模型 + 批量合并事件」这条可以直接对照自己的实现",
-      "accent": [
-        138,
-        180,
-        248
-      ],
+      "lab": "OPENAI",
+      "head": "12 月起 ChatGPT 与 Codex 共用一份额度，按 token 计",
+      "body": "OpenAI 帮助中心新文档写明：从 12 月开始，Plus、Pro、Business 套餐的用量在 ChatGPT 和 Codex 之间共享，不再分开算；计量从「条数」改成 token（模型处理的文字单位），选的模型越强、任务越复杂扣得越多。普通的 Instant 聊天不扣额度。剩余额度和重置时间在 Settings → Usage 里看；用完可以等重置、升级或买 credits。官方称大多数人等重置的频率不会比现在多，但没有公布各档具体 token 数。",
+      "why": "你主要靠 Pro 跑 Codex，12 月起在 ChatGPT 里用 Work/Astra 也会吃同一份额度，月底续费前值得先看一眼 Usage 页面",
+      "accent": [126, 224, 129],
       "links": [
-        {
-          "label": "GitHub：dsh-superagent-prototype",
-          "href": "https://github.com/deepseek-ai/dsh-superagent-prototype"
-        },
-        {
-          "label": "新浪/智东西：DeepSeek 公布 Super-agent 架构",
-          "href": "https://finance.sina.cn/tech/csj/2026-11-01/detail-inixepty4335109.d.html"
-        }
+        {"label": "OpenAI 帮助中心：ChatGPT 和 Codex 用量限制", "href": "https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits"}
       ]
     },
     {
-      "lab": "DEEPSEEK",
-      "head": "搜索/抓取接口今天起收费：每千次成功请求 5 元",
-      "body": "北京时间 11 月 1 日 00:00 起，DeepSeek API 的 Search（搜网页）和 Fetch（抓单页转 Markdown）按成功请求收费，各 5 元/千次；没结果、失败、超时不收。在 Claude Code、Codex、DeepSeek Harness 里用 DeepSeek API 时由服务端自动触发的搜索也开始计费。腾讯云 TokenHub 的 TokenPlan 套餐延到 11 月 18 日生效。",
-      "why": "如果你在编码工具里接了 DeepSeek，账单会多出一项按次费用；不需要联网就别传搜索工具参数",
-      "accent": [
-        126,
-        224,
-        129
-      ],
+      "lab": "ALIBABA · APPLE",
+      "head": "千问接入国行 Apple Intelligence，11 月 4 日开测",
+      "body": "苹果和阿里周六确认：千问将接入中国大陆版 Apple Intelligence，覆盖 Siri、写作工具和视觉智能。11 月 4 日进 iOS 开发者测试版，12 月随 iOS 27.3 正式推送，iPhone 15 Pro 及以后机型可用。每次把问题、文档或图片发给千问前都要用户确认；阿里称通过这个入口的请求不会拿去训练模型。",
+      "why": "国内 iPhone 用户的系统级 AI 将由千问提供，千问的用户量和调用量会明显增加",
+      "accent": [255, 159, 67],
       "links": [
-        {
-          "label": "DeepSeek 文档：网页搜索与抓取",
-          "href": "https://api-docs.deepseek.com/zh-cn/guides/search.md"
-        },
-        {
-          "label": "腾讯云 TokenHub 收费通知",
-          "href": "https://cloud.tencent.com/announce/detail/2538"
-        }
+        {"label": "DEV 社区 11/2 日报（引中国日报、新华社）", "href": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-2-2026-four-ai-giants-back-one-robotstxt-token-chatgpt-and-codex-merge-4kdp"}
       ]
     },
     {
-      "lab": "SENSETIME",
-      "head": "开源 Loop-9B-Preview：9B 参数循环复用",
-      "body": "商汤 10 月 31 日在 Hugging Face 放出 SenseNova Loop-9B-Preview 开源权重。它是循环 Transformer（同一组层反复跑几遍，用更少参数换更多计算），并加了一种改进层间信息流的连接方式 mHC。官方称在自家 WorkBuddy、RaccoonPPT、AutomationBench 等测试上超过 Qwen3.5-27B。",
-      "why": "小参数打大模型的新路子，本地部署显存紧的话值得留意，但目前只有自家榜单",
-      "accent": [
-        255,
-        159,
-        67
-      ],
+      "lab": "NACE AI",
+      "head": "开源 27B 决策模型 Drex Max v1，可本地跑",
+      "body": "Nace AI 放出 Drex Max v1 权重（bf16、Q8_0 GGUF、Q4 版本，另有 llama.cpp 和 Ollama 分支）。它不生成文字，只对给定的选项一次算出每个选项的概率，每题最多 255 个选项，上下文最长 262,144 token（默认 16,384），能读文本、JSON 和图片。Mac 需 24GB 以上内存（Q4）。权重用修改版 Open RAIL-M 许可：个人和小机构可商用，超过门槛有限制。",
+      "why": "又一个专做路由/分类的模型，而且能放在本地，不用经过 Cloudflare 网关，可以和 Jev、Clef-flash 一起比",
+      "accent": [138, 180, 248],
       "links": [
-        {
-          "label": "DailyCited 10/31 汇总",
-          "href": "https://dailycited.com/d/2026-10-31/"
-        }
+        {"label": "MarkTechPost：Drex Max v1 开源", "href": "https://www.marktechpost.com/2026/11/01/nace-ai-open-sources-drex-max-v1-local-inference/"},
+        {"label": "Hugging Face：nace-ai/drex-max-v1", "href": "https://huggingface.co/nace-ai/drex-max-v1"}
       ]
     },
     {
-      "lab": "RIGHTNOW",
-      "head": "System Zero：边读输入边给决策概率",
-      "body": "YC 创业公司 RightNow 10 月 31 日发布 System Zero，一个专做「做选择」的模型：可以流式吃进文本、JSON、PDF、图片、语音、代码库甚至视频，输入还没传完就返回每个选项的概率。官方称文本决策约 30 毫秒，一次调用最多 1024 个问题。",
-      "why": "又一个专门给路由/分类用的决策模型，可和 joey-1、Jev、Clef-flash 一起放进你的对比清单",
-      "accent": [
-        102,
-        217,
-        239
-      ],
+      "lab": "OPENAI · GOOGLE · MS · ANTHROPIC",
+      "head": "四家同意认一个 robots.txt「不许拿去训练」标记",
+      "body": "OpenAI、Google、微软、Anthropic 表示会遵守同一个写在 robots.txt（网站告诉爬虫能不能抓的文件）里的标记，网站写一行就能同时拒绝四家拿内容训练模型。Anthropic 已经支持，OpenAI 说几个月内跟上，Google 和微软明年。这是自愿遵守，只管以后，不影响已经抓走的数据；Meta 表态支持但没承诺遵守。",
+      "why": "以后各家能拿到的公开网页训练数据会变少，数据授权和付费问题会更突出",
+      "accent": [102, 217, 239],
       "links": [
-        {
-          "label": "RightNow 官网",
-          "href": "https://rightnowai.co"
-        }
+        {"label": "DEV 社区 11/2 日报（引 The Verge）", "href": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-2-2026-four-ai-giants-back-one-robotstxt-token-chatgpt-and-codex-merge-4kdp"}
       ]
     },
     {
-      "lab": "XIAOMI",
-      "head": "开源 0.8B 文档理解模型 Xiaomi-OCR-0",
-      "body": "小米 10 月 30 日晚开源 Xiaomi-OCR-0，只有 8 亿参数，把文档解析、关键信息抽取、看图问答三件事合在一个模型里。官方称在多项公开基准上领先同类。",
-      "why": "做票据、合同类文档 agent 时，可以用很小的本地模型先把文档转成结构化文字",
-      "accent": [
-        232,
-        184,
-        109
-      ],
+      "lab": "MICROSOFT",
+      "head": "4B 小模型 Mage-VL-Cowork：会点屏幕也会写代码",
+      "body": "微软 Mage 团队公开 Mage-VL-Cowork 的技术报告（10 月 30 日更新）。这是一个 40 亿参数的「操作电脑」模型，同一个模型自己决定每一步是点鼠标键盘还是跑代码/终端命令。官方称在 OSWorld-Verified（真实桌面任务测试）50 步内完成 66.0%，高于 Qwen3.6-27B 的 63.9%。",
+      "why": "说明小模型也能做像样的电脑操作 agent，本地或低成本跑桌面自动化更可行了",
+      "accent": [232, 184, 109],
       "links": [
-        {
-          "label": "Token导航：模型发布汇总",
-          "href": "https://www.tokendh.com/news/model-releases"
-        }
+        {"label": "Microsoft Mage：Mage-VL-Cowork", "href": "https://microsoft.github.io/Mage/cowork/"}
       ]
     }
   ]
