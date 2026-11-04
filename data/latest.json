@@ -1,106 +1,102 @@
 {
-  "date": "2026.11.03",
-  "weekday": "周二",
-  "lede": "昨夜主线是美团正式发布 LongCat-2.5。另有 Deep Principle 开源科学向 Hydrogen-1.0，Anthropic 给长会话 agent 上了 message threads。",
+  "date": "2026.11.04",
+  "weekday": "周三",
+  "lede": "昨夜没有新模型大发布。DeepSeek 午后网页和 API 短暂挂了又修好；Google 给学生账号默认关掉 Gemini 和搜索；苹果中国区「Apple 智能」按计划今天开测并接上了千问。Kimi K3.1 Pro 权重承诺今天到期，早上看 Hugging Face 上还没有。",
   "stories": [
     {
-      "lab": "MEITUAN",
-      "accent": [
-        255,
-        159,
-        67
-      ],
-      "head": "LongCat-2.5 发布：1.6 万亿参数，面向长程智能体",
-      "body": "美团 11 月 2 日发布 LongCat-2.5，官方称是面向长程智能体任务的原生多模态模型，总参数 1.6 万亿、约 480 亿每 token 激活，训练全程用国产算力，上下文最长 100 万 token。官网 longcat.ai 可体验，API 同步上线；限时价约每百万 token 输入 0.30 美元、输出 1.20 美元。Vercel AI Gateway 同日可调 meituan/longcat-2.5。官方称多项基准成绩介于 Claude Opus 4.8 与 Opus 5 之间。",
-      "why": "国内又一个万亿级、可直接调 API 的多模态 agent 模型，且明确走国产算力路线",
-      "links": [
-        {
-          "label": "美团新闻稿",
-          "href": "https://www.meituan.com/news/NN261102280001343"
-        },
-        {
-          "label": "LongCat-2.5 定价",
-          "href": "https://longcat.ai/platform/docs/pricing/longcat-2.5"
-        },
-        {
-          "label": "Vercel AI Gateway 更新",
-          "href": "https://vercel.com/changelog/longcat-2-5-now-available-on-ai-gateway"
-        }
-      ]
-    },
-    {
-      "lab": "DEEP PRINCIPLE",
-      "accent": [
-        126,
-        224,
-        129
-      ],
-      "head": "Hydrogen-1.0 开源：基于 GLM-5.3 的科学向模型",
-      "body": "杭州 Deep Principle 11 月 2 日放出 Hydrogen-1.0：在智谱 GLM-5.3 上做化学、材料、生命科学方向的后训练，约 7530 亿总参数，MIT 许可，Hugging Face / ModelScope 可下（gated）。官方称 FrontierScience-Research 38.3%、高于其自测的 GPT-6 Astra 33.3%；另有 NeuroSpark API 与自家 Mira「AI Scientist」。",
-      "why": "开源权重 + 实验室笔记后训练，科研向开源模型又多了一个可自托管选项",
-      "links": [
-        {
-          "label": "Deep Principle 介绍博客",
-          "href": "https://blog.deepprinciple.com/introducing-hydrogen-1.0/"
-        },
-        {
-          "label": "Hugging Face：Hydrogen-1.0",
-          "href": "https://huggingface.co/deep-principle/Hydrogen-1.0"
-        }
-      ]
-    },
-    {
-      "lab": "ANTHROPIC",
-      "accent": [
-        196,
-        167,
-        255
-      ],
-      "head": "Messages API 公测 message threads：长会话首字更快",
-      "body": "Anthropic 11 月 2 日宣布 message threads 公测：agent 只需首轮发完整对话，之后只发新增消息和上一条响应 ID，服务端暂存线程（加密、不落盘），闲置 5 分钟过期。官方称 Claude Code 多数用户已默认开启，50 万–100 万 token 请求的首字延迟中位数约降 35%；计费与限速不变，模型仍读完整上下文。已在 Claude API 及 AWS / Azure / Google Cloud 上的 Claude 平台开放。",
-      "why": "做长循环 coding / 电脑操作 agent 时，上传体积和首字等待会小一截，账单不会跟着降",
-      "links": [
-        {
-          "label": "Anthropic：message threads 说明",
-          "href": "https://claude.com/resources/articles/message-threads"
-        },
-        {
-          "label": "Claude Platform 发布说明",
-          "href": "https://platform.claude.com/docs/en/release-notes/overview"
-        }
-      ]
-    },
-    {
-      "lab": "OPENAI",
-      "accent": [
-        138,
-        180,
-        248
-      ],
-      "head": "推出 Grid Protectors：算力园区可在电网紧张时让电",
-      "body": "OpenAI 11 月 2 日发文启动 Grid Protectors Program：未来算力园区与电力公司约定，在电网高峰时下调用电，必要时用场内发电或储能回馈。乔治亚州 Effingham 园区作试点，与 Georgia Power 约定最多约 1000 兆瓦可调节负荷；OpenAI 称自付基建与用电成本，不让居民电费补贴园区。",
-      "why": "大模型公司开始把「能不能配合电网削峰」写成公开承诺，后面建园区谈判会常提到这一条",
-      "links": [
-        {
-          "label": "OpenAI：Grid Protectors Program",
-          "href": "https://openai.com/index/grid-protectors-program"
-        }
-      ]
-    },
-    {
-      "lab": "OPENAI",
+      "lab": "DEEPSEEK",
       "accent": [
         102,
         217,
         239
       ],
-      "head": "LifeVal：测 AI 帮人办日常事的能力",
-      "body": "OpenAI 同日发布 LifeVal 基准，用来衡量模型在找托育、理财、入学准备、政府文书等日常事务上能帮到什么程度；材料称任务来自时间使用调查，并参考约 3995 人的代表性问卷，覆盖照护、健康、教育、家务行政、财务、购物和政务等。",
-      "why": "评测从编程/考试卷，多了一块「普通人办事」的尺子，以后比模型会多看这类分数",
+      "head": "网页与 API 部分中断约 1 小时 50 分，已恢复",
+      "body": "11 月 3 日 16:58–18:48（上海时间）DeepSeek 官方状态页记录网页/API 部分中断，对话服务、V4 Pro API、V4.1 Flash API 受影响；约 18:48 宣布已修复并恢复。话题曾上热搜，记者实测对话页出现「服务器繁忙」。",
+      "why": "国内常用 API 下午高峰掉线，写 agent 的人要有重试与备用路由",
       "links": [
         {
-          "label": "OpenAI：LifeVal",
-          "href": "https://openai.com/index/lifeval"
+          "label": "DeepSeek Status 事故页",
+          "href": "https://status.deepseek.com/incidents/7202016104287"
+        },
+        {
+          "label": "21 经济网报道",
+          "href": "https://www.21jingji.com/article/20261103/herald/21249f3d4dd3bcc34efc7dbbb02763ec.html"
+        }
+      ]
+    },
+    {
+      "lab": "GOOGLE",
+      "accent": [
+        138,
+        180,
+        248
+      ],
+      "head": "K-12 学生账号默认关掉 Gemini 和 Google 搜索",
+      "body": "Google 教育业务负责人 11 月 3 日发文：Gemini、Gemini Notebook、Classroom 里的 Gemini，以及 Google 搜索，对 K-12 学生账号将全部默认关闭，要学校管理员主动打开。官方称会再给学校几个月准备时间。同日 Classroom 全球可用 Guided Learning（用追问带学生解题，而不是直接给答案）；搜索侧的 Guided Learning 本月先在部分美国学校试点。媒体报道称，因搜索已和 AI 绑得很紧，关掉 AI 可能连普通搜索也一起没了。",
+      "why": "学校侧 AI 开关变成「默认关」，且可能连带搜索，会影响学生端流量与产品设计",
+      "links": [
+        {
+          "label": "Google 教育博客",
+          "href": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/"
+        },
+        {
+          "label": "The Verge 报道",
+          "href": "https://www.theverge.com/tech/1025411/google-turn-off-search-ai-features"
+        }
+      ]
+    },
+    {
+      "lab": "APPLE / 阿里",
+      "accent": [
+        255,
+        159,
+        67
+      ],
+      "head": "中国区 Apple 智能今天开测，Siri 等可调用千问",
+      "body": "苹果 10 月 31 日中国新闻稿写明：首批 Apple 智能功能自 11 月 4 日起随最新 iOS 开发者 Beta 开放测试，12 月随 iOS 27.3 正式推出。功能含实时翻译、写作工具、视觉智能、消除工具、智绘表情等；并与阿里合作，在 Siri、写作工具、视觉智能中可调用千问（文本/图像理解与内容生成）。用户可选择是否开通，并用 Apple 登录或千问账户。本次不含 WWDC 2026 公布的下一代 Siri AI。新浪科技 11 月 4 日上午实测已可在符合条件的 iPhone 上试用。",
+      "why": "国行 iPhone 终于能开系统级 AI，且明确接到千问，对国内大模型分发是实质入口",
+      "links": [
+        {
+          "label": "苹果中国新闻稿",
+          "href": "https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/"
+        },
+        {
+          "label": "新浪科技体验",
+          "href": "https://finance.sina.com.cn/tech/shenji/2026-11-04/doc-inixpmfa9498917.shtml"
+        }
+      ]
+    },
+    {
+      "lab": "META",
+      "accent": [
+        196,
+        167,
+        255
+      ],
+      "head": "暂停推出被指可抓新闻站训练 AI 的商业账号条款",
+      "body": "美联社/洛杉矶时报 11 月 3 日报道：Meta 推迟对商业账号新条款的生效。原定约 10 月 30 日生效的条款写明，公司可用爬虫等自动工具对商业账号关联域名与网页做索引、缓存、分析、抓取。挪威法院此前应约 180 家媒体请求发出临时禁令；英国竞争监管机构也已启动调查。Meta 发言人称条款是为广告与站内推荐拉取商品信息，不是去刮新闻站；但公司已表示先维持旧条款，并称会先充分咨询行业后再改政策。",
+      "why": "平台条款能不能被读成「默许可抓内容训模型」正被监管和媒体盯死",
+      "links": [
+        {
+          "label": "洛杉矶时报 / AP",
+          "href": "https://www.latimes.com/business/story/2026-11-03/meta-pauses-rules-that-critics-say-could-let-it-scrape-news-sites-for-ai"
+        }
+      ]
+    },
+    {
+      "lab": "REVOLUT / Z.AI",
+      "accent": [
+        126,
+        224,
+        129
+      ],
+      "head": "金融科技公司自托管 GLM：称 coding 推理成本砍约九成",
+      "body": "The Register 11 月 3 日报道：Revolut 基础设施负责人 David Abitbol 在 AI Engineer 大会上说，约 2000 名工程师默认改用自托管智谱 GLM（从 5.1 升到 5.3），跑在约 56 张 Nvidia B200 上；自称混合成本约每百万 token 0.30 美元，约为原先 Anthropic/OpenAI 编码工具的十分之一，编码耗时与交付周期分别改善约 60%、70%。视觉类请求仍路由到 Gemini 或 GPT Luna。他强调便宜后才会放心把调试、Jira 也丢给模型；并称百万上下文「能开不等于该开」，他们实际常用约 25.6 万 token。",
+      "why": "开源权重 + 自建推理，正在变成大厂砍闭源 coding 账单的真实案例",
+      "links": [
+        {
+          "label": "The Register 报道",
+          "href": "https://www.theregister.com/ai-and-ml/2026/11/03/british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutting-out-claude-and-going-self-hosted/5307345"
         }
       ]
     }
