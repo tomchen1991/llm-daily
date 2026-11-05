@@ -1,103 +1,59 @@
 {
-  "date": "2026.11.04",
-  "weekday": "周三",
-  "lede": "昨夜没有新模型大发布。DeepSeek 午后网页和 API 短暂挂了又修好；Google 给学生账号默认关掉 Gemini 和搜索；苹果中国区「Apple 智能」按计划今天开测并接上了千问。Kimi K3.1 Pro 权重承诺今天到期，早上看 Hugging Face 上还没有。",
+  "date": "2026.11.05",
+  "weekday": "周四",
+  "lede": "昨夜有三件硬货：OpenAI 上线 Images 2.6（可出 GIF）；腾讯混元 Hy4 正式版首次带视觉和电脑操作；月之暗面按承诺放出 Kimi K3.1 Pro 权重。",
   "stories": [
     {
-      "lab": "DEEPSEEK",
-      "accent": [
-        102,
-        217,
-        239
-      ],
-      "head": "网页与 API 部分中断约 1 小时 50 分，已恢复",
-      "body": "11 月 3 日 16:58–18:48（上海时间）DeepSeek 官方状态页记录网页/API 部分中断，对话服务、V4 Pro API、V4.1 Flash API 受影响；约 18:48 宣布已修复并恢复。话题曾上热搜，记者实测对话页出现「服务器繁忙」。",
-      "why": "国内常用 API 下午高峰掉线，写 agent 的人要有重试与备用路由",
+      "lab": "OPENAI",
+      "accent": [126, 224, 129],
+      "head": "Images 2.6 上线：可出 GIF，API 分 Flare / Sunburst",
+      "body": "11 月 4 日 OpenAI 官方发文：Images 2.6 已在 ChatGPT、Codex 和 API 全球可用。官方称生成速度比上一代快约 50%；新增 GIF 动画、SVG 导出、标记引导的局部编辑，以及控制「规划力度」的 complexity 参数。API 侧提供 GPT-Image-2.6 Flare（偏快，low 质量最快约 6 秒）和 Sunburst（偏稳、编辑一致性更好）。官方称全平台每周约产出 40 亿张图。",
+      "why": "图像能力从「出静图」扩到动图和可控编辑，做产品图、社媒素材、agent 出图的人都直接受影响",
       "links": [
-        {
-          "label": "DeepSeek Status 事故页",
-          "href": "https://status.deepseek.com/incidents/7202016104287"
-        },
-        {
-          "label": "21 经济网报道",
-          "href": "https://www.21jingji.com/article/20261103/herald/21249f3d4dd3bcc34efc7dbbb02763ec.html"
-        }
+        {"label": "OpenAI 官方公告", "href": "https://openai.com/index/introducing-images-2-6/"}
+      ]
+    },
+    {
+      "lab": "TENCENT",
+      "accent": [138, 180, 248],
+      "head": "混元 Hy4 正式版：首次视觉理解 + 电脑操作",
+      "body": "11 月 4 日腾讯发布 Hy4。官方称首次加入视觉理解（细粒度读图、复杂图表、数学视觉推理）和电脑操作（命令行与图形界面），并针对 Blender、CAD 等专业软件做过专项训练。权重与系统卡「未来几天」放出。官方称价格与 Preview 持平：约每百万 token 输入 0.90 美元、输出 2.70 美元、缓存输入 0.045 美元；11 月 4–15 日 WorkBuddy/CodeBuddy 免费，TokenHub 上 Hy4 五折至 12 月 31 日。国内媒体报道参数约 770B（相对 Hy3 系列不到 300B）。",
+      "why": "国内头部实验室再推「能看又能点电脑」的开源向旗舰，且 API 价位对 agent 工作流友好",
+      "links": [
+        {"label": "腾讯英文公告", "href": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/"},
+        {"label": "财新报道", "href": "https://www.caixin.com/2026-11-04/102500988.html"}
+      ]
+    },
+    {
+      "lab": "MOONSHOT",
+      "accent": [255, 159, 67],
+      "head": "Kimi K3.1 Pro 权重按承诺上线 Hugging Face",
+      "body": "10 月发布时承诺「11 月 4 日前放出完整权重」。仓库 moonshotai/Kimi-K3.1-Pro 已公开：混合专家架构，总参数 2.8 万亿、单次激活约 1040 亿，约 100 万 token 上下文，文本+图像；权重为训练时量化的 MXFP4，仓库约 1.56 TB。推荐用 vLLM / SGLang / TokenSpeed 跑。许可证允许商用，但对超大规模 API 服务和大流量产品另有协议/署名条件。",
+      "why": "最大档开源权重之一终于可自托管，但体量决定只有机房玩家能直接拉起",
+      "links": [
+        {"label": "Hugging Face 权重", "href": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"},
+        {"label": "Kimi 发布页", "href": "https://www.kimi.ai/blog/kimi-k3-1-pro"}
       ]
     },
     {
       "lab": "GOOGLE",
-      "accent": [
-        138,
-        180,
-        248
-      ],
-      "head": "K-12 学生账号默认关掉 Gemini 和 Google 搜索",
-      "body": "Google 教育业务负责人 11 月 3 日发文：Gemini、Gemini Notebook、Classroom 里的 Gemini，以及 Google 搜索，对 K-12 学生账号将全部默认关闭，要学校管理员主动打开。官方称会再给学校几个月准备时间。同日 Classroom 全球可用 Guided Learning（用追问带学生解题，而不是直接给答案）；搜索侧的 Guided Learning 本月先在部分美国学校试点。媒体报道称，因搜索已和 AI 绑得很紧，关掉 AI 可能连普通搜索也一起没了。",
-      "why": "学校侧 AI 开关变成「默认关」，且可能连带搜索，会影响学生端流量与产品设计",
+      "accent": [102, 217, 239],
+      "head": "Gemini TTS 上线 Voice Remixing：用自然语言改音色",
+      "body": "11 月 4 日 Google 在 AI Studio 与 Gemini API 上线 Voice Remixing（语音混搭）。可从 2000+ 预设或自定义音色起步，用自然语言改音色、音高、语速、口音（例如「加一点美国南方口音」），生成新的可复用 voice_… ID，配合 gemini-3.8-flash-tts 使用。文档写明付费项目有状态音色上限（约 200 个），一年未用会过期。",
+      "why": "品牌语音、多角色播客、客服音色迭代从「录一版」变成「改一句提示词」",
       "links": [
-        {
-          "label": "Google 教育博客",
-          "href": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/"
-        },
-        {
-          "label": "The Verge 报道",
-          "href": "https://www.theverge.com/tech/1025411/google-turn-off-search-ai-features"
-        }
+        {"label": "Gemini 语音设计文档", "href": "https://ai.google.dev/gemini-api/docs/generate-content/voice-design"},
+        {"label": "Voices API", "href": "https://ai.google.dev/api/voices"}
       ]
     },
     {
-      "lab": "APPLE / 阿里",
-      "accent": [
-        255,
-        159,
-        67
-      ],
-      "head": "中国区 Apple 智能今天开测，Siri 等可调用千问",
-      "body": "苹果 10 月 31 日中国新闻稿写明：首批 Apple 智能功能自 11 月 4 日起随最新 iOS 开发者 Beta 开放测试，12 月随 iOS 27.3 正式推出。功能含实时翻译、写作工具、视觉智能、消除工具、智绘表情等；并与阿里合作，在 Siri、写作工具、视觉智能中可调用千问（文本/图像理解与内容生成）。用户可选择是否开通，并用 Apple 登录或千问账户。本次不含 WWDC 2026 公布的下一代 Siri AI。新浪科技 11 月 4 日上午实测已可在符合条件的 iPhone 上试用。",
-      "why": "国行 iPhone 终于能开系统级 AI，且明确接到千问，对国内大模型分发是实质入口",
+      "lab": "OPEN WEIGHTS",
+      "accent": [196, 167, 255],
+      "head": "同日两款可下载小中型模型：TwIL-8B、Ripple-65B",
+      "body": "webAI 放出 TwIL-8B（约 8.8B，基于 IBM Granite 后训练），自称 MATH-500 约 98.2，非商用许可，有 GGUF 便于本机跑。Ricursive Intelligence 放出 Ripple-65B Preview（稠密 65B、Apache 2.0），自称 Terminal-Bench 2.1 约 80.5，支持最长约 100 万 token 上下文，已上 Hugging Face 等渠道。",
+      "why": "一边是「笔记本能跑」的推理小模型，一边是美国开源 coding 榜上的中型权重，本机/私有化选项又多了两条",
       "links": [
-        {
-          "label": "苹果中国新闻稿",
-          "href": "https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/"
-        },
-        {
-          "label": "新浪科技体验",
-          "href": "https://finance.sina.com.cn/tech/shenji/2026-11-04/doc-inixpmfa9498917.shtml"
-        }
-      ]
-    },
-    {
-      "lab": "META",
-      "accent": [
-        196,
-        167,
-        255
-      ],
-      "head": "暂停推出被指可抓新闻站训练 AI 的商业账号条款",
-      "body": "美联社/洛杉矶时报 11 月 3 日报道：Meta 推迟对商业账号新条款的生效。原定约 10 月 30 日生效的条款写明，公司可用爬虫等自动工具对商业账号关联域名与网页做索引、缓存、分析、抓取。挪威法院此前应约 180 家媒体请求发出临时禁令；英国竞争监管机构也已启动调查。Meta 发言人称条款是为广告与站内推荐拉取商品信息，不是去刮新闻站；但公司已表示先维持旧条款，并称会先充分咨询行业后再改政策。",
-      "why": "平台条款能不能被读成「默许可抓内容训模型」正被监管和媒体盯死",
-      "links": [
-        {
-          "label": "洛杉矶时报 / AP",
-          "href": "https://www.latimes.com/business/story/2026-11-03/meta-pauses-rules-that-critics-say-could-let-it-scrape-news-sites-for-ai"
-        }
-      ]
-    },
-    {
-      "lab": "REVOLUT / Z.AI",
-      "accent": [
-        126,
-        224,
-        129
-      ],
-      "head": "金融科技公司自托管 GLM：称 coding 推理成本砍约九成",
-      "body": "The Register 11 月 3 日报道：Revolut 基础设施负责人 David Abitbol 在 AI Engineer 大会上说，约 2000 名工程师默认改用自托管智谱 GLM（从 5.1 升到 5.3），跑在约 56 张 Nvidia B200 上；自称混合成本约每百万 token 0.30 美元，约为原先 Anthropic/OpenAI 编码工具的十分之一，编码耗时与交付周期分别改善约 60%、70%。视觉类请求仍路由到 Gemini 或 GPT Luna。他强调便宜后才会放心把调试、Jira 也丢给模型；并称百万上下文「能开不等于该开」，他们实际常用约 25.6 万 token。",
-      "why": "开源权重 + 自建推理，正在变成大厂砍闭源 coding 账单的真实案例",
-      "links": [
-        {
-          "label": "The Register 报道",
-          "href": "https://www.theregister.com/ai-and-ml/2026/11/03/british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutting-out-claude-and-going-self-hosted/5307345"
-        }
+        {"label": "模型发布汇总", "href": "https://theagenticweekly.com/news/models"}
       ]
     }
   ]
