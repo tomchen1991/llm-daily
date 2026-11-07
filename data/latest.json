@@ -1,59 +1,132 @@
 {
-  "date": "2026.11.05",
-  "weekday": "周四",
-  "lede": "昨夜有三件硬货：OpenAI 上线 Images 2.6（可出 GIF）；腾讯混元 Hy4 正式版首次带视觉和电脑操作；月之暗面按承诺放出 Kimi K3.1 Pro 权重。",
+  "date": "2026.11.07",
+  "weekday": "周六",
+  "lede": "昨夜主线：OpenAI 放出专攻安全研究的 GPT-6 Cyber；谷歌视频模型 Omni 1.2 Flash 正式开放并降价 30%；百度开源文心 5.5 Flash Base。",
   "stories": [
     {
       "lab": "OPENAI",
-      "accent": [126, 224, 129],
-      "head": "Images 2.6 上线：可出 GIF，API 分 Flare / Sunburst",
-      "body": "11 月 4 日 OpenAI 官方发文：Images 2.6 已在 ChatGPT、Codex 和 API 全球可用。官方称生成速度比上一代快约 50%；新增 GIF 动画、SVG 导出、标记引导的局部编辑，以及控制「规划力度」的 complexity 参数。API 侧提供 GPT-Image-2.6 Flare（偏快，low 质量最快约 6 秒）和 Sunburst（偏稳、编辑一致性更好）。官方称全平台每周约产出 40 亿张图。",
-      "why": "图像能力从「出静图」扩到动图和可控编辑，做产品图、社媒素材、agent 出图的人都直接受影响",
+      "accent": [
+        126,
+        224,
+        129
+      ],
+      "head": "GPT-6 Cyber 上线：专攻漏洞发现与验证",
+      "body": "11 月 5 日 OpenAI 官方发文推出 GPT-6 Cyber。官方称 ExploitGym 得分 48.5%（上代 GPT-5.6 Cyber 为 32.1%）；在自建对齐测试里，无部署提示时越界率约 0.07%，加上提示后为 0%。官方称已协助在 Firefox 找到 81 个此前未知的高危漏洞，并在 Linux 内核研究中复现 1724 项、做出 948 个可运行的本地提权利用。安全能力自评升至 Critical。目前仅向获批的 Daybreak Red 客户开放 API/Codex，并默认要求 IP 白名单。",
+      "why": "安全研究模型真正落地到授权团队手里，同时把「能力」和「别越权」绑在一起评",
       "links": [
-        {"label": "OpenAI 官方公告", "href": "https://openai.com/index/introducing-images-2-6/"}
-      ]
-    },
-    {
-      "lab": "TENCENT",
-      "accent": [138, 180, 248],
-      "head": "混元 Hy4 正式版：首次视觉理解 + 电脑操作",
-      "body": "11 月 4 日腾讯发布 Hy4。官方称首次加入视觉理解（细粒度读图、复杂图表、数学视觉推理）和电脑操作（命令行与图形界面），并针对 Blender、CAD 等专业软件做过专项训练。权重与系统卡「未来几天」放出。官方称价格与 Preview 持平：约每百万 token 输入 0.90 美元、输出 2.70 美元、缓存输入 0.045 美元；11 月 4–15 日 WorkBuddy/CodeBuddy 免费，TokenHub 上 Hy4 五折至 12 月 31 日。国内媒体报道参数约 770B（相对 Hy3 系列不到 300B）。",
-      "why": "国内头部实验室再推「能看又能点电脑」的开源向旗舰，且 API 价位对 agent 工作流友好",
-      "links": [
-        {"label": "腾讯英文公告", "href": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/"},
-        {"label": "财新报道", "href": "https://www.caixin.com/2026-11-04/102500988.html"}
-      ]
-    },
-    {
-      "lab": "MOONSHOT",
-      "accent": [255, 159, 67],
-      "head": "Kimi K3.1 Pro 权重按承诺上线 Hugging Face",
-      "body": "10 月发布时承诺「11 月 4 日前放出完整权重」。仓库 moonshotai/Kimi-K3.1-Pro 已公开：混合专家架构，总参数 2.8 万亿、单次激活约 1040 亿，约 100 万 token 上下文，文本+图像；权重为训练时量化的 MXFP4，仓库约 1.56 TB。推荐用 vLLM / SGLang / TokenSpeed 跑。许可证允许商用，但对超大规模 API 服务和大流量产品另有协议/署名条件。",
-      "why": "最大档开源权重之一终于可自托管，但体量决定只有机房玩家能直接拉起",
-      "links": [
-        {"label": "Hugging Face 权重", "href": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"},
-        {"label": "Kimi 发布页", "href": "https://www.kimi.ai/blog/kimi-k3-1-pro"}
+        {
+          "label": "OpenAI 官方公告",
+          "href": "https://openai.com/index/introducing-gpt-6-cyber/"
+        },
+        {
+          "label": "System Card",
+          "href": "https://deploymentsafety.openai.com/gpt-6-cyber"
+        }
       ]
     },
     {
       "lab": "GOOGLE",
-      "accent": [102, 217, 239],
-      "head": "Gemini TTS 上线 Voice Remixing：用自然语言改音色",
-      "body": "11 月 4 日 Google 在 AI Studio 与 Gemini API 上线 Voice Remixing（语音混搭）。可从 2000+ 预设或自定义音色起步，用自然语言改音色、音高、语速、口音（例如「加一点美国南方口音」），生成新的可复用 voice_… ID，配合 gemini-3.8-flash-tts 使用。文档写明付费项目有状态音色上限（约 200 个），一年未用会过期。",
-      "why": "品牌语音、多角色播客、客服音色迭代从「录一版」变成「改一句提示词」",
+      "accent": [
+        138,
+        180,
+        248
+      ],
+      "head": "Gemini Omni 1.2 Flash：最长 15 秒视频，价降 30%",
+      "body": "11 月 5 日 Google 官方发文，Omni 1.2 Flash 在 Gemini API 与 Google Cloud 全面可用。官方称原生生成/编辑最长 15 秒（上代 10 秒），支持多轮对话改同一段视频；720p 报价每秒 0.07 美元，较 1.1 Flash 降约 30%。可先用 360p/720p 打草稿再升到 1080p 或 4K。Google Vids 对普通 Google 账号每月免费 3 条 15 秒；Gemini App 的 15 秒能力面向 Ultra 订阅滚动开放。",
+      "why": "视频生成第一次以「可商用 API + 更长片段 + 更低单价」齐套铺开",
       "links": [
-        {"label": "Gemini 语音设计文档", "href": "https://ai.google.dev/gemini-api/docs/generate-content/voice-design"},
-        {"label": "Voices API", "href": "https://ai.google.dev/api/voices"}
+        {
+          "label": "Google 官方博客",
+          "href": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+        },
+        {
+          "label": "模型卡",
+          "href": "https://deepmind.google/models/model-cards/gemini-omni-1-2-flash/"
+        }
       ]
     },
     {
-      "lab": "OPEN WEIGHTS",
-      "accent": [196, 167, 255],
-      "head": "同日两款可下载小中型模型：TwIL-8B、Ripple-65B",
-      "body": "webAI 放出 TwIL-8B（约 8.8B，基于 IBM Granite 后训练），自称 MATH-500 约 98.2，非商用许可，有 GGUF 便于本机跑。Ricursive Intelligence 放出 Ripple-65B Preview（稠密 65B、Apache 2.0），自称 Terminal-Bench 2.1 约 80.5，支持最长约 100 万 token 上下文，已上 Hugging Face 等渠道。",
-      "why": "一边是「笔记本能跑」的推理小模型，一边是美国开源 coding 榜上的中型权重，本机/私有化选项又多了两条",
+      "lab": "BAIDU",
+      "accent": [
+        255,
+        159,
+        67
+      ],
+      "head": "文心 5.5 Flash Base 开源：280B 总参、激活 14B",
+      "body": "百度在 Hugging Face / ModelScope 放出 ERNIE-5.5-Flash-Base。官方说明：稀疏 MoE，总参数 2800 亿、每 token 激活 140 亿；预训练约 33.5 万亿 token，训练上下文最高 128K，微调与推理可到 1M。提供 FP8 与 BF16 权重，支持 SGLang / vLLM。仓库称在统一评测管线下，知识、推理、代码、长上下文多项指标高于同尺寸对照基座。",
+      "why": "又多了一条可下载的国产大基座，方便自己做微调与后训练",
       "links": [
-        {"label": "模型发布汇总", "href": "https://theagenticweekly.com/news/models"}
+        {
+          "label": "Hugging Face",
+          "href": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base"
+        },
+        {
+          "label": "官方博客",
+          "href": "https://ernie.baidu.com/release/ernie-5-5-flash-base/"
+        }
+      ]
+    },
+    {
+      "lab": "DEEPSEEK",
+      "accent": [
+        102,
+        217,
+        239
+      ],
+      "head": "Harness 日活 154 万，日耗约 92 万亿 Token",
+      "body": "11 月 5 日 DeepSeek Harness 官方公布：截至 11 月 4 日，按使用官方 API 的用户统计，日活跃约 154 万，日消耗 Token 约 92 万亿；第三方插件约 3.5 万个，约六成活跃用户装过或做过插件。官方称将建插件市场，并筹备面向作者的 Token 激励与推荐计划。",
+      "why": "少有的公开 agent 客户端用量口径，能看出「模型 + 外壳」产品有多热",
+      "links": [
+        {
+          "label": "IT之家报道",
+          "href": "https://www.ithome.com/1/023/011.htm"
+        },
+        {
+          "label": "第一财经",
+          "href": "https://www.yicai.com/news/103428332.html"
+        }
+      ]
+    },
+    {
+      "lab": "THINKING MACHINES",
+      "accent": [
+        196,
+        167,
+        255
+      ],
+      "head": "Inkling 2 Small：594B MoE，激活约 17B",
+      "body": "Mira Murati 创办的 Thinking Machines Lab 推出 Inkling 2 Small。多家科技媒体报道：总参数约 5940 亿、激活约 170 亿，支持文本与图像；现可在其 Tinker 平台调用，官方称权重计划在安全评估后以 Apache 2.0 放出。SiliconANGLE 等同时提到其正在推进新一轮融资传闻。",
+      "why": "美国实验室再推「大总参、小激活」开源向路线，和国产 MoE 形成对照",
+      "links": [
+        {
+          "label": "Techmeme 摘要",
+          "href": "https://techmeme.com/261105/p61"
+        },
+        {
+          "label": "SiliconANGLE",
+          "href": "https://siliconangle.com/2026/11/06/thinking-machines-debuts-inkling-2-small-amid-reported-5b-fundraising-push/"
+        }
+      ]
+    },
+    {
+      "lab": "META",
+      "accent": [
+        232,
+        184,
+        109
+      ],
+      "head": "商业条款里的抓取条款无限期暂停",
+      "body": "Meta 在 Business Help Center 写明：拟于 11 月 20 日生效的商业条款等更新现已暂停。挪威、巴西法院此前发出临时禁令；英国竞争与市场管理局也在调查。争议点是：有 Meta 商家账号的媒体网站，是否会被条款强制允许平台用爬虫抓取站内内容。Meta 发言人称将继续与各方沟通，现有条款继续有效。",
+      "why": "训练与广告产品用的网页数据还能不能「默认拿走」，直接卡在监管和诉讼上",
+      "links": [
+        {
+          "label": "Nieman Lab",
+          "href": "https://www.niemanlab.org/2026/11/meta-pulls-down-controversial-terms-of-service/"
+        },
+        {
+          "label": "AP 报道",
+          "href": "https://apnews.com/article/norway-media-meta-competition-european-union-united-kingdom-c15442c8e505e50e45ce3fd7bbaae1ba"
+        }
       ]
     }
   ]
