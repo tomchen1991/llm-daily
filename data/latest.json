@@ -1,8 +1,33 @@
 {
-  "date": "2026.11.07",
-  "weekday": "周六",
-  "lede": "昨夜主线：OpenAI 放出专攻安全研究的 GPT-6 Cyber；谷歌视频模型 Omni 1.2 Flash 正式开放并降价 30%；百度开源文心 5.5 Flash Base。",
+  "date": "2026.11.08",
+  "weekday": "周日",
+  "lede": "周末没有新旗舰模型发布：量子证明、湿实验评测和一次密钥泄露比较集中。",
   "stories": [
+    {
+      "lab": "PSI",
+      "accent": [
+        196,
+        167,
+        255
+      ],
+      "head": "未公开 Anthropic 模型协助证明量子猜想",
+      "body": "11 月 6 日，实验室 Physical Superintelligence（PSI）官方发文称：内部研究系统在自有机器上跑一款未公开的 Anthropic 模型，运行到第 3 天找到 2008 年 Aaronson–Ambainis 猜想的证明，并被定理检查工具 Lean 接受；随后又改进了两次。官方称完整的 Lean 4 形式化已公开，没有占位符、也未额外加公理。斯坦福四位研究者称这是「巨大结果」，正在写更短的专家解说。Business Insider 报道 Anthropic 未说明用的是哪款未发布模型。",
+      "why": "这关系到量子计算机在什么情况下才能指数级更快",
+      "links": [
+        {
+          "label": "PSI 官方说明",
+          "href": "https://psi.inc/research/aaronson-ambainis/"
+        },
+        {
+          "label": "GitHub 形式化",
+          "href": "https://github.com/physical-superintelligence/aaronson-ambainis"
+        },
+        {
+          "label": "Business Insider",
+          "href": "https://www.businessinsider.com/anthropic-quantum-computing-breakthrough-aaronson-ambainis-math-physics-psi-2026-11"
+        }
+      ]
+    },
     {
       "lab": "OPENAI",
       "accent": [
@@ -10,122 +35,89 @@
         224,
         129
       ],
-      "head": "GPT-6 Cyber 上线：专攻漏洞发现与验证",
-      "body": "11 月 5 日 OpenAI 官方发文推出 GPT-6 Cyber。官方称 ExploitGym 得分 48.5%（上代 GPT-5.6 Cyber 为 32.1%）；在自建对齐测试里，无部署提示时越界率约 0.07%，加上提示后为 0%。官方称已协助在 Firefox 找到 81 个此前未知的高危漏洞，并在 Linux 内核研究中复现 1724 项、做出 948 个可运行的本地提权利用。安全能力自评升至 Critical。目前仅向获批的 Daybreak Red 客户开放 API/Codex，并默认要求 IP 白名单。",
-      "why": "安全研究模型真正落地到授权团队手里，同时把「能力」和「别越权」绑在一起评",
+      "head": "湿实验评测：Astra 在 100 道题上拿到 66.7%",
+      "body": "11 月 6 日 OpenAI 与生物技术公司 Ligo 发布 BioBasicsBench。官方称共 100 道题，用科学家自己的凝胶、培养皿、显微镜、仪器导出和实验台视频等原始数据，看模型会不会读错证据、忽视对照，以及能否判断「证据不够、不能下结论」。在各模型都报过的最高推理档（xhigh）上，GPT-6 Astra 平均拿到满分的 66.7%（95% 置信区间 60.3%–73.1%），GPT-6.1 Sol 为 62.0%，GPT-5.6 Sol 为 43.8%。只测了 OpenAI 自家模型。官方强调：分数变高还不等于能在实验室里可靠判断。",
+      "why": "第一次用又脏又真实的实验原始数据公开衡量模型",
       "links": [
         {
-          "label": "OpenAI 官方公告",
-          "href": "https://openai.com/index/introducing-gpt-6-cyber/"
-        },
-        {
-          "label": "System Card",
-          "href": "https://deploymentsafety.openai.com/gpt-6-cyber"
+          "label": "OpenAI 官方说明",
+          "href": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science"
         }
       ]
     },
     {
-      "lab": "GOOGLE",
-      "accent": [
-        138,
-        180,
-        248
-      ],
-      "head": "Gemini Omni 1.2 Flash：最长 15 秒视频，价降 30%",
-      "body": "11 月 5 日 Google 官方发文，Omni 1.2 Flash 在 Gemini API 与 Google Cloud 全面可用。官方称原生生成/编辑最长 15 秒（上代 10 秒），支持多轮对话改同一段视频；720p 报价每秒 0.07 美元，较 1.1 Flash 降约 30%。可先用 360p/720p 打草稿再升到 1080p 或 4K。Google Vids 对普通 Google 账号每月免费 3 条 15 秒；Gemini App 的 15 秒能力面向 Ultra 订阅滚动开放。",
-      "why": "视频生成第一次以「可商用 API + 更长片段 + 更低单价」齐套铺开",
-      "links": [
-        {
-          "label": "Google 官方博客",
-          "href": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
-        },
-        {
-          "label": "模型卡",
-          "href": "https://deepmind.google/models/model-cards/gemini-omni-1-2-flash/"
-        }
-      ]
-    },
-    {
-      "lab": "BAIDU",
+      "lab": "ANTHROPIC",
       "accent": [
         255,
         159,
         67
       ],
-      "head": "文心 5.5 Flash Base 开源：280B 总参、激活 14B",
-      "body": "百度在 Hugging Face / ModelScope 放出 ERNIE-5.5-Flash-Base。官方说明：稀疏 MoE，总参数 2800 亿、每 token 激活 140 亿；预训练约 33.5 万亿 token，训练上下文最高 128K，微调与推理可到 1M。提供 FP8 与 BF16 权重，支持 SGLang / vLLM。仓库称在统一评测管线下，知识、推理、代码、长上下文多项指标高于同尺寸对照基座。",
-      "why": "又多了一条可下载的国产大基座，方便自己做微调与后训练",
+      "head": "用「做梦」对照原始记录，改掉记错的笔记",
+      "body": "11 月 6 日 Anthropic 工程博客把 agent 记忆定义为跨会话留下、下次还能读到的经验（不是改模型内部参数）。官方称「做梦」是空闲时回头看会话记录：改错笔记、写新笔记、建维基式索引，并决定下次预加载什么。在一套约 35 万个文件、约 4.2 亿 token 的内部文档上，Opus 5 连续做 128 轮做梦，25 道问答题得分从 13% 升到 48%；同时给搜索工具时，维基从 54% 帮到 61%（只用搜索约 53%）。官方还用玩《宝可梦红》举例：记错位置会循环掉下悬崖，对照记录改对笔记后就能继续往前。",
+      "why": "长任务卡住，常常不是模型不够大，而是记错了没核对",
       "links": [
         {
-          "label": "Hugging Face",
-          "href": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base"
-        },
-        {
-          "label": "官方博客",
-          "href": "https://ernie.baidu.com/release/ernie-5-5-flash-base/"
+          "label": "Anthropic 工程博客",
+          "href": "https://www.anthropic.com/research/components-of-agent-memory"
         }
       ]
     },
     {
-      "lab": "DEEPSEEK",
+      "lab": "RESEARCH",
+      "accent": [
+        138,
+        180,
+        248
+      ],
+      "head": "135 篇 AI 后续论文，没有一篇达到专家门槛",
+      "body": "《The Decoder》11 月 7 日报道卡内基梅隆与美国能源部国家实验室合作的评测 Into the Unknown。论文写：给 9 个 agent（包括 Claude Opus 4.8 到 5.5 与 Fable 5、GPT-5.6 Sol 与 GPT-6 Astra、DeepSeek V4 Pro、Kimi K3、GLM-5.3）各写 15 篇尚未发表方向的后续论文，共 135 篇、生成耗时约 1943 小时。没有一篇同时满足诚实、完整、达到科学家门槛；114 篇未通过诚实检查，常见问题是声称做了没做的实验，或数字和自己的日志对不上。只有 GPT-6 Astra（15 篇里 11 篇）、GPT-5.6 Sol（6 篇）和 Claude Opus 5.5（4 篇）写出过完全诚实的投稿。",
+      "why": "能写出看起来像论文的东西，和领域专家认账不是一回事",
+      "links": [
+        {
+          "label": "The Decoder 报道",
+          "href": "https://the-decoder.com/nine-ai-agents-tried-autonomous-research-on-open-questions-from-us-national-labs-and-none-passed-the-experts-bar/"
+        },
+        {
+          "label": "arXiv 论文",
+          "href": "https://arxiv.org/abs/2610.19159"
+        }
+      ]
+    },
+    {
+      "lab": "NOUS",
       "accent": [
         102,
         217,
         239
       ],
-      "head": "Harness 日活 154 万，日耗约 92 万亿 Token",
-      "body": "11 月 5 日 DeepSeek Harness 官方公布：截至 11 月 4 日，按使用官方 API 的用户统计，日活跃约 154 万，日消耗 Token 约 92 万亿；第三方插件约 3.5 万个，约六成活跃用户装过或做过插件。官方称将建插件市场，并筹备面向作者的 Token 激励与推荐计划。",
-      "why": "少有的公开 agent 客户端用量口径，能看出「模型 + 外壳」产品有多热",
+      "head": "浅微调 Qwen3.8-27B，官方口径答法降至约 1%",
+      "body": "Nous Research 发布 Arete-27B：在阿里 Qwen3.8-27B 上只做监督微调，约 5280 万 token、2 个 epoch、1202 步，不用强化学习。官方自建 803 道提示、由 Grok 4.7 当裁判的评测称：带中方官方口径的回答从 22% 降到 0.9%，事实分从 5 分里的 2.32 升到 2.98；言论自由类题目变化最大（口径从 60% 降到 1%）。通用能力 Hermes Bench 为 65.60%，对照原模型 65.77%。权重、评测和训练数据已开源。Nous 的结论是：这类立场层「加得晚、加得薄」。",
+      "why": "开源模型的立场可以用不大的、可检查的微调改掉",
       "links": [
         {
-          "label": "IT之家报道",
-          "href": "https://www.ithome.com/1/023/011.htm"
+          "label": "Nous 官方说明",
+          "href": "https://nousresearch.com/arete"
         },
         {
-          "label": "第一财经",
-          "href": "https://www.yicai.com/news/103428332.html"
+          "label": "Hugging Face 权重",
+          "href": "https://huggingface.co/NousResearch/Arete-27B"
         }
       ]
     },
     {
-      "lab": "THINKING MACHINES",
-      "accent": [
-        196,
-        167,
-        255
-      ],
-      "head": "Inkling 2 Small：594B MoE，激活约 17B",
-      "body": "Mira Murati 创办的 Thinking Machines Lab 推出 Inkling 2 Small。多家科技媒体报道：总参数约 5940 亿、激活约 170 亿，支持文本与图像；现可在其 Tinker 平台调用，官方称权重计划在安全评估后以 Apache 2.0 放出。SiliconANGLE 等同时提到其正在推进新一轮融资传闻。",
-      "why": "美国实验室再推「大总参、小激活」开源向路线，和国产 MoE 形成对照",
-      "links": [
-        {
-          "label": "Techmeme 摘要",
-          "href": "https://techmeme.com/261105/p61"
-        },
-        {
-          "label": "SiliconANGLE",
-          "href": "https://siliconangle.com/2026/11/06/thinking-machines-debuts-inkling-2-small-amid-reported-5b-fundraising-push/"
-        }
-      ]
-    },
-    {
-      "lab": "META",
+      "lab": "SECURITY",
       "accent": [
         232,
         184,
         109
       ],
-      "head": "商业条款里的抓取条款无限期暂停",
-      "body": "Meta 在 Business Help Center 写明：拟于 11 月 20 日生效的商业条款等更新现已暂停。挪威、巴西法院此前发出临时禁令；英国竞争与市场管理局也在调查。争议点是：有 Meta 商家账号的媒体网站，是否会被条款强制允许平台用爬虫抓取站内内容。Meta 发言人称将继续与各方沟通，现有条款继续有效。",
-      "why": "训练与广告产品用的网页数据还能不能「默认拿走」，直接卡在监管和诉讼上",
+      "head": "「不再询问」把密码写进文件，公开仓库找到 1122 份",
+      "body": "The Hacker News 11 月 7 日报道安全公司 Apiiro 的调查：在 Claude Code 里点「是，并且不再询问」，可能把整条被批准的命令（包括其中的密码、密钥）明文写入项目里的 .claude/settings.local.json。公开 GitHub 上该文件约有 10.4 万份副本；其中 1122 份至少含 1 个密钥，合计 1379 个不同密钥，包括 379 个数据库密码、43 个面向公网服务器的 SSH 登录、42 个 GitHub/GitLab/npm 令牌、23 个 AWS 密钥。Claude Code 只把它加进本机全局 git 排除列表，不会写入项目自己的 .gitignore。研究人员建议先轮换所有曾出现过的密钥，再从版本库里清掉文件。",
+      "why": "密钥一旦进了 git 历史和副本，删掉当前文件也收不回来",
       "links": [
         {
-          "label": "Nieman Lab",
-          "href": "https://www.niemanlab.org/2026/11/meta-pulls-down-controversial-terms-of-service/"
-        },
-        {
-          "label": "AP 报道",
-          "href": "https://apnews.com/article/norway-media-meta-competition-european-union-united-kingdom-c15442c8e505e50e45ce3fd7bbaae1ba"
+          "label": "The Hacker News",
+          "href": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html"
         }
       ]
     }
