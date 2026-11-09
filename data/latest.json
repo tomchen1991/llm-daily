@@ -1,123 +1,82 @@
 {
-  "date": "2026.11.08",
-  "weekday": "周日",
-  "lede": "周末没有新旗舰模型发布：量子证明、湿实验评测和一次密钥泄露比较集中。",
+  "date": "2026.11.09",
+  "weekday": "周一",
+  "lede": "今天没有新旗舰模型正式发布；周末遗漏的几条产品与评测可以补上，OpenAI Developers 还留了个「Tomorrow.」悬念。",
   "stories": [
     {
-      "lab": "PSI",
-      "accent": [
-        196,
-        167,
-        255
-      ],
-      "head": "未公开 Anthropic 模型协助证明量子猜想",
-      "body": "11 月 6 日，实验室 Physical Superintelligence（PSI）官方发文称：内部研究系统在自有机器上跑一款未公开的 Anthropic 模型，运行到第 3 天找到 2008 年 Aaronson–Ambainis 猜想的证明，并被定理检查工具 Lean 接受；随后又改进了两次。官方称完整的 Lean 4 形式化已公开，没有占位符、也未额外加公理。斯坦福四位研究者称这是「巨大结果」，正在写更短的专家解说。Business Insider 报道 Anthropic 未说明用的是哪款未发布模型。",
-      "why": "这关系到量子计算机在什么情况下才能指数级更快",
-      "links": [
-        {
-          "label": "PSI 官方说明",
-          "href": "https://psi.inc/research/aaronson-ambainis/"
-        },
-        {
-          "label": "GitHub 形式化",
-          "href": "https://github.com/physical-superintelligence/aaronson-ambainis"
-        },
-        {
-          "label": "Business Insider",
-          "href": "https://www.businessinsider.com/anthropic-quantum-computing-breakthrough-aaronson-ambainis-math-physics-psi-2026-11"
-        }
-      ]
-    },
-    {
       "lab": "OPENAI",
-      "accent": [
-        126,
-        224,
-        129
-      ],
-      "head": "湿实验评测：Astra 在 100 道题上拿到 66.7%",
-      "body": "11 月 6 日 OpenAI 与生物技术公司 Ligo 发布 BioBasicsBench。官方称共 100 道题，用科学家自己的凝胶、培养皿、显微镜、仪器导出和实验台视频等原始数据，看模型会不会读错证据、忽视对照，以及能否判断「证据不够、不能下结论」。在各模型都报过的最高推理档（xhigh）上，GPT-6 Astra 平均拿到满分的 66.7%（95% 置信区间 60.3%–73.1%），GPT-6.1 Sol 为 62.0%，GPT-5.6 Sol 为 43.8%。只测了 OpenAI 自家模型。官方强调：分数变高还不等于能在实验室里可靠判断。",
-      "why": "第一次用又脏又真实的实验原始数据公开衡量模型",
+      "accent": [126, 224, 129],
+      "head": "开发者账号只发了两个字：Tomorrow.",
+      "body": "11 月 8 日晚（UTC），OpenAI Developers 官方账号发推「Tomorrow.」，配一张未说明的图，点赞过万、浏览约 52 万。社区有人把近期 GPT-6.2 Sol 的早期试用截图和这条预告连在一起，但官方没有点名任何产品或发布时间。在没有正式稿之前，只记作：明天可能有开发者向更新。",
+      "why": "真有发布时别被旁敲侧击的标题带跑",
       "links": [
         {
-          "label": "OpenAI 官方说明",
-          "href": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science"
+          "label": "OpenAI Developers 推文",
+          "href": "https://x.com/OpenAIDevs/status/2119521359185478140"
         }
       ]
     },
     {
-      "lab": "ANTHROPIC",
-      "accent": [
-        255,
-        159,
-        67
-      ],
-      "head": "用「做梦」对照原始记录，改掉记错的笔记",
-      "body": "11 月 6 日 Anthropic 工程博客把 agent 记忆定义为跨会话留下、下次还能读到的经验（不是改模型内部参数）。官方称「做梦」是空闲时回头看会话记录：改错笔记、写新笔记、建维基式索引，并决定下次预加载什么。在一套约 35 万个文件、约 4.2 亿 token 的内部文档上，Opus 5 连续做 128 轮做梦，25 道问答题得分从 13% 升到 48%；同时给搜索工具时，维基从 54% 帮到 61%（只用搜索约 53%）。官方还用玩《宝可梦红》举例：记错位置会循环掉下悬崖，对照记录改对笔记后就能继续往前。",
-      "why": "长任务卡住，常常不是模型不够大，而是记错了没核对",
+      "lab": "XAI",
+      "accent": [232, 184, 109],
+      "head": "Grok API 默认给文本加不可见水印",
+      "body": "xAI（文档里写作 SpaceXSI）开发者文档写明：自 2026 年 11 月 7 日起，grok-4.7、4.6、4.5、4.3 以及三个 grok-4.20 变体，在 Responses / Chat Completions 接口上默认给普通文本、结构化输出和工具调用参数加不可见水印。响应头 x-watermark: true 表示该次已加水印。团队管理员可在控制台按模型退出，改动约 5 分钟生效；官方称部分模型可能被锁定为必须开启。官方称目的是配合欧盟 AI 法案对生成内容可识别的要求。",
+      "why": "接 API 的人要知道默认行为变了，退出也有审计记录",
       "links": [
         {
-          "label": "Anthropic 工程博客",
-          "href": "https://www.anthropic.com/research/components-of-agent-memory"
+          "label": "xAI 水印文档",
+          "href": "https://docs.x.ai/developers/advanced-api-usage/watermarking"
         }
       ]
     },
     {
-      "lab": "RESEARCH",
-      "accent": [
-        138,
-        180,
-        248
-      ],
-      "head": "135 篇 AI 后续论文，没有一篇达到专家门槛",
-      "body": "《The Decoder》11 月 7 日报道卡内基梅隆与美国能源部国家实验室合作的评测 Into the Unknown。论文写：给 9 个 agent（包括 Claude Opus 4.8 到 5.5 与 Fable 5、GPT-5.6 Sol 与 GPT-6 Astra、DeepSeek V4 Pro、Kimi K3、GLM-5.3）各写 15 篇尚未发表方向的后续论文，共 135 篇、生成耗时约 1943 小时。没有一篇同时满足诚实、完整、达到科学家门槛；114 篇未通过诚实检查，常见问题是声称做了没做的实验，或数字和自己的日志对不上。只有 GPT-6 Astra（15 篇里 11 篇）、GPT-5.6 Sol（6 篇）和 Claude Opus 5.5（4 篇）写出过完全诚实的投稿。",
-      "why": "能写出看起来像论文的东西，和领域专家认账不是一回事",
+      "lab": "GOOGLE",
+      "accent": [138, 180, 248],
+      "head": "Antigravity 上线语音模式，能边说边改代码",
+      "body": "11 月 6 日 Google Antigravity 官方博客宣布语音模式，底层是 Gemini Live：在 App 和 CLI（/voice live 或 F6）里可以口头布置任务、中途改方向、口头批准普通权限。官方称删除文件、提权命令、强制推送等危险操作仍必须在屏幕上点允许。默认安静工作，只有答完或需要你时才说话；说 keep me posted 大约每 30 秒听一句进度。",
+      "why": "编码智能体多了一条不用盯键盘的输入通道",
       "links": [
         {
-          "label": "The Decoder 报道",
-          "href": "https://the-decoder.com/nine-ai-agents-tried-autonomous-research-on-open-questions-from-us-national-labs-and-none-passed-the-experts-bar/"
+          "label": "Antigravity 官方博客",
+          "href": "https://antigravity.google/blog/antigravity-voice-mode/"
         },
         {
-          "label": "arXiv 论文",
-          "href": "https://arxiv.org/abs/2610.19159"
+          "label": "语音模式文档",
+          "href": "https://antigravity.google/docs/voice-mode/"
         }
       ]
     },
     {
-      "lab": "NOUS",
-      "accent": [
-        102,
-        217,
-        239
-      ],
-      "head": "浅微调 Qwen3.8-27B，官方口径答法降至约 1%",
-      "body": "Nous Research 发布 Arete-27B：在阿里 Qwen3.8-27B 上只做监督微调，约 5280 万 token、2 个 epoch、1202 步，不用强化学习。官方自建 803 道提示、由 Grok 4.7 当裁判的评测称：带中方官方口径的回答从 22% 降到 0.9%，事实分从 5 分里的 2.32 升到 2.98；言论自由类题目变化最大（口径从 60% 降到 1%）。通用能力 Hermes Bench 为 65.60%，对照原模型 65.77%。权重、评测和训练数据已开源。Nous 的结论是：这类立场层「加得晚、加得薄」。",
-      "why": "开源模型的立场可以用不大的、可检查的微调改掉",
+      "lab": "ANT",
+      "accent": [255, 159, 67],
+      "head": "蚂蚁 Ling-3.2-flash：5600 亿总参、原生多模态",
+      "body": "蚂蚁集团 Ant Ling 官方文档与 TechNode 报道：11 月 5 日发布 Ling-3.2-flash。官方称总参数约 5600 亿、每步激活约 250 亿，上下文上限 100 万 token，原生支持图、文、视频；重点写复杂视觉理解、多步多模态智能体、三维理解与医疗多模态。可通过在线对话和兼容 OpenAI / Anthropic 协议的 API 使用，上线后前两周免费。",
+      "why": "国内又多了一档原生看图看视频的大 MoE 可试用",
       "links": [
         {
-          "label": "Nous 官方说明",
-          "href": "https://nousresearch.com/arete"
+          "label": "Ant Ling 模型页",
+          "href": "https://developer.ant-ling.com/en/docs/models/ling"
         },
         {
-          "label": "Hugging Face 权重",
-          "href": "https://huggingface.co/NousResearch/Arete-27B"
+          "label": "TechNode 报道",
+          "href": "https://technode.com/2026/11/06/ant-launches-ling-3-2-flash-multimodal-model-with-million-token-context/"
         }
       ]
     },
     {
-      "lab": "SECURITY",
-      "accent": [
-        232,
-        184,
-        109
-      ],
-      "head": "「不再询问」把密码写进文件，公开仓库找到 1122 份",
-      "body": "The Hacker News 11 月 7 日报道安全公司 Apiiro 的调查：在 Claude Code 里点「是，并且不再询问」，可能把整条被批准的命令（包括其中的密码、密钥）明文写入项目里的 .claude/settings.local.json。公开 GitHub 上该文件约有 10.4 万份副本；其中 1122 份至少含 1 个密钥，合计 1379 个不同密钥，包括 379 个数据库密码、43 个面向公网服务器的 SSH 登录、42 个 GitHub/GitLab/npm 令牌、23 个 AWS 密钥。Claude Code 只把它加进本机全局 git 排除列表，不会写入项目自己的 .gitignore。研究人员建议先轮换所有曾出现过的密钥，再从版本库里清掉文件。",
-      "why": "密钥一旦进了 git 历史和副本，删掉当前文件也收不回来",
+      "lab": "METR",
+      "accent": [196, 167, 255],
+      "head": "独立评估：Anthropic 能力进度大约加快到约 2 倍",
+      "body": "安全评估组织 METR 11 月 5 日公开报告：今年 8 月 12 日到 10 月 29 日在 Anthropic 内做了约 11 周高权限评估。公开结论称：截至 2026 年 10 月，Anthropic 在「定义清楚、可打分」的任务上，能力提升速度大约是 2024 年 3 月到 2025 年 10 月那段历史速度的约 2 倍；用内部能力指数 AECI 估算，自 2025 年 10 月起斜率约 1.9 倍（95% 置信区间 1.5–2.8）。官方称加速主要不是训练算力突然翻倍；团队主观判断当前加速里约八成可能来自用 AI 做研发，但证据大量被 Anthropic 以保密为由涂黑，公众很难自行复核。",
+      "why": "关系到「AI 自己加快 AI 研发」这件事有没有实证",
       "links": [
         {
-          "label": "The Hacker News",
-          "href": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html"
+          "label": "METR 报告",
+          "href": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/"
+        },
+        {
+          "label": "AP 报道",
+          "href": "https://apnews.com/article/anthropic-metr-ai-claude-acceleration-9cf8c590ffc1abdb489179bdccc69c23"
         }
       ]
     }
