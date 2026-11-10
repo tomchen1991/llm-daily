@@ -1,82 +1,65 @@
 {
-  "date": "2026.11.09",
-  "weekday": "周一",
-  "lede": "今天没有新旗舰模型正式发布；周末遗漏的几条产品与评测可以补上，OpenAI Developers 还留了个「Tomorrow.」悬念。",
+  "date": "2026.11.10",
+  "weekday": "周二",
+  "lede": "昨夜主线：Anthropic 把旗舰 Fable / Mythos 推到 5.2，同日 Meta 放出最便宜的 Agent 小模型 Muse Ember。",
   "stories": [
     {
-      "lab": "OPENAI",
-      "accent": [126, 224, 129],
-      "head": "开发者账号只发了两个字：Tomorrow.",
-      "body": "11 月 8 日晚（UTC），OpenAI Developers 官方账号发推「Tomorrow.」，配一张未说明的图，点赞过万、浏览约 52 万。社区有人把近期 GPT-6.2 Sol 的早期试用截图和这条预告连在一起，但官方没有点名任何产品或发布时间。在没有正式稿之前，只记作：明天可能有开发者向更新。",
-      "why": "真有发布时别被旁敲侧击的标题带跑",
+      "lab": "ANTHROPIC",
+      "accent": [255, 159, 67],
+      "head": "Claude Fable 5.2 / Mythos 5.2 正式上线",
+      "body": "11 月 9 日 Anthropic 官方发布。两套名字是同一底座：Fable 面向所有人，网络安全与生物类请求会被拦；Mythos 护栏更松，只给通过验证的安全/生命科学机构。输入/输出报价降到每百万 token 8 / 40 美元（比 5.1 的 10 / 50 便宜约 20%），官方称输出最多快约 30%；可选 fast mode 约 2.5 倍速，价翻倍到 16 / 80。API 名 claude-fable-5-2。官方称预发布里约 1000 个 Agent 用 30 小时把费马大定理形式化进 Lean——这是厂商自述，尚未见独立复核。日常建议仍用 Opus 5.5，难活再切 Fable。",
+      "why": "能力、速度、价格同日动，难任务与日常驾驶分层更清楚",
       "links": [
         {
-          "label": "OpenAI Developers 推文",
-          "href": "https://x.com/OpenAIDevs/status/2119521359185478140"
+          "label": "Anthropic 官方公告",
+          "href": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+        },
+        {
+          "label": "TechCrunch",
+          "href": "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/"
         }
       ]
     },
     {
-      "lab": "XAI",
-      "accent": [232, 184, 109],
-      "head": "Grok API 默认给文本加不可见水印",
-      "body": "xAI（文档里写作 SpaceXSI）开发者文档写明：自 2026 年 11 月 7 日起，grok-4.7、4.6、4.5、4.3 以及三个 grok-4.20 变体，在 Responses / Chat Completions 接口上默认给普通文本、结构化输出和工具调用参数加不可见水印。响应头 x-watermark: true 表示该次已加水印。团队管理员可在控制台按模型退出，改动约 5 分钟生效；官方称部分模型可能被锁定为必须开启。官方称目的是配合欧盟 AI 法案对生成内容可识别的要求。",
-      "why": "接 API 的人要知道默认行为变了，退出也有审计记录",
+      "lab": "META",
+      "accent": [138, 180, 248],
+      "head": "Muse Ember：Agent 重复活的廉价小模型",
+      "body": "Meta Superintelligence Labs 11 月 9 日发布 Muse Ember。官方称专做智能体一天到晚重复的事：工具调用、编码子任务、路由、抽取、长文档解析。API 名 muse-ember-1.0；报价每百万输入 0.10 美元、缓存输入 0.004、输出 0.50；上下文 100 万 token，输出最多约 51.2 万。官方称在 Artificial Analysis 智力指数上约 36 分，每任务成本大约 0.14 美元，比同档 Haiku 5.5 更省。已上 Meta Model API、Muse Code，以及 Google Cloud / Oracle Cloud。",
+      "why": "大模型规划、小模型刷量，这条拆法又多了一个便宜选项",
       "links": [
         {
-          "label": "xAI 水印文档",
-          "href": "https://docs.x.ai/developers/advanced-api-usage/watermarking"
+          "label": "Meta 官方博客",
+          "href": "https://research.meta.ai/blog/muse-ember"
+        },
+        {
+          "label": "TechCrunch",
+          "href": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/"
         }
       ]
     },
     {
       "lab": "GOOGLE",
-      "accent": [138, 180, 248],
-      "head": "Antigravity 上线语音模式，能边说边改代码",
-      "body": "11 月 6 日 Google Antigravity 官方博客宣布语音模式，底层是 Gemini Live：在 App 和 CLI（/voice live 或 F6）里可以口头布置任务、中途改方向、口头批准普通权限。官方称删除文件、提权命令、强制推送等危险操作仍必须在屏幕上点允许。默认安静工作，只有答完或需要你时才说话；说 keep me posted 大约每 30 秒听一句进度。",
-      "why": "编码智能体多了一条不用盯键盘的输入通道",
+      "accent": [126, 224, 129],
+      "head": "训练 Gemini 的 Pathways 对云客户正式开放",
+      "body": "Google Developers Blog 11 月 9 日宣布 Pathways 在 Google Cloud 正式可用（GA）。它是 Google 自己训练 Gemini 等大模型用的分布式系统：你在一台普通 CPU 机器上用单个 Python 客户端把整份计算写成图，运行时再把虚拟设备映射到真实 TPU，并负责搬张量、调度和主机故障后的重映射。官方强调适合管道并行、强化学习等「各阶段要的芯片数不一样」的负载。文中未给定价或客户案例数字。",
+      "why": "做大规模训练的人可以按「单控制器」方式用 Google 同款训练栈",
       "links": [
         {
-          "label": "Antigravity 官方博客",
-          "href": "https://antigravity.google/blog/antigravity-voice-mode/"
-        },
-        {
-          "label": "语音模式文档",
-          "href": "https://antigravity.google/docs/voice-mode/"
+          "label": "Google Developers Blog",
+          "href": "https://developers.googleblog.com/what-is-pathways-single-controller-training-for-large-models/"
         }
       ]
     },
     {
-      "lab": "ANT",
-      "accent": [255, 159, 67],
-      "head": "蚂蚁 Ling-3.2-flash：5600 亿总参、原生多模态",
-      "body": "蚂蚁集团 Ant Ling 官方文档与 TechNode 报道：11 月 5 日发布 Ling-3.2-flash。官方称总参数约 5600 亿、每步激活约 250 亿，上下文上限 100 万 token，原生支持图、文、视频；重点写复杂视觉理解、多步多模态智能体、三维理解与医疗多模态。可通过在线对话和兼容 OpenAI / Anthropic 协议的 API 使用，上线后前两周免费。",
-      "why": "国内又多了一档原生看图看视频的大 MoE 可试用",
+      "lab": "OPENAI",
+      "accent": [102, 217, 239],
+      "head": "昨天「Tomorrow.」揭晓：Codex 联名掌机开卖",
+      "body": "OpenAI Developers 8 日那条「Tomorrow.」预告，9 日落到 OpenAI Supply Co.：ModRetro Chromatic: Codex Edition 公开售卖，售价 200 美元，是能把提示做成复古掌机游戏的联名硬件（含可编程卡带）。这是周边/硬件，不是新基础模型。模型侧过去一天没有新旗舰正式稿。",
+      "why": "把昨早报的悬念收掉，别误当成 GPT 大版本发布",
       "links": [
         {
-          "label": "Ant Ling 模型页",
-          "href": "https://developer.ant-ling.com/en/docs/models/ling"
-        },
-        {
-          "label": "TechNode 报道",
-          "href": "https://technode.com/2026/11/06/ant-launches-ling-3-2-flash-multimodal-model-with-million-token-context/"
-        }
-      ]
-    },
-    {
-      "lab": "METR",
-      "accent": [196, 167, 255],
-      "head": "独立评估：Anthropic 能力进度大约加快到约 2 倍",
-      "body": "安全评估组织 METR 11 月 5 日公开报告：今年 8 月 12 日到 10 月 29 日在 Anthropic 内做了约 11 周高权限评估。公开结论称：截至 2026 年 10 月，Anthropic 在「定义清楚、可打分」的任务上，能力提升速度大约是 2024 年 3 月到 2025 年 10 月那段历史速度的约 2 倍；用内部能力指数 AECI 估算，自 2025 年 10 月起斜率约 1.9 倍（95% 置信区间 1.5–2.8）。官方称加速主要不是训练算力突然翻倍；团队主观判断当前加速里约八成可能来自用 AI 做研发，但证据大量被 Anthropic 以保密为由涂黑，公众很难自行复核。",
-      "why": "关系到「AI 自己加快 AI 研发」这件事有没有实证",
-      "links": [
-        {
-          "label": "METR 报告",
-          "href": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/"
-        },
-        {
-          "label": "AP 报道",
-          "href": "https://apnews.com/article/anthropic-metr-ai-claude-acceleration-9cf8c590ffc1abdb489179bdccc69c23"
+          "label": "OpenAI Supply Co.",
+          "href": "https://openai.com/supply/co-lab/chromatic/"
         }
       ]
     }
