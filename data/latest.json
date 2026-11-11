@@ -1,65 +1,102 @@
 {
-  "date": "2026.11.10",
-  "weekday": "周二",
-  "lede": "昨夜主线：Anthropic 把旗舰 Fable / Mythos 推到 5.2，同日 Meta 放出最便宜的 Agent 小模型 Muse Ember。",
+  "date": "2026.11.11",
+  "weekday": "周三",
+  "lede": "昨夜主线：Gemini 4 Carbon 向公众开放，MiniMax 开源 10 秒出 4K 图。",
   "stories": [
     {
-      "lab": "ANTHROPIC",
-      "accent": [255, 159, 67],
-      "head": "Claude Fable 5.2 / Mythos 5.2 正式上线",
-      "body": "11 月 9 日 Anthropic 官方发布。两套名字是同一底座：Fable 面向所有人，网络安全与生物类请求会被拦；Mythos 护栏更松，只给通过验证的安全/生命科学机构。输入/输出报价降到每百万 token 8 / 40 美元（比 5.1 的 10 / 50 便宜约 20%），官方称输出最多快约 30%；可选 fast mode 约 2.5 倍速，价翻倍到 16 / 80。API 名 claude-fable-5-2。官方称预发布里约 1000 个 Agent 用 30 小时把费马大定理形式化进 Lean——这是厂商自述，尚未见独立复核。日常建议仍用 Opus 5.5，难活再切 Fable。",
-      "why": "能力、速度、价格同日动，难任务与日常驾驶分层更清楚",
-      "links": [
-        {
-          "label": "Anthropic 官方公告",
-          "href": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
-        },
-        {
-          "label": "TechCrunch",
-          "href": "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/"
-        }
-      ]
-    },
-    {
-      "lab": "META",
-      "accent": [138, 180, 248],
-      "head": "Muse Ember：Agent 重复活的廉价小模型",
-      "body": "Meta Superintelligence Labs 11 月 9 日发布 Muse Ember。官方称专做智能体一天到晚重复的事：工具调用、编码子任务、路由、抽取、长文档解析。API 名 muse-ember-1.0；报价每百万输入 0.10 美元、缓存输入 0.004、输出 0.50；上下文 100 万 token，输出最多约 51.2 万。官方称在 Artificial Analysis 智力指数上约 36 分，每任务成本大约 0.14 美元，比同档 Haiku 5.5 更省。已上 Meta Model API、Muse Code，以及 Google Cloud / Oracle Cloud。",
-      "why": "大模型规划、小模型刷量，这条拆法又多了一个便宜选项",
-      "links": [
-        {
-          "label": "Meta 官方博客",
-          "href": "https://research.meta.ai/blog/muse-ember"
-        },
-        {
-          "label": "TechCrunch",
-          "href": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/"
-        }
-      ]
-    },
-    {
       "lab": "GOOGLE",
-      "accent": [126, 224, 129],
-      "head": "训练 Gemini 的 Pathways 对云客户正式开放",
-      "body": "Google Developers Blog 11 月 9 日宣布 Pathways 在 Google Cloud 正式可用（GA）。它是 Google 自己训练 Gemini 等大模型用的分布式系统：你在一台普通 CPU 机器上用单个 Python 客户端把整份计算写成图，运行时再把虚拟设备映射到真实 TPU，并负责搬张量、调度和主机故障后的重映射。官方强调适合管道并行、强化学习等「各阶段要的芯片数不一样」的负载。文中未给定价或客户案例数字。",
-      "why": "做大规模训练的人可以按「单控制器」方式用 Google 同款训练栈",
+      "accent": [
+        138,
+        180,
+        248
+      ],
+      "head": "Gemini 4 Carbon 正式面向公众上线",
+      "body": "11 月 10 日 Google 官方宣布开放。两周前只通过 Fairwind 计划给部分网络安全人员试用。官方称这是目前最强的 Gemini，擅长网络安全和需要跑很久、步骤很多的智能体任务。日常软件开发和知识工作，官方仍建议用上个月的 Gemini 4 Argon；Carbon 会多用 token 做更难、更长的探索和校验。付费开发者可在 Google AI Studio 和 Gemini for business 的 API 里用，入门价与 Argon 相同：每百万输入 token 2 美元、输出 10 美元，11 月 30 日后涨到 4 / 20 美元。Google AI Ultra 订阅用户会在 Antigravity、Gemini 应用和搜索的 AI 模式里陆续拿到。官方还预览了 Antigravity 里的 /swarm：一条提示可以派成一组互相配合的智能体。官方称 Carbon 在 CursorBench 4.0、Perplexity 的 WANDR、Zapier 的 AutomationBench 上排第一，且单任务成本不到外部次优模型的一半——这些是厂商自述。",
+      "why": "更强旗舰从内测走到可下单的 API，难任务和日常活被明确拆开",
       "links": [
         {
-          "label": "Google Developers Blog",
-          "href": "https://developers.googleblog.com/what-is-pathways-single-controller-training-for-large-models/"
+          "label": "Google 官方博客",
+          "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+        },
+        {
+          "label": "The Verge",
+          "href": "https://www.theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout"
+        }
+      ]
+    },
+    {
+      "lab": "MINIMAX",
+      "accent": [
+        255,
+        159,
+        67
+      ],
+      "head": "H3-Image 开源，官方称 10 秒内出 4K 图",
+      "body": "11 月 10 日深夜，MiniMax 官方发布并开放权重。H3-Image 是基于 H3 的图像生成模型，支持按文字出图、按参考图出图，以及改图。官方称可在 10 秒内生成一张 4096×4096（约 1600 万像素）的图，最多能看懂 16 张参考图，并称 4K 出图速度可达常见水平的约 5 倍、在开源权重模型里指令遵循最强——这些是厂商自述。权重已放上 Hugging Face；也可通过 MiniMax API、MiniMax Code 和海螺 AI 使用。发布首周，官方对 4K 及以上分辨率的生成请求打五折。官方未给出精确的美元单价，只称价格约为同类主流方案的五到七成。",
+      "why": "开源生图把 4K 从「能做」往「够快、能日常用」再推一步",
+      "links": [
+        {
+          "label": "MiniMax 官方博客",
+          "href": "https://www.minimax.io/blog/minimax-h3-image"
+        },
+        {
+          "label": "Hugging Face 权重",
+          "href": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+        }
+      ]
+    },
+    {
+      "lab": "美团",
+      "accent": [
+        232,
+        184,
+        109
+      ],
+      "head": "LongCat-2.5 以 MIT 协议正式开源",
+      "body": "11 月 10 日，美团官方宣布开源 LongCat-2.5。这是面向长任务智能体的原生多模态模型（能同时处理文字和图像一类输入），总参数 1.6 万亿；它是混合专家结构，每处理一个 token 大约只调用其中 480 亿参数，并支持 100 万 token 上下文。采用 MIT 协议，可商用部署，也可拿去继续训练，不必再单独授权。官方还介绍了 W4A4 量化（权重和激活都压到 4 bit）以及面向单卡显存不足 80 GB 的国产芯片的训练和推理适配。权重在 Hugging Face，也提供 API。",
+      "why": "又一个可商用的万亿级开源模型，而且针对国产芯片做了部署说明",
+      "links": [
+        {
+          "label": "美团技术团队公告",
+          "href": "https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html"
+        },
+        {
+          "label": "Hugging Face 权重",
+          "href": "https://huggingface.co/meituan-longcat/LongCat-2.5"
         }
       ]
     },
     {
       "lab": "OPENAI",
-      "accent": [102, 217, 239],
-      "head": "昨天「Tomorrow.」揭晓：Codex 联名掌机开卖",
-      "body": "OpenAI Developers 8 日那条「Tomorrow.」预告，9 日落到 OpenAI Supply Co.：ModRetro Chromatic: Codex Edition 公开售卖，售价 200 美元，是能把提示做成复古掌机游戏的联名硬件（含可编程卡带）。这是周边/硬件，不是新基础模型。模型侧过去一天没有新旗舰正式稿。",
-      "why": "把昨早报的悬念收掉，别误当成 GPT 大版本发布",
+      "accent": [
+        102,
+        217,
+        239
+      ],
+      "head": "ChatGPT 推出商家主页测试版",
+      "body": "11 月 10 日，OpenAI 官方宣布「Businesses in ChatGPT」进入测试。符合条件的商家可通过 Business Hub 认领自己的商家资料、更新信息和商品目录（含价格与库存）。官方称 ChatGPT 每周约有 12 亿使用者。后台提供汇总数据：被提到的次数、网站点击，以及常见话题；官方称不会把用户对话或商家助手聊天内容交给商家。美国符合条件的电商和在线服务商家还可上线 Business Agent：用户点进商家主页后，可另开一档标明身份的对话咨询商品。商家也可以赞助这个助手，作为 ChatGPT 广告的落点，广告位会单独标注。",
+      "why": "ChatGPT 开始给商家正式的入驻和对话入口，搜索和广告的位置会跟着变",
       "links": [
         {
-          "label": "OpenAI Supply Co.",
-          "href": "https://openai.com/supply/co-lab/chromatic/"
+          "label": "OpenAI 官方公告",
+          "href": "https://openai.com/index/introducing-businesses-chatgpt"
+        }
+      ]
+    },
+    {
+      "lab": "IFM",
+      "accent": [
+        196,
+        167,
+        255
+      ],
+      "head": "PAN 2 开源：用视频预演「如果我这样做」",
+      "body": "11 月 10 日，阿联酋穆罕默德·本·扎耶德人工智能大学（MBZUAI）旗下的基础模型研究所（IFM）发布开放世界模型 PAN 2。给它起始画面和用文字写的动作，它会生成接下来可能发生什么的视频，官方称会考虑物理、时间和空间关系。权重、完整训练和推理代码均以 Apache 2.0 协议公开。官方称在 Physics-IQ Verified 榜上总分第三、开源权重模型里第一；长期画面是否还能对得上，官方自己也说仍是未解决的问题。",
+      "why": "少见地把世界模型连同训练代码一起开源，方便别人复现和接着做",
+      "links": [
+        {
+          "label": "IFM 官方新闻稿",
+          "href": "https://ifm.ai/pan2/press-release/"
         }
       ]
     }
