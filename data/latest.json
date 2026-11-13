@@ -1,7 +1,7 @@
 {
-  "date": "2026.11.12",
-  "weekday": "周四",
-  "lede": "昨夜主线：Google 推出 Decision 1，阿里上线 Qwen4-Max 预览。",
+  "date": "2026.11.13",
+  "weekday": "周五",
+  "lede": "昨夜主线：Google 发布 Gemini 4 Hydrogen，用来接替 3.8 Flash。",
   "stories": [
     {
       "lab": "GOOGLE",
@@ -10,88 +10,59 @@
         180,
         248
       ],
-      "head": "Gemini Decision 1：一次可判断最多 1000 题",
-      "body": "11 月 11 日，Google 推出 Gemini Decisions API 和专用模型 Gemini Decision 1（代号 gemini-decision-1）。一次请求可带最多约 25.6 万 token 的文字、图片、音频、视频或 PDF，再附最多 1000 道判断题（是否、多选或按量表打分），并返回概率和置信度。官方称端到端延迟约 150–250 毫秒；定价为每百万输入 token 0.10 美元，输出不收费。已在 Google AI Studio 的 Gemini API 上线，官方称 Google Cloud 上的支持稍后提供。官方还称，在其对比基准上这比用 Gemini 3.5 Flash-Lite 做同类判断大约便宜近 5 倍——这是厂商自述。",
-      "why": "智能体里「选工具、过规则」这类小判断，不必再等大模型慢慢写字",
+      "head": "Gemini 4 Hydrogen 发布，接替 3.8 Flash",
+      "body": "11月12日，Google 发布 Gemini 4 Hydrogen（代号 gemini-4-hydrogen）。API 定价为每百万 token 输入 1.50 美元、输出 7.50 美元，100 万 token 上下文全程同一价格。官方称默认 high 思考档完成任务比 3.8 Flash 快 2.5 倍；编程基准 Terminal-Bench 4.1 为 57%，3.8 Flash 为 18.2%。已在 API、Gemini 应用和搜索上线。",
+      "why": "日常改代码、跑自动循环，终于有一档 Gemini 4 的便宜快模型",
       "links": [
         {
           "label": "Google 官方博客",
-          "href": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+          "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
         },
         {
-          "label": "VentureBeat",
-          "href": "https://venturebeat.com/technology/googles-gemini-decision-1-model-scores-up-to-1-000-questions-in-one-api-call"
+          "label": "开发者说明",
+          "href": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-hydrogen/"
+        },
+        {
+          "label": "9to5Google",
+          "href": "https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/"
         }
       ]
     },
     {
-      "lab": "阿里",
+      "lab": "GOOGLE",
       "accent": [
-        255,
-        159,
-        67
+        102,
+        217,
+        239
       ],
-      "head": "Qwen4-Max 预览版上线，上下文 100 万 token",
-      "body": "11 月 11 日 10:00（上海时间）起，阿里通义千问上线旗舰多模态预览版 Qwen4-Max-Preview（代号 qwen4-max-preview）。可输入文字、图片和视频，上下文 100 万 token，最大输出 393,216 token（思考和最终回答共用额度）；默认先思考再回答，并支持联网搜索、工具调用和按指定格式输出。目前只支持 Token Plan 套餐，不支持按量计费。预览期到 11 月 25 日 24:00（上海时间），到期后该预览版将下线。接口兼容 OpenAI 和 Anthropic 的常见写法。",
-      "why": "千问下一代旗舰先以限时预览露面，想试用得赶在两周内",
+      "head": "Antigravity 上线 Orchestrator，中途可换模型",
+      "body": "同一天，Google 在编程助手 Antigravity 里上线 Orchestrator。它不会从头到尾只用一个模型，而是在同一次任务里按需要切换：难题交给 Carbon 或 Argon 规划，写代码、跑测试交给 Hydrogen。官方称在 Terminal-Bench 上成功率接近 Carbon，平均少用 24% 配额、快 19%。Ultra 可选 Carbon 或 Argon 搭配，付费 Pro 目前是 Argon 搭配。",
+      "why": "不用一开始就赌一个模型，贵的只在难步骤上用",
       "links": [
         {
-          "label": "阿里云官方文档",
-          "href": "https://help.aliyun.com/zh/model-studio/qwen4-max-preview"
-        },
-        {
-          "label": "动点科技",
-          "href": "https://cn.technode.com/post/2026-11-11/alibaba-qwen4-max-preview/"
+          "label": "Antigravity 官方博客",
+          "href": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/"
         }
       ]
     },
     {
-      "lab": "百度",
-      "accent": [
-        126,
-        224,
-        129
-      ],
-      "head": "文心 5.5 Flash 预览发布，称将开源",
-      "body": "11 月 11 日，百度发布文心 5.5 Flash 预览版（ERNIE 5.5 Flash Preview）。总参数 2800 亿，每次大约只用其中 140 亿，上下文 100 万 token。API 已在百度智能云千帆上线；限时活动价为高峰时段（8:00–22:00）每百万 token 输入 1 元、输出 4 元，空闲时段输入 0.5 元、输出 2 元（原价为高峰 2 / 8 元、空闲 1 / 4 元）。官方称擅长编程、三维建模、知识工作和内容创作，权重将以 Apache 2.0 协议开源，并写明这仍是后训练中的中间版本。第一财经报道开源日期为 11 月 25 日。",
-      "why": "又一个承诺开源的国产中等规模模型，先能在 API 里试用",
-      "links": [
-        {
-          "label": "百度文心官方公告",
-          "href": "https://ernie.baidu.com/release/ernie-5-5-flash-preview/"
-        },
-        {
-          "label": "千帆定价",
-          "href": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya"
-        },
-        {
-          "label": "第一财经",
-          "href": "https://www.yicai.com/news/103436777.html"
-        }
-      ]
-    },
-    {
-      "lab": "DEEPMIND",
+      "lab": "IBM",
       "accent": [
         196,
         167,
         255
       ],
-      "head": "AlphaGenome 2：按细胞类型预测基因变异",
-      "body": "11 月 11 日，Google DeepMind 发布 AlphaGenome 2。它根据一段 DNA 序列，预测某个基因变异会怎样影响特定类型的人体细胞（比如心肌细胞或某种免疫细胞），而不只是给出组织层面的平均结果。官方称训练用了超过 1.07 亿个单细胞数据、覆盖 68 种组织；在 TenK10K 数据集上，识别因果变异的比例为 30%，上一代经单细胞数据微调后及其他专用工具为 16%。非商业研究即日起可通过 AlphaGenome API 使用，商业研究为小范围预览。官方强调：仅供研究，尚未获批用于临床诊断。",
-      "why": "把变异影响从「整块组织」细化到「哪一种细胞」，更接近找病根",
+      "head": "IBM 发布带标记格式的 Granite 4.1 预览",
+      "body": "11月12日，IBM 发布实验性预览模型 granite-4.1-3b-LLMON-preview 和 8b 版本，并开源标记格式 LLMON（读作 lemon）。它用专用标记把「指令」和「数据」分开，避免模型把文档或工具返回里藏着的话当成命令。官方称在这类静态间接注入测试里攻击成功率大幅下降，通用能力与 Granite 4.1 Instruct 相当；仅供评估，不适合生产环境。",
+      "why": "小模型更容易被「藏在资料里的指令」带跑，这是一种把格式写清楚的办法",
       "links": [
         {
-          "label": "DeepMind 官方博客",
-          "href": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/"
+          "label": "Hugging Face 官方博客",
+          "href": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite"
         },
         {
-          "label": "The Verge",
-          "href": "https://www.theverge.com/ai-artificial-intelligence/1031524/google-deepmind-alphagenome-2-genetic-ai-model"
-        },
-        {
-          "label": "Nature",
-          "href": "https://www.nature.com/articles/d41586-026-03673-0"
+          "label": "LLMON 代码仓库",
+          "href": "https://github.com/generative-computing/llmon"
         }
       ]
     }
