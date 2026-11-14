@@ -1,8 +1,71 @@
 {
-  "date": "2026.11.13",
-  "weekday": "周五",
-  "lede": "昨夜主线：Google 发布 Gemini 4 Hydrogen，用来接替 3.8 Flash。",
+  "date": "2026.11.14",
+  "weekday": "周六",
+  "lede": "昨夜主线：DeepSeek 把 App 里的搜索、读文件、语音等能力做成 API 开放出来。同一天 OpenAI 推出可由代理代付款的钱包，llama.cpp 也升到了 1.0.0。",
   "stories": [
+    {
+      "lab": "DEEPSEEK",
+      "accent": [
+        102,
+        217,
+        239
+      ],
+      "head": "开放全家桶应用 API，可搜索、读文件、说话",
+      "body": "11月13日晚，DeepSeek 开放「全家桶」应用 API：V4.1-Flash（deepseek-flash）打开参数即可联网搜索、读文件、读链接，并做安全校验；搜索、抓取、文字识别和语音也有独立接口。工具另计费：搜索和抓取各 5 元/千次，文字识别 1.5 元/千页；语音合成现价 1.5 元/万字符、识别 0.39 元/小时（官方称限时五折）。",
+      "why": "不用再自己接搜索和读文件，但账单要算上工具费",
+      "links": [
+        {
+          "label": "DeepSeek 官方公告",
+          "href": "https://api-docs.deepseek.com/zh-cn/news/news261113/"
+        },
+        {
+          "label": "模型与价格",
+          "href": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
+        },
+        {
+          "label": "演示代码",
+          "href": "https://github.com/deepseek-ai/chat-demo"
+        }
+      ]
+    },
+    {
+      "lab": "OPENAI",
+      "accent": [
+        126,
+        224,
+        129
+      ],
+      "head": "推出 ChatGPT Wallet，美国 Pro 用户可让代理代付款",
+      "body": "11月13日，OpenAI 宣布推出 ChatGPT Wallet：用户添加一次银行卡后，可由其代理产品 Dots（官方写作 dots）在结账时代为付款。代理看不到真实卡号，每笔须经 Face ID 或指纹等校验。官方称与美国运通、Mastercard、Visa 合作，初期面向年满 18 岁、持合格美国发卡的美国 ChatGPT Pro 订阅用户滚动开放，且仅在与 Dots 的对话中可用。",
+      "why": "代理从「帮你挑东西」跨到「帮你付钱」，目前仅限美国 Pro，且每笔仍要本人确认",
+      "links": [
+        {
+          "label": "OpenAI 官方公告",
+          "href": "https://openai.com/index/introducing-chatgpt-wallet"
+        }
+      ]
+    },
+    {
+      "lab": "LLAMA.CPP",
+      "accent": [
+        255,
+        159,
+        67
+      ],
+      "head": "llama.cpp 与 ggml 发布 v1.0.0",
+      "body": "11月13日，常用的本地推理库 llama.cpp 与底层计算库 ggml 正式发布 v1.0.0。官方称今后以主版本号标记公开 C 接口的不兼容改动。预发布安装包覆盖 Linux、macOS、Windows、Android 和 iOS，并可通过 Docker、Homebrew、conda-forge 等渠道获取。官方称目前支持超过 150 种模型架构变体。",
+      "why": "很多本地工具靠它跑模型，接口开始按正式版本管理，升级时更好判断会不会踩坑",
+      "links": [
+        {
+          "label": "Hugging Face 官方博客",
+          "href": "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
+        },
+        {
+          "label": "GitHub 发布页",
+          "href": "https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0"
+        }
+      ]
+    },
     {
       "lab": "GOOGLE",
       "accent": [
@@ -10,59 +73,38 @@
         180,
         248
       ],
-      "head": "Gemini 4 Hydrogen 发布，接替 3.8 Flash",
-      "body": "11月12日，Google 发布 Gemini 4 Hydrogen（代号 gemini-4-hydrogen）。API 定价为每百万 token 输入 1.50 美元、输出 7.50 美元，100 万 token 上下文全程同一价格。官方称默认 high 思考档完成任务比 3.8 Flash 快 2.5 倍；编程基准 Terminal-Bench 4.1 为 57%，3.8 Flash 为 18.2%。已在 API、Gemini 应用和搜索上线。",
-      "why": "日常改代码、跑自动循环，终于有一档 Gemini 4 的便宜快模型",
+      "head": "公开 WeatherNext 3 所用卫星与降水数据",
+      "body": "11月13日，Google DeepMind 与 Google Research 公开支撑天气模型 WeatherNext 3 的两套数据：SatWeave 是 17 个波段、约 10 公里一格的全球卫星拼图，每小时更新；PARDIG 是约 15 分钟、约 10 公里一格的全球降水估计。两套均有历史库和近实时流，托管在 Google Cloud Storage，许可为 CC BY 4.0（可免费使用，需注明出处）。",
+      "why": "做天气或水文模型的人，不用再自己拼接各国卫星数据",
       "links": [
         {
-          "label": "Google 官方博客",
-          "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+          "label": "DeepMind 官方博客",
+          "href": "https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/"
         },
         {
-          "label": "开发者说明",
-          "href": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-hydrogen/"
+          "label": "SatWeave 文档",
+          "href": "https://developers.google.com/weathernext/guides/satweave"
         },
         {
-          "label": "9to5Google",
-          "href": "https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/"
+          "label": "PARDIG 文档",
+          "href": "https://developers.google.com/weathernext/guides/pardig"
         }
       ]
     },
     {
       "lab": "GOOGLE",
       "accent": [
-        102,
-        217,
-        239
-      ],
-      "head": "Antigravity 上线 Orchestrator，中途可换模型",
-      "body": "同一天，Google 在编程助手 Antigravity 里上线 Orchestrator。它不会从头到尾只用一个模型，而是在同一次任务里按需要切换：难题交给 Carbon 或 Argon 规划，写代码、跑测试交给 Hydrogen。官方称在 Terminal-Bench 上成功率接近 Carbon，平均少用 24% 配额、快 19%。Ultra 可选 Carbon 或 Argon 搭配，付费 Pro 目前是 Argon 搭配。",
-      "why": "不用一开始就赌一个模型，贵的只在难步骤上用",
-      "links": [
-        {
-          "label": "Antigravity 官方博客",
-          "href": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/"
-        }
-      ]
-    },
-    {
-      "lab": "IBM",
-      "accent": [
         196,
         167,
         255
       ],
-      "head": "IBM 发布带标记格式的 Granite 4.1 预览",
-      "body": "11月12日，IBM 发布实验性预览模型 granite-4.1-3b-LLMON-preview 和 8b 版本，并开源标记格式 LLMON（读作 lemon）。它用专用标记把「指令」和「数据」分开，避免模型把文档或工具返回里藏着的话当成命令。官方称在这类静态间接注入测试里攻击成功率大幅下降，通用能力与 Granite 4.1 Instruct 相当；仅供评估，不适合生产环境。",
-      "why": "小模型更容易被「藏在资料里的指令」带跑，这是一种把格式写清楚的办法",
+      "head": "Antigravity 的 /teamwork 向外部用户开放",
+      "body": "11月13日，Google Research 发文称，编程助手 Antigravity 中的 /teamwork（让多个自动程序分工协作的功能）已与 /boost、Deep Review 一同向外部用户开放，并可搭配 Gemini 4 使用。文中列举了用它做数学证明和形式化验证等例子，并称向 1 万名学术研究者提供六个月最高用量档免费额度。",
+      "why": "若你在用 Antigravity，这是官方把「多代理一起干活」的功能对外放开",
       "links": [
         {
-          "label": "Hugging Face 官方博客",
-          "href": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite"
-        },
-        {
-          "label": "LLMON 代码仓库",
-          "href": "https://github.com/generative-computing/llmon"
+          "label": "Google Research 官方博客",
+          "href": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/"
         }
       ]
     }
