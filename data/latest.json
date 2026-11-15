@@ -1,110 +1,35 @@
 {
-  "date": "2026.11.14",
-  "weekday": "周六",
-  "lede": "昨夜主线：DeepSeek 把 App 里的搜索、读文件、语音等能力做成 API 开放出来。同一天 OpenAI 推出可由代理代付款的钱包，llama.cpp 也升到了 1.0.0。",
+  "date": "2026.11.15",
+  "weekday": "周日",
+  "lede": "今天没有新的旗舰模型发布。主线是 Grok 把图像和视频创作收进了主界面。",
   "stories": [
     {
-      "lab": "DEEPSEEK",
-      "accent": [
-        102,
-        217,
-        239
-      ],
-      "head": "开放全家桶应用 API，可搜索、读文件、说话",
-      "body": "11月13日晚，DeepSeek 开放「全家桶」应用 API：V4.1-Flash（deepseek-flash）打开参数即可联网搜索、读文件、读链接，并做安全校验；搜索、抓取、文字识别和语音也有独立接口。工具另计费：搜索和抓取各 5 元/千次，文字识别 1.5 元/千页；语音合成现价 1.5 元/万字符、识别 0.39 元/小时（官方称限时五折）。",
-      "why": "不用再自己接搜索和读文件，但账单要算上工具费",
+      "lab": "GROK",
+      "accent": [232, 184, 109],
+      "head": "图像和视频创作并入 Grok 主界面",
+      "body": "11月15日凌晨（上海时间），Grok Imagine 官方账号宣布：图像和视频创作已在 Grok 里上线，并称「打开 Grok 即可开始创作」。随后 Grok 官方账号称，要把更多 SpaceX Super Intelligence（帖中写作 @spacexai）的产品收进同一个使用体验。两条帖子都没有说明价格、适用订阅档或地区，也没有说明原先独立的 Imagine 入口会如何处理。",
+      "why": "生图和生视频被收进同一个聊天入口，价格和地区要以产品页面为准",
       "links": [
         {
-          "label": "DeepSeek 官方公告",
-          "href": "https://api-docs.deepseek.com/zh-cn/news/news261113/"
+          "label": "Grok Imagine 官方帖",
+          "href": "https://x.com/imagine/status/2121672946968318285"
         },
         {
-          "label": "模型与价格",
-          "href": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
-        },
-        {
-          "label": "演示代码",
-          "href": "https://github.com/deepseek-ai/chat-demo"
+          "label": "Grok 官方说明",
+          "href": "https://x.com/grok/status/2121673185540378797"
         }
       ]
     },
     {
       "lab": "OPENAI",
-      "accent": [
-        126,
-        224,
-        129
-      ],
-      "head": "推出 ChatGPT Wallet，美国 Pro 用户可让代理代付款",
-      "body": "11月13日，OpenAI 宣布推出 ChatGPT Wallet：用户添加一次银行卡后，可由其代理产品 Dots（官方写作 dots）在结账时代为付款。代理看不到真实卡号，每笔须经 Face ID 或指纹等校验。官方称与美国运通、Mastercard、Visa 合作，初期面向年满 18 岁、持合格美国发卡的美国 ChatGPT Pro 订阅用户滚动开放，且仅在与 Dots 的对话中可用。",
-      "why": "代理从「帮你挑东西」跨到「帮你付钱」，目前仅限美国 Pro，且每笔仍要本人确认",
+      "accent": [126, 224, 129],
+      "head": "确认调整独立机器人团队，并入主研究线",
+      "body": "《财富》11月13日报道（美东中午，上海时间14日凌晨），OpenAI 向该刊确认：已撤销独立的机器人团队——研究人员转入首席研究官 Mark Chen 负责的主研究团队，应用与硬件人员转入总裁 Greg Brockman 负责的应用部门。官方称这是为了加快、而不是放弃机器人方向，并认为通用模型（包括 GPT-6 Astra）已可直接用于控制机器人。该刊还引用一项 Nvidia 研究：在模拟操作测试中，由 Astra 驱动的代理成功率为 74.8%，当时榜上最好的专用机器人模型为 51.0%。此次调整较突然：机器人学习会议 CoRL 上 OpenAI 已预订展位，但现场空置。",
+      "why": "公司把机器人当成通用模型的下游能力来做，不再单开一条专用模型线",
       "links": [
         {
-          "label": "OpenAI 官方公告",
-          "href": "https://openai.com/index/introducing-chatgpt-wallet"
-        }
-      ]
-    },
-    {
-      "lab": "LLAMA.CPP",
-      "accent": [
-        255,
-        159,
-        67
-      ],
-      "head": "llama.cpp 与 ggml 发布 v1.0.0",
-      "body": "11月13日，常用的本地推理库 llama.cpp 与底层计算库 ggml 正式发布 v1.0.0。官方称今后以主版本号标记公开 C 接口的不兼容改动。预发布安装包覆盖 Linux、macOS、Windows、Android 和 iOS，并可通过 Docker、Homebrew、conda-forge 等渠道获取。官方称目前支持超过 150 种模型架构变体。",
-      "why": "很多本地工具靠它跑模型，接口开始按正式版本管理，升级时更好判断会不会踩坑",
-      "links": [
-        {
-          "label": "Hugging Face 官方博客",
-          "href": "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
-        },
-        {
-          "label": "GitHub 发布页",
-          "href": "https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0"
-        }
-      ]
-    },
-    {
-      "lab": "GOOGLE",
-      "accent": [
-        138,
-        180,
-        248
-      ],
-      "head": "公开 WeatherNext 3 所用卫星与降水数据",
-      "body": "11月13日，Google DeepMind 与 Google Research 公开支撑天气模型 WeatherNext 3 的两套数据：SatWeave 是 17 个波段、约 10 公里一格的全球卫星拼图，每小时更新；PARDIG 是约 15 分钟、约 10 公里一格的全球降水估计。两套均有历史库和近实时流，托管在 Google Cloud Storage，许可为 CC BY 4.0（可免费使用，需注明出处）。",
-      "why": "做天气或水文模型的人，不用再自己拼接各国卫星数据",
-      "links": [
-        {
-          "label": "DeepMind 官方博客",
-          "href": "https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/"
-        },
-        {
-          "label": "SatWeave 文档",
-          "href": "https://developers.google.com/weathernext/guides/satweave"
-        },
-        {
-          "label": "PARDIG 文档",
-          "href": "https://developers.google.com/weathernext/guides/pardig"
-        }
-      ]
-    },
-    {
-      "lab": "GOOGLE",
-      "accent": [
-        196,
-        167,
-        255
-      ],
-      "head": "Antigravity 的 /teamwork 向外部用户开放",
-      "body": "11月13日，Google Research 发文称，编程助手 Antigravity 中的 /teamwork（让多个自动程序分工协作的功能）已与 /boost、Deep Review 一同向外部用户开放，并可搭配 Gemini 4 使用。文中列举了用它做数学证明和形式化验证等例子，并称向 1 万名学术研究者提供六个月最高用量档免费额度。",
-      "why": "若你在用 Antigravity，这是官方把「多代理一起干活」的功能对外放开",
-      "links": [
-        {
-          "label": "Google Research 官方博客",
-          "href": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/"
+          "label": "《财富》报道",
+          "href": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/"
         }
       ]
     }
