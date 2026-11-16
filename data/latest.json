@@ -1,36 +1,48 @@
 {
-  "date": "2026.11.15",
-  "weekday": "周日",
-  "lede": "今天没有新的旗舰模型发布。主线是 Grok 把图像和视频创作收进了主界面。",
+  "date": "2026.11.16",
+  "weekday": "周一",
+  "lede": "周末没有大厂旗舰模型发布。主线是美团放出 1.6 万亿参数的 LongCat-2.5 开放权重。",
   "stories": [
     {
-      "lab": "GROK",
-      "accent": [232, 184, 109],
-      "head": "图像和视频创作并入 Grok 主界面",
-      "body": "11月15日凌晨（上海时间），Grok Imagine 官方账号宣布：图像和视频创作已在 Grok 里上线，并称「打开 Grok 即可开始创作」。随后 Grok 官方账号称，要把更多 SpaceX Super Intelligence（帖中写作 @spacexai）的产品收进同一个使用体验。两条帖子都没有说明价格、适用订阅档或地区，也没有说明原先独立的 Imagine 入口会如何处理。",
-      "why": "生图和生视频被收进同一个聊天入口，价格和地区要以产品页面为准",
+      "lab": "美团",
+      "accent": [255, 196, 0],
+      "head": "LongCat-2.5 放出权重，MIT 许可可商用",
+      "body": "11月15日，美团 LongCat 团队在正式发布一周后公开了 LongCat-2.5 的权重。它是混合专家模型（每次只调用一部分子网络）：总参数 1.6 万亿，每个 token 约用 480 亿。API 支持 100 万 token 上下文、最长 12.8 万 token 输出，能看图和视频，推理可开关，兼容 OpenAI 和 Anthropic 两种接口格式。官方称全程用国产芯片训练，在 Terminal Bench v2.1 得 88.4 分（官方表里 Claude Opus 5 为 89.1）。限时 API 价约每百万 token 输入 0.27 欧元、输出 1.07 欧元。自部署指南只给了 194 张华为昇腾的方案，没有英伟达显卡指引。",
+      "why": "又一个接近一线水平、可商用的开放权重代码代理模型，但个人自己跑基本不现实，主要看 API 价",
       "links": [
-        {
-          "label": "Grok Imagine 官方帖",
-          "href": "https://x.com/imagine/status/2121672946968318285"
-        },
-        {
-          "label": "Grok 官方说明",
-          "href": "https://x.com/grok/status/2121673185540378797"
-        }
+        {"label": "The Decoder 报道", "href": "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/"},
+        {"label": "LongCat 在线试用", "href": "https://longcat.ai/"}
       ]
     },
     {
-      "lab": "OPENAI",
-      "accent": [126, 224, 129],
-      "head": "确认调整独立机器人团队，并入主研究线",
-      "body": "《财富》11月13日报道（美东中午，上海时间14日凌晨），OpenAI 向该刊确认：已撤销独立的机器人团队——研究人员转入首席研究官 Mark Chen 负责的主研究团队，应用与硬件人员转入总裁 Greg Brockman 负责的应用部门。官方称这是为了加快、而不是放弃机器人方向，并认为通用模型（包括 GPT-6 Astra）已可直接用于控制机器人。该刊还引用一项 Nvidia 研究：在模拟操作测试中，由 Astra 驱动的代理成功率为 74.8%，当时榜上最好的专用机器人模型为 51.0%。此次调整较突然：机器人学习会议 CoRL 上 OpenAI 已预订展位，但现场空置。",
-      "why": "公司把机器人当成通用模型的下游能力来做，不再单开一条专用模型线",
+      "lab": "ANTHROPIC",
+      "accent": [217, 119, 87],
+      "head": "提醒：Sonnet 4.5 将于 11月30日下线",
+      "body": "Anthropic 模型下线页显示，claude-sonnet-4-5-20250929 已于 9月30日标记弃用，11月30日正式停用，官方推荐换成 claude-sonnet-5-5；Opus 4.5 标注「不早于 11月24日」下线。同一页还写明：temperature、top_p、top_k 三个采样参数已在 API 版本 2026-10-21 中移除，传了会直接报 400 错误。",
+      "why": "还有两周；自己脚本或网关里写死了旧模型名或采样参数的，届时请求会直接失败",
       "links": [
-        {
-          "label": "《财富》报道",
-          "href": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/"
-        }
+        {"label": "Anthropic 模型下线页", "href": "https://platform.claude.com/docs/en/about-claude/model-deprecations"}
+      ]
+    },
+    {
+      "lab": "RUNWAY",
+      "accent": [160, 140, 255],
+      "head": "机器人控制模型 Praxis-1 开放权重",
+      "body": "做视频生成的 Runway 公开了 Praxis-1 权重（270 亿参数的混合专家模型，用来直接输出机器人动作），Apache 2.0 许可，附带推理和微调代码。官方称在英伟达 RoboLab-120 测试中成功率 46.2%；但 The Robot Report 指出它在总榜上排第五。官方称从 H100 到 RTX 5090 都能跑。",
+      "why": "视频模型公司把「看视频学到的物理常识」拿去控制机械臂，而且能完全本地部署",
+      "links": [
+        {"label": "Runway 公告", "href": "https://runway.com/news/company-news/praxis-1-is-now-available"},
+        {"label": "DeAI 11月15日简报", "href": "https://www.deai.org/news/daily-brief-2026-11-15"}
+      ]
+    },
+    {
+      "lab": "美团",
+      "accent": [255, 160, 60],
+      "head": "数字人视频模型 LongCat-Video-Avatar 1.6",
+      "body": "11月15日，美团还发布了用音频驱动人物说话视频的 LongCat-Video-Avatar 1.6，MIT 许可。官方称能生成 10 分钟以上的视频，人脸和口型在长视频里漂移更少；在美团自己的偏好评测中，6 个系统里排第二。",
+      "why": "长讲解、对话类视频可以直接下载权重自己试，不必走付费 API",
+      "links": [
+        {"label": "AI Ping 报道", "href": "https://aipingnews.com/en/news/2433-meituan-longcat-video-avatar-1-6-long-video-weights"}
       ]
     }
   ]
