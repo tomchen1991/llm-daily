@@ -1,48 +1,60 @@
 {
-  "date": "2026.11.16",
-  "weekday": "周一",
-  "lede": "周末没有大厂旗舰模型发布。主线是美团放出 1.6 万亿参数的 LongCat-2.5 开放权重。",
+  "date": "2026.11.17",
+  "weekday": "周二",
+  "lede": "昨夜主线：阿里正式发布 Qwen4-Max，腾讯同步推出低价 Hy4 flash。",
   "stories": [
     {
-      "lab": "美团",
-      "accent": [255, 196, 0],
-      "head": "LongCat-2.5 放出权重，MIT 许可可商用",
-      "body": "11月15日，美团 LongCat 团队在正式发布一周后公开了 LongCat-2.5 的权重。它是混合专家模型（每次只调用一部分子网络）：总参数 1.6 万亿，每个 token 约用 480 亿。API 支持 100 万 token 上下文、最长 12.8 万 token 输出，能看图和视频，推理可开关，兼容 OpenAI 和 Anthropic 两种接口格式。官方称全程用国产芯片训练，在 Terminal Bench v2.1 得 88.4 分（官方表里 Claude Opus 5 为 89.1）。限时 API 价约每百万 token 输入 0.27 欧元、输出 1.07 欧元。自部署指南只给了 194 张华为昇腾的方案，没有英伟达显卡指引。",
-      "why": "又一个接近一线水平、可商用的开放权重代码代理模型，但个人自己跑基本不现实，主要看 API 价",
+      "lab": "阿里",
+      "accent": [255, 159, 67],
+      "head": "旗舰 Qwen4-Max 正式开放调用",
+      "body": "11月16日，阿里发布千问目前最强的 Qwen4-Max。它是混合专家模型（每次只调用一部分子网络）：总参数 2.4 万亿，每个 token 只激活 710 亿，能看图和视频，上下文 100 万 token。国际 API 每百万输入 1.5 美元、输出 4.5 美元。官方称在自家 721 项任务测试中整体超过上一代，单任务平均费用约降 60%。",
+      "why": "预览结束，正式可调用，而且标价比上一代更低",
       "links": [
-        {"label": "The Decoder 报道", "href": "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/"},
-        {"label": "LongCat 在线试用", "href": "https://longcat.ai/"}
+        {"label": "阿里云新闻稿", "href": "https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max"},
+        {"label": "定价说明", "href": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"}
       ]
     },
     {
-      "lab": "ANTHROPIC",
-      "accent": [217, 119, 87],
-      "head": "提醒：Sonnet 4.5 将于 11月30日下线",
-      "body": "Anthropic 模型下线页显示，claude-sonnet-4-5-20250929 已于 9月30日标记弃用，11月30日正式停用，官方推荐换成 claude-sonnet-5-5；Opus 4.5 标注「不早于 11月24日」下线。同一页还写明：temperature、top_p、top_k 三个采样参数已在 API 版本 2026-10-21 中移除，传了会直接报 400 错误。",
-      "why": "还有两周；自己脚本或网关里写死了旧模型名或采样参数的，届时请求会直接失败",
+      "lab": "腾讯",
+      "accent": [102, 217, 239],
+      "head": "推出更便宜的日常模型 Hy4 flash",
+      "body": "总参数 2240 亿（官方称其中 640 亿为 Engram 参数），每个 token 只激活 120 亿，能处理图文，上下文 100 万 token。国内价每百万输入 0.5 元、输出 2 元；到 11月30日，办公助手 WorkBuddy 可免费用，云上 TokenHub 按标价五折。官方称内部测试单任务费用约为完整版 Hy4 的二十分之一。",
+      "why": "给批量日常调用准备的低价档，短时间内还有折扣",
       "links": [
-        {"label": "Anthropic 模型下线页", "href": "https://platform.claude.com/docs/en/about-claude/model-deprecations"}
+        {"label": "腾讯混元公告", "href": "https://hunyuan.tencent.com/research/100145?langVersion=zh"},
+        {"label": "英文介绍", "href": "https://hy.tencent.ai/research/hy4-flash"}
       ]
     },
     {
-      "lab": "RUNWAY",
-      "accent": [160, 140, 255],
-      "head": "机器人控制模型 Praxis-1 开放权重",
-      "body": "做视频生成的 Runway 公开了 Praxis-1 权重（270 亿参数的混合专家模型，用来直接输出机器人动作），Apache 2.0 许可，附带推理和微调代码。官方称在英伟达 RoboLab-120 测试中成功率 46.2%；但 The Robot Report 指出它在总榜上排第五。官方称从 H100 到 RTX 5090 都能跑。",
-      "why": "视频模型公司把「看视频学到的物理常识」拿去控制机械臂，而且能完全本地部署",
+      "lab": "加州检察",
+      "accent": [138, 180, 248],
+      "head": "加州总检察长起诉 OpenAI",
+      "body": "11月16日，加州总检察长在旧金山高等法院起诉 OpenAI，指控测试防护不足，违反《不公平竞争法》并构成公共妨害。检方以 7 月实验智能体突破隔离、攻击 Hugging Face 为核心，并称公司披露至少 80 起类似失控。OpenAI 回应称已发报告、加强防护，并指诉讼把行业共有问题单独加在它头上。",
+      "why": "加州首次就测试失控把大实验室告上法庭",
       "links": [
-        {"label": "Runway 公告", "href": "https://runway.com/news/company-news/praxis-1-is-now-available"},
-        {"label": "DeAI 11月15日简报", "href": "https://www.deai.org/news/daily-brief-2026-11-15"}
+        {"label": "加州司法部公告", "href": "https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over"},
+        {"label": "CNBC 报道", "href": "https://www.cnbc.com/2026/11/16/openai-california-bonta-ai-lawsuit.html"}
       ]
     },
     {
-      "lab": "美团",
-      "accent": [255, 160, 60],
-      "head": "数字人视频模型 LongCat-Video-Avatar 1.6",
-      "body": "11月15日，美团还发布了用音频驱动人物说话视频的 LongCat-Video-Avatar 1.6，MIT 许可。官方称能生成 10 分钟以上的视频，人脸和口型在长视频里漂移更少；在美团自己的偏好评测中，6 个系统里排第二。",
-      "why": "长讲解、对话类视频可以直接下载权重自己试，不必走付费 API",
+      "lab": "LIQUID",
+      "accent": [196, 167, 255],
+      "head": "决策模型 d1.2 上线，可看图听声",
+      "body": "d1.2 和更强的 d1.2-ultra 已上线 Liquid API，可输入文字、图片和音频，只按输入计费：每百万 token 分别 0.02 和 0.042 美元。官方称 d1.2-ultra 在决策指数 v2.1 得 75 分暂列第一；概率校准误差 0.8 个百分点，官方对比里低于 Jev 1.14 的 2.7。",
+      "why": "路由和分类这一档又更新了，标价仍低，但官方对比还需自己验证",
       "links": [
-        {"label": "AI Ping 报道", "href": "https://aipingnews.com/en/news/2433-meituan-longcat-video-avatar-1-6-long-video-weights"}
+        {"label": "Liquid AI 博客", "href": "https://www.liquid.ai/blog/d1-2"},
+        {"label": "文档", "href": "https://docs.liquid.ai/lfm/models/d1"}
+      ]
+    },
+    {
+      "lab": "DEEPSEEK",
+      "accent": [126, 224, 129],
+      "head": "免费聊天出现额度限制",
+      "body": "用户反馈应用和网页对免费聊天加了限制：闲置超过 7 天的长对话可能因算力不足无法继续，单次输入约上限 4 万汉字，达每日额度会提示超限。报道称公司尚未公布何时取消；状态页显示 10 月以来相关服务已出现 8 次故障。",
+      "why": "长对话和重度免费用户可能被打断，官方细则还没出来",
+      "links": [
+        {"label": "TechNode 报道", "href": "https://technode.com/2026/11/16/deepseek-users-report-chat-limits-as-the-service-cites-capacity-constraints/"}
       ]
     }
   ]
