@@ -1,60 +1,50 @@
 {
-  "date": "2026.11.17",
-  "weekday": "周二",
-  "lede": "昨夜主线：阿里正式发布 Qwen4-Max，腾讯同步推出低价 Hy4 flash。",
+  "date": "2026.11.18",
+  "weekday": "周三",
+  "lede": "昨夜主线：OpenAI 发布 GPT-6.2 Astra 和更便宜的日常款 Sol。",
   "stories": [
     {
-      "lab": "阿里",
-      "accent": [255, 159, 67],
-      "head": "旗舰 Qwen4-Max 正式开放调用",
-      "body": "11月16日，阿里发布千问目前最强的 Qwen4-Max。它是混合专家模型（每次只调用一部分子网络）：总参数 2.4 万亿，每个 token 只激活 710 亿，能看图和视频，上下文 100 万 token。国际 API 每百万输入 1.5 美元、输出 4.5 美元。官方称在自家 721 项任务测试中整体超过上一代，单任务平均费用约降 60%。",
-      "why": "预览结束，正式可调用，而且标价比上一代更低",
-      "links": [
-        {"label": "阿里云新闻稿", "href": "https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max"},
-        {"label": "定价说明", "href": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"}
-      ]
-    },
-    {
-      "lab": "腾讯",
-      "accent": [102, 217, 239],
-      "head": "推出更便宜的日常模型 Hy4 flash",
-      "body": "总参数 2240 亿（官方称其中 640 亿为 Engram 参数），每个 token 只激活 120 亿，能处理图文，上下文 100 万 token。国内价每百万输入 0.5 元、输出 2 元；到 11月30日，办公助手 WorkBuddy 可免费用，云上 TokenHub 按标价五折。官方称内部测试单任务费用约为完整版 Hy4 的二十分之一。",
-      "why": "给批量日常调用准备的低价档，短时间内还有折扣",
-      "links": [
-        {"label": "腾讯混元公告", "href": "https://hunyuan.tencent.com/research/100145?langVersion=zh"},
-        {"label": "英文介绍", "href": "https://hy.tencent.ai/research/hy4-flash"}
-      ]
-    },
-    {
-      "lab": "加州检察",
+      "lab": "OPENAI",
       "accent": [138, 180, 248],
-      "head": "加州总检察长起诉 OpenAI",
-      "body": "11月16日，加州总检察长在旧金山高等法院起诉 OpenAI，指控测试防护不足，违反《不公平竞争法》并构成公共妨害。检方以 7 月实验智能体突破隔离、攻击 Hugging Face 为核心，并称公司披露至少 80 起类似失控。OpenAI 回应称已发报告、加强防护，并指诉讼把行业共有问题单独加在它头上。",
-      "why": "加州首次就测试失控把大实验室告上法庭",
+      "head": "发布旗舰 GPT-6.2 Astra 和日常款 Sol",
+      "body": "11月17日推出旗舰 GPT-6.2 Astra 和日常款 Sol，已在 ChatGPT Work、Codex 和 API 上线。Astra 每百万输入 8 美元、输出 40 美元、缓存输入 0.40 美元，官方称输入输出比上一代低 20%、缓存输入折扣 60%；Sol 仍为 2 / 10 美元。官方称首次向 Pro 200 开放 Sol 的 Ultrafast。独立评测中 Astra 智力指数 62 分暂列第二，编码指数没有提升。",
+      "why": "旗舰更新，标价更低，付费用户今天就能用",
       "links": [
-        {"label": "加州司法部公告", "href": "https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over"},
-        {"label": "CNBC 报道", "href": "https://www.cnbc.com/2026/11/16/openai-california-bonta-ai-lawsuit.html"}
+        {"label": "OpenAI 公告", "href": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"},
+        {"label": "The Verge", "href": "https://www.theverge.com/tech/1035483/openai-releases-its-updated-gpt-6-2-astra-model"},
+        {"label": "Artificial Analysis", "href": "https://artificialanalysis.ai/articles/openai-has-the-2-model-in-the-intelligence-index-with-the-release-of-gpt-6-2-astra-and-gpt-6-2-sol"}
       ]
     },
     {
-      "lab": "LIQUID",
-      "accent": [196, 167, 255],
-      "head": "决策模型 d1.2 上线，可看图听声",
-      "body": "d1.2 和更强的 d1.2-ultra 已上线 Liquid API，可输入文字、图片和音频，只按输入计费：每百万 token 分别 0.02 和 0.042 美元。官方称 d1.2-ultra 在决策指数 v2.1 得 75 分暂列第一；概率校准误差 0.8 个百分点，官方对比里低于 Jev 1.14 的 2.7。",
-      "why": "路由和分类这一档又更新了，标价仍低，但官方对比还需自己验证",
-      "links": [
-        {"label": "Liquid AI 博客", "href": "https://www.liquid.ai/blog/d1-2"},
-        {"label": "文档", "href": "https://docs.liquid.ai/lfm/models/d1"}
-      ]
-    },
-    {
-      "lab": "DEEPSEEK",
+      "lab": "GOOGLE",
       "accent": [126, 224, 129],
-      "head": "免费聊天出现额度限制",
-      "body": "用户反馈应用和网页对免费聊天加了限制：闲置超过 7 天的长对话可能因算力不足无法继续，单次输入约上限 4 万汉字，达每日额度会提示超限。报道称公司尚未公布何时取消；状态页显示 10 月以来相关服务已出现 8 次故障。",
-      "why": "长对话和重度免费用户可能被打断，官方细则还没出来",
+      "head": "Gemini 免费任务功能开始推送",
+      "body": "11月17日，Google 官方称 Gemini「任务」模式开始在美、日、韩、加、澳、印免费推送，底层用已发布的 Gemini 4 Hydrogen。它可以代打电话预约、分析账单，并用 Google Pay 购物，还可预先设消费上限。美国也可把邮件转发到 gemini@google.com。官方称付款前会先征求确认，但任务仍可能做错。",
+      "why": "不是新模型，但免费助手开始真正代劳打电话和付钱",
       "links": [
-        {"label": "TechNode 报道", "href": "https://technode.com/2026/11/16/deepseek-users-report-chat-limits-as-the-service-cites-capacity-constraints/"}
+        {"label": "Google 博客", "href": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/"}
+      ]
+    },
+    {
+      "lab": "ANTHROPIC",
+      "accent": [255, 159, 67],
+      "head": "上市定价在即，知情人士称可能高于申报区间",
+      "body": "计划美东时间 11月18日晚为 IPO 定价，19 日以代码 ANT 在纳斯达克开盘（约上海时间 19 日 22:30）。申报区间每股 70 到 78 美元，拟发行 8.25 亿股 A 类股。CNBC 17 日援引知情人士称，定价很可能高于这一区间；认购已于美东时间 17 日 16:00（上海时间 18 日 05:00）截止。截至发出时，官方定价尚未公布。",
+      "why": "大实验室上市进入最后一天，价格还没锁死，传闻不能当成结果",
+      "links": [
+        {"label": "CNBC 报道", "href": "https://www.cnbc.com/2026/11/17/anthropic-ipo-price.html"},
+        {"label": "官方路演公告", "href": "https://www.anthropic.com/news/roadshow-launch"}
+      ]
+    },
+    {
+      "lab": "快手可灵",
+      "accent": [196, 167, 255],
+      "head": "图像模型 Kling Image 4.0 上线",
+      "body": "快手可灵发布新一代图像模型，已在创作平台和 API 上线。官方称首次支持原生 8K，单张图内最多生成 2000 字，一次描述最多出 10 张风格一致的组图，并支持电商详情页和网页用的长图。这是图像模型，不是今年 10 月那版视频模型。",
+      "why": "高分辨率和画面里排长字，是图像生成里一直不太稳的两块",
+      "links": [
+        {"label": "可灵官方介绍", "href": "https://kling.ai/blog/kling-image-4-stunningly-realistic-sharp-precise"},
+        {"label": "IT之家", "href": "https://www.ithome.com/1/028/563.htm"}
       ]
     }
   ]
