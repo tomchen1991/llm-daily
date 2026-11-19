@@ -1,50 +1,65 @@
 {
-  "date": "2026.11.18",
-  "weekday": "周三",
-  "lede": "昨夜主线：OpenAI 发布 GPT-6.2 Astra 和更便宜的日常款 Sol。",
+  "date": "2026.11.19",
+  "weekday": "周四",
+  "lede": "今早主线：Google 推出中间档 Gemini 4 Neon；Anthropic 今晚挂牌。",
   "stories": [
     {
-      "lab": "OPENAI",
-      "accent": [138, 180, 248],
-      "head": "发布旗舰 GPT-6.2 Astra 和日常款 Sol",
-      "body": "11月17日推出旗舰 GPT-6.2 Astra 和日常款 Sol，已在 ChatGPT Work、Codex 和 API 上线。Astra 每百万输入 8 美元、输出 40 美元、缓存输入 0.40 美元，官方称输入输出比上一代低 20%、缓存输入折扣 60%；Sol 仍为 2 / 10 美元。官方称首次向 Pro 200 开放 Sol 的 Ultrafast。独立评测中 Astra 智力指数 62 分暂列第二，编码指数没有提升。",
-      "why": "旗舰更新，标价更低，付费用户今天就能用",
-      "links": [
-        {"label": "OpenAI 公告", "href": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"},
-        {"label": "The Verge", "href": "https://www.theverge.com/tech/1035483/openai-releases-its-updated-gpt-6-2-astra-model"},
-        {"label": "Artificial Analysis", "href": "https://artificialanalysis.ai/articles/openai-has-the-2-model-in-the-intelligence-index-with-the-release-of-gpt-6-2-astra-and-gpt-6-2-sol"}
-      ]
-    },
-    {
       "lab": "GOOGLE",
-      "accent": [126, 224, 129],
-      "head": "Gemini 免费任务功能开始推送",
-      "body": "11月17日，Google 官方称 Gemini「任务」模式开始在美、日、韩、加、澳、印免费推送，底层用已发布的 Gemini 4 Hydrogen。它可以代打电话预约、分析账单，并用 Google Pay 购物，还可预先设消费上限。美国也可把邮件转发到 gemini@google.com。官方称付款前会先征求确认，但任务仍可能做错。",
-      "why": "不是新模型，但免费助手开始真正代劳打电话和付钱",
+      "accent": [
+        126,
+        224,
+        129
+      ],
+      "head": "推出中间档 Gemini 4 Neon",
+      "body": "11月18日（上海时间今晨）发布 Gemini 4 Neon，放在日常款 Hydrogen 与最重活 Carbon 之间，上下文 100 万 token。API 每百万输入 3 美元、缓存输入 0.15 美元、输出 15 美元。官方称最高思考档智力指数 61 分，独立评测确认暂列第三。已在付费 API 和 Pro / Ultra 应用上线；12月1日起会比调价后的 Carbon 便宜 25%。",
+      "why": "新的中间档今天就能用，能力靠近头牌，促销结束后也更便宜",
       "links": [
-        {"label": "Google 博客", "href": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/"}
+        {
+          "label": "Google 博客",
+          "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+        },
+        {
+          "label": "VentureBeat",
+          "href": "https://venturebeat.com/technology/google-launches-gemini-4-neon-with-opus-5-5-level-coding-performance-at-25-lower-api-token-prices"
+        }
       ]
     },
     {
       "lab": "ANTHROPIC",
-      "accent": [255, 159, 67],
-      "head": "上市定价在即，知情人士称可能高于申报区间",
-      "body": "计划美东时间 11月18日晚为 IPO 定价，19 日以代码 ANT 在纳斯达克开盘（约上海时间 19 日 22:30）。申报区间每股 70 到 78 美元，拟发行 8.25 亿股 A 类股。CNBC 17 日援引知情人士称，定价很可能高于这一区间；认购已于美东时间 17 日 16:00（上海时间 18 日 05:00）截止。截至发出时，官方定价尚未公布。",
-      "why": "大实验室上市进入最后一天，价格还没锁死，传闻不能当成结果",
+      "accent": [
+        255,
+        159,
+        67
+      ],
+      "head": "IPO 定价 83 美元，今晚挂牌",
+      "body": "官方 11 月 18 日宣布，A 类股发行价每股 83 美元，高于此前 70–78 美元的申报区间。本次发行 9.80 亿股，按发行价计算规模约 813 亿美元，其中公司出售约 9.56 亿股。股票代码 ANT，预计美东时间 11 月 19 日开盘（约上海时间今晚 22:30）。美联社报道称估值为 1.5 万亿美元。交易尚未开始，开盘价还要晚上才见分晓。",
+      "why": "价格已经锁定，真正的市场出价要等今晚开盘",
       "links": [
-        {"label": "CNBC 报道", "href": "https://www.cnbc.com/2026/11/17/anthropic-ipo-price.html"},
-        {"label": "官方路演公告", "href": "https://www.anthropic.com/news/roadshow-launch"}
+        {
+          "label": "Anthropic 公告",
+          "href": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
+        },
+        {
+          "label": "美联社",
+          "href": "https://apnews.com/article/anthropic-ipo-pricing-70b660ddf900d90bbf484ecdf1fb441c"
+        }
       ]
     },
     {
-      "lab": "快手可灵",
-      "accent": [196, 167, 255],
-      "head": "图像模型 Kling Image 4.0 上线",
-      "body": "快手可灵发布新一代图像模型，已在创作平台和 API 上线。官方称首次支持原生 8K，单张图内最多生成 2000 字，一次描述最多出 10 张风格一致的组图，并支持电商详情页和网页用的长图。这是图像模型，不是今年 10 月那版视频模型。",
-      "why": "高分辨率和画面里排长字，是图像生成里一直不太稳的两块",
+      "lab": "腾讯混元",
+      "accent": [
+        196,
+        167,
+        255
+      ],
+      "head": "Hy4 flash 权重已可下载",
+      "body": "16日先上 API，权重 17 日预告、18 日已出现在 Hugging Face（tencent/Hy4-flash 等），无需申请。总共约 2200 亿参数，官方称每生成一个词约用 120 亿活跃参数，支持图文输入和 100 万 token 上下文。协议是腾讯 Hy 许可证，不是 Apache 2.0。官方 4-bit 包约 157 GiB，llama.cpp 官方支持尚未合并。",
+      "why": "能自己跑的便宜日常模型终于能下到了，但协议和机器门槛都得看清",
       "links": [
-        {"label": "可灵官方介绍", "href": "https://kling.ai/blog/kling-image-4-stunningly-realistic-sharp-precise"},
-        {"label": "IT之家", "href": "https://www.ithome.com/1/028/563.htm"}
+        {
+          "label": "Hugging Face",
+          "href": "https://huggingface.co/tencent/Hy4-flash"
+        }
       ]
     }
   ]
