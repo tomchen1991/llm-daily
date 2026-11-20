@@ -1,65 +1,58 @@
 {
-  "date": "2026.11.19",
-  "weekday": "周四",
-  "lede": "今早主线：Google 推出中间档 Gemini 4 Neon；Anthropic 今晚挂牌。",
+  "date": "2026.11.20",
+  "weekday": "周五",
+  "lede": "今早主线：Anthropic 股票首日收涨；Google 给开发者补了两项能力。",
   "stories": [
     {
-      "lab": "GOOGLE",
-      "accent": [
-        126,
-        224,
-        129
-      ],
-      "head": "推出中间档 Gemini 4 Neon",
-      "body": "11月18日（上海时间今晨）发布 Gemini 4 Neon，放在日常款 Hydrogen 与最重活 Carbon 之间，上下文 100 万 token。API 每百万输入 3 美元、缓存输入 0.15 美元、输出 15 美元。官方称最高思考档智力指数 61 分，独立评测确认暂列第三。已在付费 API 和 Pro / Ultra 应用上线；12月1日起会比调价后的 Carbon 便宜 25%。",
-      "why": "新的中间档今天就能用，能力靠近头牌，促销结束后也更便宜",
-      "links": [
-        {
-          "label": "Google 博客",
-          "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
-        },
-        {
-          "label": "VentureBeat",
-          "href": "https://venturebeat.com/technology/google-launches-gemini-4-neon-with-opus-5-5-level-coding-performance-at-25-lower-api-token-prices"
-        }
-      ]
-    },
-    {
       "lab": "ANTHROPIC",
-      "accent": [
-        255,
-        159,
-        67
-      ],
-      "head": "IPO 定价 83 美元，今晚挂牌",
-      "body": "官方 11 月 18 日宣布，A 类股发行价每股 83 美元，高于此前 70–78 美元的申报区间。本次发行 9.80 亿股，按发行价计算规模约 813 亿美元，其中公司出售约 9.56 亿股。股票代码 ANT，预计美东时间 11 月 19 日开盘（约上海时间今晚 22:30）。美联社报道称估值为 1.5 万亿美元。交易尚未开始，开盘价还要晚上才见分晓。",
-      "why": "价格已经锁定，真正的市场出价要等今晚开盘",
+      "accent": [255, 159, 67],
+      "head": "股票 ANT 首日收于 97.17 美元",
+      "body": "美东 11 月 19 日在纳斯达克挂牌。开盘 111.50 美元，收盘 97.17 美元，较发行价 83 美元涨 17.1%，但低于开盘。发行 9.80 亿股，按发行价计算规模约 813 亿美元。CNBC 称为有记录以来最大 IPO，并称收盘完全摊薄市值约 1.8 万亿美元。",
+      "why": "昨天还只是定价，今天已经有真实成交价了",
       "links": [
-        {
-          "label": "Anthropic 公告",
-          "href": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
-        },
-        {
-          "label": "美联社",
-          "href": "https://apnews.com/article/anthropic-ipo-pricing-70b660ddf900d90bbf484ecdf1fb441c"
-        }
+        {"label": "纳斯达克公告", "href": "https://www.nasdaq.com/newsroom/anthropic-marks-ipo-at-nasdaq"},
+        {"label": "CNBC", "href": "https://www.cnbc.com/2026/11/19/anthropic-ipo-ant-live-updates.html"}
       ]
     },
     {
-      "lab": "腾讯混元",
-      "accent": [
-        196,
-        167,
-        255
-      ],
-      "head": "Hy4 flash 权重已可下载",
-      "body": "16日先上 API，权重 17 日预告、18 日已出现在 Hugging Face（tencent/Hy4-flash 等），无需申请。总共约 2200 亿参数，官方称每生成一个词约用 120 亿活跃参数，支持图文输入和 100 万 token 上下文。协议是腾讯 Hy 许可证，不是 Apache 2.0。官方 4-bit 包约 157 GiB，llama.cpp 官方支持尚未合并。",
-      "why": "能自己跑的便宜日常模型终于能下到了，但协议和机器门槛都得看清",
+      "lab": "GOOGLE",
+      "accent": [126, 224, 129],
+      "head": "Gemini API 预览「工具检索」",
+      "body": "11 月 19 日在 Interactions API 上预览 Tool Retrieval：智能体（能自动调用工具完成任务的程序）不必每次把全部工具参数说明塞进提示，只用到某个工具时再加载完整参数表。官方称不另收费，按所用模型常规计价。适用于 Gemini 3.6 及之后，包括全部 Gemini 4，也支持远程 MCP 服务器。",
+      "why": "工具一多，提示又贵又容易选错，这项就是为这种场景减负",
       "links": [
-        {
-          "label": "Hugging Face",
-          "href": "https://huggingface.co/tencent/Hy4-flash"
-        }
+        {"label": "Google 博客", "href": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/"}
+      ]
+    },
+    {
+      "lab": "GOOGLE",
+      "accent": [138, 180, 248],
+      "head": "Genie 4 对开发者开放 API",
+      "body": "官方 11 月 19 日宣布，继前一天面向用户推出后，Genie 4（用文字或参考图生成可互动场景的世界模型）已通过 Gemini Interactions API 和 AI Studio 向开发者开放。可生成连续 720p、每秒 24 帧画面并带同步声音，也能用键盘和实时文字改天气、光线或物体。输出带不可见 SynthID 水印。",
+      "why": "以前主要是订阅用户体验，现在可以接到自己的应用里",
+      "links": [
+        {"label": "Google 博客", "href": "https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/"}
+      ]
+    },
+    {
+      "lab": "OPENAI",
+      "accent": [102, 217, 239],
+      "head": "GPT-Live-1.1 上线，待机更便宜",
+      "body": "开发者日志 11 月 19 日新增实时语音模型 gpt-live-1.1，官方称多语言发音、口音稳定性和转写比上一代更好，可在现有 Live 会话里直接改用。WebRTC 会话支持待机：没人说话时暂停推理。按时长计费，通话中每分钟 0.05 美元，待机每分钟 0.02 美元；后台模型和工具另计。",
+      "why": "语音助手可以少空转，长会话成本会低一截",
+      "links": [
+        {"label": "OpenAI 开发者日志", "href": "https://developers.openai.com/api/docs/changelog"},
+        {"label": "模型说明", "href": "https://developers.openai.com/api/docs/models/gpt-live-1.1"}
+      ]
+    },
+    {
+      "lab": "APPLE",
+      "accent": [196, 167, 255],
+      "head": "招聘自研「能替你办事」的智能体",
+      "body": "彭博社发现苹果招聘启事，The Verge 11 月 19 日报道。启事写明，目标是规划并执行跨应用、浏览器、命令行、代码和接口的多步骤任务，还能调度更专一的子智能体；将与 Siri、界面框架和苹果基础模型团队协作。这是招人和早期研发信号，不是产品已经上线。",
+      "why": "手机厂商也在补连着做完几件事的能力，但现在还在招人",
+      "links": [
+        {"label": "The Verge", "href": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing"}
       ]
     }
   ]
