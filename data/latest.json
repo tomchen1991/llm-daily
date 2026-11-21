@@ -71,7 +71,7 @@
       ],
       "head": "Gemini 待办事项可代你给商家打电话",
       "body": "Google Research 11 月 20 日称，自动打电话的 Duplex 能力已接入 Gemini 应用的 Tasks（待办事项）。官方称通话开头会说明这是来自 Google 的自动系统，商家也可拒绝此类来电。文章还写到，Tasks 会使用包括 Hydrogen 和 Neon 在内的 Gemini 4 模型办理更完整的事务。",
-      "why": "没有网约接口的小店，也可以让 Gemini 直接打电话把事办了",
+      "why": "没有网上预约入口的小店，也可以让 Gemini 直接打电话把事办了",
       "links": [
         {
           "label": "Google Research",
